@@ -1,4 +1,4 @@
-## HepLib Projector
+## HepLib Project Pages
 
-You can visit [https://heplib.github.io/](https://heplib.github.io/) to view the pages.
+Please visit [https://heplib.github.io/](https://heplib.github.io/) to view the pages.
 
