@@ -137,5 +137,15 @@ fi
 
 # install HepLib
 if [ $install_heplib == 'yes' ]; then
-    echo "install HepLib"
+    if [ ! -f $pkg.zip ]; then
+        wget --no-check-certificate https://heplib.github.io/HepLib.tar.gz
+    fi
+    tar zxfv HepLib.tar.gz
+    cd HepLib
+    mkdir build && cd build
+    cmake -DCMAKE_INSTALL_PREFIX=$prefix ..
+    make -j $jn
+    make install
+    cd $CWD
+    rm -rf $pkg
 fi
