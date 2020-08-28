@@ -97,7 +97,7 @@ if [ $install_cuba == 'yes' ]; then
     fi
     tar zxf $pkg.tar.gz
     cd $pkg
-    ./configure --prefix=$prefix CFLAGS="-fPIC" CXXFLAGS="-fPIC"
+    ./configure --prefix=$prefix --with-real=16 CFLAGS="-fPIC" CXXFLAGS="-fPIC"
     make
     make install
     cd $CWD
