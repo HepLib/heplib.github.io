@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['s1l1proj_131',['S1L1Proj',['../_f_c_8h.html#af308fc21c68addf68839ffbfd9832150',1,'HepLib::FC::Quarkonium::S1L1Proj(ex si, ex qi, ex p)'],['../_f_c_8h.html#ae030fcfaa6acdc88a9022f0844175fc7',1,'HepLib::FC::Quarkonium::S1L1Proj(ex si, ex qi, ex mu, ex p)'],['../_f_c_8h.html#ae0cd5d71814e58019acdcea4171a7435',1,'HepLib::FC::Quarkonium::S1L1Proj(ex si, ex qi, ex mu1, ex mu2, ex p)']]],
+  ['s1l1sum_132',['S1L1Sum',['../_f_c_8h.html#a740d01c2ed357f192c4eea812203b4db',1,'HepLib::FC::Quarkonium']]],
+  ['s1l2proj_133',['S1L2Proj',['../_f_c_8h.html#a16d69275fb33c46f442f2bb340bc2b8b',1,'HepLib::FC::Quarkonium::S1L2Proj(ex si, ex qi1, ex qi2, ex mu, ex p)'],['../_f_c_8h.html#a69ad1db96caef15ed105e27ca95d51a6',1,'HepLib::FC::Quarkonium::S1L2Proj(ex si, ex qi1, ex qi2, ex mu1, ex mu2, ex p)']]],
+  ['scalelize_134',['Scalelize',['../class_hep_lib_1_1_s_d_1_1_cheng_wu.html#acf221c1750172061fa0dd7c4bfe161e6',1,'HepLib::SD::ChengWu::Scalelize(ex &amp;fe, const lst xs, const ex cy)'],['../class_hep_lib_1_1_s_d_1_1_cheng_wu.html#a4ab05258402ea85ca1f1751da9a99866',1,'HepLib::SD::ChengWu::Scalelize(ex &amp;fe, const ex xi, const ex cy)']]],
+  ['sd_2eh_135',['SD.h',['../_s_d_8h.html',1,'']]],
+  ['secdec_136',['SecDec',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html',1,'HepLib::SD']]],
+  ['secdec_2ecpp_137',['SecDec.cpp',['../_sec_dec_8cpp.html',1,'']]],
+  ['secdecbase_138',['SecDecBase',['../class_hep_lib_1_1_s_d_1_1_sec_dec_base.html',1,'HepLib::SD']]],
+  ['secdecg_139',['SecDecG',['../class_hep_lib_1_1_s_d_1_1_sec_dec_g.html',1,'HepLib::SD']]],
+  ['secdecg_2ecpp_140',['SecDecG.cpp',['../_sec_dec_g_8cpp.html',1,'']]],
+  ['shrinkcut_141',['ShrinkCut',['../_f_c_8h.html#a1e714f5590662aa38af9ef05eb19c1cc',1,'HepLib::FC::Qgraf']]],
+  ['sortpermutation_142',['SortPermutation',['../_i_b_p_8h.html#a74542e9d4b3915b787c1c436dc8c5c1e',1,'HepLib::IBP']]],
+  ['spinproj_143',['SpinProj',['../_f_c_8h.html#a1149ed7eb5e55dec1db9b6f35cb68b88',1,'HepLib::FC::Quarkonium::SpinProj(IO io, int s, ex p, ex pb, ex m, ex e, ex mu)'],['../_f_c_8h.html#acac290db71a9375778665691f9d8e21a',1,'HepLib::FC::Quarkonium::SpinProj(IO io, int s, ex p, ex pb, ex m, ex e, ex mb, ex eb, ex mu)'],['../_f_c_8h.html#aeac6b1f071fb3798ca86cfc1f09b1834',1,'HepLib::FC::Quarkonium::SpinProj(IO io, int s, ex p, ex pb, ex m, ex e, ex mu, int i, int j)'],['../_f_c_8h.html#a3592de9edf7b39a6d380361cf2277a52',1,'HepLib::FC::Quarkonium::SpinProj(IO io, int s, ex p, ex pb, ex m, ex e, ex mb, ex eb, ex mu, int i, int j)']]],
+  ['sunf_144',['SUNF',['../class_hep_lib_1_1_f_c_1_1_s_u_n_f.html',1,'HepLib::FC']]],
+  ['sunf4_145',['SUNF4',['../class_hep_lib_1_1_f_c_1_1_s_u_n_f4.html',1,'HepLib::FC']]],
+  ['sunt_146',['SUNT',['../class_hep_lib_1_1_f_c_1_1_s_u_n_t.html',1,'HepLib::FC']]],
+  ['symbol_147',['Symbol',['../class_hep_lib_1_1_symbol.html',1,'HepLib']]]
+];
