@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pair_2ecpp_258',['Pair.cpp',['../_pair_8cpp.html',1,'']]],
-  ['process_2eh_259',['Process.h',['../_process_8h.html',1,'']]]
+  ['nfunctions_2ecpp_729',['NFunctions.cpp',['../_n_functions_8cpp.html',1,'']]],
+  ['nfunctions_2eh_730',['NFunctions.h',['../_n_functions_8h.html',1,'']]]
 ];

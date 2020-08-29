@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['s1l1proj_329',['S1L1Proj',['../_f_c_8h.html#af308fc21c68addf68839ffbfd9832150',1,'HepLib::FC::Quarkonium::S1L1Proj(ex si, ex qi, ex p)'],['../_f_c_8h.html#ae030fcfaa6acdc88a9022f0844175fc7',1,'HepLib::FC::Quarkonium::S1L1Proj(ex si, ex qi, ex mu, ex p)'],['../_f_c_8h.html#ae0cd5d71814e58019acdcea4171a7435',1,'HepLib::FC::Quarkonium::S1L1Proj(ex si, ex qi, ex mu1, ex mu2, ex p)']]],
-  ['s1l1sum_330',['S1L1Sum',['../_f_c_8h.html#a740d01c2ed357f192c4eea812203b4db',1,'HepLib::FC::Quarkonium']]],
-  ['s1l2proj_331',['S1L2Proj',['../_f_c_8h.html#a16d69275fb33c46f442f2bb340bc2b8b',1,'HepLib::FC::Quarkonium::S1L2Proj(ex si, ex qi1, ex qi2, ex mu, ex p)'],['../_f_c_8h.html#a69ad1db96caef15ed105e27ca95d51a6',1,'HepLib::FC::Quarkonium::S1L2Proj(ex si, ex qi1, ex qi2, ex mu1, ex mu2, ex p)']]],
-  ['scalelize_332',['Scalelize',['../class_hep_lib_1_1_s_d_1_1_cheng_wu.html#acf221c1750172061fa0dd7c4bfe161e6',1,'HepLib::SD::ChengWu::Scalelize(ex &amp;fe, const lst xs, const ex cy)'],['../class_hep_lib_1_1_s_d_1_1_cheng_wu.html#a4ab05258402ea85ca1f1751da9a99866',1,'HepLib::SD::ChengWu::Scalelize(ex &amp;fe, const ex xi, const ex cy)']]],
-  ['shrinkcut_333',['ShrinkCut',['../_f_c_8h.html#a1e714f5590662aa38af9ef05eb19c1cc',1,'HepLib::FC::Qgraf']]],
-  ['sortpermutation_334',['SortPermutation',['../_i_b_p_8h.html#a74542e9d4b3915b787c1c436dc8c5c1e',1,'HepLib::IBP']]],
-  ['spinproj_335',['SpinProj',['../_f_c_8h.html#a1149ed7eb5e55dec1db9b6f35cb68b88',1,'HepLib::FC::Quarkonium::SpinProj(IO io, int s, ex p, ex pb, ex m, ex e, ex mu)'],['../_f_c_8h.html#acac290db71a9375778665691f9d8e21a',1,'HepLib::FC::Quarkonium::SpinProj(IO io, int s, ex p, ex pb, ex m, ex e, ex mb, ex eb, ex mu)'],['../_f_c_8h.html#aeac6b1f071fb3798ca86cfc1f09b1834',1,'HepLib::FC::Quarkonium::SpinProj(IO io, int s, ex p, ex pb, ex m, ex e, ex mu, int i, int j)'],['../_f_c_8h.html#a3592de9edf7b39a6d380361cf2277a52',1,'HepLib::FC::Quarkonium::SpinProj(IO io, int s, ex p, ex pb, ex m, ex e, ex mb, ex eb, ex mu, int i, int j)']]]
+  ['q2ex_946',['q2ex',['../namespace_hep_lib.html#ad56de165b9d9a99cbb7781f55c8a1823',1,'HepLib']]],
+  ['q2gvertex_947',['q2gVertex',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html#aa16558bd383f6f864f11b741639e58b6',1,'HepLib::FC::Qgraf']]],
+  ['quarkffv_948',['QuarkFFV',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html#a94b393f4ce7058c55e32fd756b234e06',1,'HepLib::FC::Qgraf']]],
+  ['quarkpropagator_949',['QuarkPropagator',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html#a8de3e876d71ac68a5420e88f6b365ee2',1,'HepLib::FC::Qgraf']]],
+  ['quarksum_950',['QuarkSum',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html#a5ba95abfebd5ca790918afc3a0b15eb4',1,'HepLib::FC::Qgraf']]]
 ];

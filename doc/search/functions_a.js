@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['killpowers_312',['KillPowers',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a12b3a832df820bb1a53552899446d038',1,'HepLib::SD::SecDec']]]
+  ['j1sum_890',['J1Sum',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html#a5d0a84ec7d2b2788edd17e9573606ad3',1,'HepLib::FC::Qgraf']]]
 ];

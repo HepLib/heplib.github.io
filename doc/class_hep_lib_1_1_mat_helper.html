@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>HepLib</b></li><li class="navelem"><a class="el" href="class_hep_lib_1_1_mat_helper.html">MatHelper</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_hep_lib.html">HepLib</a></li><li class="navelem"><a class="el" href="class_hep_lib_1_1_mat_helper.html">MatHelper</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -72,33 +72,273 @@ $(function() {
 <div class="title">HepLib::MatHelper Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_basic_8h_source.html">Basic.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a966e203ae0e4747fc382efc439784045"><td class="memItemLeft" align="right" valign="top"><a id="a966e203ae0e4747fc382efc439784045"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>has_zero_row</b> (const matrix &amp;mat)</td></tr>
+<tr class="memitem:a966e203ae0e4747fc382efc439784045"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_mat_helper.html#a966e203ae0e4747fc382efc439784045">has_zero_row</a> (const matrix &amp;mat)</td></tr>
 <tr class="separator:a966e203ae0e4747fc382efc439784045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6589629d803713107c03e4cb73ec5b1b"><td class="memItemLeft" align="right" valign="top"><a id="a6589629d803713107c03e4cb73ec5b1b"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_zero_row</b> (const matrix &amp;mat, int r)</td></tr>
+<tr class="memitem:a6589629d803713107c03e4cb73ec5b1b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_mat_helper.html#a6589629d803713107c03e4cb73ec5b1b">is_zero_row</a> (const matrix &amp;mat, int r)</td></tr>
 <tr class="separator:a6589629d803713107c03e4cb73ec5b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa63790eaeab9a80d1b5c28e707432629"><td class="memItemLeft" align="right" valign="top"><a id="aa63790eaeab9a80d1b5c28e707432629"></a>
-static vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>zero_row_index</b> (const matrix &amp;mat)</td></tr>
+<tr class="memitem:aa63790eaeab9a80d1b5c28e707432629"><td class="memItemLeft" align="right" valign="top">static vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_mat_helper.html#aa63790eaeab9a80d1b5c28e707432629">zero_row_index</a> (const matrix &amp;mat)</td></tr>
 <tr class="separator:aa63790eaeab9a80d1b5c28e707432629"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07ba56e7d05fdba896434083c23c1732"><td class="memItemLeft" align="right" valign="top"><a id="a07ba56e7d05fdba896434083c23c1732"></a>
-static matrix&#160;</td><td class="memItemRight" valign="bottom"><b>remove_zero_rows</b> (const matrix &amp;mat)</td></tr>
+<tr class="memitem:a07ba56e7d05fdba896434083c23c1732"><td class="memItemLeft" align="right" valign="top">static matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_mat_helper.html#a07ba56e7d05fdba896434083c23c1732">remove_zero_rows</a> (const matrix &amp;mat)</td></tr>
 <tr class="separator:a07ba56e7d05fdba896434083c23c1732"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa942ecf4861f5d77abdf9d7732849cd6"><td class="memItemLeft" align="right" valign="top"><a id="aa942ecf4861f5d77abdf9d7732849cd6"></a>
-static matrix&#160;</td><td class="memItemRight" valign="bottom"><b>sub</b> (matrix mat, int r, int nr, int c, int nc)</td></tr>
+<tr class="memitem:aa942ecf4861f5d77abdf9d7732849cd6"><td class="memItemLeft" align="right" valign="top">static matrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_mat_helper.html#aa942ecf4861f5d77abdf9d7732849cd6">sub</a> (matrix mat, int r, int nr, int c, int nc)</td></tr>
 <tr class="separator:aa942ecf4861f5d77abdf9d7732849cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab703c0e2f68a07063aefc1b71e1044ed"><td class="memTemplParams" colspan="2"><a id="ab703c0e2f68a07063aefc1b71e1044ed"></a>
-template&lt;typename F &gt; </td></tr>
-<tr class="memitem:ab703c0e2f68a07063aefc1b71e1044ed"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>map_inplace</b> (matrix &amp;m, F f)</td></tr>
+<tr class="memitem:ab703c0e2f68a07063aefc1b71e1044ed"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:ab703c0e2f68a07063aefc1b71e1044ed"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_mat_helper.html#ab703c0e2f68a07063aefc1b71e1044ed">map_inplace</a> (matrix &amp;m, <a class="el" href="namespace_hep_lib.html#ab2c1d765bf6247c222221fe47cd7682f">F</a> f)</td></tr>
 <tr class="separator:ab703c0e2f68a07063aefc1b71e1044ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1779346dad829276e28b07ac4bf542cb"><td class="memTemplParams" colspan="2"><a id="a1779346dad829276e28b07ac4bf542cb"></a>
-template&lt;typename F &gt; </td></tr>
-<tr class="memitem:a1779346dad829276e28b07ac4bf542cb"><td class="memTemplItemLeft" align="right" valign="top">static matrix&#160;</td><td class="memTemplItemRight" valign="bottom"><b>map</b> (const matrix &amp;m, F f)</td></tr>
+<tr class="memitem:a1779346dad829276e28b07ac4bf542cb"><td class="memTemplParams" colspan="2">template&lt;typename F &gt; </td></tr>
+<tr class="memitem:a1779346dad829276e28b07ac4bf542cb"><td class="memTemplItemLeft" align="right" valign="top">static matrix&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_hep_lib_1_1_mat_helper.html#a1779346dad829276e28b07ac4bf542cb">map</a> (const matrix &amp;m, <a class="el" href="namespace_hep_lib.html#ab2c1d765bf6247c222221fe47cd7682f">F</a> f)</td></tr>
 <tr class="separator:a1779346dad829276e28b07ac4bf542cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a966e203ae0e4747fc382efc439784045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a966e203ae0e4747fc382efc439784045">&#9670;&nbsp;</a></span>has_zero_row()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool HepLib::MatHelper::has_zero_row </td>
+          <td>(</td>
+          <td class="paramtype">const matrix &amp;&#160;</td>
+          <td class="paramname"><em>mat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6589629d803713107c03e4cb73ec5b1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6589629d803713107c03e4cb73ec5b1b">&#9670;&nbsp;</a></span>is_zero_row()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool HepLib::MatHelper::is_zero_row </td>
+          <td>(</td>
+          <td class="paramtype">const matrix &amp;&#160;</td>
+          <td class="paramname"><em>mat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1779346dad829276e28b07ac4bf542cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1779346dad829276e28b07ac4bf542cb">&#9670;&nbsp;</a></span>map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">matrix HepLib::MatHelper::map </td>
+          <td>(</td>
+          <td class="paramtype">const matrix &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_hep_lib.html#ab2c1d765bf6247c222221fe47cd7682f">F</a>&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab703c0e2f68a07063aefc1b71e1044ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab703c0e2f68a07063aefc1b71e1044ed">&#9670;&nbsp;</a></span>map_inplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename F &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HepLib::MatHelper::map_inplace </td>
+          <td>(</td>
+          <td class="paramtype">matrix &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_hep_lib.html#ab2c1d765bf6247c222221fe47cd7682f">F</a>&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07ba56e7d05fdba896434083c23c1732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ba56e7d05fdba896434083c23c1732">&#9670;&nbsp;</a></span>remove_zero_rows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static matrix HepLib::MatHelper::remove_zero_rows </td>
+          <td>(</td>
+          <td class="paramtype">const matrix &amp;&#160;</td>
+          <td class="paramname"><em>mat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa942ecf4861f5d77abdf9d7732849cd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa942ecf4861f5d77abdf9d7732849cd6">&#9670;&nbsp;</a></span>sub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static matrix HepLib::MatHelper::sub </td>
+          <td>(</td>
+          <td class="paramtype">matrix&#160;</td>
+          <td class="paramname"><em>mat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa63790eaeab9a80d1b5c28e707432629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa63790eaeab9a80d1b5c28e707432629">&#9670;&nbsp;</a></span>zero_row_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static vector&lt;int&gt; HepLib::MatHelper::zero_row_index </td>
+          <td>(</td>
+          <td class="paramtype">const matrix &amp;&#160;</td>
+          <td class="paramname"><em>mat</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
