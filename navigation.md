@@ -11,3 +11,6 @@
   * [Example](example.md)
   
   * [Document](doc/)
+
+
+[gimmick:themechooser](cosmo)
