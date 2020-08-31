@@ -7,5 +7,7 @@
 [Docs]()
 
   * [Installation](install.md)
+  
   * [Example](example.md)
+  
   * [Document](doc/)
