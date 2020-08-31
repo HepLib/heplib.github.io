@@ -13,4 +13,4 @@
   * [Document](doc/)
 
 
-[gimmick:theme](cosmo)
+[gimmick:theme](flatly)
