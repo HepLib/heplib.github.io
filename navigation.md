@@ -3,6 +3,6 @@
 [Example](example.md)
 [Release](release.md)
 [Docs]()
-  * # SubMenu Heading 1
-  * [Installation](install.md)
-  * [Document](/doc/)
+    * # SubMenu Heading 1
+    * [Installation](install.md)
+    * [Document](/doc/)
