@@ -8,7 +8,7 @@
 
   * [Installation](install.md)
   
-  * [Example](example.md)
+  * [Examples](example.md)
   
   * [Document](doc/)
 
