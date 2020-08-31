@@ -1,4 +1,5 @@
 # HepLib
+[Home](/)
 [Document](/doc/)
-[Examples](examples.md)
-[Releases](releases.md)
+[Example](example.md)
+[Releases](release.md)
