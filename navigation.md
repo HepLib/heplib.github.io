@@ -13,4 +13,4 @@
   * [Document](doc/)
 
 
-[gimmick:themechooser](cosmo)
+[gimmick:theme](cosmo)
