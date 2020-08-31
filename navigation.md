@@ -12,5 +12,3 @@
   
   * [Document](doc/)
 
-
-[gimmick:theme](flatly)
