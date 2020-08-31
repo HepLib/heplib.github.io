@@ -1,6 +1,6 @@
 Examples
 ----------
-  * exmaple using `form` [`form.cpp`](form.md)
+  * exmaple using `form` [`form.cpp`](examples/form.md)
 
 
 
