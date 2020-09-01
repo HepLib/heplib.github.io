@@ -1,6 +1,3 @@
-HepLib project
-=========
-
 About HepLib
 ------------
   **HepLib** is a C++ library for computations in **High Energy Physics** the underlying core language is **GiNaC**, which is also a C++ library used to perform symbolic computations. 
