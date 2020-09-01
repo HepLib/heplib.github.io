@@ -9,7 +9,8 @@ var indexSectionsWithContent =
   6: "dfmpqs",
   7: "imt",
   8: "ciov",
-  9: "bcdgimorwy"
+  9: "bcdgimorwy",
+  10: "m"
 };
 
 var indexSectionNames =
@@ -23,7 +24,8 @@ var indexSectionNames =
   6: "typedefs",
   7: "enums",
   8: "enumvalues",
-  9: "defines"
+  9: "defines",
+  10: "pages"
 };
 
 var indexSectionLabels =
@@ -37,6 +39,7 @@ var indexSectionLabels =
   6: "Typedefs",
   7: "Enumerations",
   8: "Enumerator",
-  9: "Macros"
+  9: "Macros",
+  10: "Pages"
 };
 
