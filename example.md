@@ -12,10 +12,10 @@ export PATH=<HepLib Install Path>/bin:$PATH
  export LD_LIBRARY_PATH=<HepLib Install Path>/lib: $LD_LIBRARY_PATH
  ```
  we can compile and run it like this:
-using `heplib++` to compile a `.cpp`, e.g. `form.cpp` : 
 ```bash
-heplib++ -o form form.cpp
-./form
+$ heplib++ -o hello hello.cpp 
+$ ./ hello
+-4*D*p2.p1+8*p2.p1
 ```
 
 Examples @ GiNaC
