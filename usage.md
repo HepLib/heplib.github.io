@@ -7,7 +7,7 @@ export PATH=<HepLib Install Path>/bin:$PATH
 ```
  `<HepLib Install Path>/lib` is added to the environment variable `LD_LIBRARY_PATH`, if not please run 
  ```bash
- export LD_LIBRARY_PATH=<HepLib Install Path>/lib: $LD_LIBRARY_PATH
+ export LD_LIBRARY_PATH=<HepLib Install Path>/lib:$LD_LIBRARY_PATH
  ```
  We can compile the [hello.cpp](examples/hello.cpp.md) and run it like this:
 ```bash
