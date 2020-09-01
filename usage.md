@@ -1,0 +1,53 @@
+Examples of HepLib
+===
+
+Usage within C++
+------
+Assuming the `<HepLib Install Path>/bin` is added to the environment variable `PATH` , if not please run 
+```bash
+export PATH=<HepLib Install Path>/bin:$PATH
+```
+ `<HepLib Install Path>/lib` is added to the environment variable `LD_LIBRARY_PATH`, if not please run 
+ ```bash
+ export LD_LIBRARY_PATH=<HepLib Install Path>/lib: $LD_LIBRARY_PATH
+ ```
+ We can compile the [hello.cpp](hello.cpp) and run it like this:
+```bash
+$ heplib++ -o hello hello.cpp 
+$ ./ hello
+-4*D*p2.p1+8*p2.p1
+```
+
+Examples @ GiNaC
+----------
++ [iFermat.cpp](examples/GiNaC/iFermat.cpp.md)
++ [iForm.cpp](examples/GiNaC/iForm.cpp.md)
++ [qgraf.cpp](examples/GiNaC/qgraf.cpp.md)
++ [TIR.cpp](examples/GiNaC/TIR.cpp.md)
++ [apart.cpp](examples/GiNaC/fapartorm.cpp.md)
++ [fire.cpp](examples/GiNaC/fire.cpp.md)
++ [KIRA.cpp](examples/GiNaC/KIRA.cpp.md)
+
+Examples @ FC
+----------
++ [iFermat.cpp](examples/FC/iFermat.cpp.md)
++ [iForm.cpp](examples/FC/iForm.cpp.md)
++ [qgraf.cpp](examples/FC/qgraf.cpp.md)
++ [TIR.cpp](examples/FC/TIR.cpp.md)
++ [apart.cpp](examples/FC/fapartorm.cpp.md)
++ [fire.cpp](examples/FC/fire.cpp.md)
++ [KIRA.cpp](examples/FC/KIRA.cpp.md)
+
+
+Examples @ SD
+----------
++ [iFermat.cpp](examples/SD/iFermat.cpp.md)
++ [iForm.cpp](examples/SD/iForm.cpp.md)
++ [qgraf.cpp](examples/SD/qgraf.cpp.md)
++ [TIR.cpp](examples/SD/TIR.cpp.md)
++ [apart.cpp](examples/SD/fapartorm.cpp.md)
++ [fire.cpp](examples/SD/fire.cpp.md)
++ [KIRA.cpp](examples/SD/KIRA.cpp.md)
+
+
+
