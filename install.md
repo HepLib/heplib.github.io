@@ -1,12 +1,15 @@
 Installation of HepLib
 ===
-Using the [install.sh](install.sh) script
+Using the install script
 ---
+The shell script [install.sh](install.sh) can be used in install the external libraries and **HepLib**, by typing the commands in the terminal:
 ```bash
 wget https://heplib.github.io/install.sh 
 chmod +x install.sh
 prefix=<Install Path> jn=16 ./install.sh
 ```
+`<Install Path>` refers to the path for the libraries to be installed to, and `jn` is the number of jobs used in `make -j $jn`.
+
 Install external libraries
 ---
 + **GiNaC**: the underlying language of **HepLib**, which is used for symbolic operations and can be download from [https://www.ginac.de](https://www.ginac.de), and its prerequisite **CLN** can be download from [https://www.ginac.de/CLN/](https://www.ginac.de/CLN/).
