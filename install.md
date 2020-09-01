@@ -21,6 +21,7 @@ Install external libraries
 Install external binary programs
 ---
 It is only required that the binary programs can found in the environment variable `PATH`.
+
 + **FORM**: it is used for `Dirac` and `Color` matrix trace, Lorentz index contraction, *etc.*, it can be download form [https://www.nikhef.nl/~form/](https://www.nikhef.nl/~form/).
 + **Fermat**: it is used form high performance matrix operation, multivariate rational polynormial simplification, *etc.*, it can be download from [http://home.bway.net/lewis/](http://home.bway.net/lewis/).
 + **FIRE**: it is required for IBP reduction in `FIRE` class, it can be download from [https://bitbucket.org/feynmanIntegrals/fire/](https://bitbucket.org/feynmanIntegrals/fire/). Note that `FIRE_Path/bin` needs to be added to the environment variable `PATH`.
