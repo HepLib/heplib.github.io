@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['heplib_20document_1294',['HepLib Document',['../index.html',1,'']]]
+  ['heplib_20project_1294',['HepLib Project',['../index.html',1,'']]]
 ];

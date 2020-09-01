@@ -15,7 +15,7 @@ var searchData=
   ['hookejeeves_231',['HookeJeeves',['../class_hep_lib_1_1_s_d_1_1_hooke_jeeves.html',1,'HepLib::SD']]],
   ['hookejeeves_2ecpp_232',['HookeJeeves.cpp',['../_hooke_jeeves_8cpp.html',1,'']]],
   ['ibp_233',['IBP',['../namespace_hep_lib_1_1_i_b_p.html',1,'HepLib']]],
-  ['heplib_20document_234',['HepLib Document',['../index.html',1,'']]],
+  ['heplib_20project_234',['HepLib Project',['../index.html',1,'']]],
   ['qgraf_235',['Qgraf',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html',1,'HepLib::FC']]],
   ['quarkonium_236',['Quarkonium',['../namespace_hep_lib_1_1_f_c_1_1_quarkonium.html',1,'HepLib::FC']]],
   ['rc_237',['RC',['../namespace_hep_lib_1_1_f_c_1_1_r_c.html',1,'HepLib::FC']]],
