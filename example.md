@@ -1,10 +1,10 @@
-Examples
+Examples of HepLib
 ===
 
-examples/FC
+examples@FC
 ----------
-    + [qgraf.cpp](examples/qgraf.md)
-    + [form.cpp](examples/form.md)
++ [qgraf.cpp](examples/qgraf.md)
++ [form.cpp](examples/form.md)
 
 
 
