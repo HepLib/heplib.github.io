@@ -70,78 +70,78 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="_process_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;pstream.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_basic_8h.html">Basic.h</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_hep_lib.html">HepLib</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_hep_lib_1_1_process.html">Process</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#a9e9aeb206200537b09fac930b9f3f8fc">   20</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> redi::pstreams::pmode pm_in = redi::pstreams::pstdin;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#a9356062d9dd559ed4e6d1c28d73291d7">   21</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> redi::pstreams::pmode pm_out = redi::pstreams::pstdout;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#a65ce0791efd6c108ac33d8fb310b3395">   22</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> redi::pstreams::pmode pm_err = redi::pstreams::pstderr;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#a4110ad70fef84959b1e5e59f3d605d78">   24</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_process.html#a4110ad70fef84959b1e5e59f3d605d78">Open</a>(<span class="keywordtype">string</span> cmds, <span class="keyword">const</span> redi::pstreams::pmode pm=pm_in|pm_out|pm_err);</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#ab47f7ecaf73cfa9767d4ed6e71435e77">   25</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_hep_lib_1_1_process.html#ab47f7ecaf73cfa9767d4ed6e71435e77">ReadLine</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#afec92481398cdcb2c11cb66644afeb54">   26</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_hep_lib_1_1_process.html#afec92481398cdcb2c11cb66644afeb54">ReadLines</a>(<span class="keywordtype">string</span>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#aec41b78f1fed12c4c10ed99b21cc64f9">   28</a></span>&#160;        redi::pstream &amp;<a class="code" href="class_hep_lib_1_1_process.html#aec41b78f1fed12c4c10ed99b21cc64f9">io</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        redi::pstream pio;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_fermat.html">   34</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_hep_lib_1_1_fermat.html">Fermat</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_fermat.html#a76c3722ffe7451efbdd74b44d4dfd124">   36</a></span>&#160;        <span class="keywordtype">string</span> Sentinel = <span class="stringliteral">&quot;---EOF---&quot;</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_fermat.html#acbf84d2fcfc4fc3914a5983a85f3f17c">   37</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_fermat.html#acbf84d2fcfc4fc3914a5983a85f3f17c">Init</a>(<span class="keywordtype">string</span> fer_path=<span class="stringliteral">&quot;fer64&quot;</span>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">   38</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(<span class="keywordtype">string</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_fermat.html#a2d00cc5477144c480b2c635da92b5320">   39</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_fermat.html#a2d00cc5477144c480b2c635da92b5320">Exit</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_fermat.html#a83b5bc7bb4b499086caddf90b258adb1">   40</a></span>&#160;        <a class="code" href="class_hep_lib_1_1_fermat.html#a83b5bc7bb4b499086caddf90b258adb1">~Fermat</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">bool</span> inited = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">bool</span> exited = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">int</span> P2C[2];</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">int</span> C2P[2];</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        pid_t fpid = 0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        pid_t pid = 0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    };</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html">   51</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_hep_lib_1_1_form.html">Form</a> {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html#a19c0c3182b330b0bd083b3e9cf2fe92e">   53</a></span>&#160;        <span class="keywordtype">string</span> Sentinel = <span class="stringliteral">&quot;---EOF---&quot;</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html#a9b5067f611112288231665b14e76c41a">   54</a></span>&#160;        <span class="keywordtype">string</span> Prompt = <span class="stringliteral">&quot;***EOF***&quot;</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html#a36a2548210319840f2deb4682f0fbe3f">   55</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_form.html#a36a2548210319840f2deb4682f0fbe3f">Init</a>(<span class="keywordtype">string</span> form_path=<span class="stringliteral">&quot;form&quot;</span>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html#af4951707501e93938bfa6d384c190e2e">   56</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_hep_lib_1_1_form.html#af4951707501e93938bfa6d384c190e2e">Execute</a>(<span class="keywordtype">string</span> script, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp; out_var=<span class="stringliteral">&quot;[o]&quot;</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html#a11dd12b4e1f18c8b4aa0c05352113f5b">   57</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_form.html#a11dd12b4e1f18c8b4aa0c05352113f5b">Exit</a>();</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html#a7cfab3506a746c917b95a0aad7dde2fe">   58</a></span>&#160;        <a class="code" href="class_hep_lib_1_1_form.html#a7cfab3506a746c917b95a0aad7dde2fe">~Form</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">bool</span> inited = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">bool</span> exited = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">int</span> io[2][2];</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">int</span> stdo[2];</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        pid_t fpid = 0;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        pid_t pid = 0;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    };</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;pstream.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_basic_8h.html">Basic.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_hep_lib.html">HepLib</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_hep_lib_1_1_process.html">Process</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#a9e9aeb206200537b09fac930b9f3f8fc">   21</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> redi::pstreams::pmode pm_in = redi::pstreams::pstdin;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#a9356062d9dd559ed4e6d1c28d73291d7">   22</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> redi::pstreams::pmode pm_out = redi::pstreams::pstdout;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#a65ce0791efd6c108ac33d8fb310b3395">   23</a></span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> redi::pstreams::pmode pm_err = redi::pstreams::pstderr;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#a4110ad70fef84959b1e5e59f3d605d78">   25</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_process.html#a4110ad70fef84959b1e5e59f3d605d78">Open</a>(<span class="keywordtype">string</span> cmds, <span class="keyword">const</span> redi::pstreams::pmode pm=pm_in|pm_out|pm_err);</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#ab47f7ecaf73cfa9767d4ed6e71435e77">   26</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_hep_lib_1_1_process.html#ab47f7ecaf73cfa9767d4ed6e71435e77">ReadLine</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#afec92481398cdcb2c11cb66644afeb54">   27</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_hep_lib_1_1_process.html#afec92481398cdcb2c11cb66644afeb54">ReadLines</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_process.html#aec41b78f1fed12c4c10ed99b21cc64f9">   29</a></span>&#160;        redi::pstream &amp;<a class="code" href="class_hep_lib_1_1_process.html#aec41b78f1fed12c4c10ed99b21cc64f9">io</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        redi::pstream pio;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    };</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_fermat.html">   35</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_hep_lib_1_1_fermat.html">Fermat</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_fermat.html#a76c3722ffe7451efbdd74b44d4dfd124">   37</a></span>&#160;        <span class="keywordtype">string</span> Sentinel = <span class="stringliteral">&quot;---EOF---&quot;</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_fermat.html#acbf84d2fcfc4fc3914a5983a85f3f17c">   38</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_fermat.html#acbf84d2fcfc4fc3914a5983a85f3f17c">Init</a>(<span class="keywordtype">string</span> fer_path=<span class="stringliteral">&quot;fer64&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">   39</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">Execute</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_fermat.html#a2d00cc5477144c480b2c635da92b5320">   40</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_fermat.html#a2d00cc5477144c480b2c635da92b5320">Exit</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_fermat.html#a83b5bc7bb4b499086caddf90b258adb1">   41</a></span>&#160;        <a class="code" href="class_hep_lib_1_1_fermat.html#a83b5bc7bb4b499086caddf90b258adb1">~Fermat</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">bool</span> inited = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">bool</span> exited = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">int</span> P2C[2];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">int</span> C2P[2];</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        pid_t fpid = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        pid_t pid = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    };</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html">   52</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_hep_lib_1_1_form.html">Form</a> {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html#a19c0c3182b330b0bd083b3e9cf2fe92e">   54</a></span>&#160;        <span class="keywordtype">string</span> Sentinel = <span class="stringliteral">&quot;---EOF---&quot;</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html#a9b5067f611112288231665b14e76c41a">   55</a></span>&#160;        <span class="keywordtype">string</span> Prompt = <span class="stringliteral">&quot;***EOF***&quot;</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html#a36a2548210319840f2deb4682f0fbe3f">   56</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_form.html#a36a2548210319840f2deb4682f0fbe3f">Init</a>(<span class="keywordtype">string</span> form_path=<span class="stringliteral">&quot;form&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html#af4951707501e93938bfa6d384c190e2e">   57</a></span>&#160;        <span class="keywordtype">string</span> <a class="code" href="class_hep_lib_1_1_form.html#af4951707501e93938bfa6d384c190e2e">Execute</a>(<span class="keywordtype">string</span> script, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp; out_var=<span class="stringliteral">&quot;[o]&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html#a11dd12b4e1f18c8b4aa0c05352113f5b">   58</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_hep_lib_1_1_form.html#a11dd12b4e1f18c8b4aa0c05352113f5b">Exit</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_hep_lib_1_1_form.html#a7cfab3506a746c917b95a0aad7dde2fe">   59</a></span>&#160;        <a class="code" href="class_hep_lib_1_1_form.html#a7cfab3506a746c917b95a0aad7dde2fe">~Form</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">bool</span> inited = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordtype">bool</span> exited = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">int</span> io[2][2];</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">int</span> stdo[2];</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        pid_t fpid = 0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        pid_t pid = 0;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    };</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_hep_lib_1_1_process_html"><div class="ttname"><a href="class_hep_lib_1_1_process.html">HepLib::Process</a></div><div class="ttdef"><b>Definition:</b> <a href="_process_8h_source.html#l00018">Process.h:18</a></div></div>
+<div class="ttc" id="aclass_hep_lib_1_1_process_html"><div class="ttname"><a href="class_hep_lib_1_1_process.html">HepLib::Process</a></div><div class="ttdef"><b>Definition:</b> <a href="_process_8h_source.html#l00019">Process.h:19</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_form_html_a7cfab3506a746c917b95a0aad7dde2fe"><div class="ttname"><a href="class_hep_lib_1_1_form.html#a7cfab3506a746c917b95a0aad7dde2fe">HepLib::Form::~Form</a></div><div class="ttdeci">~Form()</div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_process_html_afec92481398cdcb2c11cb66644afeb54"><div class="ttname"><a href="class_hep_lib_1_1_process.html#afec92481398cdcb2c11cb66644afeb54">HepLib::Process::ReadLines</a></div><div class="ttdeci">string ReadLines(string)</div></div>
-<div class="ttc" id="aclass_hep_lib_1_1_fermat_html"><div class="ttname"><a href="class_hep_lib_1_1_fermat.html">HepLib::Fermat</a></div><div class="ttdef"><b>Definition:</b> <a href="_process_8h_source.html#l00034">Process.h:34</a></div></div>
+<div class="ttc" id="aclass_hep_lib_1_1_fermat_html"><div class="ttname"><a href="class_hep_lib_1_1_fermat.html">HepLib::Fermat</a></div><div class="ttdef"><b>Definition:</b> <a href="_process_8h_source.html#l00035">Process.h:35</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_form_html_a11dd12b4e1f18c8b4aa0c05352113f5b"><div class="ttname"><a href="class_hep_lib_1_1_form.html#a11dd12b4e1f18c8b4aa0c05352113f5b">HepLib::Form::Exit</a></div><div class="ttdeci">void Exit()</div></div>
-<div class="ttc" id="aclass_hep_lib_1_1_form_html"><div class="ttname"><a href="class_hep_lib_1_1_form.html">HepLib::Form</a></div><div class="ttdef"><b>Definition:</b> <a href="_process_8h_source.html#l00051">Process.h:51</a></div></div>
+<div class="ttc" id="aclass_hep_lib_1_1_form_html"><div class="ttname"><a href="class_hep_lib_1_1_form.html">HepLib::Form</a></div><div class="ttdef"><b>Definition:</b> <a href="_process_8h_source.html#l00052">Process.h:52</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_fermat_html_ae741caec2989509517c21fbab996070d"><div class="ttname"><a href="class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d">HepLib::Fermat::Execute</a></div><div class="ttdeci">string Execute(string)</div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_form_html_a36a2548210319840f2deb4682f0fbe3f"><div class="ttname"><a href="class_hep_lib_1_1_form.html#a36a2548210319840f2deb4682f0fbe3f">HepLib::Form::Init</a></div><div class="ttdeci">void Init(string form_path=&quot;form&quot;)</div></div>
 <div class="ttc" id="anamespace_hep_lib_html"><div class="ttname"><a href="namespace_hep_lib.html">HepLib</a></div><div class="ttdoc">HepLib namespace.</div><div class="ttdef"><b>Definition:</b> <a href="_basic_8h_source.html#l00075">Basic.h:75</a></div></div>
