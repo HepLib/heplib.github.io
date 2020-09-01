@@ -2,7 +2,7 @@ Examples of HepLib
 ===
 Usage within C++
 ------
-Assuming the `<HepLib Install Path>/bin` is added to the environment variable `PATH` (if not, please run `export PATH=<HepLib Install Path>/bin:$PATH`), `<HepLib Install Path>/lib` is added to the environment variable `LD_LIBRARY_PATH` (if not, please run `export LD_LIBRARY_PATH=<HepLib Install Path>/lib: $LD_LIBRARY_PATH`), we can compile and run it like this:
+Assuming the `<HepLib Install Path>/bin` is added to the environment variable `PATH` (if not, please run ``export PATH=<HepLib Install Path>/bin:$PATH``), `<HepLib Install Path>/lib` is added to the environment variable `LD_LIBRARY_PATH` (if not, please run `export LD_LIBRARY_PATH=<HepLib Install Path>/lib: $LD_LIBRARY_PATH`), we can compile and run it like this:
 using `heplib++` to compile a `.cpp`, e.g. `form.cpp` : 
 ```bash
 heplib++ -o form form.cpp
