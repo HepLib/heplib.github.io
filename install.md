@@ -1,6 +1,6 @@
 Installation of HepLib
 ===
-**HepLib** uses a few external routines or libraries, one needs to install these requried libraries before the installation of **HepLib**. A install script is provided for automatica installation of these required libraries and **HepLib** itself, one can also install the external libraries and binary programs mannually.
+**HepLib** uses a few external routines or libraries, one needs to install these requried libraries before the installation of **HepLib**. A install script is provided for automatica installation of these required libraries and **HepLib** itself, one can also install the external libraries and binary programs, and compile **HepLib** mannually.
 
 Using the install script
 ---
@@ -28,3 +28,23 @@ It is only required that the binary programs can found in the environment variab
 + **Fermat**: it is used form high performance matrix operation, multivariate rational polynormial simplification, *etc.*, it can be download from [http://home.bway.net/lewis/](http://home.bway.net/lewis/).
 + **FIRE**: it is required for IBP reduction in `FIRE` class, it can be download from [https://bitbucket.org/feynmanIntegrals/fire/](https://bitbucket.org/feynmanIntegrals/fire/). Note that `FIRE_Path/bin` needs to be added to the environment variable `PATH`.
 + **KIRA**: it is required for IBP reduction in `KIRA` class, it can be download from [https://kira.hepforge.org](https://kira.hepforge.org).
+
+Compilation and Installation
+---
+One can download the most recent version of **HepLib** as a compressed archive: [HepLib.tar.gz](HepLib.tar.gz), uncompress it and change current directory into *HepLib* by the commands:
+```bash
+wget https://heplib.github.io/HepLib.tar.gz 
+tar zxfv HepLib.tar.gz
+cd HepLib
+```
+and create a directory for cmake to build the library as follows
+```bash
+mkdir build && cd build
+cmake -DCMAKE_INSTALL_PREFIX=<Install Path> .. 
+make -j 4 && make install
+```
+where the standard cmake variable `CMAKE INSTALL PREFIX` refers to the directory to which HepLib will be installed, i.e., the library libHepLib.so (the file name may be system dependent) will be installed to `<Install Path>/lib`, the related C++ header files, including HepLib.h, FC.h, SD.h, etc., will be installed to `<Install Path>/include`, and the binary programs, including heplib++, garview, etc., will be installed to `<Install Path>/bin`.
+If GiNaC or other dependent external library is not installed to CMAKE INSTALL PREFIX, the user needs to specify the locations by supplying the variables INC PATH and LIB PATH in the cmake arguments as:
+```bash
+cmake -DCMAKE_INSTALL_PREFIX=path -DINC_PATH="inc1;inc2" -DLIB_PATH="lib1;lib2" ..
+```
