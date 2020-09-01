@@ -18,4 +18,10 @@ Install external libraries
 + **MinUit2**: it is used to find the minimum of a function, avaiable on [http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/](http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/).
 + **CUBA**: it is one of the numerical integrators and can be download from [http://www.feynarts.de/cuba/](http://www.feynarts.de/cuba/), note that the version with quadruple precision **libcubaq** will be used, by adding the option `--with--real=16 CFLAGS="--fPIC" CXXFLAGS="--fPIC"` to the `configure` script.
     
-
+Install external binary programs
+---
+It is only required that the binary programs can found in the environment variable `PATH`.
++ **FORM**: it is used for `Dirac` and `Color` matrix trace, Lorentz index contraction, *etc.*, it can be download form [https://www.nikhef.nl/~form/](https://www.nikhef.nl/~form/).
++ **Fermat**: it is used form high performance matrix operation, multivariate rational polynormial simplification, *etc.*, it can be download from [http://home.bway.net/lewis/](http://home.bway.net/lewis/).
++ **FIRE**: it is required for IBP reduction in `FIRE` class, it can be download from [https://bitbucket.org/feynmanIntegrals/fire/](https://bitbucket.org/feynmanIntegrals/fire/). Note that `FIRE_Path/bin` needs to be added to the environment variable `PATH`.
++ **KIRA**: it is required for IBP reduction in `KIRA` class, it can be download from [https://kira.hepforge.org](https://kira.hepforge.org).
