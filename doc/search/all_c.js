@@ -21,12 +21,12 @@ var searchData=
   ['linearize_314',['Linearize',['../class_hep_lib_1_1_s_d_1_1_cheng_wu.html#aefad75cbf80bbb821581c79e590746a8',1,'HepLib::SD::ChengWu']]],
   ['linetex_315',['LineTeX',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html#a914a5bbf4a97096c11894dc180b8e562',1,'HepLib::FC::Qgraf']]],
   ['log_316',['log',['../_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27',1,'log(qREAL x):&#160;NFunctions.h'],['../_n_functions_8h.html#ac07df1a7e05e66fd0d0149d5c8290f86',1,'log(qCOMPLEX x):&#160;NFunctions.h']]],
-  ['loopmomenta_317',['LoopMomenta',['../struct_hep_lib_1_1_feynman_parameter.html#ae349c74119fb724ddd27270ee7c7c242',1,'HepLib::FeynmanParameter::LoopMomenta()'],['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a3db16e02850fb466e15dd816783ee8b0',1,'HepLib::SD::FeynmanParameter::LoopMomenta()']]],
+  ['loopmomenta_317',['LoopMomenta',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a3db16e02850fb466e15dd816783ee8b0',1,'HepLib::SD::FeynmanParameter']]],
   ['loopprefix_318',['LoopPrefix',['../class_hep_lib_1_1_f_c_1_1_qgraf_1_1_process.html#ae46394dee78a92cc7dc7dbfb09206385',1,'HepLib::FC::Qgraf::Process']]],
   ['loops_319',['Loops',['../class_hep_lib_1_1_f_c_1_1_qgraf_1_1_process.html#ad467759954d6b2e61f5b08fc52a68f7b',1,'HepLib::FC::Qgraf::Process']]],
   ['loopuf_320',['LoopUF',['../namespace_hep_lib_1_1_i_b_p.html#aaeb95c41d1f8ff815ee7e8b703d5c1e1',1,'HepLib::IBP']]],
   ['lproj_321',['LProj',['../namespace_hep_lib_1_1_f_c_1_1_quarkonium.html#a0f538ab7504122cdc20e78f557812c02',1,'HepLib::FC::Quarkonium']]],
-  ['lreplacements_322',['lReplacements',['../struct_hep_lib_1_1_feynman_parameter.html#ad1f87d405783b807ddfa557183ccbd3a',1,'HepLib::FeynmanParameter::lReplacements()'],['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a02a773582d956c381941e04a158788a8',1,'HepLib::SD::FeynmanParameter::lReplacements()']]],
+  ['lreplacements_322',['lReplacements',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a02a773582d956c381941e04a158788a8',1,'HepLib::SD::FeynmanParameter']]],
   ['lst2exvec_323',['lst2exvec',['../namespace_hep_lib.html#a404a83a48b0bf2beb18e57ac7b52cd3e',1,'HepLib']]],
   ['lsthelper_324',['lstHelper',['../class_hep_lib_1_1lst_helper.html',1,'HepLib']]]
 ];

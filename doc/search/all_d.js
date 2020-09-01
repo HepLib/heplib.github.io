@@ -15,7 +15,7 @@ var searchData=
   ['maxrnd_337',['MaxRND',['../class_hep_lib_1_1_s_d_1_1_err_min.html#a5f6e8d64c411778b08da293f678df61f',1,'HepLib::SD::ErrMin']]],
   ['mb_338',['MB',['../class_hep_lib_1_1_m_b.html',1,'HepLib::MB'],['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#aab8c162e7ad5b4166fc14552bedd0c25',1,'HepLib::SD::SecDec::MB()']]],
   ['mb_2eh_339',['MB.h',['../_m_b_8h.html',1,'']]],
-  ['method_340',['Method',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a9ee3087ab42496412b82ad1b0a757018',1,'HepLib::SD::CUBA::Method()'],['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a443ca66dc01a78f93cee239fa48eb13c',1,'HepLib::SD::CUBA::METHOD()']]],
+  ['method_340',['METHOD',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a443ca66dc01a78f93cee239fa48eb13c',1,'HepLib::SD::CUBA::METHOD()'],['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a9ee3087ab42496412b82ad1b0a757018',1,'HepLib::SD::CUBA::Method()']]],
   ['mi_5fpref_341',['mi_pref',['../class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#a14e3287393a9f5055f6dc3461208748d',1,'HepLib::IBP::FIRE::mi_pref()'],['../class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html#aa6a533213ae05a73c2db87dd0e0b3b33',1,'HepLib::IBP::KIRA::mi_pref()']]],
   ['miner_342',['miner',['../class_hep_lib_1_1_s_d_1_1_err_min.html#ab4940f81cdfd88a17fad510ac8041458',1,'HepLib::SD::ErrMin']]],
   ['minimize_343',['Minimize',['../class_hep_lib_1_1_s_d_1_1_minimize_base.html#a0373a9e0c245307e0a5663815a0354bb',1,'HepLib::SD::MinimizeBase::Minimize()'],['../class_hep_lib_1_1_s_d_1_1_hooke_jeeves.html#a050d13c511f195f58c9054513b2e2848',1,'HepLib::SD::HookeJeeves::Minimize()'],['../class_hep_lib_1_1_s_d_1_1_min_uit.html#aa847fb56f338471e7c8a6bcb28cd313a',1,'HepLib::SD::MinUit::Minimize()']]],

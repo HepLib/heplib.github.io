@@ -11,10 +11,10 @@ var searchData=
   ['pm_5fout_1177',['pm_out',['../class_hep_lib_1_1_process.html#a9356062d9dd559ed4e6d1c28d73291d7',1,'HepLib::Process']]],
   ['polerequested_1178',['PoleRequested',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#ac7753fb3756bcbe66f2e49d2cdce09a5',1,'HepLib::SD::SecDec']]],
   ['pos_5fpref_1179',['pos_pref',['../class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#a87fdc14acbae1892195fc58cb99157c1',1,'HepLib::IBP::FIRE']]],
-  ['prefactor_1180',['Prefactor',['../struct_hep_lib_1_1_feynman_parameter.html#a166225c54c7f6989ecddc1fecbb45f43',1,'HepLib::FeynmanParameter::Prefactor()'],['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a6bd69537ca994712dec87af18c0c59dc',1,'HepLib::SD::FeynmanParameter::Prefactor()']]],
+  ['prefactor_1180',['Prefactor',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a6bd69537ca994712dec87af18c0c59dc',1,'HepLib::SD::FeynmanParameter']]],
   ['printhooker_1181',['PrintHooker',['../class_hep_lib_1_1_s_d_1_1_h_cubature.html#a439e30eb47d2c88cc9cf9d4ab1fb237d',1,'HepLib::SD::HCubature']]],
   ['problemdimension_1182',['ProblemDimension',['../class_hep_lib_1_1_i_b_p_1_1_f_i_r_e.html#a2f7a8895b8297046058e510775a8e64e',1,'HepLib::IBP::FIRE']]],
   ['problemnumber_1183',['ProblemNumber',['../class_hep_lib_1_1_i_b_p_1_1_base.html#ac2efa066a938244ab89e527016619acf',1,'HepLib::IBP::Base']]],
   ['prompt_1184',['Prompt',['../class_hep_lib_1_1_form.html#a9b5067f611112288231665b14e76c41a',1,'HepLib::Form']]],
-  ['propagators_1185',['Propagators',['../class_hep_lib_1_1_i_b_p_1_1_base.html#a93b40c6cfc023bb15d1a6c9bb3f25e6a',1,'HepLib::IBP::Base::Propagators()'],['../struct_hep_lib_1_1_feynman_parameter.html#a8b4e8e116ad397f2044ba847b4f05742',1,'HepLib::FeynmanParameter::Propagators()'],['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a263e2b75f2193ff5db76a2db6bd80cab',1,'HepLib::SD::FeynmanParameter::Propagators()']]]
+  ['propagators_1185',['Propagators',['../class_hep_lib_1_1_i_b_p_1_1_base.html#a93b40c6cfc023bb15d1a6c9bb3f25e6a',1,'HepLib::IBP::Base::Propagators()'],['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a263e2b75f2193ff5db76a2db6bd80cab',1,'HepLib::SD::FeynmanParameter::Propagators()']]]
 ];

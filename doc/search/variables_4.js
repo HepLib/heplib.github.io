@@ -11,7 +11,7 @@ var searchData=
   ['err_5fmin_1083',['err_min',['../class_hep_lib_1_1_s_d_1_1_err_min.html#af5b2d29742415cf266acb24aca8fbb75',1,'HepLib::SD::ErrMin']]],
   ['errcolor_1084',['ErrColor',['../namespace_hep_lib.html#a965274fd2f9a42e1e6d08515334e45f6',1,'HepLib']]],
   ['exit_1085',['Exit',['../class_hep_lib_1_1_s_d_1_1_hooke_jeeves.html#ad7fd9fa5e5e4a6870fd017bef1c09dd5',1,'HepLib::SD::HookeJeeves']]],
-  ['exponents_1086',['Exponents',['../class_hep_lib_1_1_x_integral.html#ae5b91976d382b2e54e7ac3deda9fad92',1,'HepLib::XIntegral::Exponents()'],['../struct_hep_lib_1_1_feynman_parameter.html#aadbc55d21e579676e0f365027f2df615',1,'HepLib::FeynmanParameter::Exponents()'],['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a28eb9ced2c59608f08cbada7e7012bdd',1,'HepLib::SD::FeynmanParameter::Exponents()'],['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#ab8d8f4a98be1d5bba8af862cd92684f9',1,'HepLib::SD::XIntegrand::Exponents()']]],
+  ['exponents_1086',['Exponents',['../class_hep_lib_1_1_x_integral.html#ae5b91976d382b2e54e7ac3deda9fad92',1,'HepLib::XIntegral::Exponents()'],['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a28eb9ced2c59608f08cbada7e7012bdd',1,'HepLib::SD::FeynmanParameter::Exponents()'],['../struct_hep_lib_1_1_s_d_1_1_x_integrand.html#ab8d8f4a98be1d5bba8af862cd92684f9',1,'HepLib::SD::XIntegrand::Exponents()']]],
   ['expresult_1087',['expResult',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#ad921f0db320b81c875f5d8cd4432ed2c',1,'HepLib::SD::SecDec']]],
   ['external_1088',['External',['../class_hep_lib_1_1_i_b_p_1_1_base.html#a457d7d643742e914b15fa7eb30b971f8',1,'HepLib::IBP::Base']]]
 ];

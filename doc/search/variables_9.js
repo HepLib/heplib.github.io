@@ -10,8 +10,8 @@ var searchData=
   ['laststate_1127',['LastState',['../class_hep_lib_1_1_s_d_1_1_h_cubature.html#a6d82fd6729945e3da9a4dff1b3ea716d',1,'HepLib::SD::HCubature']]],
   ['lib_5fflags_1128',['LIB_FLAGS',['../namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98',1,'HepLib']]],
   ['linetex_1129',['LineTeX',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html#a914a5bbf4a97096c11894dc180b8e562',1,'HepLib::FC::Qgraf']]],
-  ['loopmomenta_1130',['LoopMomenta',['../struct_hep_lib_1_1_feynman_parameter.html#ae349c74119fb724ddd27270ee7c7c242',1,'HepLib::FeynmanParameter::LoopMomenta()'],['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a3db16e02850fb466e15dd816783ee8b0',1,'HepLib::SD::FeynmanParameter::LoopMomenta()']]],
+  ['loopmomenta_1130',['LoopMomenta',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a3db16e02850fb466e15dd816783ee8b0',1,'HepLib::SD::FeynmanParameter']]],
   ['loopprefix_1131',['LoopPrefix',['../class_hep_lib_1_1_f_c_1_1_qgraf_1_1_process.html#ae46394dee78a92cc7dc7dbfb09206385',1,'HepLib::FC::Qgraf::Process']]],
   ['loops_1132',['Loops',['../class_hep_lib_1_1_f_c_1_1_qgraf_1_1_process.html#ad467759954d6b2e61f5b08fc52a68f7b',1,'HepLib::FC::Qgraf::Process']]],
-  ['lreplacements_1133',['lReplacements',['../struct_hep_lib_1_1_feynman_parameter.html#ad1f87d405783b807ddfa557183ccbd3a',1,'HepLib::FeynmanParameter::lReplacements()'],['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a02a773582d956c381941e04a158788a8',1,'HepLib::SD::FeynmanParameter::lReplacements()']]]
+  ['lreplacements_1133',['lReplacements',['../struct_hep_lib_1_1_s_d_1_1_feynman_parameter.html#a02a773582d956c381941e04a158788a8',1,'HepLib::SD::FeynmanParameter']]]
 ];
