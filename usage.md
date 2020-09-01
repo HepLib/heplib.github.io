@@ -1,5 +1,3 @@
-Examples of HepLib
-===
 
 Usage within C++
 ------
