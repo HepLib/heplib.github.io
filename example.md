@@ -6,6 +6,16 @@ heplib++ -o form form.cpp
 ./form
 ```
 
+Examples @ GiNaC
+----------
++ [iFermat.cpp](examples/GiNaC/iFermat.cpp.md)
++ [iForm.cpp](examples/GiNaC/iForm.cpp.md)
++ [qgraf.cpp](examples/GiNaC/qgraf.cpp.md)
++ [TIR.cpp](examples/GiNaC/TIR.cpp.md)
++ [apart.cpp](examples/GiNaC/fapartorm.cpp.md)
++ [fire.cpp](examples/GiNaC/fire.cpp.md)
++ [KIRA.cpp](examples/GiNaC/KIRA.cpp.md)
+
 Examples @ FC
 ----------
 + [iFermat.cpp](examples/FC/iFermat.cpp.md)
