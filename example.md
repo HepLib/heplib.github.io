@@ -17,5 +17,15 @@ Examples @ FC
 + [KIRA.cpp](examples/FC/KIRA.cpp.md)
 
 
+Examples @ SD
+----------
++ [iFermat.cpp](examples/SD/iFermat.cpp.md)
++ [iForm.cpp](examples/SD/iForm.cpp.md)
++ [qgraf.cpp](examples/SD/qgraf.cpp.md)
++ [TIR.cpp](examples/SD/TIR.cpp.md)
++ [apart.cpp](examples/SD/fapartorm.cpp.md)
++ [fire.cpp](examples/SD/fire.cpp.md)
++ [KIRA.cpp](examples/SD/KIRA.cpp.md)
+
 
 
