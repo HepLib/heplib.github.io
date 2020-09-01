@@ -6,7 +6,7 @@ heplib++ -o form form.cpp
 ./form
 ```
 
-FC
+Examples @ FC
 ----------
 + [qgraf.cpp](examples/qgraf.md)
 + [form.cpp](examples/form.md)
