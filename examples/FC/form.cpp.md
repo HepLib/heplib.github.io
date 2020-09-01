@@ -1,4 +1,3 @@
-
 ```cpp
 #include "HepLib.h"
 
@@ -59,8 +58,8 @@ int main() {
     cout << "LC case: " << exfactor(form(e10)) << endl;
     cout << endl;
 
+    
+    
     return 0;
 }
 ```
-
-
