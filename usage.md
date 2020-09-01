@@ -31,7 +31,7 @@ export PATH=<HepLib Install Path>/bin:$PATH
  ```bash
  export LD_LIBRARY_PATH=<HepLib Install Path>/lib:$LD_LIBRARY_PATH
  ```
- We can compile the [hello.cpp](examples/hello.cpp.md) and run it like this:
+ We can compile the [hello.cpp](examples/hello.cpp) and run it like this:
 ```bash
 $ heplib++ -o hello hello.cpp 
 $ ./ hello
