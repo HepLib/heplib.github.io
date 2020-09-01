@@ -1,6 +1,10 @@
 Examples
+===
+
+examples/FC
 ----------
-  * exmaple using `form` [`form.cpp`](examples/form.md)
+    + [qgraf.cpp](examples/qgraf.md)
+    + [form.cpp](examples/form.md)
 
 
 
