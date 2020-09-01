@@ -1,7 +1,9 @@
 
 Usage within C++
 ------
-The usage of **HepLib** is similar to other `C++` library by including the proper header files in the `C++` source code, compiling the program and linking with HepLib and other necessary libraries. The following code shows how to perform the D-dimensional trace on a Dirac-γ chain ![](img/tr.png) and print the resutl at end:
+The usage of **HepLib** is similar to other `C++` library by including the proper header files in the `C++` source code, compiling the program and linking with HepLib and other necessary libraries. The following code shows how to perform the D-dimensional trace on a Dirac-γ chain:
+
+![](img/tr.png) 
 
 Assuming the `<HepLib Install Path>/bin` is added to the environment variable `PATH` , if not please run 
 ```bash
