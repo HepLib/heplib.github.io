@@ -8,13 +8,13 @@ heplib++ -o form form.cpp
 
 Examples @ FC
 ----------
-+ [iFermat.cpp](examples/iFermat.cpp.md)
-+ [iForm.cpp](examples/iForm.cpp.md)
-+ [qgraf.cpp](examples/qgraf.cpp.md)
-+ [TIR.cpp](examples/TIR.cpp.md)
-+ [apart.cpp](examples/fapartorm.cpp.md)
-+ [fire.cpp](examples/fire.cpp.md)
-+ [KIRA.cpp](examples/KIRA.cpp.md)
++ [iFermat.cpp](examples/FC/iFermat.cpp.md)
++ [iForm.cpp](examples/FC/iForm.cpp.md)
++ [qgraf.cpp](examples/FC/qgraf.cpp.md)
++ [TIR.cpp](examples/FC/TIR.cpp.md)
++ [apart.cpp](examples/FC/fapartorm.cpp.md)
++ [fire.cpp](examples/FC/fire.cpp.md)
++ [KIRA.cpp](examples/FC/KIRA.cpp.md)
 
 
 
