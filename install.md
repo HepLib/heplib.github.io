@@ -1,5 +1,7 @@
 Installation of HepLib
 ===
+**HepLib** uses a few external routines or libraries, one needs to install these requried libraries before the installation of **HepLib**. A install script is provided for automatica installation of these required libraries and **HepLib** itself, one can also install the external libraries and binary programs mannually.
+
 Using the install script
 ---
 The shell script [install.sh](install.sh) can be used in install the external libraries and **HepLib**, by typing the commands in the terminal:
