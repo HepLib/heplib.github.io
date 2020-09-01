@@ -2,7 +2,7 @@ Installation of HepLib
 ===
 **HepLib** uses a few external routines or libraries, one needs to install these requried libraries before the installation of **HepLib**. A install script is provided for automatica installation of these required libraries and **HepLib** itself, one can also install the external libraries and binary programs, and compile **HepLib** mannually.
 
-Using the install script
+Install Script
 ---
 The shell script [install.sh](install.sh) can be used in install the external libraries and **HepLib**, by typing the commands in the terminal:
 ```bash
@@ -12,7 +12,7 @@ prefix=<Install Path> jn=16 ./install.sh
 ```
 `<Install Path>` refers to the path for the libraries to be installed to, and `jn` is the number of jobs used in `make -j $jn`.
 
-Install external libraries
+External Libraries
 ---
 + **GiNaC**: the underlying language of **HepLib**, which is used for symbolic operations and can be download from [https://www.ginac.de](https://www.ginac.de), and its prerequisite **CLN** can be download from [https://www.ginac.de/CLN/](https://www.ginac.de/CLN/).
 + **Qgraf**: the version 3.1.4 has been included in **HepLib**, which can be download form [http://cfif.ist.utl.pt/~paulo/qgraf.html](http://cfif.ist.utl.pt/~paulo/qgraf.html).
@@ -20,7 +20,7 @@ Install external libraries
 + **MinUit2**: it is used to find the minimum of a function, avaiable on [http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/](http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/).
 + **CUBA**: it is one of the numerical integrators and can be download from [http://www.feynarts.de/cuba/](http://www.feynarts.de/cuba/), note that the version with quadruple precision **libcubaq** will be used, by adding the option `--with--real=16 CFLAGS="--fPIC" CXXFLAGS="--fPIC"` to the `configure` script.
     
-Install external binary programs
+External binary Programs
 ---
 It is only required that the binary programs can found in the environment variable `PATH`.
 
