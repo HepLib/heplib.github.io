@@ -1,4 +1,4 @@
-Install of HepLib
+Install HepLib
 ------
 * Using the [install.sh](install.sh) script
 
@@ -10,5 +10,6 @@ prefix=<Install Path> jn=16 ./install.sh
 * Install external libraries:
     + **GiNaC**: the underlying language of **HepLib**, which is used for symbolic operations and can be download from [https://www.ginac.de](https://www.ginac.de), and its prerequisite **CLN** can be download from [https://www.ginac.de/CLN/](https://www.ginac.de/CLN/)
     + **Qgraf**: the version 3.1.4 has been included in **HepLib**, which can be download form [http://cfif.ist.utl.pt/~paulo/qgraf.html](http://cfif.ist.utl.pt/~paulo/qgraf.html)
+    + **QHull**: it is available on[http://www.qhull.org](http://www.qhull.org)
     
 
