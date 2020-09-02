@@ -25,9 +25,6 @@ int main() {
     cout << "series up to O(s^3):" << endl;
     cout << ex_s3 << endl;
     cout << endl;
-    
-
-
 
 }
 
