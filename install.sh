@@ -101,7 +101,7 @@ if [ $install_cuba == 'yes' ]; then
     fi
     tar zxf $pkg.tar.gz
     cd $pkg
-    ./configure --prefix=$prefix --with-real=16 CFLAGS="-fPIC" CXXFLAGS="-fPIC"
+    ./configure --prefix=$prefix --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon"
     make
     make install
     cd $CWD
@@ -145,7 +145,8 @@ if [ $install_heplib == 'yes' ]; then
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate https://heplib.github.io/HepLib.tar.gz
     fi
-    tar zxfv $pkg.tar.gz
+    rm -rf HepLib examples
+    tar zxf $pkg.tar.gz
     cd $pkg
     mkdir build && cd build
     cmake -DCMAKE_INSTALL_PREFIX=$prefix ..
@@ -166,10 +167,11 @@ if [ $install_fermat == 'yes' ]; then
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate http://home.bway.net/lewis/fermat64/$pkg.tar.gz
     fi
-    tar zxfv $pkg.tar.gz
-    mv $pkg "$prefix/"
+    tar zxf $pkg.tar.gz
+    rm -rf $prefix/$pkg
+    mv $pkg $prefix/
     cd "$prefix/bin"
-    ln -s ../$pkg/fer64 .
+    ln -s -f ../$pkg/fer64 .
     cd $CWD
 fi
 
@@ -184,7 +186,7 @@ if [ $install_form == 'yes' ]; then
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate https://github.com/vermaseren/form/releases/download/v4.2.1/$pkg.tar.gz
     fi
-    tar zxfv $pkg.tar.gz
+    tar zxf $pkg.tar.gz
     cp -rf $pkg/form "$prefix/bin/"
     cp -rf $pkg/tform "$prefix/bin/"
     rm -rf $pkg
