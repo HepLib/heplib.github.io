@@ -2,8 +2,6 @@
 
 [Home](index.md)
 
-[Releases](release.md)
-
 [Docs]()
 
   * [Installation](install.md)
@@ -14,3 +12,4 @@
   
   * [Document](doc/)
 
+[Releases](release.md)
