@@ -1,3 +1,5 @@
 {
-    "title": "HepLib project"
+    title: "HepLib project",
+    additionalFooterText: "All content and images &copy; by John Doe",
+    "anchorCharacter": "#"
 }
