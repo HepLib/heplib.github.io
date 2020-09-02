@@ -44,7 +44,7 @@ fi
 if [ $install_mpfr == 'yes' ]; then
     export pkg="mpfr-4.0.2"
     if [ ! -f $pkg.tar.gz ]; then
-        wget --no-check-certificate https://www.mpfr.org/mpfr-current/$pkg.tar.gz
+        wget --no-check-certificate https://heplib.github.io/download/$pkg.tar.gz
     fi
     tar zxf $pkg.tar.gz
     cd $pkg
