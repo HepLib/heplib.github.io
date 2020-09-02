@@ -1,3 +1,3 @@
 Release of HepLib
 ==========
-* Latest: [HepLib.tar.gz](/heplib.tar.gz)
+* Latest: [HepLib.tar.gz](/HepLib.tar.gz)
