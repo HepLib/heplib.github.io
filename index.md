@@ -4,9 +4,9 @@ About HepLib
   
   **HepLib** combines serval well-known packages to get the high efficiency, including 
 
-  -  **Qgraf** to generate the Feynman aptitudes.
-  -  **FORM** to perform Dirac and Color matrix related computations.
-  -  **FIRE** or **KIRA** for the IBP (Integration by Parts) reduction. 
+  -  **Qgraf** to generate the `Feynman` aptitudes/diagrams.
+  -  **FORM** to perform `Dirac` and `Color` matrix related computations.
+  -  **FIRE** or **KIRA** for the `IBP` reduction. 
   
 Another core feature of **HepLib** is the numerical evaluation of *Master Integrals* using *sector decomposition* with a customizable numerical integrator including the `arbitrary` precision supported by **MPFR**.
   
