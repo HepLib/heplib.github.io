@@ -25,7 +25,7 @@ External Libraries
 
 + **MinUit2**: it is used to find the minimum of a function, avaiable on [http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/](http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/).
 
-+ **CUBA**: it is one of the numerical integrators and can be download from [http://www.feynarts.de/cuba/](http://www.feynarts.de/cuba/), note that the version with quadruple precision **libcubaq** will be used, by adding the option `--with--real=16 CFLAGS="--fPIC" CXXFLAGS="--fPIC"` to the `configure` script.
++ **CUBA**: it is one of the numerical integrators and can be download from [http://www.feynarts.de/cuba/](http://www.feynarts.de/cuba/), note that the version with quadruple precision **libcubaq** will be used, by adding the option `--with--real=16 CFLAGS="--fPIC -fcommon" CXXFLAGS="--fPIC -fcommon"` to the `configure` script.
     
 External binary Programs
 ---
