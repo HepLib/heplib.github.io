@@ -4,7 +4,7 @@ About HepLib
   
   HepLib combines serval well-known packages to get the high efficiency, including **Qgraf** to generate the Feynman aptitudes, **FORM** to perform Dirac and Color matrix related computations, and **FIRE** or **KIRA** for the IBP (Integration by Parts) reduction. 
   
-  Another core feature of **HepLib** is the numerical evaluation of Master Integrals using sector decomposition, which is a general method widely used in the high-order numerical computation and has been implemented in many public packages in many different languages, we present another implementation in the language of `C++` with many new features. We use **GiNaC** to handle the symbolic operations, and export the corresponding integrand into an optimized `C++` code, that will be compiled internally and linked dynamically, a customizable numerical integrator is chosen to perform the numerical integration with different float precisions, including the arbitrary precision supported by **MPFR**.
+  Another core feature of **HepLib** is the numerical evaluation of Master Integrals using sector decomposition, we present another implementation in the language of `C++` with many new features. We use **GiNaC** to handle the symbolic operations, and export the corresponding integrand into an optimized `C++` code, that will be compiled internally and linked dynamically, a customizable numerical integrator is chosen to perform the numerical integration with different float precisions, including the arbitrary precision supported by **MPFR**.
   
 Use HepLib
 ------
