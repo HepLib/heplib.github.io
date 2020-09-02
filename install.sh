@@ -18,6 +18,10 @@ export install_cuba='yes'
 export install_minuit2='yes'
 export install_qhull='yes'
 export install_heplib='yes'
+export install_fermat='yes'
+export install_form='yes'
+export install_fire='yes'
+export install_kira='yes'
 
 export CWD=$PWD
 
@@ -137,11 +141,12 @@ fi
 
 # install HepLib
 if [ $install_heplib == 'yes' ]; then
+    export pkg="HepLib"
     if [ ! -f $pkg.zip ]; then
         wget --no-check-certificate https://heplib.github.io/HepLib.tar.gz
     fi
-    tar zxfv HepLib.tar.gz
-    cd HepLib
+    tar zxfv $pkg.tar.gz
+    cd $pkg
     mkdir build && cd build
     cmake -DCMAKE_INSTALL_PREFIX=$prefix ..
     make -j $jn
@@ -149,3 +154,40 @@ if [ $install_heplib == 'yes' ]; then
     cd $CWD
     rm -rf $pkg
 fi
+
+# install Fermat
+if [ $install_fermat == 'yes' ]; then
+    uo="$(uname -s)"
+    case "${uo}" in
+        Linux*)     pkg="ferl6";;
+        Darwin*)    pkg="ferm6";;
+    esac
+    export pkg
+    if [ ! -f $pkg.tar.gz ]; then
+        wget --no-check-certificate http://home.bway.net/lewis/fermat64/$pkg.tar.gz
+    fi
+    tar zxfv $pkg.tar.gz
+    mv $pkg "$prefix/"
+    cd "$prefix/bin"
+    ln -s ../$pkg/fer64 .
+    cd $CWD
+fi
+
+# install Form
+if [ $install_form == 'yes' ]; then
+    uo="$(uname -s)"
+    case "${uo}" in
+        Linux*)     pkg="form-4.2.1-x86_64-linux";;
+        Darwin*)    pkg="form-4.2.1-x86_64-osx";;
+    esac
+    export pkg
+    if [ ! -f $pkg.tar.gz ]; then
+        wget --no-check-certificate https://github.com/vermaseren/form/releases/download/v4.2.1/$pkg.tar.gz
+    fi
+    tar zxfv $pkg.tar.gz
+    cp -rf $pkg/form "$prefix/bin/"
+    cp -rf $pkg/tform "$prefix/bin/"
+    rm -rf $pkg
+    cd $CWD
+fi
+

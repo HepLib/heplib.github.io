@@ -29,6 +29,3 @@ Examples @ SD
 + [cw.cpp](examples/SD/cw.cpp.md): examples to show the usage of `ChengWu` method.
 + [kp.cpp](examples/SD/kp.cpp.md): examples to show the usage of `KillPowers` similar to `FIESTA` package.
 + [mi_ff.cpp](examples/SD/mi_ff.cpp.md): an example to evaluate the Master Integral from `Fragmentation Functions`.
-
-
-
