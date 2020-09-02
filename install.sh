@@ -142,7 +142,7 @@ fi
 # install HepLib
 if [ $install_heplib == 'yes' ]; then
     export pkg="HepLib"
-    if [ ! -f $pkg.zip ]; then
+    if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate https://heplib.github.io/HepLib.tar.gz
     fi
     tar zxfv $pkg.tar.gz
@@ -190,4 +190,11 @@ if [ $install_form == 'yes' ]; then
     rm -rf $pkg
     cd $CWD
 fi
+
+echo ""
+echo "Installation Completed!"
+echo "You can add the following sentence to your .bashrc" 
+echo "export PATH=$prefix/bin:\$PATH"
+echo "export LD_LIBRARY_PATH=$prefix/lib:\$LD_LIBRARY_PATH"
+echo
 
