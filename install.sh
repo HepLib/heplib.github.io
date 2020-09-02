@@ -42,7 +42,7 @@ fi
 
 # install MPFR
 if [ $install_mpfr == 'yes' ]; then
-    export pkg="mpfr-4.1.0"
+    export pkg="mpfr-4.0.2"
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate https://www.mpfr.org/mpfr-current/$pkg.tar.gz
     fi
