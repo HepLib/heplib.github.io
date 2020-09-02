@@ -15,18 +15,19 @@ Examples @ FC
 + [TIR.cpp](examples/FC/TIR.cpp.md)
 + [apart.cpp](examples/FC/apart.cpp.md)
 + [fire.cpp](examples/FC/fire.cpp.md)
-+ [KIRA.cpp](examples/FC/KIRA.cpp.md)
 
 
 Examples @ SD
 ----------
-+ [iFermat.cpp](examples/SD/iFermat.cpp.md)
-+ [iForm.cpp](examples/SD/iForm.cpp.md)
-+ [qgraf.cpp](examples/SD/qgraf.cpp.md)
-+ [TIR.cpp](examples/SD/TIR.cpp.md)
-+ [apart.cpp](examples/SD/apart.cpp.md)
-+ [fire.cpp](examples/SD/fire.cpp.md)
-+ [KIRA.cpp](examples/SD/KIRA.cpp.md)
++ [cuba.cpp](examples/SD/cuba.cpp.md)
++ [hcubature.cpp](examples/SD/hcubature.cpp.md)
++ [t0.cpp](examples/SD/t0.cpp.md)
++ [t1.cpp](examples/SD/t1.cpp.md)
++ [t0.cpp](examples/SD/exp1.cpp.md)
++ [t1.cpp](examples/SD/exp2.cpp.md)
++ [cw.cpp](examples/SD/cw.cpp.md)
++ [kp.cpp](examples/SD/kp.cpp.md)
++ [mi_ff.cpp](examples/SD/mi_ff.cpp.md)
 
 
 
