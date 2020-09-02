@@ -1,4 +1,4 @@
-[Download](iFermat.cpp)
+[Download](iFermat.cpp) &emsp;  [ScreenShot](iFermat.png)
 
 ```cpp
 #include "HepLib.h"
