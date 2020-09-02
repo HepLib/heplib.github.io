@@ -23,12 +23,12 @@ Examples @ SD
 + [cuba.cpp](examples/SD/cuba.cpp.md): an example to use the numerical integrator `CUBA`
 + [hcubature.cpp](examples/SD/hcubature.cpp.md): an example to use the numerical integrator `HCubature`
 + [t0.cpp](examples/SD/t0.cpp.md): an example from `SecDec` program
-+ [t1.cpp](examples/SD/t1.cpp.md): an modified example of [t0.cpp](examples/SD/t0.cpp.md), with negative F-term.
-+ [t0.cpp](examples/SD/exp1.cpp.md)
-+ [t1.cpp](examples/SD/exp2.cpp.md)
-+ [cw.cpp](examples/SD/cw.cpp.md)
-+ [kp.cpp](examples/SD/kp.cpp.md)
-+ [mi_ff.cpp](examples/SD/mi_ff.cpp.md)
++ [t1.cpp](examples/SD/t1.cpp.md): an modified example of [t0.cpp](examples/SD/t0.cpp.md).
++ [t0.cpp](examples/SD/exp1.cpp.md): an example form `SDExpand` in `FIESTA` package.
++ [t1.cpp](examples/SD/exp2.cpp.md): an example to expand a generic parameter integral.
++ [cw.cpp](examples/SD/cw.cpp.md): examples to show the usage of `ChengWu` method.
++ [kp.cpp](examples/SD/kp.cpp.md): examples to show the usage of `KillPowers` similar to `FIESTA` package.
++ [mi_ff.cpp](examples/SD/mi_ff.cpp.md): an example to evaluate the Master Integral from `Fragmentation Functions`.
 
 
 
