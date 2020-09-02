@@ -8,7 +8,7 @@ About HepLib
   -  **FORM** to perform Dirac and Color matrix related computations.
   -  **FIRE** or **KIRA** for the IBP (Integration by Parts) reduction. 
   
-  Another core feature of **HepLib** is the numerical evaluation of *Master Integrals* using *sector decomposition* with a customizable numerical integrator the numerical integration and different float precisions, including the `arbitrary` precision supported by **MPFR**.
+  Another core feature of **HepLib** is the numerical evaluation of *Master Integrals* using *sector decomposition* with a customizable numerical integrator including the `arbitrary` precision supported by **MPFR**.
   
 Use HepLib
 ------
