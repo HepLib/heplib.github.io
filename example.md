@@ -5,7 +5,7 @@ Visit [Basic usage](usage.md) for compiling a `.cpp` to an executable program.
 
 Examples @ GiNaC
 ----------
-+ [gar.cpp](exmaples/GiNaC/gar.cpp.md): the usage of gar related functions.
++ [gar.cpp](examples/GiNaC/gar.cpp.md): the usage of gar related functions.
 + [mma.cpp](examples/GiNaC/mma.cpp.md): some functions similar to `Mathematica`.
 
 Examples @ FC
