@@ -5,6 +5,7 @@ Visit [Basic usage](usage.md) for compiling a `.cpp` to an executable program.
 
 Examples @ GiNaC
 ----------
++ [gar.cpp](exmaples/GiNaC/gar.cpp.md)
 + [mma.cpp](examples/GiNaC/mma.cpp.md)
 
 Examples @ FC
