@@ -1,4 +1,4 @@
-[Download](gar.cpp)         [ScreenShot](gar.png)
+[Download](gar.cpp) &emsp;  [ScreenShot](gar.png)
 
 ```cpp
 #include "HepLib.h"
