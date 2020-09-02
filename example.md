@@ -20,10 +20,10 @@ Examples @ FC
 
 Examples @ SD
 ----------
-+ [cuba.cpp](examples/SD/cuba.cpp.md)
-+ [hcubature.cpp](examples/SD/hcubature.cpp.md)
-+ [t0.cpp](examples/SD/t0.cpp.md)
-+ [t1.cpp](examples/SD/t1.cpp.md)
++ [cuba.cpp](examples/SD/cuba.cpp.md): an example to use the numerical integrator `CUBA`
++ [hcubature.cpp](examples/SD/hcubature.cpp.md): an example to use the numerical integrator `HCubature`
++ [t0.cpp](examples/SD/t0.cpp.md): an example from `SecDec` program
++ [t1.cpp](examples/SD/t1.cpp.md): an modified example of [t0.cpp](examples/SD/t0.cpp.md), with negative F-term.
 + [t0.cpp](examples/SD/exp1.cpp.md)
 + [t1.cpp](examples/SD/exp2.cpp.md)
 + [cw.cpp](examples/SD/cw.cpp.md)
