@@ -18,7 +18,9 @@ External Libraries
 
 + **Qgraf**: the version 3.1.4 has been included in **HepLib**, which can be download form [http://cfif.ist.utl.pt/~paulo/qgraf.html](http://cfif.ist.utl.pt/~paulo/qgraf.html).
 
-+ **MPFR**: it is used to handle the multiple precision in the numerical integration when large number cancelation occurs. MPFR needs to be compiled with the option `--enable-float128`. **GMP** is required for **MPFR**, usually it has already been installed in one’s computer. Both libraries can be obtained from GNU site. Note that the quadruple precision type `__float128` has been changed to
++ **MPFR**: it is used to handle the multiple precision in the numerical integration when large number cancelation occurs. MPFR needs to be compiled with the option `--enable-float128`. **GMP** is required for **MPFR**, usually it has already been installed in one’s computer. Both libraries can be obtained from GNU site. 
+    
+    Note:  The quadruple precision type `__float128` has been changed to
 `_Float128` since [`MPFR 4.1.0`](https://www.mpfr.org/mpfr-4.1.0/), so we prefer the version [`MPFR 4.0.2`](download/mpfr-4.0.2.tar.gz) for the moment, furthermore the [`MPFR C++`](http://www.holoborodko.com/pavel/mpfr/) wrapper is included in **HepLib** archive.
 
 + **QHull**: it is used for sector decompostion with geometric stratage and available on[http://www.qhull.org](http://www.qhull.org).
