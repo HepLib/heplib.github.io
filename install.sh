@@ -193,10 +193,47 @@ if [ $install_form == 'yes' ]; then
     cd $CWD
 fi
 
+# install FIRE
+if [ $install_fire == 'yes' ]; then
+    uo="$(uname -s)"
+    case "${uo}" in
+        Linux*)     pkg="Linux";;
+        Darwin*)    pkg="MacOS";;
+    esac
+    export pkg
+    if [ $pkg == "Linux" ]; then
+        git clone https://bitbucket.org/feynmanIntegrals/fire.git
+        rm -rf $prefix/FIRE6
+        mv fire/FIRE6 $prefix/FIRE6
+        rm -rf fire
+        cd $prefix/FIRE6
+        ./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd
+        make -j $jn dep
+        make
+    fi
+    cd $CWD
+fi
+
+# install KIRA
+if [ $install_kira == 'yes' ]; then
+    uo="$(uname -s)"
+    case "${uo}" in
+        Linux*)     pkg="Linux";;
+        Darwin*)    pkg="MacOS";;
+    esac
+    export pkg
+    if [ $pkg == "Linux" ]; then
+        wget --no-check-certificate -O kira https://kira.hepforge.org/downloads?f=binaries/kira-2.0
+        chmod +x kira
+        mv -f kira "$prefix/bin/kira"
+    fi
+    cd $CWD
+fi
+
 echo ""
 echo "Installation Completed!"
-echo "You can add the following sentence to your .bashrc" 
-echo "export PATH=$prefix/bin:\$PATH"
+echo "You can add the following sentences to your .bashrc" 
+echo "export PATH=$prefix/bin:$prefix/FIRE6/bin:\$PATH"
 echo "export LD_LIBRARY_PATH=$prefix/lib:\$LD_LIBRARY_PATH"
 echo
 
