@@ -18,10 +18,10 @@ External Libraries
 
 + **Qgraf**: the version 3.1.4 has been included in **HepLib**, which can be download form [http://cfif.ist.utl.pt/~paulo/qgraf.html](http://cfif.ist.utl.pt/~paulo/qgraf.html).
 
-+ **MPFR**: it is used to handle the multiple precision in the numerical integration when large number cancelation occurs. MPFR needs to be compiled with the option `--enable-float128`. **GMP** is required for **MPFR**, usually it has already been installed in one’s computer. Both libraries can be obtained from GNU site. 
++ **MPFR**: it is used to handle the multiple precision in the numerical integration when large number cancelation occurs. MPFR needs to be compiled with the option **--enable-float128**. **GMP** is required for **MPFR**, usually it has already been installed in one’s computer. Both libraries can be obtained from GNU site. 
     
-    Note:  The quadruple precision type `__float128` has been changed to
-`_Float128` since [`MPFR 4.1.0`](https://www.mpfr.org/mpfr-4.1.0/), so we prefer the version [`MPFR 4.0.2`](download/mpfr-4.0.2.tar.gz) for the moment, furthermore the [`MPFR C++`](http://www.holoborodko.com/pavel/mpfr/) wrapper is included in **HepLib** archive.
+    Note:  The quadruple precision type **__float128** has been changed to
+`_Float128` since [MPFR 4.1.0](https://www.mpfr.org/mpfr-4.1.0/), so we prefer the version [MPFR 4.0.2](download/mpfr-4.0.2.tar.gz) for the moment, furthermore the [MPFR C++](http://www.holoborodko.com/pavel/mpfr/) wrapper is included in **HepLib** archive.
 
 + **QHull**: it is used for sector decompostion with geometric stratage and available on[http://www.qhull.org](http://www.qhull.org).
 
@@ -29,19 +29,19 @@ External Libraries
 
 + **CUBA**: it is one of the numerical integrators and can be download from [http://www.feynarts.de/cuba/](http://www.feynarts.de/cuba/). 
 
-    Note: The version with quadruple precision **libcubaq** is actually used, by adding the option `--with--real=16 CFLAGS="--fPIC -fcommon" CXXFLAGS="--fPIC -fcommon"` to the `configure` script.
+    Note: The version with quadruple precision **libcubaq** is actually used, by adding the option **--with--real=16 CFLAGS="--fPIC -fcommon" CXXFLAGS="--fPIC -fcommon"** to the **configure** script.
     
 External binary Programs
 ------
-It is only required that the binary programs can found in the environment variable `PATH`.
+It is only required that the binary programs can found in the environment variable **PATH**.
 
-+ **FORM**: it is used for `Dirac` and `Color` matrix trace, Lorentz index contraction, *etc.*, it can be download form [https://www.nikhef.nl/~form/](https://www.nikhef.nl/~form/).
++ **FORM**: it is used for **Dirac** and **Color** matrix trace, Lorentz index contraction, *etc.*, it can be download form [https://www.nikhef.nl/~form/](https://www.nikhef.nl/~form/).
 
 + **Fermat**: it is used form high performance matrix operation, multivariate rational polynormial simplification, *etc.*, it can be download from [http://home.bway.net/lewis/](http://home.bway.net/lewis/).
 
-+ **FIRE**: it is required for IBP reduction in `FIRE` class, it can be download from [https://bitbucket.org/feynmanIntegrals/fire/](https://bitbucket.org/feynmanIntegrals/fire/). Note that `FIRE_Path/bin` needs to be added to the environment variable `PATH`.
++ **FIRE**: it is required for IBP reduction in **FIRE** class, it can be download from [https://bitbucket.org/feynmanIntegrals/fire/](https://bitbucket.org/feynmanIntegrals/fire/). Note that `FIRE_Path/bin` needs to be added to the environment variable **PATH**.
 
-+ **KIRA**: it is required for IBP reduction in `KIRA` class, it can be download from [https://kira.hepforge.org](https://kira.hepforge.org).
++ **KIRA**: it is required for IBP reduction in **KIRA** class, it can be download from [https://kira.hepforge.org](https://kira.hepforge.org).
 
 Compilation and Installation
 ------
