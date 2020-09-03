@@ -10,7 +10,7 @@ wget https://heplib.github.io/install.sh
 chmod +x install.sh
 prefix=<Install Path> jn=16 ./install.sh
 ```
-`<Install Path>` refers to the path for the libraries to be installed to, and `jn` is the number of jobs used in `make -j $jn`.
+**<Install Path>** refers to the path for the libraries to be installed to, and **jn** is the number of jobs used in *make -j $jn*.
 
 External Libraries
 ------
@@ -21,7 +21,7 @@ External Libraries
 + **MPFR**: it is used to handle the multiple precision in the numerical integration when large number cancelation occurs. MPFR needs to be compiled with the option **--enable-float128**. **GMP** is required for **MPFR**, usually it has already been installed in one’s computer. Both libraries can be obtained from GNU site. 
     
     Note:  The quadruple precision type **__float128** has been changed to
-`_Float128` since [MPFR 4.1.0](https://www.mpfr.org/mpfr-4.1.0/), so we prefer the version [MPFR 4.0.2](download/mpfr-4.0.2.tar.gz) for the moment, furthermore the [MPFR C++](http://www.holoborodko.com/pavel/mpfr/) wrapper is included in **HepLib** archive.
+**_Float128** since [MPFR 4.1.0](https://www.mpfr.org/mpfr-4.1.0/), so we prefer the version [MPFR 4.0.2](download/mpfr-4.0.2.tar.gz) for the moment, furthermore the [MPFR C++](http://www.holoborodko.com/pavel/mpfr/) wrapper is included in **HepLib** archive.
 
 + **QHull**: it is used for sector decompostion with geometric stratage and available on[http://www.qhull.org](http://www.qhull.org).
 
@@ -57,7 +57,7 @@ mkdir build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=<Install Path> .. 
 make -j 4 && make install
 ```
-where the standard cmake variable `CMAKE_INSTALL_PREFIX` refers to the directory to which HepLib will be installed, i.e., the library libHepLib.so (the file name may be system dependent) will be installed to `<Install Path>/lib`, the related C++ header files, including `HepLib.h`, `FC.h`, `SD.h`, etc., will be installed to `<Install Path>/include`, and the binary programs, including `heplib++`, `garview`, *etc.*, will be installed to `<Install Path>/bin`.
+where the standard cmake variable **CMAKE_INSTALL_PREFIX** refers to the directory to which HepLib will be installed, i.e., the library libHepLib.so (the file name may be system dependent) will be installed to **<Install Path>/lib**, the related C++ header files, including *HepLib.h*, *FC.h*, *SD.h*, *etc.*, will be installed to **<Install Path>/include**, and the binary programs, including *heplib++*, *garview*, *etc.*, will be installed to **<Install Path>/bin**.
 
 Hint: If **GiNaC** or other dependent external library is not installed to **CMAKE_INSTALL_PREFIX**, the user needs to specify the locations by supplying the variables **INC_PATH** and **LIB_PATH** in the cmake arguments as:
 ```bash
