@@ -35,7 +35,7 @@ External binary Programs
 ------
 It is only required that the binary programs can found in the environment variable **PATH**.
 
-+ **FORM**: it is used for **Dirac** and **Color** matrix trace, Lorentz index contraction, *etc.*, it can be download form [https://www.nikhef.nl/~form/](https://www.nikhef.nl/~form/).
++ **FORM**: it is used for **Dirac** and **Color** matrix trace, Lorentz index contraction, *etc.*, it can be download from [https://www.nikhef.nl/~form/](https://www.nikhef.nl/~form/).
 
 + **Fermat**: it is used form high performance matrix operation, multivariate rational polynormial simplification, *etc.*, it can be download from [http://home.bway.net/lewis/](http://home.bway.net/lewis/).
 
