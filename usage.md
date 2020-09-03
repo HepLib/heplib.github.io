@@ -26,11 +26,11 @@ The above code [hello.cpp](examples/hello.cpp) shows how to perform the D-dimens
 
 Compile and Run
 ------
-Assuming the `<HepLib Install Path>/bin` is added to the environment variable `PATH` , if not please run 
+Assuming the **&lt;HepLib Install Path&gt;/bin** is added to the environment variable **PATH** , if not please run 
 ```bash
 export PATH=<HepLib Install Path>/bin:$PATH
 ```
- `<HepLib Install Path>/lib` is added to the environment variable `LD_LIBRARY_PATH`, if not please run 
+ **&lt;HepLib Install Path&gt;/lib** is added to the environment variable **LD_LIBRARY_PATH**, if not please run 
  ```bash
  export LD_LIBRARY_PATH=<HepLib Install Path>/lib:$LD_LIBRARY_PATH
  ```
