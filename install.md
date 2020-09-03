@@ -23,7 +23,7 @@ External Libraries
     Note:  The quadruple precision type **__float128** has been changed to
 **_Float128** since [MPFR 4.1.0](https://www.mpfr.org/mpfr-4.1.0/), so we prefer the version [MPFR 4.0.2](download/mpfr-4.0.2.tar.gz) for the moment, furthermore the [MPFR C++](http://www.holoborodko.com/pavel/mpfr/) wrapper is included in **HepLib** archive.
 
-+ **QHull**: it is used for sector decompostion with geometric stratage and available on[http://www.qhull.org](http://www.qhull.org).
++ **QHull**: it is used for sector decompostion with geometric stratage and available on [http://www.qhull.org](http://www.qhull.org).
 
 + **MinUit2**: it is used to find the minimum of a function, avaiable on [http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/](http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/).
 
@@ -39,7 +39,9 @@ It is only required that the binary programs can found in the environment variab
 
 + **Fermat**: it is used form high performance matrix operation, multivariate rational polynormial simplification, *etc.*, it can be download from [http://home.bway.net/lewis/](http://home.bway.net/lewis/).
 
-+ **FIRE**: it is required for IBP reduction in **FIRE** class, it can be download from [https://bitbucket.org/feynmanIntegrals/fire/](https://bitbucket.org/feynmanIntegrals/fire/). Note that `FIRE_Path/bin` needs to be added to the environment variable **PATH**.
++ **FIRE**: it is required for IBP reduction in **FIRE** class, it can be download from [https://bitbucket.org/feynmanIntegrals/fire/](https://bitbucket.org/feynmanIntegrals/fire/). 
+
+    Note: **FIRE_Path/bin** needs to be added to the environment variable **PATH**.
 
 + **KIRA**: it is required for IBP reduction in **KIRA** class, it can be download from [https://kira.hepforge.org](https://kira.hepforge.org).
 
