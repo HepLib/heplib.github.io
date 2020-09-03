@@ -4,7 +4,7 @@ Note: **HepLib** uses a few external routines or libraries, one needs to install
 
 Install Script
 ------
-The shell script [install.sh](install.sh) can be used in install the external libraries and **HepLib**, by typing the commands in the terminal:
+The shell script [install.sh](install.sh) can be used to install the external libraries and **HepLib**, by typing the commands in the terminal:
 ```bash
 wget https://heplib.github.io/install.sh 
 chmod +x install.sh
