@@ -10,7 +10,7 @@ wget https://heplib.github.io/install.sh
 chmod +x install.sh
 prefix=<Install Path> jn=16 ./install.sh
 ```
-**<Install Path>** refers to the path for the libraries to be installed to, and **jn** is the number of jobs used in *make -j $jn*.
+**&lt;Install Path&gt;** refers to the path for the libraries to be installed to, and **jn** is the number of jobs used in *make -j $jn*.
 
 External Libraries
 ------
