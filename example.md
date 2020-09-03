@@ -5,14 +5,14 @@ Hint: Visit [Usage within C++](usage.md) for compiling a *.cpp* to an executable
 
 Examples @ GiNaC
 ----------
-+ [gar.cpp](examples/GiNaC/gar.cpp.md): the usage of gar related functions.
++ [gar.cpp](examples/GiNaC/gar.cpp.md): the usage of **gar** related functions.
 + [mma.cpp](examples/GiNaC/mma.cpp.md): some functions similar to *Mathematica*.
 
 Examples @ FC
 ----------
 + [iFermat.cpp](examples/FC/iFermat.cpp.md): basic interface to **Fermat** program.
 + [iForm.cpp](examples/FC/iForm.cpp.md): basic interface to **FORM** program.
-+ [form.cpp](examples/FC/form.cpp.md): basic usage of Vector, DiracGamma and SUNT, running with  **FORM** program.
++ [form.cpp](examples/FC/form.cpp.md): basic usage of *Vector*, *DiracGamma* and *SUNT* running with  **FORM** program.
 + [qgraf.cpp](examples/FC/qgraf.cpp.md): a complete example to use **qgraf** program.
 + [TIR.cpp](examples/FC/TIR.cpp.md): an example to show the *Tensor Index Reduction*. 
 + [apart.cpp](examples/FC/apart.cpp.md): an example to show the *Partial Fractions*.
