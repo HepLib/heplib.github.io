@@ -59,7 +59,7 @@ mkdir build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=<Install Path> .. 
 make -j 4 && make install
 ```
-where the standard cmake variable **CMAKE_INSTALL_PREFIX** refers to the directory to which HepLib will be installed, i.e., the library libHepLib.so (the file name may be system dependent) will be installed to **<Install Path>/lib**, the related C++ header files, including *HepLib.h*, *FC.h*, *SD.h*, *etc.*, will be installed to **<Install Path>/include**, and the binary programs, including *heplib++*, *garview*, *etc.*, will be installed to **<Install Path>/bin**.
+where the standard cmake variable **CMAKE_INSTALL_PREFIX** refers to the directory to which HepLib will be installed, i.e., the library libHepLib.so (the file name may be system dependent) will be installed to **&lt;Install Path&gt;/lib**, the related C++ header files, including *HepLib.h*, *FC.h*, *SD.h*, *etc.*, will be installed to **&lt;Install Path&gt;/include**, and the binary programs, including *heplib++*, *garview*, *etc.*, will be installed to **&lt;Install Path&gt;/bin**.
 
 Hint: If **GiNaC** or other dependent external library is not installed to **CMAKE_INSTALL_PREFIX**, the user needs to specify the locations by supplying the variables **INC_PATH** and **LIB_PATH** in the cmake arguments as:
 ```bash
