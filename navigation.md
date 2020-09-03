@@ -6,7 +6,7 @@
 
   * [Installation](install.md)
   
-  * [Basic usage](usage.md)
+  * [Usage within C++](usage.md)
   
   * [Examples](example.md)
   

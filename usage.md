@@ -1,5 +1,7 @@
-
 Usage within C++
+======
+
+Prepare C++ Code
 ------
 The usage of **HepLib** is similar to other `C++` library by including the proper header files in the `C++` source code, compiling the program and linking with HepLib and other necessary libraries. 
 
@@ -23,6 +25,9 @@ The above code [hello.cpp](examples/hello.cpp) shows how to perform the D-dimens
 
 ![](img/tr.png) 
 
+
+Compile and Run
+------
 Assuming the `<HepLib Install Path>/bin` is added to the environment variable `PATH` , if not please run 
 ```bash
 export PATH=<HepLib Install Path>/bin:$PATH
