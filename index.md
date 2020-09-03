@@ -4,9 +4,9 @@ HepLib Project
 
 About HepLib
 ------------
-  **HepLib** is a C++ library for computations in *High Energy Physics* the underlying core language is *GiNaC*, which is also a *C++* library used to perform symbolic computations. 
+  **HepLib** is a C++ library for computations in *High Energy Physics* with the help of *GiNaC* language which is a *C++* library used to perform symbolic computations. 
   
-  **HepLib** combines serval well-known packages to get the high efficiency, including 
+  **HepLib** combines serval well-known packages to get high efficiency, including 
 
   -  **Qgraf** to generate the *Feynman* aptitudes/diagrams.
   -  **FORM** to perform *Dirac* and *Color* matrix related computations.
