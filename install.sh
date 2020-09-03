@@ -235,6 +235,7 @@ fi
 echo ""
 echo "Installation Completed!"
 echo "You can add the following sentences to your .bashrc" 
+echo ""
 echo "export PATH=$prefix/bin:$prefix/FIRE6/bin:\$PATH"
 echo "export LD_LIBRARY_PATH=$prefix/lib:\$LD_LIBRARY_PATH"
 echo
