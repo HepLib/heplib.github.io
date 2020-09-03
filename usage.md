@@ -1,10 +1,9 @@
 Usage within C++
 ======
+The usage of **HepLib** is similar to other *C++* library by including the proper header files in the *C++* source code, compiling the program and linking with *HepLib* and other necessary libraries. 
 
-Prepare C++ Code
+Prepare the C++ Code
 ------
-The usage of **HepLib** is similar to other `C++` library by including the proper header files in the `C++` source code, compiling the program and linking with HepLib and other necessary libraries. 
-
 ```cpp
 #include "HepLib.h"
 using namespace HepLib;
@@ -20,7 +19,6 @@ int main(int argc, char** argv) {
     return 0;
 }
 ```
-
 The above code [hello.cpp](examples/hello.cpp) shows how to perform the D-dimensional trace on a Dirac-γ chain:
 
 ![](img/tr.png) 
