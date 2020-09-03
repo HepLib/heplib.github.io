@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
     return 0;
 }
 ```
-The above code [hello.cpp](examples/hello.cpp) shows how to perform the D-dimensional trace on a Dirac-γ chain:
+The above code [hello.cpp](examples/hello.cpp) shows how to perform the D-dimensional trace on a Dirac-&#x1D6FE; chain:
 
 ![](img/tr.png) 
 
