@@ -1,6 +1,6 @@
 Installation of HepLib
 ======
-Note: **HepLib** uses a few external routines or libraries, one needs to install these required libraries before the installation of **HepLib**. An install script is provided for automatic installation of these required libraries and **HepLib** itself, one can also install the external libraries and binary programs, and compile **HepLib** manually.
+Note: **HepLib** uses a few external routines or libraries, one needs to install these required libraries before the installation of **HepLib**. An install script is provided for automatic installation of these required libraries and **HepLib** itself, one can also install the external libraries and binary programs and compile **HepLib** manually.
 
 Install Script
 ------
@@ -10,11 +10,11 @@ wget https://heplib.github.io/install.sh
 chmod +x install.sh
 prefix=<Install Path> jn=16 ./install.sh
 ```
-**&lt;Install Path&gt;** refers to the path for the libraries to be installed to, and **jn** is the number of jobs used in *make -j $jn*.
+**&lt;Install Path&gt;** refers to the path for the libraries to be installed to, **jn** is the number of jobs used in *make -j $jn*.
 
 External Libraries
 ------
-+ **GiNaC**: the underlying language of **HepLib**, which is used for symbolic operations and can be download from [https://www.ginac.de](https://www.ginac.de), and its prerequisite **CLN** can be download from [https://www.ginac.de/CLN/](https://www.ginac.de/CLN/).
++ **GiNaC**: the underlying language of **HepLib**, which is used for symbolic operations and can be download from [https://www.ginac.de](https://www.ginac.de), its prerequisite **CLN** can be download from [https://www.ginac.de/CLN/](https://www.ginac.de/CLN/).
 
 + **Qgraf**: the version 3.1.4 has been included in **HepLib**, which can be download from [http://cfif.ist.utl.pt/~paulo/qgraf.html](http://cfif.ist.utl.pt/~paulo/qgraf.html).
 
@@ -59,7 +59,7 @@ mkdir build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=<Install Path> .. 
 make -j 4 && make install
 ```
-where the standard cmake variable **CMAKE_INSTALL_PREFIX** refers to the directory to which HepLib will be installed, i.e., the library *libHepLib.so* (the file name may be system dependent) will be installed to **&lt;Install Path&gt;/lib**, the related *C++* header files, including *HepLib.h*, *FC.h*, *SD.h*, *etc.*, will be installed to **&lt;Install Path&gt;/include**, and the *binary programs*, including *heplib++*, *garview*, *etc.*, will be installed to **&lt;Install Path&gt;/bin**.
+where the standard cmake variable **CMAKE_INSTALL_PREFIX** refers to the directory to which HepLib will be installed, i.e., the library *libHepLib.so* (the file name may be system dependent) will be installed to **&lt;Install Path&gt;/lib**, the related *C++* header files, including *HepLib.h*, *FC.h*, *SD.h*, *etc.*, will be installed to **&lt;Install Path&gt;/include**, the *binary programs*, including *heplib++*, *garview*, *etc.*, will be installed to **&lt;Install Path&gt;/bin**.
 
 Hint: If **GiNaC** or other dependent external library is not installed to **CMAKE_INSTALL_PREFIX**, the user needs to specify the locations by supplying the variables **INC_PATH** and **LIB_PATH** in the cmake arguments as:
 ```bash
