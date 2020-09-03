@@ -16,7 +16,7 @@ External Libraries
 ------
 + **GiNaC**: the underlying language of **HepLib**, which is used for symbolic operations and can be download from [https://www.ginac.de](https://www.ginac.de), and its prerequisite **CLN** can be download from [https://www.ginac.de/CLN/](https://www.ginac.de/CLN/).
 
-+ **Qgraf**: the version 3.1.4 has been included in **HepLib**, which can be download form [http://cfif.ist.utl.pt/~paulo/qgraf.html](http://cfif.ist.utl.pt/~paulo/qgraf.html).
++ **Qgraf**: the version 3.1.4 has been included in **HepLib**, which can be download from [http://cfif.ist.utl.pt/~paulo/qgraf.html](http://cfif.ist.utl.pt/~paulo/qgraf.html).
 
 + **MPFR**: it is used to handle the multiple precision in the numerical integration when large number cancelation occurs. MPFR needs to be compiled with the option **--enable-float128**. **GMP** is required for **MPFR**, usually it has already been installed in one’s computer. Both libraries can be obtained from GNU site. 
     
@@ -59,7 +59,7 @@ mkdir build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=<Install Path> .. 
 make -j 4 && make install
 ```
-where the standard cmake variable **CMAKE_INSTALL_PREFIX** refers to the directory to which HepLib will be installed, i.e., the library libHepLib.so (the file name may be system dependent) will be installed to **&lt;Install Path&gt;/lib**, the related C++ header files, including *HepLib.h*, *FC.h*, *SD.h*, *etc.*, will be installed to **&lt;Install Path&gt;/include**, and the binary programs, including *heplib++*, *garview*, *etc.*, will be installed to **&lt;Install Path&gt;/bin**.
+where the standard cmake variable **CMAKE_INSTALL_PREFIX** refers to the directory to which HepLib will be installed, i.e., the library *libHepLib.so* (the file name may be system dependent) will be installed to **&lt;Install Path&gt;/lib**, the related *C++* header files, including *HepLib.h*, *FC.h*, *SD.h*, *etc.*, will be installed to **&lt;Install Path&gt;/include**, and the *binary programs*, including *heplib++*, *garview*, *etc.*, will be installed to **&lt;Install Path&gt;/bin**.
 
 Hint: If **GiNaC** or other dependent external library is not installed to **CMAKE_INSTALL_PREFIX**, the user needs to specify the locations by supplying the variables **INC_PATH** and **LIB_PATH** in the cmake arguments as:
 ```bash
