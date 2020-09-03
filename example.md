@@ -1,6 +1,6 @@
 Examples of HepLib
 ===
-Visit [Basic usage](usage.md) for compiling a `.cpp` to an executable program.
+Hint: Visit [Basic usage](usage.md) for compiling a `.cpp` to an executable program.
 
 
 Examples @ GiNaC
