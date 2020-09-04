@@ -2,6 +2,7 @@ Installation of HepLib
 ======
 Note: **HepLib** uses a few external routines or libraries, one needs to install these required libraries before the installation of **HepLib**. An install script is provided for automatic installation of these required libraries and **HepLib** itself, one can also install the external libraries and binary programs and compile **HepLib** manually.
 
+
 Install Script (All in One)
 ------
 The shell script [install.sh](install.sh) can be used to install **HepLib** as well as external libraries/programs, by typing the commands in the terminal:
@@ -12,6 +13,7 @@ prefix=<Install Path> jn=16 ./install.sh
 ```
 **&lt;Install Path&gt;** refers to the path for the libraries to be installed to, **jn** is the number of jobs used in *make -j $jn*.
 
+
 Install Makefile (All in One)
 ------
 The  [makefile](makefile.sh) can also be used to install **HepLib** as well as external libraries/programs, by typing the commands in the terminal:
@@ -21,7 +23,8 @@ make prefix=<Install Path> jn=16
 ```
 **&lt;Install Path&gt;** refers to the path for the libraries to be installed to, **jn** is the number of jobs used in *make -j $jn*.
 
-1. External Libraries
+
+External Libraries
 ------
 + **GiNaC**: the underlying language of **HepLib**, which is used for symbolic operations and can be download from [https://www.ginac.de](https://www.ginac.de), its prerequisite **CLN** can be download from [https://www.ginac.de/CLN/](https://www.ginac.de/CLN/).
 
@@ -40,7 +43,8 @@ make prefix=<Install Path> jn=16
 
     Note: The version with quadruple precision **libcubaq** is actually used, by adding the option **--with--real=16 CFLAGS="--fPIC -fcommon" CXXFLAGS="--fPIC -fcommon"** to the **configure** script.
     
-2. External binary Programs
+    
+External binary Programs
 ------
 It is only required that the binary programs can found in the environment variable **PATH**.
 
@@ -54,7 +58,8 @@ It is only required that the binary programs can found in the environment variab
 
 + **KIRA**: it is required for IBP reduction in **KIRA** class, it can be download from [https://kira.hepforge.org](https://kira.hepforge.org).
 
-3. Compilation and Installation
+
+Compilation and Installation
 ------
 One can download the most recent version of **HepLib** as a compressed archive: [HepLib.tar.gz](HepLib.tar.gz), uncompress it and change current directory into *HepLib* by the commands:
 ```bash
