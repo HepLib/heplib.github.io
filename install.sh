@@ -29,6 +29,7 @@ export CWD=$PWD
 
 # install GMP
 if [ $install_gmp == 'yes' ]; then
+    echo "Installing GMP ..."
     export pkg="gmp-6.2.0"
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate https://gmplib.org/download/gmp/$pkg.tar.gz
@@ -36,15 +37,17 @@ if [ $install_gmp == 'yes' ]; then
     rm -rf $pkg
     tar zxf $pkg.tar.gz
     cd $pkg
-    ./configure --prefix=$prefix
-    make -j $jn
-    make install
+    ./configure --prefix=$prefix > ${CWD}/log.txt
+    make -j $jn > ${CWD}/log.txt
+    make install > ${CWD}/log.txt
     cd $CWD
     rm -rf $pkg
+    echo ""
 fi
 
 # install MPFR
 if [ $install_mpfr == 'yes' ]; then
+    echo "Installing MPFR ..."
     export pkg="mpfr-4.0.2"
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate https://heplib.github.io/download/$pkg.tar.gz
@@ -53,18 +56,20 @@ if [ $install_mpfr == 'yes' ]; then
     tar zxf $pkg.tar.gz
     cd $pkg
     if [ $install_gmp == 'yes' ]; then
-        ./configure --prefix=$prefix --with-gmp=$prefix --enable-float128 --enable-thread-safe
+        ./configure --prefix=$prefix --with-gmp=$prefix --enable-float128 --enable-thread-safe > ${CWD}/log.txt
     else
-        ./configure --prefix=$prefix --enable-float128 --enable-thread-safe
+        ./configure --prefix=$prefix --enable-float128 --enable-thread-safe > ${CWD}/log.txt
     fi
-    make -j $jn
-    make install
+    make -j $jn > ${CWD}/log.txt
+    make install > ${CWD}/log.txt
     cd $CWD
     rm -rf $pkg
+    echo ""
 fi
 
 # install CLN
 if [ $install_cln == 'yes' ]; then
+    echo "Installing CLN ..."
     export pkg="cln-1.3.6"
     if [ ! -f $pkg.tar.bz2 ]; then
         wget --no-check-certificate https://www.ginac.de/CLN/$pkg.tar.bz2
@@ -73,18 +78,20 @@ if [ $install_cln == 'yes' ]; then
     tar jxf $pkg.tar.bz2
     cd $pkg
     if [ $install_gmp == 'yes' ]; then
-        ./configure --prefix=$prefix --with-gmp=$prefix
+        ./configure --prefix=$prefix --with-gmp=$prefix > ${CWD}/log.txt
     else
-        ./configure --prefix=$prefix
+        ./configure --prefix=$prefix > ${CWD}/log.txt
     fi
-    make -j $jn
-    make install
+    make -j $jn > ${CWD}/log.txt
+    make install > ${CWD}/log.txt
     cd $CWD
     rm -rf $pkg
+    echo ""
 fi
 
 # install GiNaC
 if [ $install_ginac == 'yes' ]; then
+    echo "Install GiNaC ..."
     export pkg="ginac-1.7.11"
     if [ ! -f $pkg.tar.bz2 ]; then
         wget --no-check-certificate https://www.ginac.de/$pkg.tar.bz2
@@ -93,14 +100,16 @@ if [ $install_ginac == 'yes' ]; then
     tar jxf $pkg.tar.bz2
     cd $pkg
     ./configure --prefix=$prefix PKG_CONFIG_PATH=$prefix/lib/pkgconfig
-    make -j $jn
-    make install
+    make -j $jn > ${CWD}/log.txt
+    make install > ${CWD}/log.txt
     cd $CWD
     rm -rf $pkg
+    echo ""
 fi
 
 # install CUBA
 if [ $install_cuba == 'yes' ]; then
+    echo "Install CUBA ..."
     export pkg="Cuba-4.2"
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate http://www.feynarts.de/cuba/$pkg.tar.gz
@@ -108,15 +117,17 @@ if [ $install_cuba == 'yes' ]; then
     rm -rf $pkg
     tar zxf $pkg.tar.gz
     cd $pkg
-    ./configure --prefix=$prefix --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon"
-    make
-    make install
+    ./configure --prefix=$prefix --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" > ${CWD}/log.txt
+    make > ${CWD}/log.txt
+    make install > ${CWD}/log.txt
     cd $CWD
     rm -rf $pkg
+    echo ""
 fi
 
 # install ROOT::Minuit2
 if [ $install_minuit2 == 'yes' ]; then
+    echo "Installing MinUit2 ..."
     export pkg="Minuit2-5.34.14"
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate http://www.cern.ch/mathlibs/sw/5_34_14/Minuit2/$pkg.tar.gz
@@ -124,15 +135,17 @@ if [ $install_minuit2 == 'yes' ]; then
     rm -rf $pkg
     tar zxf $pkg.tar.gz
     cd $pkg
-    ./configure --prefix=$prefix
-    make -j $jn
-    make install
+    ./configure --prefix=$prefix > ${CWD}/log.txt
+    make -j $jn > ${CWD}/log.txt
+    make install > ${CWD}/log.txt
     cd $CWD
     rm -rf $pkg
+    echo ""
 fi
 
 # install QHull
 if [ $install_qhull == 'yes' ]; then
+    echo "Installing QHull ..."
     export pkg="qhull-2020.2"
     if [ ! -f $pkg.zip ]; then
         wget --no-check-certificate http://www.qhull.org/download/$pkg.zip
@@ -142,14 +155,16 @@ if [ $install_qhull == 'yes' ]; then
     cd $pkg
     cp Makefile Makefile.bak
     cat Makefile.bak | sed "s/\/usr\/local/\$\$prefix/g" > Makefile
-    make
-    make install
+    make > ${CWD}/log.txt
+    make install > ${CWD}/log.txt
     cd $CWD
     rm -rf $pkg
+    echo ""
 fi
 
 # install Fermat
 if [ $install_fermat == 'yes' ]; then
+    echo "Installing Fermat ..."
     uo="$(uname -s)"
     case "${uo}" in
         Linux*)     pkg="ferl6";;
@@ -166,10 +181,12 @@ if [ $install_fermat == 'yes' ]; then
     cd "$prefix/bin"
     ln -s -f ../$pkg/fer64 .
     cd $CWD
+    echo ""
 fi
 
 # install Form
 if [ $install_form == 'yes' ]; then
+    echo "Install FORM ..."
     uo="$(uname -s)"
     case "${uo}" in
         Linux*)     pkg="form-4.2.1-x86_64-linux";;
@@ -184,22 +201,23 @@ if [ $install_form == 'yes' ]; then
     cp -rf $pkg/tform "$prefix/bin/"
     rm -rf $pkg
     cd $CWD
+    echo ""
 fi
 
 # install FIRE
 if [ $install_fire == 'yes' ]; then
+    echo "Installing FIRE ..."
     rm -rf fire
     git clone https://bitbucket.org/feynmanIntegrals/fire.git
     rm -rf $prefix/FIRE6
     mv fire/FIRE6 $prefix/FIRE6
     rm -rf fire
     cd $prefix/FIRE6
-    ./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd
-    make -j $jn dep
-    cp extra/lz4-*/lib/*.h usr/include/
-    cp extra/lz4-*/lib/liblz4.a usr/lib/
-    make
+    ./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd > ${CWD}/log.txt
+    make -j $jn dep > ${CWD}/log.txt
+    make > ${CWD}/log.txt
     cd $CWD
+    echo ""
 fi
 
 # install KIRA
@@ -217,10 +235,12 @@ if [ $install_kira == 'yes' ]; then
         mv -f kira "$prefix/bin/kira"
     fi
     cd $CWD
+    echo ""
 fi
 
 # install HepLib
 if [ $install_heplib == 'yes' ]; then
+    echo "Installing HepLib ..."
     export pkg="HepLib"
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate https://heplib.github.io/HepLib.tar.gz
@@ -231,9 +251,10 @@ if [ $install_heplib == 'yes' ]; then
     mkdir build && cd build
     cmake -DCMAKE_INSTALL_PREFIX=$prefix ..
     make -j $jn
-    make install
+    make install 
     cd $CWD
     rm -rf $pkg
+    echo ""
 fi
 
 echo ""

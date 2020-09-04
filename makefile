@@ -35,7 +35,8 @@ FIRE = fire
 
 CWD=$(shell pwd)
 
-.SILENT: help install
+.SILENT:
+
 help:
 	echo "usage: make prefix=<path> jn=32" ;\
 	echo "Targets:" ;\
@@ -64,24 +65,24 @@ install: INSTALL_GMP INSTALL_MPFR INSTALL_CLN INSTALL_GINAC INSTALL_CUBA INSTALL
 	echo "Installation Completed!" ;\
 	echo "You can add the following sentences to your .bashrc"  ;\
 	echo "" ;\
-	echo "export PATH=$prefix/bin:$prefix/FIRE6/bin:\$PATH" ;\
-	echo "export LD_LIBRARY_PATH=$prefix/lib:\$LD_LIBRARY_PATH" ;\
+	echo "export PATH=${prefix}/bin:${prefix}/FIRE6/bin:\$PATH" ;\
+	echo "export LD_LIBRARY_PATH=${prefix}/lib:\$LD_LIBRARY_PATH" ;\
 	echo ""
 
 INSTALL_KIRA: ${KIRA}
 	cp ${KIRA} kira ;\
 	chmod +x kira ;\
-        mv -f kira ${prefix}/bin/
+        mv -f kira ${prefix}/bin/ ;\
+	echo ""
 
 INSTALL_FIRE: ${FIRE}
 	rm -rf ${prefix}/FIRE6 ;\
-	cp -rf fire/FIRE6 $prefix/FIRE6 ;\
+	cp -rf fire/FIRE6 ${prefix}/ ;\
 	cd ${prefix}/FIRE6 ;\
-	./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd ;\
-	make -j ${jn} dep ;\
-	cp extra/lz4-*/lib/*.h usr/include/ ;\
-	cp extra/lz4-*/lib/liblz4.a usr/lib/ ;\
-	make
+	./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd 2>${CWD}/log.txt >${CWD}/log.txt;\
+	make -j ${jn} dep > ${CWD}/log.txt ;\
+	make > ${CWD}/log.txt ;\
+	echo ""
 
 INSTALL_FORM: ${FORM}
 	rm -rf ${form}
@@ -89,7 +90,8 @@ INSTALL_FORM: ${FORM}
 	cp -rf ${form}/form ${prefix}/bin/ ;\
 	cp -rf ${form}/tform ${prefix}/bin/ ;\
 	cd ${CWD} ;\
-	rm -rf ${form}
+	rm -rf ${form} ;\
+	echo ""
 
 INSTALL_Fermat: ${Fermat}
 	rm -rf ${fermat} ;\
@@ -97,11 +99,12 @@ INSTALL_Fermat: ${Fermat}
 	rm -rf ${prefix}/${fermat} ;\
 	mv ${fermat} ${prefix}/ ;\
 	cd ${prefix}/bin ;\
-	ln -s -f ../${fermat}/fer64 .
+	ln -s -f ../${fermat}/fer64 . ;\
+	echo ""
 
 INSTALL_HepLib: ${HepLib}
 	rm -rf ${heplib} examples ;\
-	tar zxfv ${HepLib} ;\
+	tar zxf ${HepLib} ;\
 	cd ${heplib} ;\
 	mkdir -p build ;\
 	cd build ;\
@@ -109,78 +112,87 @@ INSTALL_HepLib: ${HepLib}
 	make -j ${jn} ;\
 	make install ;\
 	cd ${CWD} ;\
-	rm -rf ${heplib}
+	rm -rf ${heplib} ;\
+	echo ""
 
 INSTALL_QHULL: ${QHULL}
 	rm -rf ${qhull} ;\
 	unzip ${QHULL} ;\
 	cd ${qhull} ;\
 	cp Makefile Makefile.bak ;\
-	cat Makefile.bak | sed "s/\/usr\/local/\$\$prefix/g" > Makefile ;\
-	make ;\
-	make install ;\
+	cat Makefile.bak | sed "s/\/usr\/local/$(subst /,\/,${prefix})/g" > Makefile ;\
+	make > ${CWD}/log.txt ;\
+	make install > ${CWD}/log.txt ;\
 	cd ${CWD} ;\
-	rm -rf ${qhull}
+	rm -rf ${qhull} ;\
+	echo ""
 
 INSTALL_MINUIT: ${MINUIT}
 	rm -rf ${minuit} ;\
-	tar zxfv ${MINUIT} ;\
+	tar zxf ${MINUIT} ;\
 	cd ${minuit} ;\
-	./configure --prefix=${prefix} ;\
-	make -j ${jn};\
-	make install ;\
+	./configure --prefix=${prefix} > ${CWD}/log.txt ;\
+	make -j ${jn} > ${CWD}/log.txt ;\
+	make install > ${CWD}/log.txt ;\
 	cd ${CWD} ;\
-	rm -rf ${minuit}
+	rm -rf ${minuit} ;\
+	echo ""
 
 INSTALL_CUBA: ${CUBA}
 	rm -rf ${cuba} ;\
-	tar zxfv ${CUBA} ;\
+	tar zxf ${CUBA} ;\
 	cd ${cuba} ;\
-	./configure --prefix=${prefix} --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" ;\
-	make ;\
-	make install ;\
+	./configure --prefix=${prefix} --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" > ${CWD}/log.txt ;\
+	make > ${CWD}/log.txt ;\
+	make install > ${CWD}/log.txt ;\
 	cd ${CWD} ;\
-	rm -rf ${cuba}
+	rm -rf ${cuba} ;\
+	echo ""
 
 INSTALL_GINAC: ${GINAC}
 	rm -rf ${ginac} ;\
-	tar jxfv ${GINAC} ;\
+	tar jxf ${GINAC} ;\
 	cd ${ginac} ;\
-	./configure --prefix=${prefix} PKG_CONFIG_PATH=${prefix}/lib/pkgconfig ;\
-	make -j ${jn} ;\
-	make install ;\
+	./configure --prefix=${prefix} PKG_CONFIG_PATH=${prefix}/lib/pkgconfig > ${CWD}/log.txt ;\
+	make -j ${jn} > ${CWD}/log.txt ;\
+	make install > ${CWD}/log.txt ;\
 	cd ${CWD}
-	rm -rf ${ginac}
+	rm -rf ${ginac} ;\
+	echo ""
 
 INSTALL_CLN: ${CLN}
 	rm -rf ${cln} ;\
-	tar jxfv ${CLN} ;\
+	tar jxf ${CLN} ;\
 	cd ${cln} ;\
-	./configure --prefix=${prefix} --with-gmp=${prefix} ;\
-	make -j ${jn} ;\
-	make install ;\
+	./configure --prefix=${prefix} --with-gmp=${prefix} > ${CWD}/log.txt ;\
+	make -j ${jn} > ${CWD}/log.txt ;\
+	make install > ${CWD}/log.txt ;\
 	cd ${CWD} ;\
-	rm -rf ${cln}
+	rm -rf ${cln} ;\
+	echo ""
 
 INSTALL_MPFR: ${MPFR}
 	rm -rf ${mpfr} ;\
-	tar zxfv ${MPFR} ;\
+	tar zxf ${MPFR} ;\
 	cd ${mpfr} ;\
-	./configure --prefix=${prefix} --with-gmp=${prefix} --enable-float128 --enable-thread-safe ;\
-	make -j ${jn} ;\
-	make install ;\
+	./configure --prefix=${prefix} --with-gmp=${prefix} --enable-float128 --enable-thread-safe > ${CWD}/log.txt ;\
+	make -j ${jn} > ${CWD}/log.txt ;\
+	make install > ${CWD}/log.txt ;\
 	cd ${CWD} ;\
-	rm -rf ${mpfr}
+	rm -rf ${mpfr} ;\
+	echo ""
 	
 INSTALL_GMP: ${GMP}
+	echo "Installing GMP ..."
 	rm -rf ${gmp} ;\
 	tar zxf ${GMP} ;\
 	cd ${gmp} ;\
-	./configure --prefix=${prefix} ;\
-	make -j ${jn} ;\
-	make install ;\
+	./configure --prefix=${prefix} > ${CWD}/log.txt ;\
+	make -j ${jn} > ${CWD}/log.txt ;\
+	make install > ${CWD}/log.txt ;\
 	cd ${CWD} ;\
-	rm -rf ${gmp}
+	rm -rf ${gmp} ;\
+	echo ""
 
 ${GMP} :
 	wget --no-check-certificate https://gmplib.org/download/gmp/${GMP}
@@ -217,13 +229,4 @@ ${KIRA}:
 
 ${FORM}:
 	wget https://github.com/vermaseren/form/releases/download/v4.2.1/${FORM}
-
-
-
-
-
-
-
-
-
 
