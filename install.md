@@ -21,7 +21,7 @@ The  [makefile](makefile) can also be used to install **HepLib** as well as exte
 wget https://heplib.github.io/makefile 
 make prefix=<Install Path> jn=16
 ```
-**&lt;Install Path&gt;** refers to the path for the libraries to be installed to, **jn** is the number of jobs used in *make -j $jn*.
+**&lt;Install Path&gt;** refers to the path for the libraries to be installed to, **jn** is the number of jobs used in *make -j $jn*, try *make help* for more information.
 
 
 External Libraries
