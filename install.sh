@@ -17,11 +17,13 @@ export install_ginac='yes'
 export install_cuba='yes'
 export install_minuit2='yes'
 export install_qhull='yes'
-export install_heplib='yes'
+
 export install_fermat='yes'
 export install_form='yes'
 export install_fire='yes'
 export install_kira='yes'
+
+export install_heplib='yes'
 
 export CWD=$PWD
 
@@ -146,23 +148,6 @@ if [ $install_qhull == 'yes' ]; then
     rm -rf $pkg
 fi
 
-# install HepLib
-if [ $install_heplib == 'yes' ]; then
-    export pkg="HepLib"
-    if [ ! -f $pkg.tar.gz ]; then
-        wget --no-check-certificate https://heplib.github.io/HepLib.tar.gz
-    fi
-    rm -rf HepLib examples
-    tar zxf $pkg.tar.gz
-    cd $pkg
-    mkdir build && cd build
-    cmake -DCMAKE_INSTALL_PREFIX=$prefix ..
-    make -j $jn
-    make install
-    cd $CWD
-    rm -rf $pkg
-fi
-
 # install Fermat
 if [ $install_fermat == 'yes' ]; then
     uo="$(uname -s)"
@@ -232,6 +217,23 @@ if [ $install_kira == 'yes' ]; then
         mv -f kira "$prefix/bin/kira"
     fi
     cd $CWD
+fi
+
+# install HepLib
+if [ $install_heplib == 'yes' ]; then
+    export pkg="HepLib"
+    if [ ! -f $pkg.tar.gz ]; then
+        wget --no-check-certificate https://heplib.github.io/HepLib.tar.gz
+    fi
+    rm -rf HepLib examples
+    tar zxf $pkg.tar.gz
+    cd $pkg
+    mkdir build && cd build
+    cmake -DCMAKE_INSTALL_PREFIX=$prefix ..
+    make -j $jn
+    make install
+    cd $CWD
+    rm -rf $pkg
 fi
 
 echo ""
