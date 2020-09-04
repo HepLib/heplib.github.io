@@ -142,7 +142,7 @@ INSTALL_CUBA: ${CUBA}
 	cd ${CWD} ;\
 	rm -rf ${cuba}
 
-INSTALL_GINAC: INSTALL_GMP ${GINAC}
+INSTALL_GINAC: ${GINAC}
 	rm -rf ${ginac} ;\
 	tar jxfv ${GINAC} ;\
 	cd ${ginac} ;\
@@ -152,7 +152,7 @@ INSTALL_GINAC: INSTALL_GMP ${GINAC}
 	cd ${CWD}
 	rm -rf ${ginac}
 
-INSTALL_CLN: INSTALL_GMP ${CLN}
+INSTALL_CLN: ${CLN}
 	rm -rf ${cln} ;\
 	tar jxfv ${CLN} ;\
 	cd ${cln} ;\
@@ -162,7 +162,7 @@ INSTALL_CLN: INSTALL_GMP ${CLN}
 	cd ${CWD} ;\
 	rm -rf ${cln}
 
-INSTALL_MPFR: INSTALL_GMP ${MPFR}
+INSTALL_MPFR: ${MPFR}
 	rm -rf ${mpfr} ;\
 	tar zxfv ${MPFR} ;\
 	cd ${mpfr} ;\
