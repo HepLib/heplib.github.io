@@ -33,6 +33,8 @@ heplib = $(basename $(basename ${HepLib}))
 KIRA = kira-2.0
 FIRE = fire
 
+CWD=$(shell pwd)
+
 .SILENT: help install
 help:
 	echo "usage: make prefix=<path> jn=32" ;\
@@ -86,6 +88,7 @@ INSTALL_FORM: ${FORM}
 	tar zxf ${FORM} ;\
 	cp -rf ${form}/form ${prefix}/bin/ ;\
 	cp -rf ${form}/tform ${prefix}/bin/ ;\
+	cd ${CWD} ;\
 	rm -rf ${form}
 
 INSTALL_Fermat: ${Fermat}
@@ -105,6 +108,7 @@ INSTALL_HepLib: ${HepLib}
 	cmake -DCMAKE_INSTALL_PREFIX=${prefix} .. ;\
 	make -j ${jn} ;\
 	make install ;\
+	cd ${CWD} ;\
 	rm -rf ${heplib}
 
 INSTALL_QHULL: ${QHULL}
@@ -115,6 +119,7 @@ INSTALL_QHULL: ${QHULL}
 	cat Makefile.bak | sed "s/\/usr\/local/\$\$prefix/g" > Makefile ;\
 	make ;\
 	make install ;\
+	cd ${CWD} ;\
 	rm -rf ${qhull}
 
 INSTALL_MINUIT: ${MINUIT}
@@ -124,6 +129,7 @@ INSTALL_MINUIT: ${MINUIT}
 	./configure --prefix=${prefix} ;\
 	make ;\
 	make install ;\
+	cd ${CWD} ;\
 	rm -rf ${minuit}
 
 INSTALL_CUBA: ${CUBA}
@@ -133,6 +139,7 @@ INSTALL_CUBA: ${CUBA}
 	./configure --prefix=${prefix} --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" ;\
 	make ;\
 	make install ;\
+	cd ${CWD} ;\
 	rm -rf ${cuba}
 
 INSTALL_GINAC: INSTALL_GMP ${GINAC}
@@ -151,6 +158,7 @@ INSTALL_CLN: INSTALL_GMP ${CLN}
 	./configure --prefix=${prefix} --with-gmp=${prefix} ;\
 	make -j ${jn} ;\
 	make install ;\
+	cd ${CWD} ;\
 	rm -rf ${cln}
 
 INSTALL_MPFR: INSTALL_GMP ${MPFR}
@@ -160,6 +168,7 @@ INSTALL_MPFR: INSTALL_GMP ${MPFR}
 	./configure --prefix=${prefix} --with-gmp=${prefix} --enable-float128 --enable-thread-safe ;\
 	make -j ${jn} ;\
 	make install ;\
+	cd ${CWD} ;\
 	rm -rf ${mpfr}
 	
 
@@ -170,6 +179,7 @@ INSTALL_GMP: ${GMP}
 	./configure --prefix=${prefix} ;\
 	make -j ${jn} ;\
 	make install ;\
+	cd ${CWD} ;\
 	rm -rf ${gmp}
 
 ${GMP} :
