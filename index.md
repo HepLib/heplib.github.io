@@ -14,8 +14,9 @@ About HepLib
   
 Another core feature of **HepLib** is the numerical evaluation of *Master Integrals* using *sector decomposition* with a customizable numerical integrator including the *arbitrary* precision supported by **MPFR**.
   
-Use HepLib
+Related URLs
 ------
++ [HepLib @ GitHub](https://github.com/HepLib/HepLib)
 + [How to Install HepLib](#!install.md)
 + [Basic usage of HepLib](#!usage.md)
 + [Examples using HepLib](#!example.md)
