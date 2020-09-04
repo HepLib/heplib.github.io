@@ -127,7 +127,7 @@ INSTALL_MINUIT: ${MINUIT}
 	tar zxfv ${MINUIT} ;\
 	cd ${minuit} ;\
 	./configure --prefix=${prefix} ;\
-	make ;\
+	make -j ${jn};\
 	make install ;\
 	cd ${CWD} ;\
 	rm -rf ${minuit}
