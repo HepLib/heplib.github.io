@@ -1,4 +1,4 @@
-[Download](apart.cpp) &emsp;  [ScreenShot](apart.png)
+Download: [apart.cpp](apart.cpp) &emsp;&emsp;  [ScreenShot](apart.png)
 
 ```cpp
 #include "HepLib.h"

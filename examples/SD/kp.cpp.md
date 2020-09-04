@@ -1,4 +1,4 @@
-[Download](kp.cpp) &emsp;  [ScreenShot](kp.png)
+Download: [kp.cpp](kp.cpp) &emsp;&emsp;  [ScreenShot](kp.png)
 
 ```cpp
 #include "SD.h"

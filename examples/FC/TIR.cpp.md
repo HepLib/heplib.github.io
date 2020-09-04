@@ -1,4 +1,4 @@
-[Download](TIR.cpp) &emsp;  [ScreenShot](TIR.png)
+Download: [TIR.cpp](TIR.cpp) &emsp;&emsp;  [ScreenShot](TIR.png)
 
 ```cpp
 #include "HepLib.h"

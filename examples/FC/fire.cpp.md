@@ -1,4 +1,4 @@
-[Download](fire.cpp) &emsp;  [ScreenShot](fire.png)
+Download: [fire.cpp](fire.cpp) &emsp;&emsp;  [ScreenShot](fire.png)
 
 ```cpp
 #include "HepLib.h"

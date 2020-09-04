@@ -1,4 +1,4 @@
-[Download](hcubature.cpp) &emsp;  [ScreenShot](hcubature.png)
+Download: [hcubature.cpp](hcubature.cpp) &emsp;&emsp;  [ScreenShot](hcubature.png)
 
 ```cpp
 #include "HepLib.h"

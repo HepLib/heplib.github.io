@@ -1,4 +1,4 @@
-[Download](qgraf.cpp) &emsp;  [ScreenShot](qgraf.png)
+Download: [qgraf.cpp](qgraf.cpp) &emsp;&emsp;  [ScreenShot](qgraf.png)
 
 ```cpp
 #include "HepLib.h"
