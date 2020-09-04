@@ -4,11 +4,20 @@ Note: **HepLib** uses a few external routines or libraries, one needs to install
 
 Install Script (All in One)
 ------
-The shell script [install.sh](install.sh) can be used to install the external libraries and **HepLib**, by typing the commands in the terminal:
+The shell script [install.sh](install.sh) can be used to install **HepLib** as well as external libraries/programs, by typing the commands in the terminal:
 ```bash
 wget https://heplib.github.io/install.sh 
 chmod +x install.sh
 prefix=<Install Path> jn=16 ./install.sh
+```
+**&lt;Install Path&gt;** refers to the path for the libraries to be installed to, **jn** is the number of jobs used in *make -j $jn*.
+
+Install Makefile (All in One)
+------
+The  [makefile](makefile.sh) can also be used to install **HepLib** as well as external libraries/programs, by typing the commands in the terminal:
+```bash
+wget https://heplib.github.io/makefile 
+make prefix=<Install Path> jn=16
 ```
 **&lt;Install Path&gt;** refers to the path for the libraries to be installed to, **jn** is the number of jobs used in *make -j $jn*.
 
