@@ -10,7 +10,7 @@ Examples @ GiNaC
 
 Examples @ FC
 ----------
-+ [iFermat.cpp](examples/FC/iFermat.cpp.md): basic interface to **Fermat** program (input file: [stuff](stuff)).
++ [iFermat.cpp](examples/FC/iFermat.cpp.md): basic interface to **Fermat** program.
 + [iForm.cpp](examples/FC/iForm.cpp.md): basic interface to **FORM** program.
 + [form.cpp](examples/FC/form.cpp.md): basic usage of *Vector*, *DiracGamma* and *SUNT* running with  **FORM** program.
 + [qgraf.cpp](examples/FC/qgraf.cpp.md): a complete example to use **qgraf** program.
