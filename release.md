@@ -1,3 +1,4 @@
-Release of HepLib
+Releases of HepLib
 ==========
-* Latest: [HepLib.tar.gz](/HepLib.tar.gz)
++ HepLib @ GitHub: [https://github.com/HepLib/HepLib](https://github.com/HepLib/HepLib)
++ Latest: [HepLib.tar.gz](/HepLib.tar.gz)
