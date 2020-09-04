@@ -70,21 +70,24 @@ install: INSTALL_GMP INSTALL_MPFR INSTALL_CLN INSTALL_GINAC INSTALL_CUBA INSTALL
 	echo ""
 
 INSTALL_KIRA: ${KIRA}
+	echo "Installing KIRA ..."
 	cp ${KIRA} kira ;\
 	chmod +x kira ;\
         mv -f kira ${prefix}/bin/ ;\
 	echo ""
 
 INSTALL_FIRE: ${FIRE}
+	echo "Installing FIRE ..."
 	rm -rf ${prefix}/FIRE6 ;\
 	cp -rf fire/FIRE6 ${prefix}/ ;\
 	cd ${prefix}/FIRE6 ;\
 	./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd 2>${CWD}/log.txt >${CWD}/log.txt;\
-	make -j ${jn} dep > ${CWD}/log.txt ;\
-	make > ${CWD}/log.txt ;\
+	make -j ${jn} dep >> ${CWD}/log.txt ;\
+	make >> ${CWD}/log.txt ;\
 	echo ""
 
 INSTALL_FORM: ${FORM}
+	echo "Installing FORM ..."
 	rm -rf ${form}
 	tar zxf ${FORM} ;\
 	cp -rf ${form}/form ${prefix}/bin/ ;\
@@ -94,6 +97,7 @@ INSTALL_FORM: ${FORM}
 	echo ""
 
 INSTALL_Fermat: ${Fermat}
+	echo "Installing Fermat ..."
 	rm -rf ${fermat} ;\
 	tar zxf ${Fermat} ;\
 	rm -rf ${prefix}/${fermat} ;\
@@ -103,6 +107,7 @@ INSTALL_Fermat: ${Fermat}
 	echo ""
 
 INSTALL_HepLib: ${HepLib}
+	echo "Installing HepLib ..."
 	rm -rf ${heplib} examples ;\
 	tar zxf ${HepLib} ;\
 	cd ${heplib} ;\
@@ -116,68 +121,74 @@ INSTALL_HepLib: ${HepLib}
 	echo ""
 
 INSTALL_QHULL: ${QHULL}
+	echo "Installing QHull ..."
 	rm -rf ${qhull} ;\
-	unzip ${QHULL} ;\
+	unzip -q ${QHULL} ;\
 	cd ${qhull} ;\
 	cp Makefile Makefile.bak ;\
 	cat Makefile.bak | sed "s/\/usr\/local/$(subst /,\/,${prefix})/g" > Makefile ;\
-	make > ${CWD}/log.txt ;\
-	make install > ${CWD}/log.txt ;\
+	make >> ${CWD}/log.txt ;\
+	make install >> ${CWD}/log.txt ;\
 	cd ${CWD} ;\
 	rm -rf ${qhull} ;\
 	echo ""
 
 INSTALL_MINUIT: ${MINUIT}
+	echo "Installing MinUit2 ..."
 	rm -rf ${minuit} ;\
 	tar zxf ${MINUIT} ;\
 	cd ${minuit} ;\
-	./configure --prefix=${prefix} > ${CWD}/log.txt ;\
-	make -j ${jn} > ${CWD}/log.txt ;\
-	make install > ${CWD}/log.txt ;\
+	./configure --prefix=${prefix} >> ${CWD}/log.txt ;\
+	make -j ${jn} >> ${CWD}/log.txt ;\
+	make install >> ${CWD}/log.txt ;\
 	cd ${CWD} ;\
 	rm -rf ${minuit} ;\
 	echo ""
 
 INSTALL_CUBA: ${CUBA}
+	echo "Installing CUBA ..."
 	rm -rf ${cuba} ;\
 	tar zxf ${CUBA} ;\
 	cd ${cuba} ;\
-	./configure --prefix=${prefix} --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" > ${CWD}/log.txt ;\
-	make > ${CWD}/log.txt ;\
-	make install > ${CWD}/log.txt ;\
+	./configure --prefix=${prefix} --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" >> ${CWD}/log.txt ;\
+	make >> ${CWD}/log.txt ;\
+	make install >> ${CWD}/log.txt ;\
 	cd ${CWD} ;\
 	rm -rf ${cuba} ;\
 	echo ""
 
 INSTALL_GINAC: ${GINAC}
+	echo "Installing GiNaC ..."
 	rm -rf ${ginac} ;\
 	tar jxf ${GINAC} ;\
 	cd ${ginac} ;\
-	./configure --prefix=${prefix} PKG_CONFIG_PATH=${prefix}/lib/pkgconfig > ${CWD}/log.txt ;\
-	make -j ${jn} > ${CWD}/log.txt ;\
-	make install > ${CWD}/log.txt ;\
+	./configure --prefix=${prefix} PKG_CONFIG_PATH=${prefix}/lib/pkgconfig >> ${CWD}/log.txt ;\
+	make -j ${jn} >> ${CWD}/log.txt ;\
+	make install >> ${CWD}/log.txt ;\
 	cd ${CWD}
 	rm -rf ${ginac} ;\
 	echo ""
 
 INSTALL_CLN: ${CLN}
+	echo "Installing CLN ..."
 	rm -rf ${cln} ;\
 	tar jxf ${CLN} ;\
 	cd ${cln} ;\
-	./configure --prefix=${prefix} --with-gmp=${prefix} > ${CWD}/log.txt ;\
-	make -j ${jn} > ${CWD}/log.txt ;\
-	make install > ${CWD}/log.txt ;\
+	./configure --prefix=${prefix} --with-gmp=${prefix} >> ${CWD}/log.txt ;\
+	make -j ${jn} >> ${CWD}/log.txt ;\
+	make install >> ${CWD}/log.txt ;\
 	cd ${CWD} ;\
 	rm -rf ${cln} ;\
 	echo ""
 
 INSTALL_MPFR: ${MPFR}
+	echo "Installing MPFR ..."
 	rm -rf ${mpfr} ;\
 	tar zxf ${MPFR} ;\
 	cd ${mpfr} ;\
-	./configure --prefix=${prefix} --with-gmp=${prefix} --enable-float128 --enable-thread-safe > ${CWD}/log.txt ;\
-	make -j ${jn} > ${CWD}/log.txt ;\
-	make install > ${CWD}/log.txt ;\
+	./configure --prefix=${prefix} --with-gmp=${prefix} --enable-float128 --enable-thread-safe >> ${CWD}/log.txt ;\
+	make -j ${jn} >> ${CWD}/log.txt ;\
+	make install >> ${CWD}/log.txt ;\
 	cd ${CWD} ;\
 	rm -rf ${mpfr} ;\
 	echo ""
@@ -187,9 +198,9 @@ INSTALL_GMP: ${GMP}
 	rm -rf ${gmp} ;\
 	tar zxf ${GMP} ;\
 	cd ${gmp} ;\
-	./configure --prefix=${prefix} > ${CWD}/log.txt ;\
-	make -j ${jn} > ${CWD}/log.txt ;\
-	make install > ${CWD}/log.txt ;\
+	./configure --prefix=${prefix} >> ${CWD}/log.txt ;\
+	make -j ${jn} >> ${CWD}/log.txt ;\
+	make install >> ${CWD}/log.txt ;\
 	cd ${CWD} ;\
 	rm -rf ${gmp} ;\
 	echo ""
