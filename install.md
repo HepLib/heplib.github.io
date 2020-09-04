@@ -2,7 +2,7 @@ Installation of HepLib
 ======
 Note: **HepLib** uses a few external routines or libraries, one needs to install these required libraries before the installation of **HepLib**. An install script is provided for automatic installation of these required libraries and **HepLib** itself, one can also install the external libraries and binary programs and compile **HepLib** manually.
 
-Install Script
+Install Script (All in One)
 ------
 The shell script [install.sh](install.sh) can be used to install the external libraries and **HepLib**, by typing the commands in the terminal:
 ```bash
@@ -12,7 +12,7 @@ prefix=<Install Path> jn=16 ./install.sh
 ```
 **&lt;Install Path&gt;** refers to the path for the libraries to be installed to, **jn** is the number of jobs used in *make -j $jn*.
 
-External Libraries
+1. External Libraries
 ------
 + **GiNaC**: the underlying language of **HepLib**, which is used for symbolic operations and can be download from [https://www.ginac.de](https://www.ginac.de), its prerequisite **CLN** can be download from [https://www.ginac.de/CLN/](https://www.ginac.de/CLN/).
 
@@ -31,7 +31,7 @@ External Libraries
 
     Note: The version with quadruple precision **libcubaq** is actually used, by adding the option **--with--real=16 CFLAGS="--fPIC -fcommon" CXXFLAGS="--fPIC -fcommon"** to the **configure** script.
     
-External binary Programs
+2. External binary Programs
 ------
 It is only required that the binary programs can found in the environment variable **PATH**.
 
@@ -45,7 +45,7 @@ It is only required that the binary programs can found in the environment variab
 
 + **KIRA**: it is required for IBP reduction in **KIRA** class, it can be download from [https://kira.hepforge.org](https://kira.hepforge.org).
 
-Compilation and Installation
+3. Compilation and Installation
 ------
 One can download the most recent version of **HepLib** as a compressed archive: [HepLib.tar.gz](HepLib.tar.gz), uncompress it and change current directory into *HepLib* by the commands:
 ```bash
