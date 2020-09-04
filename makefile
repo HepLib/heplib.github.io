@@ -149,6 +149,7 @@ INSTALL_GINAC: INSTALL_GMP ${GINAC}
 	./configure --prefix=${prefix} PKG_CONFIG_PATH=${prefix}/lib/pkgconfig ;\
 	make -j ${jn} ;\
 	make install ;\
+	cd ${CWD}
 	rm -rf ${ginac}
 
 INSTALL_CLN: INSTALL_GMP ${CLN}
@@ -171,7 +172,6 @@ INSTALL_MPFR: INSTALL_GMP ${MPFR}
 	cd ${CWD} ;\
 	rm -rf ${mpfr}
 	
-
 INSTALL_GMP: ${GMP}
 	rm -rf ${gmp} ;\
 	tar zxf ${GMP} ;\
@@ -216,7 +216,7 @@ ${KIRA}:
 	wget --no-check-certificate -O ${KIRA} https://kira.hepforge.org/downloads?f=binaries/${KIRA}
 
 ${FORM}:
-	https://github.com/vermaseren/form/releases/download/v4.2.1/${FORM}
+	wget https://github.com/vermaseren/form/releases/download/v4.2.1/${FORM}
 
 
 
