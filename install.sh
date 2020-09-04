@@ -195,24 +195,16 @@ fi
 
 # install FIRE
 if [ $install_fire == 'yes' ]; then
-    uo="$(uname -s)"
-    case "${uo}" in
-        Linux*)     pkg="Linux";;
-        Darwin*)    pkg="MacOS";;
-    esac
-    export pkg
-    if [ $pkg == "Linux" ]; then
-        git clone https://bitbucket.org/feynmanIntegrals/fire.git
-        rm -rf $prefix/FIRE6
-        mv fire/FIRE6 $prefix/FIRE6
-        rm -rf fire
-        cd $prefix/FIRE6
-        ./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd
-        make -j $jn dep
-        cp extra/lz4-*/lib/*.h usr/include/
-        cp extra/lz4-*/lib/liblz4.a usr/lib/
-        make
-    fi
+    git clone https://bitbucket.org/feynmanIntegrals/fire.git
+    rm -rf $prefix/FIRE6
+    mv fire/FIRE6 $prefix/FIRE6
+    rm -rf fire
+    cd $prefix/FIRE6
+    ./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd
+    make -j $jn dep
+    cp extra/lz4-*/lib/*.h usr/include/
+    cp extra/lz4-*/lib/liblz4.a usr/lib/
+    make
     cd $CWD
 fi
 
