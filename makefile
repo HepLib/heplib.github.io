@@ -2,14 +2,16 @@ all : install
 
 UNAMES := $(shell uname -s)
 ifeq ($(UNAMES),Linux)
-    Fermat = ferm6.tar.gz
+    Fermat = ferl6.tar.gz
     fermat = $(basename $(basename ${Fermat}))
     FORM = form-4.2.1-x86_64-linux.tar.gz
     form = $(basename $(basename ${FORM}))
 endif
 ifeq ($(UNAMES),Darwin)
-    Fermat = ferml.tar.gz
+    Fermat = ferm6.tar.gz
+    fermat = $(basename $(basename ${Fermat}))
     FORM = form-4.2.1-x86_64-osx.tar.gz
+    form = $(basename $(basename ${FORM}))
 endif
  
 GMP = gmp-6.2.0.tar.gz
@@ -35,7 +37,7 @@ FIRE = fire
 help:
 	echo "usage: make prefix=<path> jn=32" ;\
 	echo "Targets:" ;\
-	echo "    install: to install all packages" ; \
+	echo "    install: to install all packages" ;\
 	echo "    download: to only download all packages" ;\
 	echo "Install only one:" ;\
 	echo "    INSTALL_GMP INSTALL_MPFR INSTALL_CLN" ;\
@@ -91,7 +93,7 @@ INSTALL_Fermat: ${Fermat}
 	tar zxf ${Fermat} ;\
 	rm -rf ${prefix}/${fermat} ;\
 	mv ${fermat} ${prefix}/ ;\
-	cd ${prefix}/bin ;\ ;\
+	cd ${prefix}/bin ;\
 	ln -s -f ../${fermat}/fer64 .
 
 INSTALL_HepLib: ${HepLib}
