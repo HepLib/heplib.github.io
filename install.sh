@@ -31,6 +31,7 @@ if [ $install_gmp == 'yes' ]; then
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate https://gmplib.org/download/gmp/$pkg.tar.gz
     fi
+    rm -rf $pkg
     tar zxf $pkg.tar.gz
     cd $pkg
     ./configure --prefix=$prefix
@@ -46,6 +47,7 @@ if [ $install_mpfr == 'yes' ]; then
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate https://heplib.github.io/download/$pkg.tar.gz
     fi
+    rm -rf $pkg
     tar zxf $pkg.tar.gz
     cd $pkg
     if [ $install_gmp == 'yes' ]; then
@@ -65,6 +67,7 @@ if [ $install_cln == 'yes' ]; then
     if [ ! -f $pkg.tar.bz2 ]; then
         wget --no-check-certificate https://www.ginac.de/CLN/$pkg.tar.bz2
     fi
+    rm -rf $pkg
     tar jxf $pkg.tar.bz2
     cd $pkg
     if [ $install_gmp == 'yes' ]; then
@@ -84,6 +87,7 @@ if [ $install_ginac == 'yes' ]; then
     if [ ! -f $pkg.tar.bz2 ]; then
         wget --no-check-certificate https://www.ginac.de/$pkg.tar.bz2
     fi
+    rm -rf $pkg
     tar jxf $pkg.tar.bz2
     cd $pkg
     ./configure --prefix=$prefix PKG_CONFIG_PATH=$prefix/lib/pkgconfig
@@ -99,6 +103,7 @@ if [ $install_cuba == 'yes' ]; then
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate http://www.feynarts.de/cuba/$pkg.tar.gz
     fi
+    rm -rf $pkg
     tar zxf $pkg.tar.gz
     cd $pkg
     ./configure --prefix=$prefix --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon"
@@ -114,6 +119,7 @@ if [ $install_minuit2 == 'yes' ]; then
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate http://www.cern.ch/mathlibs/sw/5_34_14/Minuit2/$pkg.tar.gz
     fi
+    rm -rf $pkg
     tar zxf $pkg.tar.gz
     cd $pkg
     ./configure --prefix=$prefix
@@ -129,6 +135,7 @@ if [ $install_qhull == 'yes' ]; then
     if [ ! -f $pkg.zip ]; then
         wget --no-check-certificate http://www.qhull.org/download/$pkg.zip
     fi
+    rm -rf $pkg
     unzip $pkg.zip
     cd $pkg
     cp Makefile Makefile.bak
@@ -167,6 +174,7 @@ if [ $install_fermat == 'yes' ]; then
     if [ ! -f $pkg.tar.gz ]; then
         wget --no-check-certificate http://home.bway.net/lewis/fermat64/$pkg.tar.gz
     fi
+    rm -rf $pkg
     tar zxf $pkg.tar.gz
     rm -rf $prefix/$pkg
     mv $pkg $prefix/
@@ -195,6 +203,7 @@ fi
 
 # install FIRE
 if [ $install_fire == 'yes' ]; then
+    rm -rf fire
     git clone https://bitbucket.org/feynmanIntegrals/fire.git
     rm -rf $prefix/FIRE6
     mv fire/FIRE6 $prefix/FIRE6
@@ -218,6 +227,7 @@ if [ $install_kira == 'yes' ]; then
     export pkg
     if [ $pkg == "Linux" ]; then
         wget --no-check-certificate -O kira https://kira.hepforge.org/downloads?f=binaries/kira-2.0
+        rm -rf kira
         chmod +x kira
         mv -f kira "$prefix/bin/kira"
     fi

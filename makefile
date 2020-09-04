@@ -80,15 +80,17 @@ INSTALL_FIRE: ${FIRE}
 	make
 
 INSTALL_FORM: ${FORM}
+	rm -rf ${form}
 	tar zxf ${FORM} ;\
 	cp -rf ${form}/form ${prefix}/bin/ ;\
 	cp -rf ${form}/tform ${prefix}/bin/ ;\
 	rm -rf ${form}
 
 INSTALL_Fermat: ${Fermat}
+	rm -rf ${fermat} ;\
 	tar zxf ${Fermat} ;\
 	rm -rf ${prefix}/${fermat} ;\
-	cp -rf ${fermat} ${prefix}/ ;\
+	mv ${fermat} ${prefix}/ ;\
 	cd ${prefix}/bin ;\ ;\
 	ln -s -f ../${fermat}/fer64 .
 
@@ -134,7 +136,7 @@ INSTALL_CUBA: ${CUBA}
 INSTALL_GINAC: INSTALL_GMP ${GINAC}
 	rm -rf ${ginac} ;\
 	tar jxfv ${GINAC} ;\
-	cd ${cln} ;\
+	cd ${ginac} ;\
 	./configure --prefix=${prefix} PKG_CONFIG_PATH=${prefix}/lib/pkgconfig ;\
 	make -j ${jn} ;\
 	make install ;\
