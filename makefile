@@ -99,7 +99,6 @@ INSTALL_HepLib: ${HepLib}
 	mkdir -p build ;\
 	cd build ;\
 	cmake -DCMAKE_INSTALL_PREFIX=${prefix} .. ;\
-	./configure --prefix=${prefix} ;\
 	make -j ${jn} ;\
 	make install ;\
 	rm -rf ${heplib}
