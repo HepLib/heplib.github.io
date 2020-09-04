@@ -16,7 +16,7 @@ prefix=<Install Path> jn=16 ./install.sh
 
 Install Makefile (All in One)
 ------
-The  [makefile](makefile.sh) can also be used to install **HepLib** as well as external libraries/programs, by typing the commands in the terminal:
+The  [makefile](makefile) can also be used to install **HepLib** as well as external libraries/programs, by typing the commands in the terminal:
 ```bash
 wget https://heplib.github.io/makefile 
 make prefix=<Install Path> jn=16
