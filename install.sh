@@ -38,9 +38,9 @@ if [ $install_gmp == 'yes' ]; then
     rm -rf $pkg
     tar zxf $pkg.tar.gz
     cd $pkg
-    ./configure --prefix=$prefix &>> $LOG
-    make -j $jn &>> $LOG
-    make install &>> $LOG
+    ./configure --prefix=$prefix >>$LOG &2>1
+    make -j $jn >>$LOG &2>1
+    make install >>$LOG &2>1
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -57,12 +57,12 @@ if [ $install_mpfr == 'yes' ]; then
     tar zxf $pkg.tar.gz
     cd $pkg
     if [ $install_gmp == 'yes' ]; then
-        ./configure --prefix=$prefix --with-gmp=$prefix --enable-float128 --enable-thread-safe &>> $LOG
+        ./configure --prefix=$prefix --with-gmp=$prefix --enable-float128 --enable-thread-safe >>$LOG &2>1
     else
-        ./configure --prefix=$prefix --enable-float128 --enable-thread-safe &>> $LOG
+        ./configure --prefix=$prefix --enable-float128 --enable-thread-safe >>$LOG &2>1
     fi
-    make -j $jn &>> $LOG
-    make install &>> $LOG
+    make -j $jn >>$LOG &2>1
+    make install >>$LOG &2>1
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -79,12 +79,12 @@ if [ $install_cln == 'yes' ]; then
     tar jxf $pkg.tar.bz2
     cd $pkg
     if [ $install_gmp == 'yes' ]; then
-        ./configure --prefix=$prefix --with-gmp=$prefix &>> $LOG
+        ./configure --prefix=$prefix --with-gmp=$prefix >>$LOG &2>1
     else
-        ./configure --prefix=$prefix &>> $LOG
+        ./configure --prefix=$prefix >>$LOG &2>1
     fi
-    make -j $jn &>> $LOG
-    make install &>> $LOG
+    make -j $jn >>$LOG &2>1
+    make install >>$LOG &2>1
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -100,9 +100,9 @@ if [ $install_ginac == 'yes' ]; then
     rm -rf $pkg
     tar jxf $pkg.tar.bz2
     cd $pkg
-    ./configure --prefix=$prefix PKG_CONFIG_PATH=$prefix/lib/pkgconfig &>> $LOG
-    make -j $jn &>> $LOG
-    make install &>> $LOG
+    ./configure --prefix=$prefix PKG_CONFIG_PATH=$prefix/lib/pkgconfig >>$LOG &2>1
+    make -j $jn >>$LOG &2>1
+    make install >>$LOG &2>1
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -118,9 +118,9 @@ if [ $install_cuba == 'yes' ]; then
     rm -rf $pkg
     tar zxf $pkg.tar.gz
     cd $pkg
-    ./configure --prefix=$prefix --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" &>> $LOG
-    make &>> $LOG
-    make install &>> $LOG
+    ./configure --prefix=$prefix --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" >>$LOG &2>1
+    make >>$LOG &2>1
+    make install >>$LOG &2>1
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -136,9 +136,9 @@ if [ $install_minuit2 == 'yes' ]; then
     rm -rf $pkg
     tar zxf $pkg.tar.gz
     cd $pkg
-    ./configure --prefix=$prefix &>> $LOG
-    make -j $jn &>> $LOG
-    make install &>> $LOG
+    ./configure --prefix=$prefix >>$LOG &2>1
+    make -j $jn >>$LOG &2>1
+    make install >>$LOG &2>1
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -156,8 +156,8 @@ if [ $install_qhull == 'yes' ]; then
     cd $pkg
     cp Makefile Makefile.bak
     cat Makefile.bak | sed "s/\/usr\/local/\$\$prefix/g" > Makefile
-    make &>> $LOG
-    make install &>> $LOG
+    make >>$LOG &2>1
+    make install >>$LOG &2>1
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -214,9 +214,9 @@ if [ $install_fire == 'yes' ]; then
     mv fire/FIRE6 $prefix/FIRE6
     rm -rf fire
     cd $prefix/FIRE6
-    ./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd &>> $LOG
-    make -j $jn dep &>> $LOG
-    make &>> $LOG
+    ./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd >>$LOG &2>1
+    make -j $jn dep >>$LOG &2>1
+    make >>$LOG &2>1
     cd $CWD
     echo ""
 fi
