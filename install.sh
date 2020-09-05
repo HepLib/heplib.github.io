@@ -216,6 +216,9 @@ if [ $install_fire == 'yes' ]; then
     cd $prefix/FIRE6
     ./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd &>> $LOG
     make -j $jn dep &>> $LOG
+    mkdir -p usr/include
+    cp -f extra/lz4-*/lib/*.h usr/include/
+    cp -f extra/lz4-*/lib/liblz4.a usr/lib/
     make &>> $LOG
     cd $CWD
     echo ""
