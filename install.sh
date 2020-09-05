@@ -100,7 +100,7 @@ if [ $install_ginac == 'yes' ]; then
     rm -rf $pkg
     tar jxf $pkg.tar.bz2
     cd $pkg
-    ./configure --prefix=$prefix PKG_CONFIG_PATH=$prefix/lib/pkgconfig
+    ./configure --prefix=$prefix PKG_CONFIG_PATH=$prefix/lib/pkgconfig &>> $LOG
     make -j $jn &>> $LOG
     make install &>> $LOG
     cd $CWD
@@ -233,8 +233,8 @@ if [ $install_kira == 'yes' ]; then
     esac
     export pkg
     if [ $pkg == "Linux" ]; then
-        wget --no-check-certificate -O kira https://kira.hepforge.org/downloads?f=binaries/kira-2.0
         rm -rf kira
+        wget --no-check-certificate -O kira https://kira.hepforge.org/downloads?f=binaries/kira-2.0
         chmod +x kira
         mv -f kira "$prefix/bin/kira"
     fi
