@@ -34,6 +34,7 @@ KIRA = kira-2.0
 FIRE = fire
 
 CWD=$(shell pwd)
+LOG=${CWD}/log.txt
 
 .SILENT:
 
@@ -81,9 +82,9 @@ INSTALL_FIRE: ${FIRE}
 	rm -rf ${prefix}/FIRE6 ;\
 	cp -rf fire/FIRE6 ${prefix}/ ;\
 	cd ${prefix}/FIRE6 ;\
-	./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd 2>${CWD}/log.txt >${CWD}/log.txt;\
-	make -j ${jn} dep >> ${CWD}/log.txt ;\
-	make >> ${CWD}/log.txt ;\
+	./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd &>> ${LOG} ;\
+	make -j ${jn} dep &>> ${LOG} ;\
+	make &>> ${LOG} ;\
 	echo ""
 
 INSTALL_FORM: ${FORM}
@@ -127,8 +128,8 @@ INSTALL_QHULL: ${QHULL}
 	cd ${qhull} ;\
 	cp Makefile Makefile.bak ;\
 	cat Makefile.bak | sed "s/\/usr\/local/$(subst /,\/,${prefix})/g" > Makefile ;\
-	make >> ${CWD}/log.txt ;\
-	make install >> ${CWD}/log.txt ;\
+	make &>> ${LOG} ;\
+	make install &>> ${LOG} ;\
 	cd ${CWD} ;\
 	rm -rf ${qhull} ;\
 	echo ""
@@ -138,9 +139,9 @@ INSTALL_MINUIT: ${MINUIT}
 	rm -rf ${minuit} ;\
 	tar zxf ${MINUIT} ;\
 	cd ${minuit} ;\
-	./configure --prefix=${prefix} >> ${CWD}/log.txt ;\
-	make -j ${jn} >> ${CWD}/log.txt ;\
-	make install >> ${CWD}/log.txt ;\
+	./configure --prefix=${prefix} &>> ${LOG} ;\
+	make -j ${jn} &>> ${LOG} ;\
+	make install &>> ${LOG} ;\
 	cd ${CWD} ;\
 	rm -rf ${minuit} ;\
 	echo ""
@@ -150,9 +151,9 @@ INSTALL_CUBA: ${CUBA}
 	rm -rf ${cuba} ;\
 	tar zxf ${CUBA} ;\
 	cd ${cuba} ;\
-	./configure --prefix=${prefix} --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" >> ${CWD}/log.txt ;\
-	make >> ${CWD}/log.txt ;\
-	make install >> ${CWD}/log.txt ;\
+	./configure --prefix=${prefix} --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" &>> ${LOG} ;\
+	make &>> ${LOG} ;\
+	make install &>> ${LOG} ;\
 	cd ${CWD} ;\
 	rm -rf ${cuba} ;\
 	echo ""
@@ -162,9 +163,9 @@ INSTALL_GINAC: ${GINAC}
 	rm -rf ${ginac} ;\
 	tar jxf ${GINAC} ;\
 	cd ${ginac} ;\
-	./configure --prefix=${prefix} PKG_CONFIG_PATH=${prefix}/lib/pkgconfig >> ${CWD}/log.txt ;\
-	make -j ${jn} >> ${CWD}/log.txt ;\
-	make install >> ${CWD}/log.txt ;\
+	./configure --prefix=${prefix} PKG_CONFIG_PATH=${prefix}/lib/pkgconfig &>> ${LOG} ;\
+	make -j ${jn} &>> ${LOG} ;\
+	make install &>> ${LOG} ;\
 	cd ${CWD}
 	rm -rf ${ginac} ;\
 	echo ""
@@ -174,9 +175,9 @@ INSTALL_CLN: ${CLN}
 	rm -rf ${cln} ;\
 	tar jxf ${CLN} ;\
 	cd ${cln} ;\
-	./configure --prefix=${prefix} --with-gmp=${prefix} >> ${CWD}/log.txt ;\
-	make -j ${jn} >> ${CWD}/log.txt ;\
-	make install >> ${CWD}/log.txt ;\
+	./configure --prefix=${prefix} --with-gmp=${prefix} &>> ${LOG} ;\
+	make -j ${jn} &>> ${LOG} ;\
+	make install &>> ${LOG} ;\
 	cd ${CWD} ;\
 	rm -rf ${cln} ;\
 	echo ""
@@ -186,9 +187,9 @@ INSTALL_MPFR: ${MPFR}
 	rm -rf ${mpfr} ;\
 	tar zxf ${MPFR} ;\
 	cd ${mpfr} ;\
-	./configure --prefix=${prefix} --with-gmp=${prefix} --enable-float128 --enable-thread-safe >> ${CWD}/log.txt ;\
-	make -j ${jn} >> ${CWD}/log.txt ;\
-	make install >> ${CWD}/log.txt ;\
+	./configure --prefix=${prefix} --with-gmp=${prefix} --enable-float128 --enable-thread-safe &>> ${LOG} ;\
+	make -j ${jn} &>> ${LOG} ;\
+	make install &>> ${LOG} ;\
 	cd ${CWD} ;\
 	rm -rf ${mpfr} ;\
 	echo ""
@@ -198,9 +199,9 @@ INSTALL_GMP: ${GMP}
 	rm -rf ${gmp} ;\
 	tar zxf ${GMP} ;\
 	cd ${gmp} ;\
-	./configure --prefix=${prefix} >> ${CWD}/log.txt ;\
-	make -j ${jn} >> ${CWD}/log.txt ;\
-	make install >> ${CWD}/log.txt ;\
+	./configure --prefix=${prefix} &>> ${LOG} ;\
+	make -j ${jn} &>> ${LOG} ;\
+	make install &>> ${LOG} ;\
 	cd ${CWD} ;\
 	rm -rf ${gmp} ;\
 	echo ""

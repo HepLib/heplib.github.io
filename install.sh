@@ -26,6 +26,7 @@ export install_kira='yes'
 export install_heplib='yes'
 
 export CWD=$PWD
+export LOG=$CWD/log.txt
 
 # install GMP
 if [ $install_gmp == 'yes' ]; then
@@ -37,9 +38,9 @@ if [ $install_gmp == 'yes' ]; then
     rm -rf $pkg
     tar zxf $pkg.tar.gz
     cd $pkg
-    ./configure --prefix=$prefix >> ${CWD}/log.txt
-    make -j $jn >> ${CWD}/log.txt
-    make install >> ${CWD}/log.txt
+    ./configure --prefix=$prefix &>> $LOG
+    make -j $jn &>> $LOG
+    make install &>> $LOG
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -56,12 +57,12 @@ if [ $install_mpfr == 'yes' ]; then
     tar zxf $pkg.tar.gz
     cd $pkg
     if [ $install_gmp == 'yes' ]; then
-        ./configure --prefix=$prefix --with-gmp=$prefix --enable-float128 --enable-thread-safe >> ${CWD}/log.txt
+        ./configure --prefix=$prefix --with-gmp=$prefix --enable-float128 --enable-thread-safe &>> $LOG
     else
-        ./configure --prefix=$prefix --enable-float128 --enable-thread-safe >> ${CWD}/log.txt
+        ./configure --prefix=$prefix --enable-float128 --enable-thread-safe &>> $LOG
     fi
-    make -j $jn >> ${CWD}/log.txt
-    make install >> ${CWD}/log.txt
+    make -j $jn &>> $LOG
+    make install &>> $LOG
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -78,12 +79,12 @@ if [ $install_cln == 'yes' ]; then
     tar jxf $pkg.tar.bz2
     cd $pkg
     if [ $install_gmp == 'yes' ]; then
-        ./configure --prefix=$prefix --with-gmp=$prefix >> ${CWD}/log.txt
+        ./configure --prefix=$prefix --with-gmp=$prefix &>> $LOG
     else
-        ./configure --prefix=$prefix >> ${CWD}/log.txt
+        ./configure --prefix=$prefix &>> $LOG
     fi
-    make -j $jn >> ${CWD}/log.txt
-    make install >> ${CWD}/log.txt
+    make -j $jn &>> $LOG
+    make install &>> $LOG
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -100,8 +101,8 @@ if [ $install_ginac == 'yes' ]; then
     tar jxf $pkg.tar.bz2
     cd $pkg
     ./configure --prefix=$prefix PKG_CONFIG_PATH=$prefix/lib/pkgconfig
-    make -j $jn >> ${CWD}/log.txt
-    make install >> ${CWD}/log.txt
+    make -j $jn &>> $LOG
+    make install &>> $LOG
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -117,9 +118,9 @@ if [ $install_cuba == 'yes' ]; then
     rm -rf $pkg
     tar zxf $pkg.tar.gz
     cd $pkg
-    ./configure --prefix=$prefix --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" >> ${CWD}/log.txt
-    make >> ${CWD}/log.txt
-    make install >> ${CWD}/log.txt
+    ./configure --prefix=$prefix --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" &>> $LOG
+    make &>> $LOG
+    make install &>> $LOG
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -135,9 +136,9 @@ if [ $install_minuit2 == 'yes' ]; then
     rm -rf $pkg
     tar zxf $pkg.tar.gz
     cd $pkg
-    ./configure --prefix=$prefix >> ${CWD}/log.txt
-    make -j $jn >> ${CWD}/log.txt
-    make install >> ${CWD}/log.txt
+    ./configure --prefix=$prefix &>> $LOG
+    make -j $jn &>> $LOG
+    make install &>> $LOG
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -155,8 +156,8 @@ if [ $install_qhull == 'yes' ]; then
     cd $pkg
     cp Makefile Makefile.bak
     cat Makefile.bak | sed "s/\/usr\/local/\$\$prefix/g" > Makefile
-    make >> ${CWD}/log.txt
-    make install >> ${CWD}/log.txt
+    make &>> $LOG
+    make install &>> $LOG
     cd $CWD
     rm -rf $pkg
     echo ""
@@ -213,9 +214,9 @@ if [ $install_fire == 'yes' ]; then
     mv fire/FIRE6 $prefix/FIRE6
     rm -rf fire
     cd $prefix/FIRE6
-    ./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd >> ${CWD}/log.txt
-    make -j $jn dep >> ${CWD}/log.txt
-    make >> ${CWD}/log.txt
+    ./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd &>> $LOG
+    make -j $jn dep &>> $LOG
+    make &>> $LOG
     cd $CWD
     echo ""
 fi
