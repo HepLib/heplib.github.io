@@ -3,12 +3,12 @@ Examples of HepLib
 Hint: Visit [Usage within C++](usage.md) for compiling a *.cpp* to an executable program.
 
 
-Examples @ GiNaC
+Examples @ Basic
 ----------
-+ [iFermat.cpp](examples/GiNaC/iFermat.cpp.md): basic interface to **Fermat** program.
-+ [iForm.cpp](examples/GiNaC/iForm.cpp.md): basic interface to **FORM** program.
-+ [gar.cpp](examples/GiNaC/gar.cpp.md): the usage of **gar** related functions.
-+ [mma.cpp](examples/GiNaC/mma.cpp.md): some functions similar to *Mathematica*.
++ [iFermat.cpp](examples/Basic/iFermat.cpp.md): basic interface to **Fermat** program.
++ [iForm.cpp](examples/Basic/iForm.cpp.md): basic interface to **FORM** program.
++ [gar.cpp](examples/Basic/gar.cpp.md): the usage of **gar** related functions.
++ [mma.cpp](examples/Basic/mma.cpp.md): some functions similar to *Mathematica*.
 
 Examples @ FC
 ----------
