@@ -225,7 +225,7 @@ ${CUBA}:
 	curl -O http://www.feynarts.de/cuba/${CUBA}
 
 ${MINUIT}:
-	curl -O http://www.cern.ch/mathlibs/sw/5_34_14/Minuit2/${MINUIT}
+	curl -O http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/${MINUIT}
 
 ${QHULL}:
 	curl -O http://www.qhull.org/download/${QHULL}

@@ -131,7 +131,7 @@ if [ $install_minuit2 == 'yes' ]; then
     echo "Installing MinUit2 ..."
     export pkg="Minuit2-5.34.14"
     if [ ! -f $pkg.tar.gz ]; then
-        curl -O http://www.cern.ch/mathlibs/sw/5_34_14/Minuit2/$pkg.tar.gz
+        curl -O http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/$pkg.tar.gz
     fi
     rm -rf $pkg
     tar zxf $pkg.tar.gz
