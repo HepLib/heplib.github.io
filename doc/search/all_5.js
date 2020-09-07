@@ -33,7 +33,7 @@ var searchData=
   ['ex2str_134',['ex2str',['../namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d',1,'HepLib']]],
   ['ex_5fless_135',['ex_less',['../namespace_hep_lib.html#a12af63150d93a138d75ce79e04905441',1,'HepLib']]],
   ['execute_136',['Execute',['../class_hep_lib_1_1_fermat.html#ae741caec2989509517c21fbab996070d',1,'HepLib::Fermat::Execute()'],['../class_hep_lib_1_1_form.html#af4951707501e93938bfa6d384c190e2e',1,'HepLib::Form::Execute()']]],
-  ['exfactor_137',['exfactor',['../namespace_gi_na_c.html#ae2a4db32815380508a02d5b663dde7ea',1,'GiNaC']]],
+  ['exfactor_137',['exfactor',['../namespace_hep_lib.html#aa59e20e6193286abf3b38cedffc81cd9',1,'HepLib']]],
   ['exit_138',['Exit',['../class_hep_lib_1_1_s_d_1_1_hooke_jeeves.html#ad7fd9fa5e5e4a6870fd017bef1c09dd5',1,'HepLib::SD::HookeJeeves::Exit()'],['../class_hep_lib_1_1_fermat.html#a2d00cc5477144c480b2c635da92b5320',1,'HepLib::Fermat::Exit()'],['../class_hep_lib_1_1_form.html#a11dd12b4e1f18c8b4aa0c05352113f5b',1,'HepLib::Form::Exit()']]],
   ['exp_139',['exp',['../_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b',1,'exp(qREAL x):&#160;NFunctions.h'],['../_n_functions_8h.html#a2f0c4d3ec7141a2304d4a253b2dce448',1,'exp(qCOMPLEX x):&#160;NFunctions.h']]],
   ['exp_5fsimplify_140',['exp_simplify',['../namespace_hep_lib_1_1_s_d.html#a6686c331164598017956919bcfc9b7d2',1,'HepLib::SD']]],
