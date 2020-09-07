@@ -82,12 +82,12 @@ INSTALL_FIRE: ${FIRE}
 	rm -rf ${INSTALL_PATH}/FIRE6 ;\
 	cp -rf fire/FIRE6 ${INSTALL_PATH}/ ;\
 	cd ${INSTALL_PATH}/FIRE6 ;\
-	./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd &>> ${LOG} ;\
-	make -j ${jn} dep &>> ${LOG} ;\
+	./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd >>${LOG} 2>>${LOG} ;\
+	make -j ${jn} dep >>${LOG} 2>>${LOG} ;\
 	mkdir -p usr/include ;\
 	cp -f extra/lz4-*/lib/*.h usr/include/ ;\
 	cp -f extra/lz4-*/lib/liblz4.a usr/lib/ ;\
-	make &>> ${LOG} ;\
+	make >>${LOG} 2>>${LOG} ;\
 	echo ""
 
 INSTALL_FORM: ${FORM}
@@ -131,8 +131,8 @@ INSTALL_QHULL: ${QHULL}
 	cd ${qhull} ;\
 	cp Makefile Makefile.bak ;\
 	cat Makefile.bak | sed "s/\/usr\/local/$(subst /,\/,${INSTALL_PATH})/g" > Makefile ;\
-	make &>> ${LOG} ;\
-	make install &>> ${LOG} ;\
+	make >>${LOG} 2>>${LOG} ;\
+	make install >>${LOG} 2>>${LOG} ;\
 	cd ${CWD} ;\
 	rm -rf ${qhull} ;\
 	echo ""
@@ -142,9 +142,9 @@ INSTALL_MINUIT: ${MINUIT}
 	rm -rf ${minuit} ;\
 	tar zxf ${MINUIT} ;\
 	cd ${minuit} ;\
-	./configure --prefix=${INSTALL_PATH} &>> ${LOG} ;\
-	make -j ${jn} &>> ${LOG} ;\
-	make install &>> ${LOG} ;\
+	./configure --prefix=${INSTALL_PATH} >>${LOG} 2>>${LOG} ;\
+	make -j ${jn} >>${LOG} 2>>${LOG} ;\
+	make install >>${LOG} 2>>${LOG} ;\
 	cd ${CWD} ;\
 	rm -rf ${minuit} ;\
 	echo ""
@@ -154,9 +154,9 @@ INSTALL_CUBA: ${CUBA}
 	rm -rf ${cuba} ;\
 	tar zxf ${CUBA} ;\
 	cd ${cuba} ;\
-	./configure --prefix=${INSTALL_PATH} --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" &>> ${LOG} ;\
-	make &>> ${LOG} ;\
-	make install &>> ${LOG} ;\
+	./configure --prefix=${INSTALL_PATH} --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" >>${LOG} 2>>${LOG} ;\
+	make >>${LOG} 2>>${LOG} ;\
+	make install >>${LOG} 2>>${LOG} ;\
 	cd ${CWD} ;\
 	rm -rf ${cuba} ;\
 	echo ""
@@ -166,9 +166,9 @@ INSTALL_GINAC: ${GINAC}
 	rm -rf ${ginac} ;\
 	tar jxf ${GINAC} ;\
 	cd ${ginac} ;\
-	./configure --prefix=${INSTALL_PATH} PKG_CONFIG_PATH=${INSTALL_PATH}/lib/pkgconfig &>> ${LOG} ;\
-	make -j ${jn} &>> ${LOG} ;\
-	make install &>> ${LOG} ;\
+	./configure --prefix=${INSTALL_PATH} PKG_CONFIG_PATH=${INSTALL_PATH}/lib/pkgconfig >>${LOG} 2>>${LOG} ;\
+	make -j ${jn} >>${LOG} 2>>${LOG} ;\
+	make install >>${LOG} 2>>${LOG} ;\
 	cd ${CWD}
 	rm -rf ${ginac} ;\
 	echo ""
@@ -178,9 +178,9 @@ INSTALL_CLN: ${CLN}
 	rm -rf ${cln} ;\
 	tar jxf ${CLN} ;\
 	cd ${cln} ;\
-	./configure --prefix=${INSTALL_PATH} --with-gmp=${INSTALL_PATH} &>> ${LOG} ;\
-	make -j ${jn} &>> ${LOG} ;\
-	make install &>> ${LOG} ;\
+	./configure --prefix=${INSTALL_PATH} --with-gmp=${INSTALL_PATH} >>${LOG} 2>>${LOG} ;\
+	make -j ${jn} >>${LOG} 2>>${LOG} ;\
+	make install >>${LOG} 2>>${LOG} ;\
 	cd ${CWD} ;\
 	rm -rf ${cln} ;\
 	echo ""
@@ -190,9 +190,9 @@ INSTALL_MPFR: ${MPFR}
 	rm -rf ${mpfr} ;\
 	tar zxf ${MPFR} ;\
 	cd ${mpfr} ;\
-	./configure --prefix=${INSTALL_PATH} --with-gmp=${INSTALL_PATH} --enable-float128 --enable-thread-safe &>> ${LOG} ;\
-	make -j ${jn} &>> ${LOG} ;\
-	make install &>> ${LOG} ;\
+	./configure --prefix=${INSTALL_PATH} --with-gmp=${INSTALL_PATH} --enable-float128 --enable-thread-safe >>${LOG} 2>>${LOG} ;\
+	make -j ${jn} >>${LOG} 2>>${LOG} ;\
+	make install >>${LOG} 2>>${LOG} ;\
 	cd ${CWD} ;\
 	rm -rf ${mpfr} ;\
 	echo ""
@@ -202,46 +202,46 @@ INSTALL_GMP: ${GMP}
 	rm -rf ${gmp} ;\
 	tar zxf ${GMP} ;\
 	cd ${gmp} ;\
-	./configure --prefix=${INSTALL_PATH} &>> ${LOG} ;\
-	make -j ${jn} &>> ${LOG} ;\
-	make install &>> ${LOG} ;\
+	./configure --prefix=${INSTALL_PATH} >>${LOG} 2>>${LOG} ;\
+	make -j ${jn} >>${LOG} 2>>${LOG} ;\
+	make install >>${LOG} 2>>${LOG} ;\
 	cd ${CWD} ;\
 	rm -rf ${gmp} ;\
 	echo ""
 
 ${GMP} :
-	wget --no-check-certificate https://gmplib.org/download/gmp/${GMP}
+	curl -O https://gmplib.org/download/gmp/${GMP}
 
 ${MPFR}:
-	wget --no-check-certificate https://heplib.github.io/download/${MPFR}
+	curl -O https://heplib.github.io/download/${MPFR}
 
 ${CLN}:
-	wget --no-check-certificate https://www.ginac.de/CLN/${CLN}
+	curl -O https://www.ginac.de/CLN/${CLN}
 
 ${GINAC}:
-	wget --no-check-certificate https://www.ginac.de/${GINAC}
+	curl -O https://www.ginac.de/${GINAC}
 
 ${CUBA}:
-	wget --no-check-certificate http://www.feynarts.de/cuba/${CUBA}
+	curl -O http://www.feynarts.de/cuba/${CUBA}
 
 ${MINUIT}:
-	wget --no-check-certificate http://www.cern.ch/mathlibs/sw/5_34_14/Minuit2/${MINUIT}
+	curl -O http://www.cern.ch/mathlibs/sw/5_34_14/Minuit2/${MINUIT}
 
 ${QHULL}:
-	wget --no-check-certificate http://www.qhull.org/download/${QHULL}
+	curl -O http://www.qhull.org/download/${QHULL}
 
 ${HepLib}:
-	wget --no-check-certificate https://heplib.github.io/HepLib.tar.gz
+	curl -O https://heplib.github.io/HepLib.tar.gz
 
 ${Fermat}:
-	wget --no-check-certificate http://home.bway.net/lewis/fermat64/${Fermat}
+	curl -O http://home.bway.net/lewis/fermat64/${Fermat}
 
 ${FIRE}:
 	git clone https://bitbucket.org/feynmanIntegrals/fire.git
 
 ${KIRA}:
-	wget --no-check-certificate -O ${KIRA} https://kira.hepforge.org/downloads?f=binaries/${KIRA}
+	curl -o ${KIRA} https://kira.hepforge.org/downloads?f=binaries/${KIRA}
 
 ${FORM}:
-	wget https://github.com/vermaseren/form/releases/download/v4.2.1/${FORM}
+	curl -O https://github.com/vermaseren/form/releases/download/v4.2.1/${FORM}
 
