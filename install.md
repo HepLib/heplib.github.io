@@ -9,7 +9,7 @@ The shell script [install.sh](install.sh) can be used to install **HepLib** as w
 ```bash
 wget https://heplib.github.io/install.sh 
 chmod +x install.sh
-prefix=<Install Path> jn=16 ./install.sh
+INSTALL_PATH=<Install Path> jn=16 ./install.sh
 ```
 **&lt;Install Path&gt;** refers to the path for the libraries to be installed to, **jn** is the number of jobs used in *make -j $jn*.
 
@@ -19,7 +19,7 @@ Install Makefile (All in One)
 The  [makefile](makefile) can also be used to install **HepLib** as well as external libraries/programs, by typing the commands in the terminal:
 ```bash
 wget https://heplib.github.io/makefile 
-make prefix=<Install Path> jn=16
+make INSTALL_PATH=<Install Path> jn=16
 ```
 **&lt;Install Path&gt;** refers to the path for the libraries to be installed to, **jn** is the number of jobs used in *make -j $jn*, try *make help* for more information.
 
