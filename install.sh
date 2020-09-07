@@ -5,7 +5,6 @@ if [ ! -z $prefix ]; then
     INSTALL_PATH=$prefix
     unset prefix
 fi
-export INSTALL_PATH
 
 if [ -z $INSTALL_PATH ]; then
     INSTALL_PATH=/usr/local
