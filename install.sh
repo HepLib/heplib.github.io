@@ -1,19 +1,16 @@
 #!/bin/bash
 
-if [ -z $INSTALL_PATH ]; then
-    INSTALL_PATH=/usr/local
-fi
-export INSTALL_PATH
-
 # for old version with prefix
 if [ ! -z $prefix ]; then
     INSTALL_PATH=$prefix
     unset prefix
 fi
 export INSTALL_PATH
-echo $prefix
-echo $INSTALL_PATH
-exit 0
+
+if [ -z $INSTALL_PATH ]; then
+    INSTALL_PATH=/usr/local
+fi
+export INSTALL_PATH
 
 if [ -z $jn ]; then
     export jn=8
