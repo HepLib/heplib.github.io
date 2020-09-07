@@ -39,7 +39,7 @@ LOG=${CWD}/log.txt
 .SILENT:
 
 help:
-	echo "usage: make prefix=<path> jn=32" ;\
+	echo "usage: make INSTALL_PATH=<path> jn=32" ;\
 	echo "Targets:" ;\
 	echo "    install: to install all packages" ;\
 	echo "    download: to only download all packages" ;\
@@ -49,8 +49,8 @@ help:
 	echo "    INSTALL_QHULL INSTALL_HepLib INSTALL_Fermat" ;\
 	echo "    INSTALL_FORM INSTALL_FIRE INSTALL_KIRA"
 
-ifndef prefix
-    prefix = /usr/local
+ifndef INSTALL_PATH
+    INSTALL_PATH = /usr/local
 endif
 
 ifndef jn
@@ -66,22 +66,22 @@ install: INSTALL_GMP INSTALL_MPFR INSTALL_CLN INSTALL_GINAC INSTALL_CUBA INSTALL
 	echo "Installation Completed!" ;\
 	echo "You can add the following sentences to your .bashrc"  ;\
 	echo "" ;\
-	echo "export PATH=${prefix}/bin:${prefix}/FIRE6/bin:\$PATH" ;\
-	echo "export LD_LIBRARY_PATH=${prefix}/lib:\$LD_LIBRARY_PATH" ;\
+	echo "export PATH=${INSTALL_PATH}/bin:${INSTALL_PATH}/FIRE6/bin:\$PATH" ;\
+	echo "export LD_LIBRARY_PATH=${INSTALL_PATH}/lib:\$LD_LIBRARY_PATH" ;\
 	echo ""
 
 INSTALL_KIRA: ${KIRA}
 	echo "Installing KIRA ..."
 	cp ${KIRA} kira ;\
 	chmod +x kira ;\
-        mv -f kira ${prefix}/bin/ ;\
+        mv -f kira ${INSTALL_PATH}/bin/ ;\
 	echo ""
 
 INSTALL_FIRE: ${FIRE}
 	echo "Installing FIRE ..."
-	rm -rf ${prefix}/FIRE6 ;\
-	cp -rf fire/FIRE6 ${prefix}/ ;\
-	cd ${prefix}/FIRE6 ;\
+	rm -rf ${INSTALL_PATH}/FIRE6 ;\
+	cp -rf fire/FIRE6 ${INSTALL_PATH}/ ;\
+	cd ${INSTALL_PATH}/FIRE6 ;\
 	./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd &>> ${LOG} ;\
 	make -j ${jn} dep &>> ${LOG} ;\
 	mkdir -p usr/include ;\
@@ -94,8 +94,8 @@ INSTALL_FORM: ${FORM}
 	echo "Installing FORM ..."
 	rm -rf ${form}
 	tar zxf ${FORM} ;\
-	cp -rf ${form}/form ${prefix}/bin/ ;\
-	cp -rf ${form}/tform ${prefix}/bin/ ;\
+	cp -rf ${form}/form ${INSTALL_PATH}/bin/ ;\
+	cp -rf ${form}/tform ${INSTALL_PATH}/bin/ ;\
 	cd ${CWD} ;\
 	rm -rf ${form} ;\
 	echo ""
@@ -104,9 +104,9 @@ INSTALL_Fermat: ${Fermat}
 	echo "Installing Fermat ..."
 	rm -rf ${fermat} ;\
 	tar zxf ${Fermat} ;\
-	rm -rf ${prefix}/${fermat} ;\
-	mv ${fermat} ${prefix}/ ;\
-	cd ${prefix}/bin ;\
+	rm -rf ${INSTALL_PATH}/${fermat} ;\
+	mv ${fermat} ${INSTALL_PATH}/ ;\
+	cd ${INSTALL_PATH}/bin ;\
 	ln -s -f ../${fermat}/fer64 . ;\
 	echo ""
 
@@ -117,7 +117,7 @@ INSTALL_HepLib: ${HepLib}
 	cd ${heplib} ;\
 	mkdir -p build ;\
 	cd build ;\
-	cmake -DCMAKE_INSTALL_PREFIX=${prefix} .. ;\
+	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_PATH} .. ;\
 	make -j ${jn} ;\
 	make install ;\
 	cd ${CWD} ;\
@@ -130,7 +130,7 @@ INSTALL_QHULL: ${QHULL}
 	unzip -q ${QHULL} ;\
 	cd ${qhull} ;\
 	cp Makefile Makefile.bak ;\
-	cat Makefile.bak | sed "s/\/usr\/local/$(subst /,\/,${prefix})/g" > Makefile ;\
+	cat Makefile.bak | sed "s/\/usr\/local/$(subst /,\/,${INSTALL_PATH})/g" > Makefile ;\
 	make &>> ${LOG} ;\
 	make install &>> ${LOG} ;\
 	cd ${CWD} ;\
@@ -142,7 +142,7 @@ INSTALL_MINUIT: ${MINUIT}
 	rm -rf ${minuit} ;\
 	tar zxf ${MINUIT} ;\
 	cd ${minuit} ;\
-	./configure --prefix=${prefix} &>> ${LOG} ;\
+	./configure --prefix=${INSTALL_PATH} &>> ${LOG} ;\
 	make -j ${jn} &>> ${LOG} ;\
 	make install &>> ${LOG} ;\
 	cd ${CWD} ;\
@@ -154,7 +154,7 @@ INSTALL_CUBA: ${CUBA}
 	rm -rf ${cuba} ;\
 	tar zxf ${CUBA} ;\
 	cd ${cuba} ;\
-	./configure --prefix=${prefix} --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" &>> ${LOG} ;\
+	./configure --prefix=${INSTALL_PATH} --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" &>> ${LOG} ;\
 	make &>> ${LOG} ;\
 	make install &>> ${LOG} ;\
 	cd ${CWD} ;\
@@ -166,7 +166,7 @@ INSTALL_GINAC: ${GINAC}
 	rm -rf ${ginac} ;\
 	tar jxf ${GINAC} ;\
 	cd ${ginac} ;\
-	./configure --prefix=${prefix} PKG_CONFIG_PATH=${prefix}/lib/pkgconfig &>> ${LOG} ;\
+	./configure --prefix=${INSTALL_PATH} PKG_CONFIG_PATH=${INSTALL_PATH}/lib/pkgconfig &>> ${LOG} ;\
 	make -j ${jn} &>> ${LOG} ;\
 	make install &>> ${LOG} ;\
 	cd ${CWD}
@@ -178,7 +178,7 @@ INSTALL_CLN: ${CLN}
 	rm -rf ${cln} ;\
 	tar jxf ${CLN} ;\
 	cd ${cln} ;\
-	./configure --prefix=${prefix} --with-gmp=${prefix} &>> ${LOG} ;\
+	./configure --prefix=${INSTALL_PATH} --with-gmp=${INSTALL_PATH} &>> ${LOG} ;\
 	make -j ${jn} &>> ${LOG} ;\
 	make install &>> ${LOG} ;\
 	cd ${CWD} ;\
@@ -190,7 +190,7 @@ INSTALL_MPFR: ${MPFR}
 	rm -rf ${mpfr} ;\
 	tar zxf ${MPFR} ;\
 	cd ${mpfr} ;\
-	./configure --prefix=${prefix} --with-gmp=${prefix} --enable-float128 --enable-thread-safe &>> ${LOG} ;\
+	./configure --prefix=${INSTALL_PATH} --with-gmp=${INSTALL_PATH} --enable-float128 --enable-thread-safe &>> ${LOG} ;\
 	make -j ${jn} &>> ${LOG} ;\
 	make install &>> ${LOG} ;\
 	cd ${CWD} ;\
@@ -202,7 +202,7 @@ INSTALL_GMP: ${GMP}
 	rm -rf ${gmp} ;\
 	tar zxf ${GMP} ;\
 	cd ${gmp} ;\
-	./configure --prefix=${prefix} &>> ${LOG} ;\
+	./configure --prefix=${INSTALL_PATH} &>> ${LOG} ;\
 	make -j ${jn} &>> ${LOG} ;\
 	make install &>> ${LOG} ;\
 	cd ${CWD} ;\
