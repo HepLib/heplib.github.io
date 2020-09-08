@@ -210,38 +210,38 @@ INSTALL_GMP: ${GMP}
 	echo ""
 
 ${GMP} :
-	curl -O https://gmplib.org/download/gmp/${GMP}
+	curl -L -O https://gmplib.org/download/gmp/${GMP}
 
 ${MPFR}:
-	curl -O https://heplib.github.io/download/${MPFR}
+	curl -L -O https://heplib.github.io/download/${MPFR}
 
 ${CLN}:
-	curl -O https://www.ginac.de/CLN/${CLN}
+	curl -L -O https://www.ginac.de/CLN/${CLN}
 
 ${GINAC}:
-	curl -O https://www.ginac.de/${GINAC}
+	curl -L -O https://www.ginac.de/${GINAC}
 
 ${CUBA}:
-	curl -O http://www.feynarts.de/cuba/${CUBA}
+	curl -L -O http://www.feynarts.de/cuba/${CUBA}
 
 ${MINUIT}:
-	curl -O http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/${MINUIT}
+	curl -L -O http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/${MINUIT}
 
 ${QHULL}:
-	curl -O http://www.qhull.org/download/${QHULL}
+	curl -L -O http://www.qhull.org/download/${QHULL}
 
 ${HepLib}:
-	curl -O https://heplib.github.io/HepLib.tar.gz
+	curl -L -O https://heplib.github.io/HepLib.tar.gz
 
 ${Fermat}:
-	curl -O http://home.bway.net/lewis/fermat64/${Fermat}
+	curl -L -O http://home.bway.net/lewis/fermat64/${Fermat}
 
 ${FIRE}:
 	git clone https://bitbucket.org/feynmanIntegrals/fire.git
 
 ${KIRA}:
-	curl -o ${KIRA} https://kira.hepforge.org/downloads?f=binaries/${KIRA}
+	curl -L -o ${KIRA} https://kira.hepforge.org/downloads?f=binaries/${KIRA}
 
 ${FORM}:
-	curl -O https://github.com/vermaseren/form/releases/download/v4.2.1/${FORM}
+	curl -L -O https://github.com/vermaseren/form/releases/download/v4.2.1/${FORM}
 

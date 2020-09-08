@@ -39,7 +39,7 @@ if [ $install_gmp == 'yes' ]; then
     echo "Installing GMP ..."
     export pkg="gmp-6.2.0"
     if [ ! -f $pkg.tar.gz ]; then
-        curl -O https://gmplib.org/download/gmp/$pkg.tar.gz
+        curl -L -O https://gmplib.org/download/gmp/$pkg.tar.gz
     fi
     rm -rf $pkg
     tar zxf $pkg.tar.gz
@@ -57,7 +57,7 @@ if [ $install_mpfr == 'yes' ]; then
     echo "Installing MPFR ..."
     export pkg="mpfr-4.0.2"
     if [ ! -f $pkg.tar.gz ]; then
-        curl -O https://heplib.github.io/download/$pkg.tar.gz
+        curl -L -O https://heplib.github.io/download/$pkg.tar.gz
     fi
     rm -rf $pkg
     tar zxf $pkg.tar.gz
@@ -79,7 +79,7 @@ if [ $install_cln == 'yes' ]; then
     echo "Installing CLN ..."
     export pkg="cln-1.3.6"
     if [ ! -f $pkg.tar.bz2 ]; then
-        curl -O https://www.ginac.de/CLN/$pkg.tar.bz2
+        curl -L -O https://www.ginac.de/CLN/$pkg.tar.bz2
     fi
     rm -rf $pkg
     tar jxf $pkg.tar.bz2
@@ -101,7 +101,7 @@ if [ $install_ginac == 'yes' ]; then
     echo "Install GiNaC ..."
     export pkg="ginac-1.7.11"
     if [ ! -f $pkg.tar.bz2 ]; then
-        curl -O https://www.ginac.de/$pkg.tar.bz2
+        curl -L -O https://www.ginac.de/$pkg.tar.bz2
     fi
     rm -rf $pkg
     tar jxf $pkg.tar.bz2
@@ -119,7 +119,7 @@ if [ $install_cuba == 'yes' ]; then
     echo "Install CUBA ..."
     export pkg="Cuba-4.2"
     if [ ! -f $pkg.tar.gz ]; then
-        curl -O http://www.feynarts.de/cuba/$pkg.tar.gz
+        curl -L -O http://www.feynarts.de/cuba/$pkg.tar.gz
     fi
     rm -rf $pkg
     tar zxf $pkg.tar.gz
@@ -137,7 +137,7 @@ if [ $install_minuit2 == 'yes' ]; then
     echo "Installing MinUit2 ..."
     export pkg="Minuit2-5.34.14"
     if [ ! -f $pkg.tar.gz ]; then
-        curl -O http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/$pkg.tar.gz
+        curl -L -O http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/$pkg.tar.gz
     fi
     rm -rf $pkg
     tar zxf $pkg.tar.gz
@@ -155,7 +155,7 @@ if [ $install_qhull == 'yes' ]; then
     echo "Installing QHull ..."
     export pkg="qhull-2020.2"
     if [ ! -f $pkg.zip ]; then
-        curl -O http://www.qhull.org/download/$pkg.zip
+        curl -L -O http://www.qhull.org/download/$pkg.zip
     fi
     rm -rf $pkg
     unzip -q $pkg.zip
@@ -179,7 +179,7 @@ if [ $install_fermat == 'yes' ]; then
     esac
     export pkg
     if [ ! -f $pkg.tar.gz ]; then
-        curl -O http://home.bway.net/lewis/fermat64/$pkg.tar.gz
+        curl -L -O http://home.bway.net/lewis/fermat64/$pkg.tar.gz
     fi
     rm -rf $pkg
     tar zxf $pkg.tar.gz
@@ -201,7 +201,7 @@ if [ $install_form == 'yes' ]; then
     esac
     export pkg
     if [ ! -f $pkg.tar.gz ]; then
-        curl -O https://github.com/vermaseren/form/releases/download/v4.2.1/$pkg.tar.gz
+        curl -L -O https://github.com/vermaseren/form/releases/download/v4.2.1/$pkg.tar.gz
     fi
     tar zxf $pkg.tar.gz
     cp -rf $pkg/form "$INSTALL_PATH/bin/"
@@ -237,13 +237,13 @@ if [ $install_kira == 'yes' ]; then
     export pkg
     if [ $pkg == "Linux" ]; then
         rm -rf kira
-        curl -o kira https://kira.hepforge.org/downloads?f=binaries/kira-2.0
+        curl -L -o kira https://kira.hepforge.org/downloads?f=binaries/kira-2.0
         chmod +x kira
         mv -f kira "$INSTALL_PATH/bin/kira"
     fi
     if [ $pkg == "MacOS" ]; then
         rm -rf kira
-        curl -o kira-2.0.tar.gz https://kira.hepforge.org/downloads?f=kira-2.0.tar.gz
+        curl -L -o kira-2.0.tar.gz https://kira.hepforge.org/downloads?f=kira-2.0.tar.gz
         tar zxf kira-2.0.tar.gz
         cd kira-2.0
         pip3 install --user meson
@@ -261,7 +261,7 @@ if [ $install_heplib == 'yes' ]; then
     echo "Installing HepLib ..."
     export pkg="HepLib"
     if [ ! -f $pkg.tar.gz ]; then
-        curl -O https://heplib.github.io/HepLib.tar.gz
+        curl -L -O https://heplib.github.io/HepLib.tar.gz
     fi
     rm -rf HepLib examples
     tar zxf $pkg.tar.gz
