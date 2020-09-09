@@ -61,11 +61,11 @@ It is only required that the binary programs can found in the environment variab
 
 Compilation and Installation
 ------
-One can download the most recent version of **HepLib** as a compressed archive: [HepLib.tar.gz](HepLib.tar.gz), uncompress it and change current directory into *HepLib* by the commands:
+One can download the most recent version of **HepLib** as a compressed archive: [HepLib.tar.gz](HepLib.tar.gz), uncompress it and change current directory into *HepLib/src* by the commands:
 ```bash
 wget https://heplib.github.io/HepLib.tar.gz 
 tar zxfv HepLib.tar.gz
-cd HepLib
+cd HepLib/src
 ```
 and create a directory for cmake to build the library as follows
 ```bash

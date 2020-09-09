@@ -112,16 +112,15 @@ INSTALL_Fermat: ${Fermat}
 
 INSTALL_HepLib: ${HepLib}
 	echo "Installing HepLib ..."
-	rm -rf ${heplib} examples ;\
+	rm -rf ${heplib} ;\
 	tar zxf ${HepLib} ;\
-	cd ${heplib} ;\
+	cd ${heplib}/src ;\
 	mkdir -p build ;\
 	cd build ;\
 	cmake -DCMAKE_INSTALL_PREFIX=${INSTALL_PATH} .. ;\
 	make -j ${jn} ;\
 	make install ;\
 	cd ${CWD} ;\
-	rm -rf ${heplib} ;\
 	echo ""
 
 INSTALL_QHULL: ${QHULL}

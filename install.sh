@@ -263,15 +263,14 @@ if [ $install_heplib == 'yes' ]; then
     if [ ! -f $pkg.tar.gz ]; then
         curl -L -O https://heplib.github.io/HepLib.tar.gz
     fi
-    rm -rf HepLib examples
+    rm -rf $pkg
     tar zxf $pkg.tar.gz
-    cd $pkg
+    cd $pkg/src
     mkdir build && cd build
     cmake -DCMAKE_INSTALL_PREFIX=$INSTALL_PATH ..
     make -j $jn
     make install 
     cd $CWD
-    rm -rf $pkg
     echo ""
 fi
 
