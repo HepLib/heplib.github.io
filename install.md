@@ -95,7 +95,7 @@ make -j 16
 make install
 ```
 
-+ **CUBA**: it is one of the numerical integrators and can be download from [http://www.feynarts.de/cuba/](http://www.feynarts.de/cuba/). 
++ **CUBA**: it is one of the numerical integrators. [website](http://www.feynarts.de/cuba/). 
 
     Note: The version with quadruple precision **libcubaq** is actually used, by adding the option **--with--real=16 CFLAGS="--fPIC -fcommon" CXXFLAGS="--fPIC -fcommon"** to the **configure** script.
 ```bash
@@ -112,6 +112,9 @@ make install
 External binary Programs
 ------
 It is only required that the binary programs can found in the environment variable **PATH**.
+
+Hint: Assuming one has exported the environment variable **INSTALL_PATH**
+$ export INSTALL_PATH="&lt;INSTALL PATH&gt;"
 
 + **FORM**: it is used for **Dirac** and **Color** matrix trace, Lorentz index contraction, *etc.*, it can be download from [https://www.nikhef.nl/~form/](https://www.nikhef.nl/~form/).
 
