@@ -126,7 +126,7 @@ cd $INSTALL_PATH/bin
 ln -s -f ../ferl6/fer64 .
 ```
 
-+ [**FORM**](https://www.nikhef.nl/~form/): it is used for **Dirac** and **Color** matrix trace, Lorentz index contraction, *etc.*.
++ [**FORM**](https://www.nikhef.nl/~form/): it is used for *Dirac* and *Color* matrix trace, Lorentz index contraction, *etc.*.
 ```bash
 #Linux OS
 curl -L -O https://github.com/vermaseren/form/releases/download/v4.2.1/form-4.2.1-x86_64-linux.tar.gz
