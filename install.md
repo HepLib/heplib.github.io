@@ -42,7 +42,7 @@ make install
     Hint: Typical installation instructions:
 ```bash
 curl -L -O https://heplib.github.io/download/mpfr-4.0.2.tar.gz
-tar zxf gmp-6.2.0.tar.gz
+tar zxf mpfr-4.0.2.tar.gz
 cd mpfr-4.0.2
 ./configure --prefix=<INSTALL PATH> --with-gmp=<INSTALL PATH> --enable-float128 --enable-thread-safe
 make -j 16
@@ -54,9 +54,9 @@ make install
     Hint: Typical installation instructions:
 ```bash
 curl -L -O https://www.ginac.de/CLN/cln-1.3.6.tar.bz2
-tar jxf gmp-6.2.0.tar.gz
-cd mpfr-4.0.2
-./configure --prefix=<INSTALL PATH> --with-gmp=<INSTALL PATH> --enable-float128 --enable-thread-safe
+tar jxf cln-1.3.6.tar.bz2
+cd cln-1.3.6
+./configure --prefix=<INSTALL PATH> --with-gmp=<INSTALL PATH>
 make -j 16
 make install
 ```
@@ -104,10 +104,11 @@ make install
     
     Hint: Typical installation instructions:
 ```bash
-curl -L -O https://www.ginac.de/ginac-1.7.11.tar.bz2
-cd ginac-1.7.11
-./configure --prefix=<INSTALL PATH> PKG_CONFIG_PATH=<INSTALL PATH>/lib/pkgconfig
-make -j 16
+curl -L -O http://www.feynarts.de/cuba/Cuba-4.2.tar.gz
+tar zxf Cuba-4.2.tar.gz
+cd Cuba-4.2
+./configure --prefix=<INSTALL PATH> --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon"
+make
 make install
 ```
     
