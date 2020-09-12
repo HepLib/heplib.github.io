@@ -88,6 +88,7 @@ make install
 ```
 
 + **MinUit2**: it is used to find the minimum of a function, avaiable on [http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/](http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/).
+
     Hint: Typical installation instructions:
 ```bash
 curl -L -O http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/Minuit2-5.34.14.tar.gz
