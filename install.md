@@ -26,11 +26,34 @@ make INSTALL_PATH=<Install Path> jn=16
 
 External Libraries
 ------
-+ **GiNaC**: the underlying language of **HepLib**, which is used for symbolic operations and can be download from [https://www.ginac.de](https://www.ginac.de), its prerequisite **CLN** can be download from [https://www.ginac.de/CLN/](https://www.ginac.de/CLN/).
++ **MPFR**: it is used to handle the multiple precision in the numerical integration when large number cancelation occurs. **MPFR** needs to be compiled with the option **--enable-float128**. **GMP** is required for **MPFR**, usually it has already been installed in one’s computer. Both libraries can be obtained from GNU site. 
+
+    Hint: Typical installation instruction for **GMP**:
+```bash
+    curl -L -O https://gmplib.org/download/gmp/gmp-6.2.0.tar.gz
+    tar zxf gmp-6.2.0.tar.gz
+    cd gmp-6.2.0
+    ./configure --prefix=<INSTALL PATH> 
+    make -j 16
+    make install
+```
+    Hint: Typical installation instruction for **MPFR**:
+```bash
+    curl -L -O https://heplib.github.io/download/mpfr-4.0.2.tar.gz
+    tar zxf gmp-6.2.0.tar.gz
+    cd mpfr-4.0.2
+    ./configure --prefix=<INSTALL PATH> --with-gmp=<INSTALL PATH> --enable-float128 --enable-thread-safe
+    make -j 16
+    make install
+```
+
++ **GiNaC**: The underlying language of **HepLib**, which is used for symbolic operations and can be download from [https://www.ginac.de](https://www.ginac.de), its prerequisite **CLN** can be download from [https://www.ginac.de/CLN/](https://www.ginac.de/CLN/).
+
+  Hint: Typical installation instructions:
+  
 
 + **Qgraf**: the version 3.1.4 has been included in **HepLib**, which can be download from [http://cfif.ist.utl.pt/~paulo/qgraf.html](http://cfif.ist.utl.pt/~paulo/qgraf.html).
 
-+ **MPFR**: it is used to handle the multiple precision in the numerical integration when large number cancelation occurs. **MPFR** needs to be compiled with the option **--enable-float128**. **GMP** is required for **MPFR**, usually it has already been installed in one’s computer. Both libraries can be obtained from GNU site. 
     
     Note:  The quadruple precision type **__float128** has been changed to
 **_Float128** since [MPFR 4.1.0](https://www.mpfr.org/mpfr-4.1.0/), so we prefer the version [MPFR 4.0.2](download/mpfr-4.0.2.tar.gz) for the moment, furthermore the [MPFR C++](http://www.holoborodko.com/pavel/mpfr/) wrapper is included in **HepLib** archive.
