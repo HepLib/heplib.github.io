@@ -52,7 +52,7 @@ make -j 16
 make install
 ```
 
-+ **CLN**: it is required for **GiNaC**.
++ [**CLN**](https://www.ginac.de/CLN/): it is required for **GiNaC**.
 ```bash
 #Typical installation instructions:
 curl -L -O https://www.ginac.de/CLN/cln-1.3.6.tar.bz2
@@ -63,7 +63,7 @@ make -j 16
 make install
 ```
 
-+ **GiNaC**: The underlying language of **HepLib**, which is used for symbolic operations and can be download from [https://www.ginac.de](https://www.ginac.de), its prerequisite **CLN** can be download from [https://www.ginac.de/CLN/](https://www.ginac.de/CLN/).
++ [**GiNaC**](https://www.ginac.de): The underlying language of **HepLib**, which is used for symbolic operations.
 ```bash
 #Typical installation instructions:
 curl -L -O https://www.ginac.de/ginac-1.7.11.tar.bz2
@@ -73,7 +73,7 @@ make -j 16
 make install
 ```
 
-+ **QHull**: it is used for sector decompostion with geometric stratage and available on [http://www.qhull.org](http://www.qhull.org).
++ [**QHull**](http://www.qhull.org): it is used for sector decompostion with geometric stratage.
 ```bash
 #Typical installation instructions:
 curl -L -O http://www.qhull.org/download/qhull-2020.2.zip
@@ -85,7 +85,7 @@ make
 make install
 ```
 
-+ **MinUit2**: it is used to find the minimum of a function, avaiable on [http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/](http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/).
++ [**MinUit2**](http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/): it is used to find the minimum of a function.
 ```bash
 #Typical installation instructions:
 curl -L -O http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/Minuit2-5.34.14.tar.gz
@@ -95,7 +95,7 @@ make -j 16
 make install
 ```
 
-+ **CUBA**: it is one of the numerical integrators. [website](http://www.feynarts.de/cuba/). 
++ [**CUBA**](http://www.feynarts.de/cuba/): it is one of the numerical integrators. 
 
     Note: The version with quadruple precision **libcubaq** is actually used, by adding the option **--with--real=16 CFLAGS="--fPIC -fcommon" CXXFLAGS="--fPIC -fcommon"** to the **configure** script.
 ```bash
