@@ -158,6 +158,9 @@ mv -f kira $INSTALL_PATH/bin/kira
 
 Compilation and Installation
 ------
+Hint: Assuming one has exported the environment variable **INSTALL_PATH**
+$ export INSTALL_PATH="&lt;INSTALL PATH&gt;"
+
 One can download the most recent version of **HepLib** as a compressed archive: [HepLib.tar.gz](HepLib.tar.gz), uncompress it and change current directory into *HepLib/src* by the commands:
 ```bash
 wget https://heplib.github.io/HepLib.tar.gz 
@@ -167,7 +170,7 @@ cd HepLib/src
 and create a directory for cmake to build the library as follows
 ```bash
 mkdir build && cd build
-cmake -DCMAKE_INSTALL_PREFIX=<Install Path> .. 
+cmake -DCMAKE_INSTALL_PREFIX=$INSTALL_PATH .. 
 make -j 4 && make install
 ```
 where the standard cmake variable **CMAKE_INSTALL_PREFIX** refers to the directory to which **HepLib** will be installed, *i.e.*, the library *libHepLib.so* (the file name may be system dependent) will be installed to **&lt;Install Path&gt;/lib**, the related *C++* header files, including *HepLib.h*, *FC.h*, *SD.h*, *etc.*, will be installed to **&lt;Install Path&gt;/include**, the *binary programs*, including *heplib++*, *garview*, *etc.*, will be installed to **&lt;Install Path&gt;/bin**.
