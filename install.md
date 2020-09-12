@@ -26,7 +26,7 @@ make INSTALL_PATH=<Install Path> jn=16
 
 External Libraries
 ------
-Hint: Assuming one has export the environment variable **INSTALL_PATH**
+Hint: Assuming one has exported the environment variable **INSTALL_PATH**
 ```bash
 export INSTALL_PATH="<INSTALL PATH>"
 ```
@@ -64,9 +64,8 @@ make install
 ```
 
 + **GiNaC**: The underlying language of **HepLib**, which is used for symbolic operations and can be download from [https://www.ginac.de](https://www.ginac.de), its prerequisite **CLN** can be download from [https://www.ginac.de/CLN/](https://www.ginac.de/CLN/).
-
-  Hint: Typical installation instructions:
 ```bash
+#Typical installation instructions:
 curl -L -O https://www.ginac.de/ginac-1.7.11.tar.bz2
 cd ginac-1.7.11
 ./configure --prefix=<INSTALL PATH> PKG_CONFIG_PATH=<INSTALL PATH>/lib/pkgconfig
@@ -77,9 +76,8 @@ make install
 + **Qgraf**: the version 3.1.4 has been included in **HepLib**, which can be download from [http://cfif.ist.utl.pt/~paulo/qgraf.html](http://cfif.ist.utl.pt/~paulo/qgraf.html).
 
 + **QHull**: it is used for sector decompostion with geometric stratage and available on [http://www.qhull.org](http://www.qhull.org).
-
-    Hint: Typical installation instructions:
 ```bash
+#Typical installation instructions:
 curl -L -O http://www.qhull.org/download/qhull-2020.2.zip
 unzip -q qhull-2020.2.zip
 cd qhull-2020.2
@@ -90,9 +88,8 @@ make install
 ```
 
 + **MinUit2**: it is used to find the minimum of a function, avaiable on [http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/](http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/).
-
-    Hint: Typical installation instructions:
 ```bash
+#Typical installation instructions:
 curl -L -O http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/Minuit2-5.34.14.tar.gz
 cd Minuit2-5.34.14
 ./configure --prefix=<INSTALL PATH>
@@ -103,9 +100,8 @@ make install
 + **CUBA**: it is one of the numerical integrators and can be download from [http://www.feynarts.de/cuba/](http://www.feynarts.de/cuba/). 
 
     Note: The version with quadruple precision **libcubaq** is actually used, by adding the option **--with--real=16 CFLAGS="--fPIC -fcommon" CXXFLAGS="--fPIC -fcommon"** to the **configure** script.
-    
-    Hint: Typical installation instructions:
 ```bash
+#Typical installation instructions:
 curl -L -O http://www.feynarts.de/cuba/Cuba-4.2.tar.gz
 tar zxf Cuba-4.2.tar.gz
 cd Cuba-4.2
