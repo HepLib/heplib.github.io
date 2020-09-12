@@ -27,7 +27,7 @@ make INSTALL_PATH=<Install Path> jn=16
 External Libraries
 ------
 Hint: Assuming one has exported the environment variable **INSTALL_PATH**
-$ export INSTALL_PATH="<INSTALL PATH>"
+$ export INSTALL_PATH="&lt;INSTALL PATH&gt;"
 
 + **GMP**: it is required for **MPFR** and **GiNaC**.
 ```bash
