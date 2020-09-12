@@ -26,10 +26,14 @@ make INSTALL_PATH=<Install Path> jn=16
 
 External Libraries
 ------
-+ **GMP**: it is required for **MPFR** and **GiNaC**.
-
-    Hint: Typical installation instructions:
+Hint: Assuming one has export the environment variable **INSTALL_PATH**
 ```bash
+export INSTALL_PATH="<INSTALL PATH>"
+```
+
++ **GMP**: it is required for **MPFR** and **GiNaC**.
+```bash
+#Typical installation instructions:
 curl -L -O https://gmplib.org/download/gmp/gmp-6.2.0.tar.gz
 tar zxf gmp-6.2.0.tar.gz
 cd gmp-6.2.0
@@ -38,9 +42,8 @@ make -j 16
 make install
 ```
 + **MPFR**: it is used to handle the multiple precision in the numerical integration when large number cancelation occurs. **MPFR** needs to be compiled with the option **--enable-float128**.
-
-    Hint: Typical installation instructions:
 ```bash
+#Typical installation instructions:
 curl -L -O https://heplib.github.io/download/mpfr-4.0.2.tar.gz
 tar zxf mpfr-4.0.2.tar.gz
 cd mpfr-4.0.2
@@ -50,9 +53,8 @@ make install
 ```
 
 + **CLN**: it is required for **GiNaC**
-
-    Hint: Typical installation instructions:
 ```bash
+#Typical installation instructions:
 curl -L -O https://www.ginac.de/CLN/cln-1.3.6.tar.bz2
 tar jxf cln-1.3.6.tar.bz2
 cd cln-1.3.6
