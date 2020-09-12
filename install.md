@@ -116,23 +116,46 @@ It is only required that the binary programs can found in the environment variab
 Hint: Assuming one has exported the environment variable **INSTALL_PATH**
 $ export INSTALL_PATH="&lt;INSTALL PATH&gt;"
 
-+ [**Fermat**](http://home.bway.net/lewis/): it is used for high performance matrix operation, multivariate rational polynormial simplification, *etc.*.
-
-+ [**FORM**]((https://www.nikhef.nl/~form/)): it is used for **Dirac** and **Color** matrix trace, Lorentz index contraction, *etc.*.
++ [**Fermat**](http://home.bway.net/lewis/): it is used for matrix operation, multivariate rational polynormial simplification, *etc.*.
 ```bash
+#Linux OS
 curl -L -O http://home.bway.net/lewis/fermat64/ferl6.tar.gz
 tar zxf ferl6.tar.gz
 mv ferl6 $INSTALL_PATH
-cd <INSTALL PATH>/bin
+cd $INSTALL_PATH/bin
 ln -s -f ../ferl6/fer64 .
+```
+
++ [**FORM**]((https://www.nikhef.nl/~form/)): it is used for **Dirac** and **Color** matrix trace, Lorentz index contraction, *etc.*.
+```bash
+#Linux OS
+curl -L -O https://github.com/vermaseren/form/releases/download/v4.2.1/form-4.2.1-x86_64-linux.tar.gz
+tar zxf form-4.2.1-x86_64-linux.tar.gz
+cp -rf form-4.2.1-x86_64-linux/form $INSTALL_PATH/bin/
+cp -rf form-4.2.1-x86_64-linux/tform $INSTALL_PATH/bin/
 ```
 
 + [**FIRE**](https://bitbucket.org/feynmanIntegrals/fire/): it is required for IBP reduction in **FIRE** class. 
 
     Note: **FIRE_Path/bin** needs to be added to the environment variable **PATH**.
+    
+```bash
+git clone https://bitbucket.org/feynmanIntegrals/fire.git
+mv fire/FIRE6 $INSTALL_PATH/FIRE6
+rm -rf fire
+cd $INSTALL_PATH/FIRE6
+./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd
+make -j 16
+make
+```
 
 + [**KIRA**](https://kira.hepforge.org): it is required for IBP reduction in **KIRA** class.
-
+```bash
+#Linux OS 
+curl -L -o kira https://kira.hepforge.org/downloads?f=binaries/kira-2.0
+chmod +x kira
+mv -f kira $INSTALL_PATH/bin/kira
+```
 
 Compilation and Installation
 ------
