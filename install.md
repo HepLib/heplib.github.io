@@ -29,7 +29,7 @@ External Libraries
 Hint: Assuming one has exported the environment variable **INSTALL_PATH**
 $ export INSTALL_PATH="&lt;INSTALL PATH&gt;"
 
-+ **GMP**: it is required for **MPFR** and **GiNaC**.
++ [**GMP**](https://gmplib.org/): it is required for **MPFR** and **GiNaC**.
 ```bash
 #Typical installation instructions:
 curl -L -O https://gmplib.org/download/gmp/gmp-6.2.0.tar.gz
@@ -39,7 +39,7 @@ cd gmp-6.2.0
 make -j 16
 make install
 ```
-+ **MPFR**: it is used to handle the multiple precision in the numerical integration when large number cancelation occurs. **MPFR** needs to be compiled with the option **--enable-float128**.
++ [**MPFR**](https://www.mpfr.org/): it is used to handle the multiple precision in the numerical integration when large number cancelation occurs. **MPFR** needs to be compiled with the option **--enable-float128**.
     
     Note: The quadruple precision type __float128 has been changed to _Float128 since [MPFR 4.1.0](https://www.mpfr.org/mpfr-4.1.0/), so we prefer the version [MPFR 4.0.2](https://heplib.github.io/download/mpfr-4.0.2.tar.gz) for the moment, furthermore the [MPFR C++](http://www.holoborodko.com/pavel/mpfr/) wrapper is included in **HepLib** archive.
 ```bash
