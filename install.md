@@ -53,7 +53,7 @@ make -j 16
 make install
 ```
 
-+ **CLN**: it is required for **GiNaC**
++ **CLN**: it is required for **GiNaC**.
 ```bash
 #Typical installation instructions:
 curl -L -O https://www.ginac.de/CLN/cln-1.3.6.tar.bz2
@@ -109,7 +109,7 @@ make
 make install
 ```
     
-    
+
 External binary Programs
 ------
 It is only required that the binary programs can found in the environment variable **PATH**.
