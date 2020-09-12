@@ -27,9 +27,7 @@ make INSTALL_PATH=<Install Path> jn=16
 External Libraries
 ------
 Hint: Assuming one has exported the environment variable **INSTALL_PATH**
-```bash
-export INSTALL_PATH="<INSTALL PATH>"
-```
+$ export INSTALL_PATH="<INSTALL PATH>"
 
 + **GMP**: it is required for **MPFR** and **GiNaC**.
 ```bash
@@ -42,6 +40,9 @@ make -j 16
 make install
 ```
 + **MPFR**: it is used to handle the multiple precision in the numerical integration when large number cancelation occurs. **MPFR** needs to be compiled with the option **--enable-float128**.
+    
+    Note: The quadruple precision type __float128 has been changed to _Float128 since [MPFR 4.1.0](https://www.mpfr.org/mpfr-4.1.0/), so we prefer the version [MPFR 4.0.2](https://heplib.github.io/download/mpfr-4.0.2.tar.gz) for the moment, furthermore the [MPFR C++](http://www.holoborodko.com/pavel/mpfr/) wrapper is included in **HepLib** archive.
+    
 ```bash
 #Typical installation instructions:
 curl -L -O https://heplib.github.io/download/mpfr-4.0.2.tar.gz
@@ -72,8 +73,6 @@ cd ginac-1.7.11
 make -j 16
 make install
 ```
-
-+ **Qgraf**: the version 3.1.4 has been included in **HepLib**, which can be download from [http://cfif.ist.utl.pt/~paulo/qgraf.html](http://cfif.ist.utl.pt/~paulo/qgraf.html).
 
 + **QHull**: it is used for sector decompostion with geometric stratage and available on [http://www.qhull.org](http://www.qhull.org).
 ```bash
