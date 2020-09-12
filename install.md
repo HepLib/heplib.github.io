@@ -75,25 +75,26 @@ make install
 + **Qgraf**: the version 3.1.4 has been included in **HepLib**, which can be download from [http://cfif.ist.utl.pt/~paulo/qgraf.html](http://cfif.ist.utl.pt/~paulo/qgraf.html).
 
 + **QHull**: it is used for sector decompostion with geometric stratage and available on [http://www.qhull.org](http://www.qhull.org).
+
     Hint: Typical installation instructions:
 ```bash
-    curl -L -O http://www.qhull.org/download/qhull-2020.2.zip
-    unzip -q qhull-2020.2.zip
-    cd qhull-2020.2
-    cp Makefile Makefile.bak
-    cat Makefile.bak | sed "s/\/usr\/local/<INSTALL PATH>/g" > Makefile
-    make
-    make install
+curl -L -O http://www.qhull.org/download/qhull-2020.2.zip
+unzip -q qhull-2020.2.zip
+cd qhull-2020.2
+cp Makefile Makefile.bak
+cat Makefile.bak | sed "s/\/usr\/local/<INSTALL PATH>/g" > Makefile
+make
+make install
 ```
 
 + **MinUit2**: it is used to find the minimum of a function, avaiable on [http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/](http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/).
     Hint: Typical installation instructions:
 ```bash
-    curl -L -O http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/Minuit2-5.34.14.tar.gz
-    cd Minuit2-5.34.14
-    ./configure --prefix=<INSTALL PATH>
-    make -j 16
-    make install
+curl -L -O http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/Minuit2-5.34.14.tar.gz
+cd Minuit2-5.34.14
+./configure --prefix=<INSTALL PATH>
+make -j 16
+make install
 ```
 
 + **CUBA**: it is one of the numerical integrators and can be download from [http://www.feynarts.de/cuba/](http://www.feynarts.de/cuba/). 
@@ -102,11 +103,11 @@ make install
     
     Hint: Typical installation instructions:
 ```bash
-  curl -L -O https://www.ginac.de/ginac-1.7.11.tar.bz2
-    cd ginac-1.7.11
-    ./configure --prefix=<INSTALL PATH> PKG_CONFIG_PATH=<INSTALL PATH>/lib/pkgconfig
-    make -j 16
-    make install
+curl -L -O https://www.ginac.de/ginac-1.7.11.tar.bz2
+cd ginac-1.7.11
+./configure --prefix=<INSTALL PATH> PKG_CONFIG_PATH=<INSTALL PATH>/lib/pkgconfig
+make -j 16
+make install
 ```
     
     
