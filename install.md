@@ -35,7 +35,7 @@ $ export INSTALL_PATH="&lt;INSTALL PATH&gt;"
 curl -L -O https://gmplib.org/download/gmp/gmp-6.2.0.tar.gz
 tar zxf gmp-6.2.0.tar.gz
 cd gmp-6.2.0
-./configure --prefix=<INSTALL PATH> 
+./configure --prefix=$INSTALL_PATH 
 make -j 16
 make install
 ```
@@ -47,7 +47,7 @@ make install
 curl -L -O https://heplib.github.io/download/mpfr-4.0.2.tar.gz
 tar zxf mpfr-4.0.2.tar.gz
 cd mpfr-4.0.2
-./configure --prefix=<INSTALL PATH> --with-gmp=<INSTALL PATH> --enable-float128 --enable-thread-safe
+./configure --prefix=$INSTALL_PATH --with-gmp=$INSTALL_PATH --enable-float128 --enable-thread-safe
 make -j 16
 make install
 ```
@@ -58,7 +58,7 @@ make install
 curl -L -O https://www.ginac.de/CLN/cln-1.3.6.tar.bz2
 tar jxf cln-1.3.6.tar.bz2
 cd cln-1.3.6
-./configure --prefix=<INSTALL PATH> --with-gmp=<INSTALL PATH>
+./configure --prefix=$INSTALL_PATH --with-gmp=$INSTALL_PATH
 make -j 16
 make install
 ```
@@ -68,7 +68,7 @@ make install
 #Typical installation instructions:
 curl -L -O https://www.ginac.de/ginac-1.7.11.tar.bz2
 cd ginac-1.7.11
-./configure --prefix=<INSTALL PATH> PKG_CONFIG_PATH=<INSTALL PATH>/lib/pkgconfig
+./configure --prefix=$INSTALL_PATH PKG_CONFIG_PATH=$INSTALL_PATH/lib/pkgconfig
 make -j 16
 make install
 ```
@@ -80,7 +80,7 @@ curl -L -O http://www.qhull.org/download/qhull-2020.2.zip
 unzip -q qhull-2020.2.zip
 cd qhull-2020.2
 cp Makefile Makefile.bak
-cat Makefile.bak | sed "s/\/usr\/local/<INSTALL PATH>/g" > Makefile
+cat Makefile.bak | sed "s/\/usr\/local/\$\$INSTALL_PATH/g" > Makefile
 make
 make install
 ```
@@ -90,7 +90,7 @@ make install
 #Typical installation instructions:
 curl -L -O http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/Minuit2-5.34.14.tar.gz
 cd Minuit2-5.34.14
-./configure --prefix=<INSTALL PATH>
+./configure --prefix=$INSTALL_PATH
 make -j 16
 make install
 ```
@@ -103,7 +103,7 @@ make install
 curl -L -O http://www.feynarts.de/cuba/Cuba-4.2.tar.gz
 tar zxf Cuba-4.2.tar.gz
 cd Cuba-4.2
-./configure --prefix=<INSTALL PATH> --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon"
+./configure --prefix=$INSTALL_PATH --with-real=16 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon"
 make
 make install
 ```
@@ -116,15 +116,22 @@ It is only required that the binary programs can found in the environment variab
 Hint: Assuming one has exported the environment variable **INSTALL_PATH**
 $ export INSTALL_PATH="&lt;INSTALL PATH&gt;"
 
-+ **FORM**: it is used for **Dirac** and **Color** matrix trace, Lorentz index contraction, *etc.*, it can be download from [https://www.nikhef.nl/~form/](https://www.nikhef.nl/~form/).
++ [**Fermat**](http://home.bway.net/lewis/): it is used for high performance matrix operation, multivariate rational polynormial simplification, *etc.*.
 
-+ **Fermat**: it is used for high performance matrix operation, multivariate rational polynormial simplification, *etc.*, it can be download from [http://home.bway.net/lewis/](http://home.bway.net/lewis/).
++ [**FORM**]((https://www.nikhef.nl/~form/)): it is used for **Dirac** and **Color** matrix trace, Lorentz index contraction, *etc.*.
+```bash
+curl -L -O http://home.bway.net/lewis/fermat64/ferl6.tar.gz
+tar zxf ferl6.tar.gz
+mv ferl6 $INSTALL_PATH
+cd <INSTALL PATH>/bin
+ln -s -f ../ferl6/fer64 .
+```
 
-+ **FIRE**: it is required for IBP reduction in **FIRE** class, it can be download from [https://bitbucket.org/feynmanIntegrals/fire/](https://bitbucket.org/feynmanIntegrals/fire/). 
++ [**FIRE**](https://bitbucket.org/feynmanIntegrals/fire/): it is required for IBP reduction in **FIRE** class. 
 
     Note: **FIRE_Path/bin** needs to be added to the environment variable **PATH**.
 
-+ **KIRA**: it is required for IBP reduction in **KIRA** class, it can be download from [https://kira.hepforge.org](https://kira.hepforge.org).
++ [**KIRA**](https://kira.hepforge.org): it is required for IBP reduction in **KIRA** class.
 
 
 Compilation and Installation
