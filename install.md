@@ -138,7 +138,6 @@ cp -rf form-4.2.1-x86_64-linux/tform $INSTALL_PATH/bin/
 + [**FIRE**](https://bitbucket.org/feynmanIntegrals/fire/): it is required for IBP reduction in **FIRE** class. 
 
     Note: **FIRE_Path/bin** needs to be added to the environment variable **PATH**.
-    
 ```bash
 git clone https://bitbucket.org/feynmanIntegrals/fire.git
 mv fire/FIRE6 $INSTALL_PATH/FIRE6
