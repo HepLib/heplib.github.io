@@ -30,46 +30,46 @@ External Libraries
 
     Hint: Typical installation instructions:
 ```bash
-    curl -L -O https://gmplib.org/download/gmp/gmp-6.2.0.tar.gz
-    tar zxf gmp-6.2.0.tar.gz
-    cd gmp-6.2.0
-    ./configure --prefix=<INSTALL PATH> 
-    make -j 16
-    make install
+curl -L -O https://gmplib.org/download/gmp/gmp-6.2.0.tar.gz
+tar zxf gmp-6.2.0.tar.gz
+cd gmp-6.2.0
+./configure --prefix=<INSTALL PATH> 
+make -j 16
+make install
 ```
 + **MPFR**: it is used to handle the multiple precision in the numerical integration when large number cancelation occurs. **MPFR** needs to be compiled with the option **--enable-float128**.
 
     Hint: Typical installation instructions:
 ```bash
-    curl -L -O https://heplib.github.io/download/mpfr-4.0.2.tar.gz
-    tar zxf gmp-6.2.0.tar.gz
-    cd mpfr-4.0.2
-    ./configure --prefix=<INSTALL PATH> --with-gmp=<INSTALL PATH> --enable-float128 --enable-thread-safe
-    make -j 16
-    make install
+curl -L -O https://heplib.github.io/download/mpfr-4.0.2.tar.gz
+tar zxf gmp-6.2.0.tar.gz
+cd mpfr-4.0.2
+./configure --prefix=<INSTALL PATH> --with-gmp=<INSTALL PATH> --enable-float128 --enable-thread-safe
+make -j 16
+make install
 ```
 
 + **CLN**: it is required for **GiNaC**
 
     Hint: Typical installation instructions:
 ```bash
-    curl -L -O https://www.ginac.de/CLN/cln-1.3.6.tar.bz2
-    tar jxf gmp-6.2.0.tar.gz
-    cd mpfr-4.0.2
-    ./configure --prefix=<INSTALL PATH> --with-gmp=<INSTALL PATH> --enable-float128 --enable-thread-safe
-    make -j 16
-    make install
+curl -L -O https://www.ginac.de/CLN/cln-1.3.6.tar.bz2
+tar jxf gmp-6.2.0.tar.gz
+cd mpfr-4.0.2
+./configure --prefix=<INSTALL PATH> --with-gmp=<INSTALL PATH> --enable-float128 --enable-thread-safe
+make -j 16
+make install
 ```
 
 + **GiNaC**: The underlying language of **HepLib**, which is used for symbolic operations and can be download from [https://www.ginac.de](https://www.ginac.de), its prerequisite **CLN** can be download from [https://www.ginac.de/CLN/](https://www.ginac.de/CLN/).
 
   Hint: Typical installation instructions:
 ```bash
-    curl -L -O https://www.ginac.de/ginac-1.7.11.tar.bz2
-    cd ginac-1.7.11
-    ./configure --prefix=<INSTALL PATH> PKG_CONFIG_PATH=<INSTALL PATH>/lib/pkgconfig
-    make -j 16
-    make install
+curl -L -O https://www.ginac.de/ginac-1.7.11.tar.bz2
+cd ginac-1.7.11
+./configure --prefix=<INSTALL PATH> PKG_CONFIG_PATH=<INSTALL PATH>/lib/pkgconfig
+make -j 16
+make install
 ```
 
 + **Qgraf**: the version 3.1.4 has been included in **HepLib**, which can be download from [http://cfif.ist.utl.pt/~paulo/qgraf.html](http://cfif.ist.utl.pt/~paulo/qgraf.html).
