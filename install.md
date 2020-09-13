@@ -142,7 +142,7 @@ cp -rf form-4.2.1-x86_64-linux/form $INSTALL_PATH/bin/
 cp -rf form-4.2.1-x86_64-linux/tform $INSTALL_PATH/bin/
 ```
 ```bash
-#MacOS
+#Typical installation instructions (MacOS):
 curl -L -O https://github.com/vermaseren/form/releases/download/v4.2.1/form-4.2.1-x86_64-osx.tar.gz
 tar zxf form-4.2.1-x86_64-osx.tar.gz
 cp -rf form-4.2.1-x86_64-osx/form $INSTALL_PATH/bin/
