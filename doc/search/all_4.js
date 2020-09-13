@@ -14,10 +14,11 @@ var searchData=
   ['dir_5fexists_95',['dir_exists',['../namespace_hep_lib.html#ac4edb7e1b0b8398f8e263cecd4ff2421',1,'HepLib']]],
   ['diracgamma_96',['DiracGamma',['../class_hep_lib_1_1_f_c_1_1_dirac_gamma.html',1,'HepLib::FC::DiracGamma'],['../class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a8c71eaeb159eb26e3ef86a60f4d50cd5',1,'HepLib::FC::DiracGamma::DiracGamma(const Vector &amp;p, unsigned rl=0)'],['../class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a3b1a6469f895d395ae69e48263b114d5',1,'HepLib::FC::DiracGamma::DiracGamma(const Index &amp;i, unsigned rl=0)'],['../class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#ad95ee54b9f4087c74047f5b93b65c799',1,'HepLib::FC::DiracGamma::DiracGamma(int int_1567, unsigned _rl=0)'],['../class_hep_lib_1_1_f_c_1_1_dirac_gamma.html#a47b00147ccb4e6bdcd878803593b9ee7',1,'HepLib::FC::DiracGamma::DiracGamma(const DiracGamma &amp;g, unsigned _rl)']]],
   ['diracgamma_2ecpp_97',['DiracGamma.cpp',['../_dirac_gamma_8cpp.html',1,'']]],
-  ['do_5fnot_5fevalf_5fparams_98',['do_not_evalf_params',['../namespace_hep_lib_1_1_s_d.html#a46456a87922407dbb47af053ce5fb13c',1,'HepLib::SD']]],
-  ['dops_99',['DoPS',['../namespace_hep_lib_1_1_f_c_1_1_quarkonium.html#aee24e54fcde6ef5bcc2be156b0973e17',1,'HepLib::FC::Quarkonium']]],
-  ['dpi_100',['dPi',['../_n_functions_8h.html#ad5a0f598cf6c8b319cdd54bfad867cd0',1,'dPi():&#160;NFunctions.cpp'],['../_n_functions_8cpp.html#ad5a0f598cf6c8b319cdd54bfad867cd0',1,'dPi():&#160;NFunctions.cpp']]],
-  ['dqmp_101',['DQMP',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#afbe3ae33245b31bd0008cabba3e8cea7',1,'HepLib::SD::IntegratorBase']]],
-  ['drawpdf_102',['DrawPDF',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html#afa9aac178d42bf5ad34ef96968e79648',1,'HepLib::FC::Qgraf']]],
-  ['dreal_103',['dREAL',['../_n_functions_8h.html#a81a76489b14e1dd4a1340685535edcad',1,'dREAL():&#160;NFunctions.h'],['../namespace_hep_lib_1_1_s_d.html#a3a7cfef7b6abf275a9655a77b2399b38',1,'HepLib::SD::dREAL()'],['../_c_u_b_a_8cpp.html#a81a76489b14e1dd4a1340685535edcad',1,'dREAL():&#160;CUBA.cpp'],['../_h_cubature_8cpp.html#a81a76489b14e1dd4a1340685535edcad',1,'dREAL():&#160;HCubature.cpp']]]
+  ['dmax_98',['dmax',['../class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html#a33d2d8eb28e7bebd28131c909c332162',1,'HepLib::IBP::KIRA']]],
+  ['do_5fnot_5fevalf_5fparams_99',['do_not_evalf_params',['../namespace_hep_lib_1_1_s_d.html#a46456a87922407dbb47af053ce5fb13c',1,'HepLib::SD']]],
+  ['dops_100',['DoPS',['../namespace_hep_lib_1_1_f_c_1_1_quarkonium.html#aee24e54fcde6ef5bcc2be156b0973e17',1,'HepLib::FC::Quarkonium']]],
+  ['dpi_101',['dPi',['../_n_functions_8h.html#ad5a0f598cf6c8b319cdd54bfad867cd0',1,'dPi():&#160;NFunctions.cpp'],['../_n_functions_8cpp.html#ad5a0f598cf6c8b319cdd54bfad867cd0',1,'dPi():&#160;NFunctions.cpp']]],
+  ['dqmp_102',['DQMP',['../class_hep_lib_1_1_s_d_1_1_integrator_base.html#afbe3ae33245b31bd0008cabba3e8cea7',1,'HepLib::SD::IntegratorBase']]],
+  ['drawpdf_103',['DrawPDF',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html#afa9aac178d42bf5ad34ef96968e79648',1,'HepLib::FC::Qgraf']]],
+  ['dreal_104',['dREAL',['../_n_functions_8h.html#a81a76489b14e1dd4a1340685535edcad',1,'dREAL():&#160;NFunctions.h'],['../namespace_hep_lib_1_1_s_d.html#a3a7cfef7b6abf275a9655a77b2399b38',1,'HepLib::SD::dREAL()'],['../_c_u_b_a_8cpp.html#a81a76489b14e1dd4a1340685535edcad',1,'dREAL():&#160;CUBA.cpp'],['../_h_cubature_8cpp.html#a81a76489b14e1dd4a1340685535edcad',1,'dREAL():&#160;HCubature.cpp']]]
 ];
