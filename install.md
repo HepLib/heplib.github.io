@@ -125,6 +125,13 @@ mv ferl6 $INSTALL_PATH
 cd $INSTALL_PATH/bin
 ln -s -f ../ferl6/fer64 .
 ```
+```bash
+#MacOS
+curl -L -O http://home.bway.net/lewis/fermat64/ferlm.tar.gz
+tar zxf ferm6.tar.gz
+mv ferm6 $INSTALL_PATH
+ln -s -f ../ferl6/fer64 .
+```
 
 + [**FORM**](https://www.nikhef.nl/~form/): it is used for *Dirac* and *Color* matrix trace, Lorentz index contraction, *etc.*.
 ```bash
@@ -133,6 +140,13 @@ curl -L -O https://github.com/vermaseren/form/releases/download/v4.2.1/form-4.2.
 tar zxf form-4.2.1-x86_64-linux.tar.gz
 cp -rf form-4.2.1-x86_64-linux/form $INSTALL_PATH/bin/
 cp -rf form-4.2.1-x86_64-linux/tform $INSTALL_PATH/bin/
+```
+```bash
+#MacOS
+curl -L -O https://github.com/vermaseren/form/releases/download/v4.2.1/form-4.2.1-x86_64-osx.tar.gz
+tar zxf form-4.2.1-x86_64-osx.tar.gz
+cp -rf form-4.2.1-x86_64-osx/form $INSTALL_PATH/bin/
+cp -rf form-4.2.1-x86_64-osx/tform $INSTALL_PATH/bin/
 ```
 
 + [**FIRE**](https://bitbucket.org/feynmanIntegrals/fire/): it is required for IBP reduction in **FIRE** class. 
