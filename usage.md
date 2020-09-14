@@ -30,7 +30,7 @@ Assuming the **&lt;HepLib Install Path&gt;/bin** is added to the environment var
 ```bash
 export PATH=<HepLib Install Path>/bin:$PATH
 ```
- **&lt;HepLib Install Path&gt;/lib** is added to the environment variable **LD_LIBRARY_PATH**, if not please run 
+ **&lt;INSTALL PATH&gt;/lib** is added to the environment variable **LD_LIBRARY_PATH**, if not please run 
  ```bash
  export LD_LIBRARY_PATH=<HepLib Install Path>/lib:$LD_LIBRARY_PATH
  ```
@@ -41,7 +41,15 @@ $ ./ hello
 -4*D*p2.p1+8*p2.p1
 ```
 
+One can also compile the program with pkg-config as follows, still we assume **&lt;INSTALL PATH&lt;/lib/pkgconfig** has been included in the environment variable PKG CONFIG PATH (if not, please run export PKG CONFIG PATH=&lt;INSTALL PATH&lt;/lib/pkgconfig:$PKG CONFIG PATH),
+```bash
+g++ $(pkg-config --cflags --libs HepLib) -o hello hello.cpp
+```
 
+Of course, one can also provide the g++ flags and libraries explicitly as follows:
+```bash
+g++ -I <INSTALL PATH>/include -L <INSTALL PATH>/lib -lHepLib -lginac -o hello hello.cpp
+```
 
 
 
