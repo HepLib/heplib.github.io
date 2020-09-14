@@ -26,7 +26,7 @@ The above code [hello.cpp](examples/hello.cpp) shows how to perform the D-dimens
 
 Compile and Run
 ------
-Assuming the **&lt;HepLib Install Path&gt;/bin** is added to the environment variable **PATH** , if not please run 
+Assuming the **&lt;INSTALL PATH&gt;/bin** is added to the environment variable **PATH** , if not please run 
 ```bash
 export PATH=<HepLib Install Path>/bin:$PATH
 ```
