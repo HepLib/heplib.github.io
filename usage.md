@@ -47,7 +47,7 @@ g++ $(pkg-config --cflags --libs HepLib) -o hello hello.cpp
 ```
 still we assume **&lt;INSTALL PATH&lt;/lib/pkgconfig** has been included in the environment variable **PKG_CONFIG_PATH**, if not, please run 
 ```bash
-export PKG_CONFIG_PATH=&lt;INSTALL PATH&lt;/lib/pkgconfig:$PKG_CONFIG_PATH
+export PKG_CONFIG_PATH=<INSTALL PATH>/lib/pkgconfig:$PKG_CONFIG_PATH
 ```
 
 
