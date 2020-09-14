@@ -130,7 +130,7 @@ ln -s -f ../ferl6/fer64 .
 curl -L -O http://home.bway.net/lewis/fermat64/ferlm.tar.gz
 tar zxf ferm6.tar.gz
 mv ferm6 $INSTALL_PATH
-ln -s -f ../ferl6/fer64 .
+ln -s -f ../ferm6/fer64 .
 ```
 
 + [**FORM**](https://www.nikhef.nl/~form/): it is used for *Dirac* and *Color* matrix trace, Lorentz index contraction, *etc.*.
