@@ -11,6 +11,7 @@ using namespace FC;
 int main() {
 
     Index i1("i1"), i2("i2"), i3("i3"), i4("i4"), i5("i5"), i6("i6");
+    Index ti1("ti1",Index::Type::CF),  ti2("ti2",Index::Type::CF), ti3("ti3",Index::Type::CF), ti4("ti4",Index::Type::CF);
     Index a1("a1",Index::Type::CA), a2("a2",Index::Type::CA), a3("a3",Index::Type::CA), a4("a4",Index::Type::CA);
     Vector p1("p1"), p2("p2"), p3("p3"), p4("p4"), q1("q1"), q2("q2");
     Symbol m("m"), c("c");
@@ -46,7 +47,7 @@ int main() {
     cout << endl;
     
     // SUNT object
-    ex e8 = SUNT(i1,i2,a1) * SUNT(i2,i3,a2) * SUNT(i3,i4,a1) * SUNT(i4,i1,a2);
+    ex e8 = SUNT(ti1,ti2,a1) * SUNT(ti2,ti3,a2) * SUNT(ti3,ti4,a1) * SUNT(ti4,ti1,a2);
     cout << "SUNT trace: " << form(e8) << endl;
     cout << endl;
     
@@ -60,8 +61,6 @@ int main() {
     cout << "LC case: " << exfactor(form(e10)) << endl;
     cout << endl;
 
-    
-    
     return 0;
 }
 ```
