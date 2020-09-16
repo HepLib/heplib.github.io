@@ -6,7 +6,7 @@ About HepLib
 ------------
   **HepLib** is a C++ library for computations in *High Energy Physics* with the help of *GiNaC* language which is a *C++* library used to perform symbolic computations. 
   
-  **HepLib** combines serval well-known packages to get high efficiency, including 
+  **HepLib** combines several well-known packages to get high efficiency, including 
 
   -  **Fermat** to perform multivariate polynomial simplification, matrix operators, ...
   -  **FORM** to perform *Dirac* and *Color* matrix related computations, polynomial factorization, ...
