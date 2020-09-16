@@ -73,7 +73,7 @@ make -j 16
 make install
 ```
 
-+ [**QHull**](http://www.qhull.org): it is used for sector decompostion with geometric stratage.
++ [**QHull**](http://www.qhull.org): it is used for sector decompostion with geometric strategy.
 ```bash
 #Typical installation instructions:
 curl -L -O http://www.qhull.org/download/qhull-2020.2.zip
