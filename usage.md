@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
 ```
 The above code [trace.cpp](download/trace.cpp) shows how to perform the D-dimensional trace on a Dirac-&#x1D6FE; chain:
 
-[gimmick: math]()
+[gimmick:math]()
 
 $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
