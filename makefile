@@ -50,11 +50,11 @@ help:
 	echo "    INSTALL_FORM INSTALL_FIRE INSTALL_KIRA"
 
 ifndef INSTALL_PATH
-    INSTALL_PATH = /usr/local
+    INSTALL_PATH = /usr/local/HepLib
 endif
 
 ifndef jn
-    jn = $(shell nproc)
+    jn = 8
 endif
 
 download: ${GMP} ${MPFR} ${CLN} ${GINAC} ${CUBA} ${MINUIT} ${QHULL} ${HepLib} ${KIRA} ${Fermat} ${FIRE} ${FORM}
