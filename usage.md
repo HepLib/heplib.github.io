@@ -19,29 +19,29 @@ int main(int argc, char** argv) {
     return 0;
 }
 ```
-The above code [hello.cpp](examples/hello.cpp) shows how to perform the D-dimensional trace on a Dirac-&#x1D6FE; chain:
+The above code [trace.cpp](download/trace.cpp) shows how to perform the D-dimensional trace on a Dirac-&#x1D6FE; chain:
 
 ![](img/tr.png) 
 
 
 Compile and Run
 ------
-One can compile the [hello.cpp](examples/hello.cpp) using **heplib++** and run it as follows:
+One can compile the [trace.cpp](download/trace.cpp) using **heplib++** and run it as follows:
 ```bash
-$ <INSTALL PATH>/bin/heplib++ -o hello hello.cpp 
-$ ./ hello
+$ <INSTALL PATH>/bin/heplib++ -o trace trace.cpp 
+$ ./trace
 -4*D*p2.p1+8*p2.p1
 ```
 
 One can also compile the program with **pkg-config** as follows, 
 ```bash
 export PKG_CONFIG_PATH=<INSTALL PATH>/lib/pkgconfig:$PKG_CONFIG_PATH
-g++ $(pkg-config --cflags --libs HepLib) -o hello hello.cpp
+g++ $(pkg-config --cflags --libs HepLib) -o trace trace.cpp
 ```
 
 Furthermore, one can provide the g++ flags and libraries explicitly as follows:
 ```bash
-g++ -I <INSTALL PATH>/include -L <INSTALL PATH>/lib -Wl,-rpath,. -Wl,-rapth,<INSTALL PATH>/lib -lHepLib -lginac -o hello hello.cpp
+g++ -I <INSTALL PATH>/include -L <INSTALL PATH>/lib -Wl,-rapth,<INSTALL PATH>/lib -lHepLib -lginac -o trace trace.cpp
 ```
 
 
