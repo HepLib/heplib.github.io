@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cyan_1300',['CYAN',['../_basic_8h.html#ad243f93c16bc4c1d3e0a13b84421d760',1,'Basic.h']]]
+  ['cyan_1302',['CYAN',['../_basic_8h.html#ad243f93c16bc4c1d3e0a13b84421d760',1,'Basic.h']]]
 ];

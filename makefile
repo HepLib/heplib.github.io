@@ -62,13 +62,7 @@ download: ${GMP} ${MPFR} ${CLN} ${GINAC} ${CUBA} ${MINUIT} ${QHULL} ${HepLib} ${
 
 install: INSTALL_GMP INSTALL_MPFR INSTALL_CLN INSTALL_GINAC INSTALL_CUBA INSTALL_MINUIT INSTALL_QHULL INSTALL_Fermat INSTALL_FORM INSTALL_FIRE INSTALL_KIRA INSTALL_HepLib
 	echo "" ;\
-	echo "" ;\
 	echo "Installation Completed!" ;\
-	echo "You can add the following sentences to your .bashrc"  ;\
-	echo "" ;\
-	echo "export PATH=${INSTALL_PATH}/bin:${INSTALL_PATH}/FIRE6/bin:\$$PATH" ;\
-	echo "export LD_LIBRARY_PATH=${INSTALL_PATH}/lib:\$$LD_LIBRARY_PATH" ;\
-	echo "export PKG_CONFIG_PATH=${INSTALL_PATH}/lib/pkgconfig:\$$PKG_CONFIG_PATH" ;\
 	echo ""
 
 INSTALL_KIRA: ${KIRA}
