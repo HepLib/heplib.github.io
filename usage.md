@@ -26,7 +26,7 @@ The above code [hello.cpp](examples/hello.cpp) shows how to perform the D-dimens
 
 Compile and Run
 ------
-One can compile the [hello.cpp](examples/hello.cpp) and run it like this:
+One can compile the [hello.cpp](examples/hello.cpp) using **heplib++** and run it as follows:
 ```bash
 $ <INSTALL PATH>/bin/heplib++ -o hello hello.cpp 
 $ ./ hello
@@ -41,7 +41,7 @@ g++ $(pkg-config --cflags --libs HepLib) -o hello hello.cpp
 
 Furthermore, one can provide the g++ flags and libraries explicitly as follows:
 ```bash
-g++ -I <INSTALL PATH>/include -L <INSTALL PATH>/lib -Wl,-rapth,<INSTALL PATH>/lib -lHepLib -lginac -o hello hello.cpp
+g++ -I <INSTALL PATH>/include -L <INSTALL PATH>/lib -Wl,-rpath,. -Wl,-rapth,<INSTALL PATH>/lib -lHepLib -lginac -o hello hello.cpp
 ```
 
 
