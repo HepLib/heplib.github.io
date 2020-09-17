@@ -1,6 +1,6 @@
 Installation of HepLib
 ======
-Note: **HepLib** uses a few external routines or libraries, one needs to install these required libraries before the installation of **HepLib**. An install script is provided for automatic installation of these required libraries and **HepLib** itself, one can also install the external libraries and binary programs and compile **HepLib** manually.
+Note: **HepLib** uses several external routines or libraries, one needs to install these required libraries before the installation of **HepLib**. An install script is provided for automatic installation of these required libraries and **HepLib** itself, one can also install the external libraries and binary programs and compile **HepLib** manually.
 
 
 Install Script (All in One)
