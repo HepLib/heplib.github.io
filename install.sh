@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export CC=gcc
+export CXX=g++
+
 if [ -z $INSTALL_PATH ]; then
     INSTALL_PATH=/usr/local/heplib
 fi
