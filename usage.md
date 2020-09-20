@@ -19,26 +19,9 @@ int main(int argc, char** argv) {
     return 0;
 }
 ```
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-      processEscapes: true
-    },
-    "HTML-CSS": { fonts: ["TeX"] }
-  });
-</script>
-[gimmick: math]()
-
 The above code [trace.cpp](download/trace.cpp) shows how to perform the D-dimensional trace on a Dirac-&#x1D6FE; chain:
 
-$$ 
-{\rm Tr}[ p\!\!/_1 + \gamma^\mu  (p\!\!/_2+m) \gamma_\mu ] 
-$$
+![](img/tr.png) 
 
 
 Compile and Run
