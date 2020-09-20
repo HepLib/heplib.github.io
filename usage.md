@@ -19,6 +19,7 @@ int main(int argc, char** argv) {
     return 0;
 }
 ```
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
