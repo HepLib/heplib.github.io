@@ -66,14 +66,16 @@ install: INSTALL_GMP INSTALL_MPFR INSTALL_CLN INSTALL_GINAC INSTALL_CUBA INSTALL
 	echo ""
 
 INSTALL_KIRA: ${KIRA}
-	echo "Installing KIRA ..."
+	echo "Installing KIRA ..." ;\
 	cp ${KIRA} kira ;\
 	chmod +x kira ;\
         mv -f kira ${INSTALL_PATH}/bin/ ;\
 	echo ""
 
 INSTALL_FIRE: ${FIRE}
-	echo "Installing FIRE ..."
+	echo "Installing FIRE ..." ;\
+	export CC=gcc ;\
+	export CXX=g++ ;\
 	rm -rf ${INSTALL_PATH}/FIRE6 ;\
 	cp -rf fire/FIRE6 ${INSTALL_PATH}/ ;\
 	cd ${INSTALL_PATH}/FIRE6 ;\
@@ -86,8 +88,8 @@ INSTALL_FIRE: ${FIRE}
 	echo ""
 
 INSTALL_FORM: ${FORM}
-	echo "Installing FORM ..."
-	rm -rf ${form}
+	echo "Installing FORM ..." ;\
+	rm -rf ${form} ;\
 	tar zxf ${FORM} ;\
 	cp -rf ${form}/form ${INSTALL_PATH}/bin/ ;\
 	cp -rf ${form}/tform ${INSTALL_PATH}/bin/ ;\
@@ -96,7 +98,7 @@ INSTALL_FORM: ${FORM}
 	echo ""
 
 INSTALL_Fermat: ${Fermat}
-	echo "Installing Fermat ..."
+	echo "Installing Fermat ..." ;\
 	rm -rf ${fermat} ;\
 	tar zxf ${Fermat} ;\
 	rm -rf ${INSTALL_PATH}/${fermat} ;\
@@ -106,7 +108,7 @@ INSTALL_Fermat: ${Fermat}
 	echo ""
 
 INSTALL_HepLib: ${HepLib}
-	echo "Installing HepLib ..."
+	echo "Installing HepLib ..." ;\
 	rm -rf ${heplib} ;\
 	tar zxf ${HepLib} ;\
 	cd ${heplib}/src ;\
@@ -119,7 +121,7 @@ INSTALL_HepLib: ${HepLib}
 	echo ""
 
 INSTALL_QHULL: ${QHULL}
-	echo "Installing QHull ..."
+	echo "Installing QHull ..." ;\
 	rm -rf ${qhull} ;\
 	unzip -q ${QHULL} ;\
 	cd ${qhull} ;\
@@ -132,7 +134,7 @@ INSTALL_QHULL: ${QHULL}
 	echo ""
 
 INSTALL_MINUIT: ${MINUIT}
-	echo "Installing MinUit2 ..."
+	echo "Installing MinUit2 ..." ;\
 	rm -rf ${minuit} ;\
 	tar zxf ${MINUIT} ;\
 	cd ${minuit} ;\
@@ -144,7 +146,7 @@ INSTALL_MINUIT: ${MINUIT}
 	echo ""
 
 INSTALL_CUBA: ${CUBA}
-	echo "Installing CUBA ..."
+	echo "Installing CUBA ..." ;\
 	rm -rf ${cuba} ;\
 	tar zxf ${CUBA} ;\
 	cd ${cuba} ;\
@@ -156,7 +158,7 @@ INSTALL_CUBA: ${CUBA}
 	echo ""
 
 INSTALL_GINAC: ${GINAC}
-	echo "Installing GiNaC ..."
+	echo "Installing GiNaC ..." ;\
 	rm -rf ${ginac} ;\
 	tar jxf ${GINAC} ;\
 	cd ${ginac} ;\
@@ -168,7 +170,7 @@ INSTALL_GINAC: ${GINAC}
 	echo ""
 
 INSTALL_CLN: ${CLN}
-	echo "Installing CLN ..."
+	echo "Installing CLN ..." ;\
 	rm -rf ${cln} ;\
 	tar jxf ${CLN} ;\
 	cd ${cln} ;\
@@ -180,7 +182,7 @@ INSTALL_CLN: ${CLN}
 	echo ""
 
 INSTALL_MPFR: ${MPFR}
-	echo "Installing MPFR ..."
+	echo "Installing MPFR ..." ;\
 	rm -rf ${mpfr} ;\
 	tar zxf ${MPFR} ;\
 	cd ${mpfr} ;\
@@ -192,7 +194,7 @@ INSTALL_MPFR: ${MPFR}
 	echo ""
 	
 INSTALL_GMP: ${GMP}
-	echo "Installing GMP ..."
+	echo "Installing GMP ..." ;\
 	rm -rf ${gmp} ;\
 	tar zxf ${GMP} ;\
 	cd ${gmp} ;\
