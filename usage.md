@@ -20,7 +20,10 @@ int main(int argc, char** argv) {
 }
 ```
 The above code [trace.cpp](download/trace.cpp) shows how to perform the D-dimensional trace on a Dirac-&#x1D6FE; chain: 
-[gimmick: math]()
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
  \[ {\rm Tr}[ p\!\!\!/_1 \gamma^\mu ( p\!\!\!/_2 + m) \gamma_\mu] \]
 
 
