@@ -31,6 +31,12 @@ int main(int argc, char** argv) {
     SecDec work;
     work.epN = 0;
     Verbose = 100;
+    
+    auto hcubature = new HCubature();
+    work.Integrator = hcubature;
+    work.TryPTS = 1000000;
+    work.RunPTS = 1000000;
+    work.RunMAX = 10;
 
     work.Evaluate(fp);
 
