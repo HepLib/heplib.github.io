@@ -1748,7 +1748,7 @@ var MDwiki;
         $links.remove();
         var script = document.createElement('script');
         script.type = 'text/javascript';
-        script.src  = $.md.prepareLink('cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js');
+        script.src  = $.md.prepareLink('cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML');
         document.getElementsByTagName('head')[0].appendChild(script);
     }
     var mathGimmick = new MDwiki.Core.Gimmick();
