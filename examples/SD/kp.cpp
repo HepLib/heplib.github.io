@@ -59,7 +59,7 @@ int main(int argc, char** argv) {
         cout << "(I*(-2.02612013(5))+(-4.934802201(3)))*ep^2+0(2)E-26+(I*2.0261201(5)+8.7609007(8)E-1)*ep^3+I*3.1415926536(0)+ep*(I*(-3.141592654(2))+4.9348022005(0))" << endl << endl;
     }
     
-    if(true) { // without delta
+    { // without delta
         XIntegrand xint;
         xint.Functions = lst{ 1, 1-2*x(2)};
         xint.Exponents = lst{ 1, -1+ep};
@@ -71,7 +71,7 @@ int main(int argc, char** argv) {
         cout << "ep^3*(-2.0293560632(0))+ep*2.4674011003(0)+I*1.5707963268(0)+I*(-2.5838563900(0))*ep^2" << endl << endl;
     }
     
-    if(true) { // without delta
+    { // without delta
         XIntegrand xint;
         xint.Functions = lst{ 1, 1-2*x(2)};
         xint.Exponents = lst{ 1, -1+ep};
@@ -84,7 +84,7 @@ int main(int argc, char** argv) {
     }
     
     
-    if(true) { // without delta
+    { // without delta
         XIntegrand xint;
         xint.Functions = lst{ 1, pow(1-2*x(2),4)};
         xint.Exponents = lst{ 1, (-1+ep)};
