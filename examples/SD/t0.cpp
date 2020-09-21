@@ -26,9 +26,6 @@ int main(int argc, char** argv) {
     fp.lReplacements[s] = -1;
     fp.Prefactor = pow(I*pow(Pi,2-ep), -3) * pow(tgamma(1-ep), 3);
 
-    
-    fp.nReplacements[ep] = ex(1)/11;
-    
     SecDec work;
     work.epN = 0;
     Verbose = 2;
