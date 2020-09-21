@@ -20,7 +20,8 @@ int main(int argc, char** argv) {
 }
 ```
 [gimmick: math]()
-The above code [trace.cpp](download/trace.cpp) shows how to perform the D-dimensional trace on a Dirac-&#x1D6FE; chain: $ {\rm Tr}[ p\!\!/_1 \gamma^\mu (p\!\!/_2 + m) \gamma_\mu ] $
+The above code [trace.cpp](download/trace.cpp) shows how to perform the D-dimensional trace on a Dirac-&#x1D6FE; chain: 
+$$ {\rm Tr}[ p\!\!/_1 \gamma^\mu (p\!\!/_2 + m) \gamma_\mu ] $$
 
 
 Compile and Run
