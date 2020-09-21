@@ -23,9 +23,6 @@ The above code [trace.cpp](download/trace.cpp) shows how to perform the D-dimens
 [gimmick: math]()
 $$ {\rm Tr}[ \gamma\cdot p_1 \gamma^\mu (\gamma\cdot p_2 + m) \gamma_\mu] $$
 
-$$ 
-{\rm Tr}[ p_1 \gamma^\mu (p_2 + m) \gamma_\mu ] 
-$$
 
 Compile and Run
 ------
