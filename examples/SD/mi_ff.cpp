@@ -59,7 +59,6 @@ int main(int argc, char** argv) {
     fp.tReplacements[kp] = 1;
     fp.tReplacements[zz] = z0;
     
-    fp.nReplacements[ep] = ex(1)/11;
     fp.nReplacements[zz] = z0;
     fp.nReplacements[z(1)] = ex(1)/3;
     fp.nReplacements[z(2)] = ex(1)/3;
