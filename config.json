@@ -1,4 +1,5 @@
 {
-    "title": "HepLib project",
-    "additionalFooterText": "All contents &copy; HepLib Team. "
+    "useSideMenu": true,
+    "lineBreaks": "gfm",
+    "title": "HepLib"
 }
