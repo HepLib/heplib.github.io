@@ -20,6 +20,7 @@ int main(int argc, char** argv) {
 }
 ```
 The above code [trace.cpp](download/trace.cpp) shows how to perform the D-dimensional trace on a Dirac-&#x1D6FE; chain: 
+
  ![](img/tr.png)
 
 Compile and Run
