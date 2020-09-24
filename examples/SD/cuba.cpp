@@ -31,9 +31,6 @@ int main(int argc, char** argv) {
     
     auto cuba = new CUBA();
     cuba->Method = CUBA::CUHRE;
-    cuba->VEGAS_NSTART = 1000;
-    cuba->VEGAS_NINCREASE = 1000;
-    cuba->VEGAS_NBATCH = 1000;
     work.Integrator = cuba;
     work.TryPTS = 1000000;
     work.RunPTS = 1000000;
