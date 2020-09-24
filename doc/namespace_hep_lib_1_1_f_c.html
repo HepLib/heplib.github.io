@@ -448,17 +448,16 @@ Variables</h2></td></tr>
 <p>perform <a class="el" href="namespace_hep_lib_1_1_i_b_p.html" title="namespace for IBP reduction">IBP</a> reduction on the Aparted input </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">IBPmethod</td><td>ibp method used, 1-FIRE, 2-KIRA </td></tr>
+    <tr><td class="paramname">IBPmethod</td><td>ibp method used, 0-No <a class="el" href="namespace_hep_lib_1_1_i_b_p.html" title="namespace for IBP reduction">IBP</a>, 1-FIRE, 2-KIRA </td></tr>
     <tr><td class="paramname">air_vec</td><td>vector contains aparted input, ApartIRC will be call internally </td></tr>
-    <tr><td class="paramname">vloops</td><td>loop vectors, vloops will be differentialized in FIRE </td></tr>
-    <tr><td class="paramname">vexts</td><td>external vectors </td></tr>
+    <tr><td class="paramname">loops_exts</td><td>lst { loop vectors, external vectors, } </td></tr>
     <tr><td class="paramname">cut_props</td><td>cut propagators, default is { } </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>nothing returned, the input air_vec will be updated </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00637">637</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_apart_8cpp_source.html#l00636">636</a> of file <a class="el" href="_apart_8cpp_source.html">Apart.cpp</a>.</p>
 
 </div>
 </div>
