@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ra_454',['ra',['../class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html#ae3eee3d902ab5f8d11ccaeb46799d6c4',1,'HepLib::IBP::KIRA']]],
+  ['ra_454',['ra',['../class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html#ae3eee3d902ab5f8d11ccaeb46799d6c4',1,'HepLib::IBP::KIRA::ra()'],['../class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#ad595a7a8f77f03179e5d2a98595270a3',1,'HepLib::IBP::UKIRA::ra()']]],
   ['rai_455',['RAI',['../namespace_hep_lib_1_1_f_c_1_1_qgraf.html#a5a86154f3a1fb0878df493476a3a1f67',1,'HepLib::FC::Qgraf']]],
   ['rationalize_456',['Rationalize',['../namespace_hep_lib.html#a85149c6fb878bf26fefea55a68d7ec4e',1,'HepLib::Rationalize()'],['../namespace_hep_lib.html#aec352cd07325348d37a233a20ae42285',1,'HepLib::Rationalize([](const ex &amp;e, MapFunction &amp;self) -&gt;ex{ if(is_a&lt; numeric &gt;(e)) { auto ne=ex_to&lt; numeric &gt;(e);if(ne.is_crational()) return e;auto zz=ne.to_cl_N();auto re=cln::rationalize(cln::realpart(zz));auto im=cln::rationalize(cln::imagpart(zz));return numeric(cln::complex(re, im));} else return e.map(self);})']]],
   ['rc_2ecpp_457',['RC.cpp',['../_r_c_8cpp.html',1,'']]],

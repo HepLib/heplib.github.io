@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['sa_1219',['sa',['../class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html#a40001a9dc5322e392d7d696fe8270599',1,'HepLib::IBP::KIRA']]],
+  ['sa_1219',['sa',['../class_hep_lib_1_1_i_b_p_1_1_k_i_r_a.html#a40001a9dc5322e392d7d696fe8270599',1,'HepLib::IBP::KIRA::sa()'],['../class_hep_lib_1_1_i_b_p_1_1_u_k_i_r_a.html#a11fe71b346d69b901f625452f0cfa9fb',1,'HepLib::IBP::UKIRA::sa()']]],
   ['save_5flas_1220',['save_las',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a427f9890ffc2e057615abd2369cae10c',1,'HepLib::SD::SecDec']]],
   ['secdec_1221',['SecDec',['../class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2142a9728aa9dfc777ea7311c2eb882f',1,'HepLib::SD::SecDec']]],
   ['sentinel_1222',['Sentinel',['../class_hep_lib_1_1_fermat.html#a76c3722ffe7451efbdd74b44d4dfd124',1,'HepLib::Fermat::Sentinel()'],['../class_hep_lib_1_1_form.html#a19c0c3182b330b0bd083b3e9cf2fe92e',1,'HepLib::Form::Sentinel()']]],
