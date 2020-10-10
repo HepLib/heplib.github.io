@@ -2,9 +2,9 @@ Examples of HepLib
 ======
 Hint: Visit [Usage within C++](usage.md) for compiling a *.cpp* to an executable program.
 
-Try Examples @ repl.it
+Try it @ repl.it
 ------
-open [https://repl.it/@HepLib/examples](https://repl.it/@HepLib/examples), clicn the **Run** button to initialize the HepLib on repl.it, and get the information to compile *codes/trace.cpp*.
+Open [https://repl.it/@HepLib/examples](https://repl.it/@HepLib/examples), click the **Run** button to initialize the *HepLib* on *repl.it*, and get the information to compile *codes/trace.cpp*. One can compile and run the other examples in a similar way.
 
 
 Examples @ Basic
