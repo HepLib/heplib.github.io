@@ -28,7 +28,7 @@ Update to Latest Version
 Since *HepLib* or *GiNaC* will get updated from time by time, one can update it to the latest version by using one of the following codes
 ```bash
 # show information
-jn=16 <INSTALL_PATH>/bin/update
+<INSTALL_PATH>/bin/update
 ```
 ```bash
 # update all items
