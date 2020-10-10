@@ -178,7 +178,7 @@ mv -f kira $INSTALL_PATH/bin/kira
 **Compilation and Installation**
 
     One can download the most recent version of **HepLib** as a compressed archive: [HepLib.tar.gz](HepLib.tar.gz), uncompress it and change current directory into *HepLib/src* by the commands:
-    
+
 ```bash
 wget https://heplib.github.io/HepLib.tar.gz 
 tar zxfv HepLib.tar.gz
@@ -186,15 +186,16 @@ cd HepLib/src
 ```
 
     and create a directory for cmake to build the library as follows
+    
 ```bash
 mkdir build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=$INSTALL_PATH .. 
 make -j 4 && make install
 ```
-
     where the standard cmake variable **CMAKE_INSTALL_PREFIX** refers to the directory to which **HepLib** will be installed, *i.e.*, the library *libHepLib.so* (the file name may be system dependent) will be installed to **$INSTALL_PATH/lib**, the related *C++* header files, including *HepLib.h*, *FC.h*, *SD.h*, *etc.*, will be installed to **$INSTALL_PATH/include**, the *binary programs*, including *heplib++*, *garview*, *etc.*, will be installed to **$INSTALL_PATH/bin**.
 
     Hint: If **GiNaC** or other dependent external library is not installed to **CMAKE_INSTALL_PREFIX**, the user needs to specify the locations by supplying the variables **INC_PATH** and **LIB_PATH** in the cmake arguments as:
+    
 ```bash
 cmake -DCMAKE_INSTALL_PREFIX=path -DINC_PATH="inc1;inc2" -DLIB_PATH="lib1;lib2" ..
 ```
