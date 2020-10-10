@@ -24,7 +24,10 @@ make INSTALL_PATH=<INSTALL PATH> jn=16
 **&lt;INSTALL PATH&gt;** refers to the path for the libraries to be installed to, **jn** is the number of jobs used in *make -j $jn*, try *make help* for more information.
 
 
-External Libraries
+Manual Installation
+------
+
++ External Libraries
 ------
 Hint: Assuming one has exported the environment variable **INSTALL_PATH**
 $ export INSTALL_PATH="&lt;INSTALL PATH&gt;"
@@ -109,7 +112,7 @@ make install
 ```
     
 
-External binary Programs
++ External binary Programs
 ------
 It is only required that the binary programs can found in the environment variable **PATH**.
 
@@ -171,7 +174,7 @@ chmod +x kira
 mv -f kira $INSTALL_PATH/bin/kira
 ```
 
-Compilation and Installation
++ Compilation and Installation
 ------
 Hint: Assuming one has exported the environment variable **INSTALL_PATH**
 $ export INSTALL_PATH="&lt;INSTALL PATH&gt;"
