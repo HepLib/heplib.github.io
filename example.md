@@ -4,7 +4,7 @@ Hint: Visit [Usage within C++](usage.md) for compiling a *.cpp* to an executable
 
 Try it @ repl.it
 ------
-Hint: just open [https://repl.it/@HepLib/examples](https://repl.it/@HepLib/examples), click the **Run** button to initialize the *HepLib* on *repl.it*, and get the information to compile *codes/trace.cpp*. One can compile and run the other examples in a similar way.
+Hint: just open [examples@HepLib](https://repl.it/@HepLib/examples) on *repl.it*, click the **Run** button to initialize the *HepLib* and get the information to compile *codes/trace.cpp*. One can compile and run the other examples in a similar way.
 
 
 Examples @ Basic
