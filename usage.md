@@ -43,5 +43,7 @@ Furthermore, one can provide the g++ flags and libraries explicitly as follows:
 g++ -I <INSTALL PATH>/include -L <INSTALL PATH>/lib -Wl,-rapth,<INSTALL PATH>/lib -lHepLib -lginac -o trace trace.cpp
 ```
 
-
+Try it @ repl.it
+------
+Open [https://repl.it/@HepLib/examples](https://repl.it/@HepLib/examples), click the **Run** button to initialize the *HepLib* on *repl.it*, and get the information to compile *codes/trace.cpp*.
 
