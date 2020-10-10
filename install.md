@@ -183,8 +183,7 @@ mv -f kira $INSTALL_PATH/bin/kira
 ```
 
 **Compilation and Installation**
-  
-  One can download the most recent version of **HepLib** as a compressed archive: [HepLib.tar.gz](HepLib.tar.gz), uncompress it and change current directory into *HepLib/src* by the commands:
+    One can download the most recent version of **HepLib** as a compressed archive: [HepLib.tar.gz](HepLib.tar.gz), uncompress it and change current directory into *HepLib/src* by the commands:
   
 ```bash
 wget https://heplib.github.io/HepLib.tar.gz 
