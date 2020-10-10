@@ -2,6 +2,10 @@ Examples of HepLib
 ======
 Hint: Visit [Usage within C++](usage.md) for compiling a *.cpp* to an executable program.
 
+Try Examples @ repl.it
+------
+[https://repl.it/@HepLib/examples](https://repl.it/@HepLib/examples)
+
 
 Examples @ Basic
 ----------
