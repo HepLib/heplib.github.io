@@ -1,0 +1,19 @@
+#.bashrc
+
+export LANG=en_US.UTF-8
+
+Dirs="$HOME/gnu $HOME/cmake $HOME/usr $HOME/usr/local"
+#Dirs="$HOME/gnu $HOME/cmake"
+
+for dir in $Dirs
+do
+  PATH=$dir/bin:$PATH
+  LD_LIBRARY_PATH=$dir/lib:$dir/lib64:$LD_LIBRARY_PATH
+  PKG_CONFIG_PATH=$dir/lib/pkgconfig:$dir/lib64/pkgconfig:$PKG_CONFIG_PATH
+done
+
+PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
+PATH=$PATH:$HOME/usr/FIRE6/bin:$HOME/usr/FIRE5/bin
+
+export PATH
+export LD_LIBRARY_PATH
