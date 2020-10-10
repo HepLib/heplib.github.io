@@ -45,5 +45,5 @@ g++ -I <INSTALL PATH>/include -L <INSTALL PATH>/lib -Wl,-rapth,<INSTALL PATH>/li
 
 Try it @ repl.it
 ------
-Hint: just open [examples@HepLib](https://repl.it/@HepLib/examples) on *repl.it*, click the **Run** button to initialize the *HepLib* and get the information to compile *codes/trace.cpp*.
+Hint: just open [https://examples.heplib.repl.run](https://examples.heplib.repl.run), after the initialization of *HepLib*, one will get the information to compile *codes/trace.cpp*.
 
