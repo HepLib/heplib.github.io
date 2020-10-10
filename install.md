@@ -25,9 +25,14 @@ make INSTALL_PATH=<INSTALL PATH> jn=16
 
 Update to Latest Version
 ------
-Since *HepLib* or *GiNaC* will get updated time by time, one can update it to the latest version by using 
+Since *HepLib* or *GiNaC* will get updated from time by time, one can update it to the latest version by using 
 ```bash
-update heplib
+# show information
+<INSTALL_PATH>/bin/update
+# update all items
+<INSTALL_PATH>/bin/update all
+# only update heplib
+<INSTALL_PATH>/bin/update heplib
 ```
 
 
