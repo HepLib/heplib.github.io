@@ -44,7 +44,7 @@ Manual Installation
 Hint: Assuming one has exported the environment variable **INSTALL_PATH**
     $ export INSTALL_PATH="&lt;INSTALL PATH&gt;"
 
-* **External Libraries**
+**External Libraries**
 
 + [**GMP**](https://gmplib.org/): it is required for **MPFR** and **GiNaC**.
 ```bash
@@ -121,7 +121,7 @@ make install
 ```
     
 
-* **External binary Programs**
+**External binary Programs**
 
 + [**Fermat**](http://home.bway.net/lewis/): it is used for matrix operation, multivariate rational polynormial simplification, *etc.*.
 ```bash
@@ -175,7 +175,7 @@ chmod +x kira
 mv -f kira $INSTALL_PATH/bin/kira
 ```
 
- * **Compilation and Installation**
+**Compilation and Installation**
 
     One can download the most recent version of **HepLib** as a compressed archive: [HepLib.tar.gz](HepLib.tar.gz), uncompress it and change current directory into *HepLib/src* by the commands:
 ```bash
