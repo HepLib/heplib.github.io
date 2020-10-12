@@ -13,3 +13,5 @@
   * [Document](doc/)
 
 [Releases](release.md)
+
+[Try@REPL](https://examples.heplib.repl.run/)
