@@ -14,4 +14,4 @@
 
 [Releases](release.md)
 
-[Try@REPL](https://examples.heplib.repl.run/)
+[@REPL](https://examples.heplib.repl.run/)
