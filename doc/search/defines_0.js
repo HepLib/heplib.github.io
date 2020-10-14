@@ -1,13 +1,13 @@
 var searchData=
 [
-  ['black_1298',['BLACK',['../_basic_8h.html#a7b3b25cba33b07c303f3060fe41887f6',1,'Basic.h']]],
-  ['blue_1299',['BLUE',['../_basic_8h.html#a79d10e672abb49ad63eeaa8aaef57c38',1,'Basic.h']]],
-  ['boldblack_1300',['BOLDBLACK',['../_basic_8h.html#aef2fe95894117165b29036718221979f',1,'Basic.h']]],
-  ['boldblue_1301',['BOLDBLUE',['../_basic_8h.html#a11e77c19555cbd15bcc744ff36a18635',1,'Basic.h']]],
-  ['boldcyan_1302',['BOLDCYAN',['../_basic_8h.html#ae87af5e6363eb1913b17f24dcb60a22d',1,'Basic.h']]],
-  ['boldgreen_1303',['BOLDGREEN',['../_basic_8h.html#a4a6c893a1703c33ede7d702fe5f97c91',1,'Basic.h']]],
-  ['boldmagenta_1304',['BOLDMAGENTA',['../_basic_8h.html#ac4723c5ee12cfca16e2172b57b99cb07',1,'Basic.h']]],
-  ['boldred_1305',['BOLDRED',['../_basic_8h.html#ab912d02c7998c3d47d05f87be4e2c920',1,'Basic.h']]],
-  ['boldwhite_1306',['BOLDWHITE',['../_basic_8h.html#aa4ef051614aa0bd503b0a18ee158c5d7',1,'Basic.h']]],
-  ['boldyellow_1307',['BOLDYELLOW',['../_basic_8h.html#a8cec79108dfc3c61e8e32d390ec28b26',1,'Basic.h']]]
+  ['black_1305',['BLACK',['../_basic_8h.html#a7b3b25cba33b07c303f3060fe41887f6',1,'Basic.h']]],
+  ['blue_1306',['BLUE',['../_basic_8h.html#a79d10e672abb49ad63eeaa8aaef57c38',1,'Basic.h']]],
+  ['boldblack_1307',['BOLDBLACK',['../_basic_8h.html#aef2fe95894117165b29036718221979f',1,'Basic.h']]],
+  ['boldblue_1308',['BOLDBLUE',['../_basic_8h.html#a11e77c19555cbd15bcc744ff36a18635',1,'Basic.h']]],
+  ['boldcyan_1309',['BOLDCYAN',['../_basic_8h.html#ae87af5e6363eb1913b17f24dcb60a22d',1,'Basic.h']]],
+  ['boldgreen_1310',['BOLDGREEN',['../_basic_8h.html#a4a6c893a1703c33ede7d702fe5f97c91',1,'Basic.h']]],
+  ['boldmagenta_1311',['BOLDMAGENTA',['../_basic_8h.html#ac4723c5ee12cfca16e2172b57b99cb07',1,'Basic.h']]],
+  ['boldred_1312',['BOLDRED',['../_basic_8h.html#ab912d02c7998c3d47d05f87be4e2c920',1,'Basic.h']]],
+  ['boldwhite_1313',['BOLDWHITE',['../_basic_8h.html#aa4ef051614aa0bd503b0a18ee158c5d7',1,'Basic.h']]],
+  ['boldyellow_1314',['BOLDYELLOW',['../_basic_8h.html#a8cec79108dfc3c61e8e32d390ec28b26',1,'Basic.h']]]
 ];

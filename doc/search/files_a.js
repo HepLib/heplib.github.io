@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['nfunctions_2ecpp_746',['NFunctions.cpp',['../_n_functions_8cpp.html',1,'']]],
-  ['nfunctions_2eh_747',['NFunctions.h',['../_n_functions_8h.html',1,'']]]
+  ['main_2emd_749',['main.md',['../main_8md.html',1,'']]],
+  ['mb_2eh_750',['MB.h',['../_m_b_8h.html',1,'']]],
+  ['minuit_2ecpp_751',['MinUit.cpp',['../_min_uit_8cpp.html',1,'']]]
 ];
