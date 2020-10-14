@@ -10,6 +10,6 @@
 
 [Releases](release.md)
   
-[Reference](doc/)
+[Document](doc/)
 
 [@REPL](https://examples.heplib.repl.run/)
