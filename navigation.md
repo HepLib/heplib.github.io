@@ -2,15 +2,13 @@
 
 [Home](index.md)
 
-[Docs]()
-
-  * [Installation](install.md)
+[Installation](install.md)
   
-  * [Usage within C++](usage.md)
+[Usage](usage.md)
   
-  * [Examples](example.md)
+[Examples](example.md)
   
-  * [Document](doc/)
+[Reference](doc/)
 
 [Releases](release.md)
 
