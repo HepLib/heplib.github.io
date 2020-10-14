@@ -7,9 +7,9 @@
 [Usage](usage.md)
   
 [Examples](example.md)
-  
-[Reference](doc/)
 
 [Releases](release.md)
+  
+[Reference](doc/)
 
 [@REPL](https://examples.heplib.repl.run/)
