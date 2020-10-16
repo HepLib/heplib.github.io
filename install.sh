@@ -65,7 +65,7 @@ rm -rf $pkg
 echo ""
 
 # install GiNaC
-export pkg="ginac-1.7.11"
+export pkg="ginac-1.8.0"
 echo "Installing $pkg ..."
 if [ ! -f $pkg.tar.bz2 ]; then
     curl -L -O https://www.ginac.de/$pkg.tar.bz2
