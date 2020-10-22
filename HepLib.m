@@ -1,6 +1,10 @@
 (* ::Package:: *)
 
-(* ::Section:: *)
+(* ::Chapter::Closed:: *)
+(*Sector Decomposition*)
+
+
+(* ::Section::Closed:: *)
 (*M2C*)
 
 
@@ -20,7 +24,7 @@ ret
 ];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*C2M*)
 
 
@@ -147,7 +151,7 @@ Return[tmp];
 ];
 
 
-(* ::Section:: *)
+(* ::Section::Closed:: *)
 (*UF*)
 
 
