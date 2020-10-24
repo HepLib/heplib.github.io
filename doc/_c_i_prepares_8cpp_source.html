@@ -1266,27 +1266,29 @@ $(function() {
 <div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;                cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">LIB_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp &quot;</span>;</div>
 <div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;                <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
 <div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;                cmd &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; $(seq -f &#39;&quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/%g.o&#39; &quot;</span> &lt;&lt; start &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; end &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;                system(cmd.str().c_str());</div>
-<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;                <span class="keywordflow">if</span>(end&gt;=res_size-1) <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;            }</div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;            cmd.clear();</div>
-<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;            cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">LIB_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp &quot;</span>;</div>
-<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;            <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
-<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/*.o&quot;</span>;</div>
-<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;            system(cmd.str().c_str());</div>
-<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;        }</div>
-<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;        cmd.clear();</div>
-<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;        cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;        <span class="keywordflow">if</span>(debug) cmd &lt;&lt; <span class="stringliteral">&quot;rm -rf &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;_debug;mv -f &quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;_debug;rm -f &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;_debug/*.o&quot;</span>;</div>
-<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;        <span class="keywordflow">else</span> cmd &lt;&lt; <span class="stringliteral">&quot;rm -rf &quot;</span> &lt;&lt; pid;</div>
-<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;        system(cmd.str().c_str());</div>
-<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160; </div>
-<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;    }</div>
-<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;    </div>
-<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160; </div>
-<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;}</div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;                <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;                system(cmd.str().c_str());</div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;                <span class="keywordflow">if</span>(end&gt;=res_size-1) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;            }</div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;            cmd.clear();</div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;            cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">LIB_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp &quot;</span>;</div>
+<div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;            <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
+<div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/*.o&quot;</span>;</div>
+<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;            <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;            system(cmd.str().c_str());</div>
+<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;        }</div>
+<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160;        cmd.clear();</div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;        cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;        <span class="keywordflow">if</span>(debug) cmd &lt;&lt; <span class="stringliteral">&quot;rm -rf &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;_debug;mv -f &quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;_debug;rm -f &quot;</span> &lt;&lt; key &lt;&lt; <span class="stringliteral">&quot;_debug/*.o&quot;</span>;</div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;        <span class="keywordflow">else</span> cmd &lt;&lt; <span class="stringliteral">&quot;rm -rf &quot;</span> &lt;&lt; pid;</div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;        system(cmd.str().c_str());</div>
+<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160; </div>
+<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;    }</div>
+<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160;    </div>
+<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160; </div>
+<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_hep_lib_1_1_error_html"><div class="ttname"><a href="class_hep_lib_1_1_error.html">HepLib::Error</a></div><div class="ttdoc">class used to wrap error message</div><div class="ttdef"><b>Definition:</b> <a href="_basic_8h_source.html#l00160">Basic.h:160</a></div></div>
 <div class="ttc" id="a_s_d_8h_html"><div class="ttname"><a href="_s_d_8h.html">SD.h</a></div><div class="ttdoc">SecDec header file.</div></div>
