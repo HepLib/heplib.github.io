@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['magenta_1306',['MAGENTA',['../_basic_8h.html#a6f699060902f800f12aaae150f3a708e',1,'Basic.h']]]
+  ['magenta_1339',['MAGENTA',['../_basic_8h.html#a6f699060902f800f12aaae150f3a708e',1,'Basic.h']]]
 ];
