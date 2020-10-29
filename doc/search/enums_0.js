@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['factormethod_1301',['FactorMethod',['../namespace_hep_lib.html#a15db74a3d0da5d683ef7bf23950e1b66',1,'HepLib']]]
+  ['io_939',['IO',['../namespace_hep_lib_1_1_f_c_1_1_quarkonium.html#a65ac6156e65063e726b5bc98f5b33e10',1,'HepLib::FC::Quarkonium']]]
 ];

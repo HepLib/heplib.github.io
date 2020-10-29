@@ -81,11 +81,11 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a7ea34e07604065d8fd08f9f265eac9b0">IsZero</a>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">Verbose</a> &gt; 0) cout &lt;&lt; <a class="code" href="namespace_hep_lib.html#a406b9f70f7be848603aaa04d2e36c63d">Color_HighLight</a> &lt;&lt; <span class="stringliteral">&quot;  CIPrepares @ &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#aa27dc222ce5a1ee715d0a08986d51060">now</a>() &lt;&lt; <a class="code" href="_basic_8h.html#ab702106cf3b3e96750b6845ded4e0299">RESET</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span>(Verbose &gt; 0) cout &lt;&lt; Color_HighLight &lt;&lt; <span class="stringliteral">&quot;  CIPrepares @ &quot;</span> &lt;&lt; now() &lt;&lt; RESET &lt;&lt; endl;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">auto</span> pid = getpid();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">auto</span> resf =</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="namespace_hep_lib.html#aa441ead14197d6474286dd3b6b121f55">GiNaC_Parallel</a>(<a class="code" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#ad921f0db320b81c875f5d8cd4432ed2c">expResult</a>.size(), [&amp;](<span class="keywordtype">int</span> idx)-&gt;ex {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        GiNaC_Parallel(<a class="code" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#ad921f0db320b81c875f5d8cd4432ed2c">expResult</a>.size(), [&amp;](<span class="keywordtype">int</span> idx)-&gt;ex {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="comment">// return lst{ kv.op(0), kv.op(1), ft};</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            auto kv = expResult[idx];</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            auto expr = kv.op(1);</div>
@@ -95,7 +95,7 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            }</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            exset ftxset;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <a class="code" href="classexpr.html">expr</a>.find(FTX(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>), ftxset);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            expr.find(FTX(w1,w2), ftxset);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            ex ft;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordtype">int</span> ftxsize = -1;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : ftxset) {</div>
@@ -107,28 +107,28 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordtype">bool</span> need_contour_deformation = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span>(ft.has(x(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)) &amp;&amp; !ft.has(PL(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span>(ft.has(x(w)) &amp;&amp; !ft.has(PL(w))) {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keyword">auto</span> tmp = ft.subs(<a class="code" href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2d180c2bdae9eb023a663eefbab95431">nReplacements</a>).subs(lst{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    CV(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>)==<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>, <a class="code" href="namespace_hep_lib.html#a441c90e44abfc8b5d08502ec73c83a5c">ep</a>==ex(1)/111, <a class="code" href="namespace_hep_lib_1_1_s_d.html#a59283e3b396a7ad6107a1626e9fb96d4">eps</a>==ex(1)/1111</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                }).<a class="code" href="_wrap_8h.html#a9ad48c5ab416ac7295c554002193f366">expand</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    CV(w1,w2)==w2, ep==ex(1)/111, <a class="code" href="namespace_hep_lib_1_1_s_d.html#a59283e3b396a7ad6107a1626e9fb96d4">eps</a>==ex(1)/1111</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                }).expand();</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">if</span>(is_a&lt;add&gt;(tmp)) {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : tmp) {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        <span class="keywordflow">if</span>(!is_a&lt;numeric&gt;(item.subs(x(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)==1))) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                            <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(<span class="stringliteral">&quot;CIPrepares: (!is_a&lt;numeric&gt;(item.subs(x(w)==1)))&quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        <span class="keywordflow">if</span>(!is_a&lt;numeric&gt;(item.subs(x(w)==1))) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                            <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;CIPrepares: (!is_a&lt;numeric&gt;(item.subs(x(w)==1)))&quot;</span>);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                        <span class="keywordflow">if</span>(item.subs(x(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)==1) &lt; 0) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                        <span class="keywordflow">if</span>(item.subs(x(w)==1) &lt; 0) {</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                            need_contour_deformation = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                        }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    <span class="keywordflow">if</span>(!is_a&lt;numeric&gt;(tmp.subs(x(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)==1))) {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        <span class="keywordflow">throw</span> <a class="code" href="class_hep_lib_1_1_error.html">Error</a>(<span class="stringliteral">&quot;CIPrepares: (!is_a&lt;numeric&gt;(tmp.subs(x(w)==1)))&quot;</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    <span class="keywordflow">if</span>(!is_a&lt;numeric&gt;(tmp.subs(x(w)==1))) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;CIPrepares: (!is_a&lt;numeric&gt;(tmp.subs(x(w)==1)))&quot;</span>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    <span class="keywordflow">if</span>(tmp.subs(x(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)==1) &lt; 0) need_contour_deformation = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    <span class="keywordflow">if</span>(tmp.subs(x(w)==1) &lt; 0) need_contour_deformation = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">if</span>(!need_contour_deformation) ft = 1; <span class="comment">//note the difference with SDPrepare</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!ft.has(x(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!ft.has(x(w))) {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                ft = 1;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            </div>
@@ -141,7 +141,7 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">//============================================================================================================</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        lst fts;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : resf) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">if</span>(item.op(2).has(x(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">if</span>(item.op(2).has(x(w))) {</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                fts.append(item.op(2));</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            }</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
@@ -170,10 +170,10 @@ $(function() {
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                ii.append(-1);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordtype">int</span> ft_n = ftnmap[item.op(2)];</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordflow">if</span>(ft_n==0) <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;CIPrepares: ft_n==0, &quot;</span> + <a class="code" href="namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d">ex2str</a>(item.op(2)));</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordflow">if</span>(ft_n==0) <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;CIPrepares: ft_n==0, &quot;</span> + ex2str(item.op(2)));</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                ii.append(ft_n);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">if</span>(ii.op(0).is_zero() || ii.op(1).subs(FTX(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>)==1).is_zero()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">if</span>(ii.op(0).is_zero() || ii.op(1).subs(FTX(w1,w2)==1).is_zero()) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">if</span>(!use_IBF) res_vec.push_back(ii);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                ex key = ii;</div>
@@ -199,7 +199,7 @@ $(function() {
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">//============================================================================================================</span></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="comment">// Prepare FT-lambda</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <a class="code" href="namespace_hep_lib.html#aa441ead14197d6474286dd3b6b121f55">GiNaC_Parallel</a>(ftnvec.size(), [&amp;](<span class="keywordtype">int</span> idx)-&gt;ex {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        GiNaC_Parallel(ftnvec.size(), [&amp;](<span class="keywordtype">int</span> idx)-&gt;ex {</div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="comment">// return nothing</span></div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            auto kv = ftnvec[idx];</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            ex ft = kv.op(0);</div>
@@ -218,18 +218,18 @@ $(function() {
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            </div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            ex DFs[fxs.size()], DDFs[fxs.size()][fxs.size()];</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;fxs.size(); i++) {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="keyword">auto</span> df = <a class="code" href="namespace_hep_lib.html#ac12e6d2f21b88fda24af578b7bfdba6b">mma_diff</a>(ft, fxs[i]);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                <span class="keyword">auto</span> df = mma_diff(ft, fxs[i]);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                DFs[i] = collect_common_factors(df);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                ostringstream ilaos;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                ilaos &lt;&lt; <span class="stringliteral">&quot;ilas[&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;]&quot;</span>;</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                symbol ila(ilaos.str());</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;fxs.size(); j++) {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                    <span class="keyword">auto</span> ddf = <a class="code" href="namespace_hep_lib.html#ac12e6d2f21b88fda24af578b7bfdba6b">mma_diff</a>(DFs[i], fxs[j]);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                    <span class="keyword">auto</span> ddf = mma_diff(DFs[i], fxs[j]);</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                    DDFs[i][j] = collect_common_factors(ddf);</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                }</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            }</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keywordflow">if</span>(!<a class="code" href="namespace_hep_lib.html#ac4edb7e1b0b8398f8e263cecd4ff2421">dir_exists</a>(to_string(pid))) system((<span class="stringliteral">&quot;mkdir -p &quot;</span>+to_string(pid)).c_str());</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="keywordflow">if</span>(!dir_exists(to_string(pid))) system((<span class="stringliteral">&quot;mkdir -p &quot;</span>+to_string(pid)).c_str());</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            ostringstream cppfn, sofn;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            cppfn &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/F&quot;</span> &lt;&lt; ft_n &lt;&lt; <span class="stringliteral">&quot;.cpp&quot;</span>;</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            sofn &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/F&quot;</span> &lt;&lt; ft_n &lt;&lt; <span class="stringliteral">&quot;.o&quot;</span>;</div>
@@ -256,7 +256,7 @@ $(function() {
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="comment">// FL_fid</span></div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;dREAL FL_&quot;</span> &lt;&lt; ft_n &lt;&lt; <span class="stringliteral">&quot;(const dREAL* x, const dREAL *pl) {&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;dREAL yy = &quot;</span>;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <a class="code" href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">EvalL</a>(ft.subs(plRepl).subs(cxRepl)).print(cppL);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            EvalL(ft.subs(plRepl).subs(cxRepl)).print(cppL);</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;return yy;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; endl;</div>
@@ -265,7 +265,7 @@ $(function() {
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="comment">// FQ_fid</span></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;qREAL FQ_&quot;</span> &lt;&lt; ft_n &lt;&lt; <span class="stringliteral">&quot;(const qREAL* x, const qREAL *pl) {&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;qREAL yy = &quot;</span>;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <a class="code" href="namespace_hep_lib.html#a276713cbba34768f77c3ad5158f9b5dc">EvalQ</a>(ft.subs(plRepl).subs(cxRepl)).print(cppQ);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            EvalQ(ft.subs(plRepl).subs(cxRepl)).print(cppQ);</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;return yy;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; endl;</div>
@@ -274,7 +274,7 @@ $(function() {
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="comment">// FMP_fid</span></div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;mpREAL FMP_&quot;</span> &lt;&lt; ft_n &lt;&lt; <span class="stringliteral">&quot;(const mpREAL* x, const mpREAL *pl) {&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;mpREAL yy = &quot;</span>;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <a class="code" href="namespace_hep_lib.html#afedb664a64c7abdf30c65df5bd4d198d">EvalMP</a>(ft.subs(plRepl).subs(cxRepl)).print(cppMP);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            EvalMP(ft.subs(plRepl).subs(cxRepl)).print(cppMP);</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;return yy;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; endl;</div>
@@ -284,7 +284,7 @@ $(function() {
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;dREAL FL_&quot;</span> &lt;&lt; ft_n &lt;&lt; <span class="stringliteral">&quot;(const int i, const dREAL* x, const dREAL *pl) {&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;fxs.size(); i++) {</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;if(&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;==i) return &quot;</span>;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                <a class="code" href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">EvalL</a>(DFs[i].subs(plRepl).subs(cxRepl)).print(cppL);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                EvalL(DFs[i].subs(plRepl).subs(cxRepl)).print(cppL);</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            }</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;return 0;&quot;</span> &lt;&lt; endl;</div>
@@ -295,7 +295,7 @@ $(function() {
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;qREAL FQ_&quot;</span> &lt;&lt; ft_n &lt;&lt; <span class="stringliteral">&quot;(const int i, const qREAL* x, const qREAL *pl) {&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;fxs.size(); i++) {</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;if(&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;==i) return &quot;</span>;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                <a class="code" href="namespace_hep_lib.html#a276713cbba34768f77c3ad5158f9b5dc">EvalQ</a>(DFs[i].subs(plRepl).subs(cxRepl)).print(cppQ);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                EvalQ(DFs[i].subs(plRepl).subs(cxRepl)).print(cppQ);</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            }</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;return 0;&quot;</span> &lt;&lt; endl;</div>
@@ -306,7 +306,7 @@ $(function() {
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;mpREAL FMP_&quot;</span> &lt;&lt; ft_n &lt;&lt; <span class="stringliteral">&quot;(const int i, const mpREAL* x, const mpREAL *pl) {&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;fxs.size(); i++) {</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;if(&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;==i) return &quot;</span>;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                <a class="code" href="namespace_hep_lib.html#afedb664a64c7abdf30c65df5bd4d198d">EvalMP</a>(DFs[i].subs(plRepl).subs(cxRepl)).print(cppMP);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                EvalMP(DFs[i].subs(plRepl).subs(cxRepl)).print(cppMP);</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            }</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;return 0;&quot;</span> &lt;&lt; endl;</div>
@@ -318,7 +318,7 @@ $(function() {
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;fxs.size(); i++) {</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;fxs.size(); j++) {</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;if(&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;==i &amp;&amp; &quot;</span>&lt;&lt;j&lt;&lt;<span class="stringliteral">&quot;==j) return &quot;</span>;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                <a class="code" href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">EvalL</a>(DDFs[i][j].subs(plRepl).subs(cxRepl)).print(cppL);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                EvalL(DDFs[i][j].subs(plRepl).subs(cxRepl)).print(cppL);</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            }}</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;return 0;&quot;</span> &lt;&lt; endl;</div>
@@ -330,7 +330,7 @@ $(function() {
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;fxs.size(); i++) {</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;fxs.size(); j++) {</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;if(&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;==i &amp;&amp; &quot;</span>&lt;&lt;j&lt;&lt;<span class="stringliteral">&quot;==j) return &quot;</span>;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                <a class="code" href="namespace_hep_lib.html#a276713cbba34768f77c3ad5158f9b5dc">EvalQ</a>(DDFs[i][j].subs(plRepl).subs(cxRepl)).print(cppQ);</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                EvalQ(DDFs[i][j].subs(plRepl).subs(cxRepl)).print(cppQ);</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            }}</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;return 0;&quot;</span> &lt;&lt; endl;</div>
@@ -342,7 +342,7 @@ $(function() {
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;fxs.size(); i++) {</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;fxs.size(); j++) {</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;if(&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;==i &amp;&amp; &quot;</span>&lt;&lt;j&lt;&lt;<span class="stringliteral">&quot;==j) return &quot;</span>;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                <a class="code" href="namespace_hep_lib.html#afedb664a64c7abdf30c65df5bd4d198d">EvalMP</a>(DDFs[i][j].subs(plRepl).subs(cxRepl)).print(cppMP);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                EvalMP(DDFs[i][j].subs(plRepl).subs(cxRepl)).print(cppMP);</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            }}</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;return 0;&quot;</span> &lt;&lt; endl;</div>
@@ -394,7 +394,7 @@ $(function() {
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;dREAL dff[xn+1];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;X2ZL_&quot;</span>&lt;&lt;ft_n&lt;&lt;<span class="stringliteral">&quot;(x,z,r,dff,pl,las);&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;dCOMPLEX zf = &quot;</span>;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <a class="code" href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">EvalL</a>(ft.subs(plRepl).subs(czRepl)).print(cppL);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            EvalL(ft.subs(plRepl).subs(czRepl)).print(cppL);</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;return -zf.imag()/x[xn-1];&quot;</span> &lt;&lt; endl; <span class="comment">// find max image part, check with 0</span></div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            ofs &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; endl;</div>
@@ -419,10 +419,10 @@ $(function() {
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            }</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            </div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            ostringstream cmd;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; -fPIC -c &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a04d7c11ac19192c1b7ac658a982e085d">INC_FLAGS</a> &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; cppfn.str();</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; -fPIC -c &quot;</span> &lt;&lt; INC_FLAGS &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; cppfn.str();</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            system(cmd.str().c_str());</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            </div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            <span class="keywordflow">if</span>(!<a class="code" href="namespace_hep_lib.html#a580b6208b2fa4dfef76ad9af7cb4cb03">file_exists</a>(sofn.str().c_str())) {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            <span class="keywordflow">if</span>(!file_exists(sofn.str().c_str())) {</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                cmd.clear();</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                cmd &lt;&lt; <span class="stringliteral">&quot;cp &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; . &quot;</span>;</div>
@@ -441,7 +441,7 @@ $(function() {
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                sofn &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;F.so&quot;</span>;</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            }</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">LIB_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp &quot;</span> &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/F*.o&quot;</span>;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; LIB_FLAGS &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp &quot;</span> &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/F*.o&quot;</span>;</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            system(cmd.str().c_str());</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            </div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            cmd.clear();</div>
@@ -455,7 +455,7 @@ $(function() {
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="comment">// Compile the null.o</span></div>
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordflow">if</span>(<span class="keyword">true</span>) {</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            ostringstream cmd;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            <span class="keywordflow">if</span>(!<a class="code" href="namespace_hep_lib.html#ac4edb7e1b0b8398f8e263cecd4ff2421">dir_exists</a>(to_string(pid))) cmd &lt;&lt; <span class="stringliteral">&quot;mkdir -p &quot;</span> &lt;&lt; pid;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            <span class="keywordflow">if</span>(!dir_exists(to_string(pid))) cmd &lt;&lt; <span class="stringliteral">&quot;mkdir -p &quot;</span> &lt;&lt; pid;</div>
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            system(cmd.str().c_str());</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            cmd.clear();</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
@@ -466,7 +466,7 @@ $(function() {
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <span class="comment">// Prepare Integrand</span></div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keyword">auto</span> res =</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <a class="code" href="namespace_hep_lib.html#aa441ead14197d6474286dd3b6b121f55">GiNaC_Parallel</a>(res_vec.size(), [&amp;](<span class="keywordtype">int</span> idx)-&gt;ex {</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        GiNaC_Parallel(res_vec.size(), [&amp;](<span class="keywordtype">int</span> idx)-&gt;ex {</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            <span class="comment">// return lst{ no-x-result, xn, x-indepent prefactor, ft_n }</span></div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            <span class="comment">// or     lst{ id(SD(D|Q)_id in .so), xn, x-indepent prefactor, ft_n }</span></div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            </div>
@@ -490,13 +490,13 @@ $(function() {
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            <span class="keyword">auto</span> fxs = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a1f9569c9a83d9781855fb03d9b838fb9">get_xy_from</a>(ft);</div>
 <div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;            </div>
 <div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            exset ftxset;</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            <a class="code" href="classexpr.html">expr</a>.find(FTX(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>), ftxset);</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            expr.find(FTX(w1,w2), ftxset);</div>
 <div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;            lst ftxlst;</div>
 <div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> it : ftxset) ftxlst.append(it);</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;            <a class="code" href="classexpr.html">expr</a> = <a class="code" href="namespace_hep_lib.html#a322c2513e72bd9e2217ed2f1e13cb3d2">mma_collect</a>(<a class="code" href="classexpr.html">expr</a>, FTX(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>));</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;            expr = mma_collect(expr, FTX(w1,w2));</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            vector&lt;pair&lt;ex,ex&gt;&gt; ft_expr;</div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : ftxlst) {</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                ft_expr.push_back(make_pair(item.op(1), <a class="code" href="classexpr.html">expr</a>.coeff(item)));</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                ft_expr.push_back(make_pair(item.op(1), expr.coeff(item)));</div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;            }</div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;            </div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            lst cxRepl, czRepl, czzRepl, plRepl;</div>
@@ -522,7 +522,7 @@ $(function() {
 <div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                }</div>
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;            }</div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;            <span class="keywordflow">if</span>(count!=xs.size()) <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;CIPrepares: (count!=xs.size())&quot;</span>);</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;            <span class="keyword">auto</span> pls = <a class="code" href="namespace_hep_lib_1_1_s_d.html#afd6da9f763cc8ed9a64492bcc093e9bb">get_pl_from</a>(<a class="code" href="classexpr.html">expr</a>);</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;            <span class="keyword">auto</span> pls = <a class="code" href="namespace_hep_lib_1_1_s_d.html#afd6da9f763cc8ed9a64492bcc093e9bb">get_pl_from</a>(expr);</div>
 <div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;            <span class="keywordtype">int</span> npls = pls.size()&gt;0 ? ex_to&lt;numeric&gt;(pls[pls.size()-1].subs(lst{PL(w)==w})).to_int() : -1;</div>
 <div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;npls+1; i++) {</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                ostringstream pl;</div>
@@ -530,7 +530,7 @@ $(function() {
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                plRepl.append(PL(i) == symbol(pl.str()));</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            }</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            </div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            <span class="keywordflow">if</span>(!<a class="code" href="namespace_hep_lib.html#ac4edb7e1b0b8398f8e263cecd4ff2421">dir_exists</a>(to_string(pid))) system((<span class="stringliteral">&quot;mkdir -p &quot;</span>+to_string(pid)).c_str());</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            <span class="keywordflow">if</span>(!dir_exists(to_string(pid))) system((<span class="stringliteral">&quot;mkdir -p &quot;</span>+to_string(pid)).c_str());</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;            ostringstream cppfn;</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;            cppfn &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; idx &lt;&lt; <span class="stringliteral">&quot;.cpp&quot;</span>;</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;            std::ofstream ofs;</div>
@@ -571,41 +571,41 @@ $(function() {
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;for(int i=0; i&lt;&quot;</span>&lt;&lt;(npls+1)&lt;&lt;<span class="stringliteral">&quot;; i++) pl[i] = qpl[i];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;                </div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;                <span class="keywordflow">if</span>(debug) {</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;                    <span class="keyword">auto</span> tmp = <a class="code" href="classexpr.html">expr</a>.subs(FTX(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>)==1).subs(cxRepl).subs(plRepl);</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;                    <span class="keyword">auto</span> tmp = expr.subs(FTX(w1,w2)==1).subs(cxRepl).subs(plRepl);</div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;//for debug, intg: &quot;</span> &lt;&lt; endl &lt;&lt; <span class="stringliteral">&quot;//&quot;</span> &lt;&lt; tmp &lt;&lt; endl;</div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                }</div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                </div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                <span class="keyword">auto</span> intg = <a class="code" href="classexpr.html">expr</a>.subs(FTX(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>)==1);</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;                intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#ae8b0f616d75a71ac19977a99ce3317d4">xyz_pow_simplify</a>(intg);</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;                <span class="keywordtype">bool</span> hasF2 = intg.has(<a class="code" href="namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3">iEpsilon</a>) || intg.has(I);</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                <span class="keyword">auto</span> intg = expr.subs(FTX(w1,w2)==1);</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;                intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a11e194f265341b876cafa4536c8c2814">xyz_pow_simplify</a>(intg);</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;                <span class="keywordtype">bool</span> hasF2 = intg.has(iEpsilon) || intg.has(I);</div>
 <div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;                </div>
 <div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;                <span class="comment">// WickRotation</span></div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                hasF2 = hasF2 || intg.has(WRA(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>));</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                <span class="keywordflow">if</span>(intg.has(WRA(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                hasF2 = hasF2 || intg.has(WRA(w));</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                <span class="keywordflow">if</span>(intg.has(WRA(w))) {</div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;                    exset wras;</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;                    find(intg, WRA(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), wras);</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;                    find(intg, WRA(w), wras);</div>
 <div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                    <span class="keywordflow">if</span>(wras.size()!=1) <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;CIPrepares: Too many WRA(w).&quot;</span>);</div>
 <div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                    <span class="keyword">auto</span> wra = (*(wras.begin())).op(0);</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                    intg = intg.subs(WRA(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)==xwra);</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;dREAL wra = &quot;</span>; <a class="code" href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">EvalL</a>(wra).print(cppL); ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                    intg = intg.subs(WRA(w)==xwra);</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;dREAL wra = &quot;</span>; EvalL(wra).print(cppL); ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                    </div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                    exset pows_set;</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                    find(intg, <a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>), pows_set);</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                    find(intg, sqrt(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), pows_set);</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                    find(intg, <a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(w1,w2), pows_set);</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                    find(intg, sqrt(w), pows_set);</div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                    lst pow_subs;</div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : pows_set) {</div>
 <div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                        <span class="keywordflow">if</span>(item.has(xwra)) {</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                            <span class="keywordflow">if</span>(item.match(<a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>)) &amp;&amp; !item.op(1).info(info_flags::integer)) {</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                            <span class="keywordflow">if</span>(item.match(<a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(w1,w2)) &amp;&amp; !item.op(1).info(info_flags::integer)) {</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                                pow_subs.append(item == <a class="code" href="_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b">exp</a>(item.op(1)*<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(item.op(0))));</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(item.match(sqrt(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(item.match(sqrt(w))) {</div>
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                                pow_subs.append(item == <a class="code" href="_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b">exp</a>(<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(item.op(0))/2));</div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                            }</div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                        }</div>
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;                    }</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;                    <span class="keywordflow">if</span>(pow_subs.nops()&gt;0) intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a6686c331164598017956919bcfc9b7d2">exp_simplify</a>(intg);</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;                    <span class="keywordflow">if</span>(pow_subs.nops()&gt;0) intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a21161a39cbff13c7aaedfbf430ae7d39">exp_simplify</a>(intg);</div>
 <div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;                    </div>
 <div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;                    exset logs_set;</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;                    find(intg, <a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), logs_set);</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;                    find(intg, <a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(w), logs_set);</div>
 <div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;                    lst logs;</div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : logs_set) {</div>
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;                        <span class="keywordflow">if</span>(item.has(xwra)) logs.append(item.op(0));</div>
@@ -624,14 +624,14 @@ $(function() {
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                        ofs &lt;&lt; <span class="stringliteral">&quot;dCOMPLEX &quot;</span>&lt;&lt;cse.oc&lt;&lt;<span class="stringliteral">&quot;[&quot;</span> &lt;&lt; cse.on()+1 &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;                        <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : cse.os()) {</div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                            ofs &lt;&lt;cse.oc&lt;&lt; <span class="stringliteral">&quot;[&quot;</span>&lt;&lt;kv.first&lt;&lt;<span class="stringliteral">&quot;] = &quot;</span>;</div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                            <a class="code" href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">EvalL</a>(kv.second.subs(cxRepl).subs(plRepl)).print(cppL);</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                            EvalL(kv.second.subs(cxRepl).subs(plRepl)).print(cppL);</div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                            ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;                        }</div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;                        </div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;                        exmap log_subs;</div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;clogs.nops(); i++) {</div>
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;                            ofs &lt;&lt; <span class="stringliteral">&quot;LogZ[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;][ti] = &quot;</span>;</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;                            <a class="code" href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">EvalL</a>(clogs.op(i).subs(cxRepl).subs(plRepl)).print(cppL);</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;                            EvalL(clogs.op(i).subs(cxRepl).subs(plRepl)).print(cppL);</div>
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;                            ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;                            log_subs[<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(logs.op(i))] = symbol(<span class="stringliteral">&quot;CLog[&quot;</span>+to_string(i)+<span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;                        }</div>
@@ -648,12 +648,12 @@ $(function() {
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                <span class="keywordflow">else</span> ofs &lt;&lt; <span class="stringliteral">&quot;dREAL &quot;</span>&lt;&lt;cse.oc&lt;&lt;<span class="stringliteral">&quot;[&quot;</span> &lt;&lt; cse.on()+1 &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : cse.os()) {</div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;                    ofs &lt;&lt;cse.oc&lt;&lt; <span class="stringliteral">&quot;[&quot;</span>&lt;&lt;kv.first&lt;&lt;<span class="stringliteral">&quot;] = &quot;</span>;</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;                    <a class="code" href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">EvalL</a>(kv.second.subs(cxRepl).subs(plRepl)).print(cppL);</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;                    EvalL(kv.second.subs(cxRepl).subs(plRepl)).print(cppL);</div>
 <div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;                }</div>
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;                </div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;dCOMPLEX yy = &quot;</span>;</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;                <a class="code" href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">EvalL</a>(intg.subs(cxRepl).subs(plRepl)).print(cppL);</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;                EvalL(intg.subs(cxRepl).subs(plRepl)).print(cppL);</div>
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                </div>
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;y[0] = yy.real();&quot;</span> &lt;&lt; endl;</div>
@@ -701,26 +701,26 @@ $(function() {
 <div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;                    </div>
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;                    <span class="keywordflow">if</span>(<span class="keyword">true</span>) { <span class="comment">// RCLog</span></div>
 <div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;                        exset pows_set;</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;                        find(intg, <a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>), pows_set);</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;                        find(intg, sqrt(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), pows_set);</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;                        find(intg, <a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(w1,w2), pows_set);</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;                        find(intg, sqrt(w), pows_set);</div>
 <div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;                        lst pow_subs;</div>
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;                        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : pows_set) {</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;                            <span class="keywordflow">if</span>(!item.op(0).match(x(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;                                <span class="keywordflow">if</span>(item.match(<a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>)) &amp;&amp; !item.op(1).info(info_flags::integer)) {</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;                            <span class="keywordflow">if</span>(!item.op(0).match(x(w))) {</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;                                <span class="keywordflow">if</span>(item.match(<a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(w1,w2)) &amp;&amp; !item.op(1).info(info_flags::integer)) {</div>
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;                                    pow_subs.append(item == <a class="code" href="_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b">exp</a>(item.op(1)*<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(item.op(0))));</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;                                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(item.match(sqrt(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;                                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(item.match(sqrt(w))) {</div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                                    pow_subs.append(item == <a class="code" href="_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b">exp</a>(<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(item.op(0))/2));</div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;                                }</div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;                            }</div>
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;                        }</div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;                        <span class="keywordflow">if</span>(pow_subs.nops()&gt;0) intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a6686c331164598017956919bcfc9b7d2">exp_simplify</a>(intg);</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;                        <span class="keywordflow">if</span>(pow_subs.nops()&gt;0) intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a21161a39cbff13c7aaedfbf430ae7d39">exp_simplify</a>(intg);</div>
 <div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;                    </div>
 <div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;                        exset logs_set;</div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;                        find(intg, <a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), logs_set);</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;                        find(intg, <a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(w), logs_set);</div>
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;                        <span class="keywordflow">if</span>(logs_set.size()&gt;0) {</div>
 <div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;                            lst logs;</div>
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;                            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : logs_set) {</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;                                <span class="keywordflow">if</span>(!item.op(0).match(x(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) logs.append(item.op(0));</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;                                <span class="keywordflow">if</span>(!item.op(0).match(x(w))) logs.append(item.op(0));</div>
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;                            }</div>
 <div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;                            <span class="keywordflow">if</span>(logs.nops()&gt;0) {</div>
 <div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;                                ofs &lt;&lt; <span class="stringliteral">&quot;int nlog = &quot;</span>&lt;&lt;logs.nops()&lt;&lt;<span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
@@ -734,14 +734,14 @@ $(function() {
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;                                ofs &lt;&lt; <span class="stringliteral">&quot;dCOMPLEX &quot;</span>&lt;&lt;cse.oc&lt;&lt;<span class="stringliteral">&quot;[&quot;</span> &lt;&lt; cse.on()+1 &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;                                <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : cse.os()) {</div>
 <div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;                                    ofs &lt;&lt;cse.oc&lt;&lt; <span class="stringliteral">&quot;[&quot;</span>&lt;&lt;kv.first&lt;&lt;<span class="stringliteral">&quot;] = &quot;</span>;</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;                                    <a class="code" href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">EvalL</a>(kv.second.subs(czzRepl).subs(plRepl)).print(cppL);</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;                                    EvalL(kv.second.subs(czzRepl).subs(plRepl)).print(cppL);</div>
 <div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;                                    ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                                }</div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;                                </div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;                                exmap log_subs;</div>
 <div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;                                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;clogs.nops(); i++) {</div>
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;                                    ofs &lt;&lt; <span class="stringliteral">&quot;LogZ[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;][ti] = &quot;</span>;</div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;                                    <a class="code" href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">EvalL</a>(clogs.op(i).subs(czzRepl).subs(plRepl)).print(cppL);</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;                                    EvalL(clogs.op(i).subs(czzRepl).subs(plRepl)).print(cppL);</div>
 <div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;                                    ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;                                    log_subs[<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(logs.op(i))] = symbol(<span class="stringliteral">&quot;CLog[&quot;</span>+to_string(i)+<span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;                                }</div>
@@ -757,12 +757,12 @@ $(function() {
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;dCOMPLEX &quot;</span>&lt;&lt;cse.oc&lt;&lt;<span class="stringliteral">&quot;[&quot;</span> &lt;&lt; cse.on()+1 &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : cse.os()) {</div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;                        ofs &lt;&lt;cse.oc&lt;&lt; <span class="stringliteral">&quot;[&quot;</span>&lt;&lt;kv.first&lt;&lt;<span class="stringliteral">&quot;] = &quot;</span>;</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;                        <a class="code" href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">EvalL</a>(kv.second.subs(czRepl).subs(plRepl)).print(cppL);</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;                        EvalL(kv.second.subs(czRepl).subs(plRepl)).print(cppL);</div>
 <div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;                        ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;                    }</div>
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;                    </div>
 <div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;ytmp = &quot;</span>;</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;                    <a class="code" href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">EvalL</a>(intg.subs(czRepl).subs(plRepl)).print(cppL);</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;                    EvalL(intg.subs(czRepl).subs(plRepl)).print(cppL);</div>
 <div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;yy += det * ytmp;&quot;</span> &lt;&lt; endl &lt;&lt; endl;</div>
 <div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; endl;</div>
@@ -787,37 +787,37 @@ $(function() {
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;extern \&quot;C\&quot; &quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;int SDQ_&quot;</span>&lt;&lt;idx&lt;&lt;<span class="stringliteral">&quot;(const unsigned int xn, const qREAL x[], const int unsigned yn, qREAL y[], const qREAL pl[], const qREAL las[]) {&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                </div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;                <span class="keyword">auto</span> intg = <a class="code" href="classexpr.html">expr</a>.subs(FTX(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>)==1);</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;                intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#ae8b0f616d75a71ac19977a99ce3317d4">xyz_pow_simplify</a>(intg);</div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;                <span class="keywordtype">bool</span> hasF2 = intg.has(<a class="code" href="namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3">iEpsilon</a>) || intg.has(I);</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;                <span class="keyword">auto</span> intg = expr.subs(FTX(w1,w2)==1);</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;                intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a11e194f265341b876cafa4536c8c2814">xyz_pow_simplify</a>(intg);</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;                <span class="keywordtype">bool</span> hasF2 = intg.has(iEpsilon) || intg.has(I);</div>
 <div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;                </div>
 <div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;                <span class="comment">// WickRotation</span></div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;                hasF2 = hasF2 || intg.has(WRA(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>));</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;                <span class="keywordflow">if</span>(intg.has(WRA(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;                hasF2 = hasF2 || intg.has(WRA(w));</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;                <span class="keywordflow">if</span>(intg.has(WRA(w))) {</div>
 <div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;                    exset wras;</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;                    find(intg, WRA(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), wras);</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;                    find(intg, WRA(w), wras);</div>
 <div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;                    <span class="keywordflow">if</span>(wras.size()!=1) <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;CIPrepares: Too many WRA(w).&quot;</span>);</div>
 <div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;                    <span class="keyword">auto</span> wra = (*(wras.begin())).op(0);</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;                    intg = intg.subs(WRA(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)==xwra);</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;qREAL wra = &quot;</span>; <a class="code" href="namespace_hep_lib.html#a276713cbba34768f77c3ad5158f9b5dc">EvalQ</a>(wra).print(cppQ); ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;                    intg = intg.subs(WRA(w)==xwra);</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;qREAL wra = &quot;</span>; EvalQ(wra).print(cppQ); ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;                    </div>
 <div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;                    exset pows_set;</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;                    find(intg, <a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>), pows_set);</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;                    find(intg, sqrt(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), pows_set);</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;                    find(intg, <a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(w1,w2), pows_set);</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;                    find(intg, sqrt(w), pows_set);</div>
 <div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;                    lst pow_subs;</div>
 <div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : pows_set) {</div>
 <div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;                        <span class="keywordflow">if</span>(item.has(xwra)) {</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;                            <span class="keywordflow">if</span>(item.match(<a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>)) &amp;&amp; !item.op(1).info(info_flags::integer)) {</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;                            <span class="keywordflow">if</span>(item.match(<a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(w1,w2)) &amp;&amp; !item.op(1).info(info_flags::integer)) {</div>
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;                                pow_subs.append(item == <a class="code" href="_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b">exp</a>(item.op(1)*<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(item.op(0))));</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(item.match(sqrt(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(item.match(sqrt(w))) {</div>
 <div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;                                pow_subs.append(item == <a class="code" href="_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b">exp</a>(<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(item.op(0))/2));</div>
 <div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;                            }</div>
 <div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;                        }</div>
 <div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;                    }</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;                    <span class="keywordflow">if</span>(pow_subs.nops()&gt;0) intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a6686c331164598017956919bcfc9b7d2">exp_simplify</a>(intg);</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;                    <span class="keywordflow">if</span>(pow_subs.nops()&gt;0) intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a21161a39cbff13c7aaedfbf430ae7d39">exp_simplify</a>(intg);</div>
 <div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;                    </div>
 <div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;                    exset logs_set;</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;                    find(intg, <a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), logs_set);</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;                    find(intg, <a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(w), logs_set);</div>
 <div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;                    lst logs;</div>
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : logs_set) {</div>
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;                        <span class="keywordflow">if</span>(item.has(xwra)) logs.append(item.op(0));</div>
@@ -836,14 +836,14 @@ $(function() {
 <div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;                        ofs &lt;&lt; <span class="stringliteral">&quot;qCOMPLEX &quot;</span>&lt;&lt;cse.oc&lt;&lt;<span class="stringliteral">&quot;[&quot;</span> &lt;&lt; cse.on()+1 &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;                        <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : cse.os()) {</div>
 <div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;                            ofs &lt;&lt;cse.oc&lt;&lt; <span class="stringliteral">&quot;[&quot;</span>&lt;&lt;kv.first&lt;&lt;<span class="stringliteral">&quot;] = &quot;</span>;</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;                            <a class="code" href="namespace_hep_lib.html#a276713cbba34768f77c3ad5158f9b5dc">EvalQ</a>(kv.second.subs(cxRepl).subs(plRepl)).print(cppQ);</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;                            EvalQ(kv.second.subs(cxRepl).subs(plRepl)).print(cppQ);</div>
 <div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;                            ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;                        }</div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;                        </div>
 <div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;                        exmap log_subs;</div>
 <div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;clogs.nops(); i++) {</div>
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;                            ofs &lt;&lt; <span class="stringliteral">&quot;LogZ[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;][ti] = &quot;</span>;</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                            <a class="code" href="namespace_hep_lib.html#a276713cbba34768f77c3ad5158f9b5dc">EvalQ</a>(clogs.op(i).subs(cxRepl).subs(plRepl)).print(cppQ);</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                            EvalQ(clogs.op(i).subs(cxRepl).subs(plRepl)).print(cppQ);</div>
 <div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;                            ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;                            log_subs[<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(logs.op(i))] = symbol(<span class="stringliteral">&quot;CLog[&quot;</span>+to_string(i)+<span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;                        }</div>
@@ -860,12 +860,12 @@ $(function() {
 <div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;                <span class="keywordflow">else</span> ofs &lt;&lt; <span class="stringliteral">&quot;qREAL &quot;</span>&lt;&lt;cse.oc&lt;&lt;<span class="stringliteral">&quot;[&quot;</span> &lt;&lt; cse.on()+1 &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : cse.os()) {</div>
 <div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;                    ofs &lt;&lt;cse.oc&lt;&lt; <span class="stringliteral">&quot;[&quot;</span>&lt;&lt;kv.first&lt;&lt;<span class="stringliteral">&quot;] = &quot;</span>;</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;                    <a class="code" href="namespace_hep_lib.html#a276713cbba34768f77c3ad5158f9b5dc">EvalQ</a>(kv.second.subs(cxRepl).subs(plRepl)).print(cppQ);</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;                    EvalQ(kv.second.subs(cxRepl).subs(plRepl)).print(cppQ);</div>
 <div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                }</div>
 <div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;                </div>
 <div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;qCOMPLEX yy = &quot;</span>;</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;                <a class="code" href="namespace_hep_lib.html#a276713cbba34768f77c3ad5158f9b5dc">EvalQ</a>(intg.subs(cxRepl).subs(plRepl)).print(cppQ);</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;                EvalQ(intg.subs(cxRepl).subs(plRepl)).print(cppQ);</div>
 <div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;                </div>
 <div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;y[0] = crealq(yy);&quot;</span> &lt;&lt; endl;</div>
@@ -908,26 +908,26 @@ $(function() {
 <div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;                    </div>
 <div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;                    <span class="keywordflow">if</span>(<span class="keyword">true</span>) { <span class="comment">// RCLog</span></div>
 <div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;                        exset pows_set;</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;                        find(intg, <a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>), pows_set);</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;                        find(intg, sqrt(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), pows_set);</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;                        find(intg, <a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(w1,w2), pows_set);</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;                        find(intg, sqrt(w), pows_set);</div>
 <div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;                        lst pow_subs;</div>
 <div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;                        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : pows_set) {</div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;                            <span class="keywordflow">if</span>(!item.op(0).match(x(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;                                <span class="keywordflow">if</span>(item.match(<a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>)) &amp;&amp; !item.op(1).info(info_flags::integer)) {</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;                            <span class="keywordflow">if</span>(!item.op(0).match(x(w))) {</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;                                <span class="keywordflow">if</span>(item.match(<a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(w1,w2)) &amp;&amp; !item.op(1).info(info_flags::integer)) {</div>
 <div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;                                    pow_subs.append(item == <a class="code" href="_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b">exp</a>(item.op(1)*<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(item.op(0))));</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;                                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(item.match(sqrt(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;                                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(item.match(sqrt(w))) {</div>
 <div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;                                    pow_subs.append(item == <a class="code" href="_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b">exp</a>(<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(item.op(0))/2));</div>
 <div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;                                }</div>
 <div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;                            }</div>
 <div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;                        }</div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;                        <span class="keywordflow">if</span>(pow_subs.nops()&gt;0) intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a6686c331164598017956919bcfc9b7d2">exp_simplify</a>(intg);</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;                        <span class="keywordflow">if</span>(pow_subs.nops()&gt;0) intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a21161a39cbff13c7aaedfbf430ae7d39">exp_simplify</a>(intg);</div>
 <div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;                        </div>
 <div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;                        exset logs_set;</div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;                        find(intg, <a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), logs_set);</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;                        find(intg, <a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(w), logs_set);</div>
 <div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;                        <span class="keywordflow">if</span>(logs_set.size()&gt;0) {</div>
 <div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;                            lst logs;</div>
 <div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;                            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : logs_set) {</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;                                <span class="keywordflow">if</span>(!item.op(0).match(x(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) logs.append(item.op(0));</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;                                <span class="keywordflow">if</span>(!item.op(0).match(x(w))) logs.append(item.op(0));</div>
 <div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;                            }</div>
 <div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;                            <span class="keywordflow">if</span>(logs.nops()&gt;0) {</div>
 <div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;                                ofs &lt;&lt; <span class="stringliteral">&quot;int nlog = &quot;</span>&lt;&lt;logs.nops()&lt;&lt;<span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
@@ -941,14 +941,14 @@ $(function() {
 <div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;                                ofs &lt;&lt; <span class="stringliteral">&quot;qCOMPLEX &quot;</span>&lt;&lt;cse.oc&lt;&lt;<span class="stringliteral">&quot;[&quot;</span> &lt;&lt; cse.on()+1 &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;                                <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : cse.os()) {</div>
 <div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;                                    ofs &lt;&lt;cse.oc&lt;&lt; <span class="stringliteral">&quot;[&quot;</span>&lt;&lt;kv.first&lt;&lt;<span class="stringliteral">&quot;] = &quot;</span>;</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;                                    <a class="code" href="namespace_hep_lib.html#a276713cbba34768f77c3ad5158f9b5dc">EvalQ</a>(kv.second.subs(czzRepl).subs(plRepl)).print(cppQ);</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;                                    EvalQ(kv.second.subs(czzRepl).subs(plRepl)).print(cppQ);</div>
 <div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;                                    ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;                                }</div>
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;                                </div>
 <div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;                                exmap log_subs;</div>
 <div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;                                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;clogs.nops(); i++) {</div>
 <div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;                                    ofs &lt;&lt; <span class="stringliteral">&quot;LogZ[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;][ti] = &quot;</span>;</div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;                                    <a class="code" href="namespace_hep_lib.html#a276713cbba34768f77c3ad5158f9b5dc">EvalQ</a>(clogs.op(i).subs(czzRepl).subs(plRepl)).print(cppQ);</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;                                    EvalQ(clogs.op(i).subs(czzRepl).subs(plRepl)).print(cppQ);</div>
 <div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;                                    ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;                                    log_subs[<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(logs.op(i))] = symbol(<span class="stringliteral">&quot;CLog[&quot;</span>+to_string(i)+<span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;                                }</div>
@@ -964,12 +964,12 @@ $(function() {
 <div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;qCOMPLEX &quot;</span>&lt;&lt;cse.oc&lt;&lt;<span class="stringliteral">&quot;[&quot;</span> &lt;&lt; cse.on()+1 &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : cse.os()) {</div>
 <div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;                        ofs &lt;&lt;cse.oc&lt;&lt; <span class="stringliteral">&quot;[&quot;</span>&lt;&lt;kv.first&lt;&lt;<span class="stringliteral">&quot;] = &quot;</span>;</div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;                        <a class="code" href="namespace_hep_lib.html#a276713cbba34768f77c3ad5158f9b5dc">EvalQ</a>(kv.second.subs(czRepl).subs(plRepl)).print(cppQ);</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;                        EvalQ(kv.second.subs(czRepl).subs(plRepl)).print(cppQ);</div>
 <div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;                        ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;                    }</div>
 <div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;                    </div>
 <div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;ytmp = &quot;</span>;</div>
-<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;                    <a class="code" href="namespace_hep_lib.html#a276713cbba34768f77c3ad5158f9b5dc">EvalQ</a>(intg.subs(czRepl).subs(plRepl)).print(cppQ);</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;                    EvalQ(intg.subs(czRepl).subs(plRepl)).print(cppQ);</div>
 <div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;yy += det * ytmp;&quot;</span> &lt;&lt; endl &lt;&lt; endl;</div>
 <div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; endl;</div>
@@ -1004,37 +1004,37 @@ $(function() {
 <div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;mpREAL pl[&quot;</span>&lt;&lt;(npls&lt;0 ? 1 : npls+1)&lt;&lt;<span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;for(int i=0; i&lt;&quot;</span>&lt;&lt;(npls+1)&lt;&lt;<span class="stringliteral">&quot;; i++) pl[i] = mpREAL(qpl[i]);&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;                </div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;                <span class="keyword">auto</span> intg = <a class="code" href="classexpr.html">expr</a>.subs(FTX(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>)==1);</div>
-<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;                intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#ae8b0f616d75a71ac19977a99ce3317d4">xyz_pow_simplify</a>(intg);</div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;                <span class="keywordtype">bool</span> hasF2 = intg.has(<a class="code" href="namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3">iEpsilon</a>) || intg.has(I);</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;                <span class="keyword">auto</span> intg = expr.subs(FTX(w1,w2)==1);</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;                intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a11e194f265341b876cafa4536c8c2814">xyz_pow_simplify</a>(intg);</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;                <span class="keywordtype">bool</span> hasF2 = intg.has(iEpsilon) || intg.has(I);</div>
 <div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;                </div>
 <div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;                <span class="comment">// WickRotation</span></div>
-<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;                hasF2 = hasF2 || intg.has(WRA(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>));</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;                <span class="keywordflow">if</span>(intg.has(WRA(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;                hasF2 = hasF2 || intg.has(WRA(w));</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;                <span class="keywordflow">if</span>(intg.has(WRA(w))) {</div>
 <div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;                    exset wras;</div>
-<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;                    find(intg, WRA(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), wras);</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;                    find(intg, WRA(w), wras);</div>
 <div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;                    <span class="keywordflow">if</span>(wras.size()!=1) <span class="keywordflow">throw</span> Error(<span class="stringliteral">&quot;CIPrepares: Too many WRA(w).&quot;</span>);</div>
 <div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;                    <span class="keyword">auto</span> wra = (*(wras.begin())).op(0);</div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;                    intg = intg.subs(WRA(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>)==xwra);</div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;mpREAL wra = &quot;</span>; <a class="code" href="namespace_hep_lib.html#afedb664a64c7abdf30c65df5bd4d198d">EvalMP</a>(wra).print(cppMP); ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;                    intg = intg.subs(WRA(w)==xwra);</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;mpREAL wra = &quot;</span>; EvalMP(wra).print(cppMP); ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;                    </div>
 <div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;                    exset pows_set;</div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;                    find(intg, <a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>), pows_set);</div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;                    find(intg, sqrt(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), pows_set);</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;                    find(intg, <a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(w1,w2), pows_set);</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;                    find(intg, sqrt(w), pows_set);</div>
 <div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;                    lst pow_subs;</div>
 <div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : pows_set) {</div>
 <div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;                        <span class="keywordflow">if</span>(item.has(xwra)) {</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;                            <span class="keywordflow">if</span>(item.match(<a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>)) &amp;&amp; !item.op(1).info(info_flags::integer)) {</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;                            <span class="keywordflow">if</span>(item.match(<a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(w1,w2)) &amp;&amp; !item.op(1).info(info_flags::integer)) {</div>
 <div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;                                pow_subs.append(item == <a class="code" href="_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b">exp</a>(item.op(1)*<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(item.op(0))));</div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(item.match(sqrt(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;                            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(item.match(sqrt(w))) {</div>
 <div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;                                pow_subs.append(item == <a class="code" href="_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b">exp</a>(<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(item.op(0))/2));</div>
 <div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;                            }</div>
 <div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;                        }</div>
 <div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;                    }</div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;                    <span class="keywordflow">if</span>(pow_subs.nops()&gt;0) intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a6686c331164598017956919bcfc9b7d2">exp_simplify</a>(intg);</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;                    <span class="keywordflow">if</span>(pow_subs.nops()&gt;0) intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a21161a39cbff13c7aaedfbf430ae7d39">exp_simplify</a>(intg);</div>
 <div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;                    </div>
 <div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;                    exset logs_set;</div>
-<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;                    find(intg, <a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), logs_set);</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;                    find(intg, <a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(w), logs_set);</div>
 <div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;                    lst logs;</div>
 <div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : logs_set) {</div>
 <div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;                        <span class="keywordflow">if</span>(item.has(xwra)) logs.append(item.op(0));</div>
@@ -1053,14 +1053,14 @@ $(function() {
 <div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;                        ofs &lt;&lt; <span class="stringliteral">&quot;mpCOMPLEX &quot;</span>&lt;&lt;cse.oc&lt;&lt;<span class="stringliteral">&quot;[&quot;</span> &lt;&lt; cse.on()+1 &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;                        <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : cse.os()) {</div>
 <div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;                            ofs &lt;&lt;cse.oc&lt;&lt; <span class="stringliteral">&quot;[&quot;</span>&lt;&lt;kv.first&lt;&lt;<span class="stringliteral">&quot;] = &quot;</span>;</div>
-<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;                            <a class="code" href="namespace_hep_lib.html#afedb664a64c7abdf30c65df5bd4d198d">EvalMP</a>(kv.second.subs(cxRepl).subs(plRepl)).print(cppMP);</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;                            EvalMP(kv.second.subs(cxRepl).subs(plRepl)).print(cppMP);</div>
 <div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;                            ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;                        }</div>
 <div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;                        </div>
 <div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160;                        exmap log_subs;</div>
 <div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;                        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;clogs.nops(); i++) {</div>
 <div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;                            ofs &lt;&lt; <span class="stringliteral">&quot;LogZ[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;][ti] = &quot;</span>;</div>
-<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;                            <a class="code" href="namespace_hep_lib.html#afedb664a64c7abdf30c65df5bd4d198d">EvalMP</a>(clogs.op(i).subs(cxRepl).subs(plRepl)).print(cppMP);</div>
+<div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;                            EvalMP(clogs.op(i).subs(cxRepl).subs(plRepl)).print(cppMP);</div>
 <div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;                            ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;                            log_subs[<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(logs.op(i))] = symbol(<span class="stringliteral">&quot;CLog[&quot;</span>+to_string(i)+<span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;                        }</div>
@@ -1077,12 +1077,12 @@ $(function() {
 <div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;                <span class="keywordflow">else</span> ofs &lt;&lt; <span class="stringliteral">&quot;mpREAL &quot;</span>&lt;&lt;cse.oc&lt;&lt;<span class="stringliteral">&quot;[&quot;</span> &lt;&lt; cse.on()+1 &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : cse.os()) {</div>
 <div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;                    ofs &lt;&lt;cse.oc&lt;&lt; <span class="stringliteral">&quot;[&quot;</span>&lt;&lt;kv.first&lt;&lt;<span class="stringliteral">&quot;] = &quot;</span>;</div>
-<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;                    <a class="code" href="namespace_hep_lib.html#afedb664a64c7abdf30c65df5bd4d198d">EvalMP</a>(kv.second.subs(cxRepl).subs(plRepl)).print(cppMP);</div>
+<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;                    EvalMP(kv.second.subs(cxRepl).subs(plRepl)).print(cppMP);</div>
 <div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;                }</div>
 <div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;                </div>
 <div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;mpCOMPLEX yy = &quot;</span>;</div>
-<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;                <a class="code" href="namespace_hep_lib.html#afedb664a64c7abdf30c65df5bd4d198d">EvalMP</a>(intg.subs(cxRepl).subs(plRepl)).print(cppMP);</div>
+<div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;                EvalMP(intg.subs(cxRepl).subs(plRepl)).print(cppMP);</div>
 <div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;y[0] = yy.real().toFloat128();&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;                ofs &lt;&lt; <span class="stringliteral">&quot;y[1] = yy.imag().toFloat128();&quot;</span> &lt;&lt; endl;</div>
@@ -1129,26 +1129,26 @@ $(function() {
 <div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;                    </div>
 <div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;                    <span class="keywordflow">if</span>(<span class="keyword">true</span>) { <span class="comment">// RCLog</span></div>
 <div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;                        exset pows_set;</div>
-<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;                        find(intg, <a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>), pows_set);</div>
-<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;                        find(intg, sqrt(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), pows_set);</div>
+<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;                        find(intg, <a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(w1,w2), pows_set);</div>
+<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;                        find(intg, sqrt(w), pows_set);</div>
 <div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;                        lst pow_subs;</div>
 <div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;                        <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : pows_set) {</div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;                            <span class="keywordflow">if</span>(!item.op(0).match(x(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
-<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;                                <span class="keywordflow">if</span>(item.match(<a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(<a class="code" href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">w1</a>,<a class="code" href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">w2</a>)) &amp;&amp; !item.op(1).info(info_flags::integer)) {</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;                            <span class="keywordflow">if</span>(!item.op(0).match(x(w))) {</div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;                                <span class="keywordflow">if</span>(item.match(<a class="code" href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a>(w1,w2)) &amp;&amp; !item.op(1).info(info_flags::integer)) {</div>
 <div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;                                    pow_subs.append(item == <a class="code" href="_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b">exp</a>(item.op(1)*<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(item.op(0))));</div>
-<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;                                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(item.match(sqrt(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) {</div>
+<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;                                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(item.match(sqrt(w))) {</div>
 <div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;                                    pow_subs.append(item == <a class="code" href="_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b">exp</a>(<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(item.op(0))/2));</div>
 <div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;                                }</div>
 <div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;                            }</div>
 <div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;                        }</div>
-<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;                        <span class="keywordflow">if</span>(pow_subs.nops()&gt;0) intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a6686c331164598017956919bcfc9b7d2">exp_simplify</a>(intg);</div>
+<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;                        <span class="keywordflow">if</span>(pow_subs.nops()&gt;0) intg = <a class="code" href="namespace_hep_lib_1_1_s_d.html#a21161a39cbff13c7aaedfbf430ae7d39">exp_simplify</a>(intg);</div>
 <div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;                        </div>
 <div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;                        exset logs_set;</div>
-<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;                        find(intg, <a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>), logs_set);</div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;                        find(intg, <a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(w), logs_set);</div>
 <div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;                        <span class="keywordflow">if</span>(logs_set.size()&gt;0) {</div>
 <div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;                            lst logs;</div>
 <div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;                            <span class="keywordflow">for</span>(<span class="keyword">auto</span> item : logs_set) {</div>
-<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;                                <span class="keywordflow">if</span>(!item.op(0).match(x(<a class="code" href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">w</a>))) logs.append(item.op(0));</div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;                                <span class="keywordflow">if</span>(!item.op(0).match(x(w))) logs.append(item.op(0));</div>
 <div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;                            }</div>
 <div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;                            <span class="keywordflow">if</span>(logs.nops()&gt;0) {</div>
 <div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;                                ofs &lt;&lt; <span class="stringliteral">&quot;int nlog = &quot;</span>&lt;&lt;logs.nops()&lt;&lt;<span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
@@ -1162,14 +1162,14 @@ $(function() {
 <div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;                                ofs &lt;&lt; <span class="stringliteral">&quot;mpCOMPLEX &quot;</span>&lt;&lt;cse.oc&lt;&lt;<span class="stringliteral">&quot;[&quot;</span> &lt;&lt; cse.on()+1 &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;                                <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : cse.os()) {</div>
 <div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;                                    ofs &lt;&lt;cse.oc&lt;&lt; <span class="stringliteral">&quot;[&quot;</span>&lt;&lt;kv.first&lt;&lt;<span class="stringliteral">&quot;] = &quot;</span>;</div>
-<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;                                    <a class="code" href="namespace_hep_lib.html#afedb664a64c7abdf30c65df5bd4d198d">EvalMP</a>(kv.second.subs(czzRepl).subs(plRepl)).print(cppMP);</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;                                    EvalMP(kv.second.subs(czzRepl).subs(plRepl)).print(cppMP);</div>
 <div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;                                    ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;                                }</div>
 <div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;                                </div>
 <div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;                                exmap log_subs;</div>
 <div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;                                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;clogs.nops(); i++) {</div>
 <div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;                                    ofs &lt;&lt; <span class="stringliteral">&quot;LogZ[&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;][ti] = &quot;</span>;</div>
-<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;                                    <a class="code" href="namespace_hep_lib.html#afedb664a64c7abdf30c65df5bd4d198d">EvalMP</a>(clogs.op(i).subs(czzRepl).subs(plRepl)).print(cppMP);</div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;                                    EvalMP(clogs.op(i).subs(czzRepl).subs(plRepl)).print(cppMP);</div>
 <div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;                                    ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;                                    log_subs[<a class="code" href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a>(logs.op(i))] = symbol(<span class="stringliteral">&quot;CLog[&quot;</span>+to_string(i)+<span class="stringliteral">&quot;]&quot;</span>);</div>
 <div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;                                }</div>
@@ -1185,12 +1185,12 @@ $(function() {
 <div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;mpCOMPLEX &quot;</span>&lt;&lt;cse.oc&lt;&lt;<span class="stringliteral">&quot;[&quot;</span> &lt;&lt; cse.on()+1 &lt;&lt; <span class="stringliteral">&quot;];&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> kv : cse.os()) {</div>
 <div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;                        ofs &lt;&lt;cse.oc&lt;&lt; <span class="stringliteral">&quot;[&quot;</span>&lt;&lt;kv.first&lt;&lt;<span class="stringliteral">&quot;] = &quot;</span>;</div>
-<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;                        <a class="code" href="namespace_hep_lib.html#afedb664a64c7abdf30c65df5bd4d198d">EvalMP</a>(kv.second.subs(czRepl).subs(plRepl)).print(cppMP);</div>
+<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;                        EvalMP(kv.second.subs(czRepl).subs(plRepl)).print(cppMP);</div>
 <div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;                        ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;                    }</div>
 <div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;                    </div>
 <div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;ytmp = &quot;</span>;</div>
-<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;                    <a class="code" href="namespace_hep_lib.html#afedb664a64c7abdf30c65df5bd4d198d">EvalMP</a>(intg.subs(czRepl).subs(plRepl)).print(cppMP);</div>
+<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;                    EvalMP(intg.subs(czRepl).subs(plRepl)).print(cppMP);</div>
 <div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;;&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;yy += det * ytmp;&quot;</span> &lt;&lt; endl &lt;&lt; endl;</div>
 <div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;                    ofs &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; endl;</div>
@@ -1206,7 +1206,7 @@ $(function() {
 <div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;            ofs.close();</div>
 <div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;            ostringstream ofn, cmd;</div>
 <div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;            ofn &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/&quot;</span> &lt;&lt; idx &lt;&lt; <span class="stringliteral">&quot;.o&quot;</span>;</div>
-<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; -fPIC &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a04d7c11ac19192c1b7ac658a982e085d">INC_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -c -o &quot;</span> &lt;&lt; ofn.str() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; cppfn.str();</div>
+<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; -fPIC &quot;</span> &lt;&lt; INC_FLAGS &lt;&lt;  <span class="stringliteral">&quot; -c -o &quot;</span> &lt;&lt; ofn.str() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; cppfn.str();</div>
 <div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;            system(cmd.str().c_str());</div>
 <div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;            <span class="keywordflow">if</span>(!debug) remove(cppfn.str().c_str());</div>
 <div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;            <span class="keywordflow">return</span> lst{ idx, xs.size(), kvf.op(0), ft_n };</div>
@@ -1248,7 +1248,7 @@ $(function() {
 <div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;        <span class="keywordflow">if</span>(res_size&gt;GccLimit) {</div>
 <div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;            cmd.clear();</div>
 <div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;            cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">LIB_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp &quot;</span>;</div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; LIB_FLAGS &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp &quot;</span>;</div>
 <div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;            <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
 <div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; $(seq -f &#39;&quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/%g.o&#39; 0 &quot;</span> &lt;&lt; (GccLimit-1) &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
 <div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;            system(cmd.str().c_str());</div>
@@ -1263,7 +1263,7 @@ $(function() {
 <div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;                <span class="keywordflow">else</span> sofn &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;X&quot;</span> &lt;&lt; n &lt;&lt; <span class="stringliteral">&quot;.so&quot;</span>;</div>
 <div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;                cmd.clear();</div>
 <div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;                cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;                cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">LIB_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp &quot;</span>;</div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;                cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; LIB_FLAGS &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp &quot;</span>;</div>
 <div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;                <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
 <div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;                cmd &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; $(seq -f &#39;&quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/%g.o&#39; &quot;</span> &lt;&lt; start &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; end &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
 <div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;                <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
@@ -1273,7 +1273,7 @@ $(function() {
 <div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;            cmd.clear();</div>
 <div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;            cmd.str(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">LIB_FLAGS</a> &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp &quot;</span>;</div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160;            cmd &lt;&lt; cpp &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; LIB_FLAGS &lt;&lt;  <span class="stringliteral">&quot; -Wl,-rpath,. -rdynamic -fPIC -shared -lHepLib -lquadmath -lmpfr -lgmp &quot;</span>;</div>
 <div class="line"><a name="l01215"></a><span class="lineno"> 1215</span>&#160;            <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
 <div class="line"><a name="l01216"></a><span class="lineno"> 1216</span>&#160;            cmd &lt;&lt; <span class="stringliteral">&quot; -o &quot;</span> &lt;&lt; sofn.str() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; pid &lt;&lt; <span class="stringliteral">&quot;/*.o&quot;</span>;</div>
 <div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;            <span class="keywordflow">if</span>(hasF) cmd &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; fsofn.str();</div>
@@ -1290,41 +1290,18 @@ $(function() {
 <div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160; </div>
 <div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_hep_lib_1_1_error_html"><div class="ttname"><a href="class_hep_lib_1_1_error.html">HepLib::Error</a></div><div class="ttdoc">class used to wrap error message</div><div class="ttdef"><b>Definition:</b> <a href="_basic_8h_source.html#l00160">Basic.h:160</a></div></div>
 <div class="ttc" id="a_s_d_8h_html"><div class="ttname"><a href="_s_d_8h.html">SD.h</a></div><div class="ttdoc">SecDec header file.</div></div>
-<div class="ttc" id="anamespace_hep_lib_html_a406b9f70f7be848603aaa04d2e36c63d"><div class="ttname"><a href="namespace_hep_lib.html#a406b9f70f7be848603aaa04d2e36c63d">HepLib::Color_HighLight</a></div><div class="ttdeci">const char * Color_HighLight</div></div>
-<div class="ttc" id="anamespace_hep_lib_1_1_s_d_html_ae8b0f616d75a71ac19977a99ce3317d4"><div class="ttname"><a href="namespace_hep_lib_1_1_s_d.html#ae8b0f616d75a71ac19977a99ce3317d4">HepLib::SD::xyz_pow_simplify</a></div><div class="ttdeci">ex xyz_pow_simplify(const ex expr)</div><div class="ttdef"><b>Definition:</b> <a href="_helpers_8cpp_source.html#l00401">Helpers.cpp:401</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_a69835f6cd58e456c18b6cbeb5e79da98"><div class="ttname"><a href="namespace_hep_lib.html#a69835f6cd58e456c18b6cbeb5e79da98">HepLib::LIB_FLAGS</a></div><div class="ttdeci">string LIB_FLAGS</div><div class="ttdef"><b>Definition:</b> <a href="_init_8cpp_source.html#l00044">Init.cpp:44</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_aa27dc222ce5a1ee715d0a08986d51060"><div class="ttname"><a href="namespace_hep_lib.html#aa27dc222ce5a1ee715d0a08986d51060">HepLib::now</a></div><div class="ttdeci">string now(bool use_date=true)</div></div>
 <div class="ttc" id="anamespace_hep_lib_1_1_s_d_html_afd6da9f763cc8ed9a64492bcc093e9bb"><div class="ttname"><a href="namespace_hep_lib_1_1_s_d.html#afd6da9f763cc8ed9a64492bcc093e9bb">HepLib::SD::get_pl_from</a></div><div class="ttdeci">vector&lt; ex &gt; get_pl_from(ex pol)</div><div class="ttdef"><b>Definition:</b> <a href="_helpers_8cpp_source.html#l00062">Helpers.cpp:62</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_acd7a1d43f12ad5f7b40923978174b125"><div class="ttname"><a href="namespace_hep_lib.html#acd7a1d43f12ad5f7b40923978174b125">HepLib::w1</a></div><div class="ttdeci">ex w1</div><div class="ttdef"><b>Definition:</b> <a href="_basic_8h_source.html#l00395">Basic.h:395</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_ac12e6d2f21b88fda24af578b7bfdba6b"><div class="ttname"><a href="namespace_hep_lib.html#ac12e6d2f21b88fda24af578b7bfdba6b">HepLib::mma_diff</a></div><div class="ttdeci">ex mma_diff(ex const expr, ex const xp, unsigned nth=1, bool expand=false)</div></div>
-<div class="ttc" id="anamespace_hep_lib_html_ab868f1b276fdfd8b62d5dc36f6c877c1"><div class="ttname"><a href="namespace_hep_lib.html#ab868f1b276fdfd8b62d5dc36f6c877c1">HepLib::Verbose</a></div><div class="ttdeci">int Verbose</div><div class="ttdef"><b>Definition:</b> <a href="_init_8cpp_source.html#l00035">Init.cpp:35</a></div></div>
 <div class="ttc" id="a_n_functions_8h_html_a13f23af57c060ce99da9bd8753540eed"><div class="ttname"><a href="_n_functions_8h.html#a13f23af57c060ce99da9bd8753540eed">pow</a></div><div class="ttdeci">qREAL pow(qREAL x, qREAL y)</div><div class="ttdef"><b>Definition:</b> <a href="_n_functions_8h_source.html#l00076">NFunctions.h:76</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_a276713cbba34768f77c3ad5158f9b5dc"><div class="ttname"><a href="namespace_hep_lib.html#a276713cbba34768f77c3ad5158f9b5dc">HepLib::EvalQ</a></div><div class="ttdeci">ex EvalQ(ex)</div></div>
-<div class="ttc" id="anamespace_hep_lib_html_ac4edb7e1b0b8398f8e263cecd4ff2421"><div class="ttname"><a href="namespace_hep_lib.html#ac4edb7e1b0b8398f8e263cecd4ff2421">HepLib::dir_exists</a></div><div class="ttdeci">bool dir_exists(string dir)</div><div class="ttdef"><b>Definition:</b> <a href="_basic_8h_source.html#l00244">Basic.h:244</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_a322c2513e72bd9e2217ed2f1e13cb3d2"><div class="ttname"><a href="namespace_hep_lib.html#a322c2513e72bd9e2217ed2f1e13cb3d2">HepLib::mma_collect</a></div><div class="ttdeci">ex mma_collect(const ex &amp;expr, std::function&lt; bool(const ex &amp;)&gt;, bool ccf=false, bool cvf=false)</div></div>
-<div class="ttc" id="anamespace_hep_lib_1_1_s_d_html"><div class="ttname"><a href="namespace_hep_lib_1_1_s_d.html">HepLib::SD</a></div><div class="ttdoc">namespace for Numerical integration with Sector Decomposition method</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_8h_source.html#l00027">SD.h:27</a></div></div>
-<div class="ttc" id="a_basic_8h_html_ab702106cf3b3e96750b6845ded4e0299"><div class="ttname"><a href="_basic_8h.html#ab702106cf3b3e96750b6845ded4e0299">RESET</a></div><div class="ttdeci">#define RESET</div><div class="ttdef"><b>Definition:</b> <a href="_basic_8h_source.html#l00083">Basic.h:83</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_1_1_s_d_html_a6686c331164598017956919bcfc9b7d2"><div class="ttname"><a href="namespace_hep_lib_1_1_s_d.html#a6686c331164598017956919bcfc9b7d2">HepLib::SD::exp_simplify</a></div><div class="ttdeci">ex exp_simplify(const ex)</div><div class="ttdef"><b>Definition:</b> <a href="_helpers_8cpp_source.html#l00368">Helpers.cpp:368</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_a16bb1155283dad164e492aef11cc6ce3"><div class="ttname"><a href="namespace_hep_lib.html#a16bb1155283dad164e492aef11cc6ce3">HepLib::iEpsilon</a></div><div class="ttdeci">const iSymbol iEpsilon</div></div>
+<div class="ttc" id="anamespace_hep_lib_1_1_s_d_html"><div class="ttname"><a href="namespace_hep_lib_1_1_s_d.html">HepLib::SD</a></div><div class="ttdoc">namespace for Numerical integration with Sector Decomposition method</div><div class="ttdef"><b>Definition:</b> <a href="_asy_m_b_8cpp_source.html#l00010">AsyMB.cpp:10</a></div></div>
 <div class="ttc" id="a_n_functions_8h_html_a75a2f84f6e46bbe29d6ecd53342c650b"><div class="ttname"><a href="_n_functions_8h.html#a75a2f84f6e46bbe29d6ecd53342c650b">exp</a></div><div class="ttdeci">qREAL exp(qREAL x)</div><div class="ttdef"><b>Definition:</b> <a href="_n_functions_8h_source.html#l00078">NFunctions.h:78</a></div></div>
-<div class="ttc" id="aclassexpr_html"><div class="ttname"><a href="classexpr.html">expr</a></div><div class="ttdef"><b>Definition:</b> <a href="_wrap_8h_source.html#l00008">Wrap.h:8</a></div></div>
-<div class="ttc" id="a_wrap_8h_html_a9ad48c5ab416ac7295c554002193f366"><div class="ttname"><a href="_wrap_8h.html#a9ad48c5ab416ac7295c554002193f366">expand</a></div><div class="ttdeci">expr expand(const expr &amp;e)</div></div>
-<div class="ttc" id="anamespace_hep_lib_html_a441c90e44abfc8b5d08502ec73c83a5c"><div class="ttname"><a href="namespace_hep_lib.html#a441c90e44abfc8b5d08502ec73c83a5c">HepLib::ep</a></div><div class="ttdeci">const Symbol ep</div></div>
-<div class="ttc" id="anamespace_hep_lib_html_aa441ead14197d6474286dd3b6b121f55"><div class="ttname"><a href="namespace_hep_lib.html#aa441ead14197d6474286dd3b6b121f55">HepLib::GiNaC_Parallel</a></div><div class="ttdeci">vector&lt; ex &gt; GiNaC_Parallel(int ntotal, int nbatch, std::function&lt; ex(int)&gt; f, const string &amp;key=&quot;&quot;, bool rm=true, int prtlvl=0)</div></div>
-<div class="ttc" id="anamespace_hep_lib_html_a752f07c16efe490fce76ed1a3a0b042b"><div class="ttname"><a href="namespace_hep_lib.html#a752f07c16efe490fce76ed1a3a0b042b">HepLib::w</a></div><div class="ttdeci">ex w</div><div class="ttdef"><b>Definition:</b> <a href="_init_8cpp_source.html#l00024">Init.cpp:24</a></div></div>
+<div class="ttc" id="anamespace_hep_lib_1_1_s_d_html_a21161a39cbff13c7aaedfbf430ae7d39"><div class="ttname"><a href="namespace_hep_lib_1_1_s_d.html#a21161a39cbff13c7aaedfbf430ae7d39">HepLib::SD::exp_simplify</a></div><div class="ttdeci">ex exp_simplify(const ex expr_in)</div><div class="ttdef"><b>Definition:</b> <a href="_helpers_8cpp_source.html#l00368">Helpers.cpp:368</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_s_d_1_1_sec_dec_html_a2d180c2bdae9eb023a663eefbab95431"><div class="ttname"><a href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a2d180c2bdae9eb023a663eefbab95431">HepLib::SD::SecDec::nReplacements</a></div><div class="ttdeci">exmap nReplacements</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_8h_source.html#l00354">SD.h:354</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_afedb664a64c7abdf30c65df5bd4d198d"><div class="ttname"><a href="namespace_hep_lib.html#afedb664a64c7abdf30c65df5bd4d198d">HepLib::EvalMP</a></div><div class="ttdeci">ex EvalMP(ex)</div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_s_d_1_1_sec_dec_html_a7ea34e07604065d8fd08f9f265eac9b0"><div class="ttname"><a href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#a7ea34e07604065d8fd08f9f265eac9b0">HepLib::SD::SecDec::IsZero</a></div><div class="ttdeci">bool IsZero</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_8h_source.html#l00362">SD.h:362</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_aa3c9ab822ad0dece52dade8273273bb9"><div class="ttname"><a href="namespace_hep_lib.html#aa3c9ab822ad0dece52dade8273273bb9">HepLib::EvalL</a></div><div class="ttdeci">ex EvalL(ex)</div></div>
 <div class="ttc" id="a_n_functions_8h_html_ab8413d10e561da0cee665724337e5c27"><div class="ttname"><a href="_n_functions_8h.html#ab8413d10e561da0cee665724337e5c27">log</a></div><div class="ttdeci">qREAL log(qREAL x)</div><div class="ttdef"><b>Definition:</b> <a href="_n_functions_8h_source.html#l00077">NFunctions.h:77</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_aeac89cafae8fc78b08ab9cc251402335"><div class="ttname"><a href="namespace_hep_lib.html#aeac89cafae8fc78b08ab9cc251402335">HepLib::w2</a></div><div class="ttdeci">ex w2</div><div class="ttdef"><b>Definition:</b> <a href="_basic_8h_source.html#l00395">Basic.h:395</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_a580b6208b2fa4dfef76ad9af7cb4cb03"><div class="ttname"><a href="namespace_hep_lib.html#a580b6208b2fa4dfef76ad9af7cb4cb03">HepLib::file_exists</a></div><div class="ttdeci">bool file_exists(string fn)</div><div class="ttdef"><b>Definition:</b> <a href="_basic_8h_source.html#l00240">Basic.h:240</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_ac1db5a50669ce842368f5403d43bcf9d"><div class="ttname"><a href="namespace_hep_lib.html#ac1db5a50669ce842368f5403d43bcf9d">HepLib::ex2str</a></div><div class="ttdeci">string ex2str(const ex &amp;expr)</div></div>
+<div class="ttc" id="anamespace_hep_lib_1_1_s_d_html_a11e194f265341b876cafa4536c8c2814"><div class="ttname"><a href="namespace_hep_lib_1_1_s_d.html#a11e194f265341b876cafa4536c8c2814">HepLib::SD::xyz_pow_simplify</a></div><div class="ttdeci">ex xyz_pow_simplify(const ex expr_in)</div><div class="ttdef"><b>Definition:</b> <a href="_helpers_8cpp_source.html#l00401">Helpers.cpp:401</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_1_1_s_d_html_a1f9569c9a83d9781855fb03d9b838fb9"><div class="ttname"><a href="namespace_hep_lib_1_1_s_d.html#a1f9569c9a83d9781855fb03d9b838fb9">HepLib::SD::get_xy_from</a></div><div class="ttdeci">vector&lt; ex &gt; get_xy_from(ex pol)</div><div class="ttdef"><b>Definition:</b> <a href="_helpers_8cpp_source.html#l00014">Helpers.cpp:14</a></div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_s_d_1_1_sec_dec_html_ad921f0db320b81c875f5d8cd4432ed2c"><div class="ttname"><a href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#ad921f0db320b81c875f5d8cd4432ed2c">HepLib::SD::SecDec::expResult</a></div><div class="ttdeci">vector&lt; ex &gt; expResult</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_8h_source.html#l00357">SD.h:357</a></div></div>
-<div class="ttc" id="anamespace_hep_lib_html_a04d7c11ac19192c1b7ac658a982e085d"><div class="ttname"><a href="namespace_hep_lib.html#a04d7c11ac19192c1b7ac658a982e085d">HepLib::INC_FLAGS</a></div><div class="ttdeci">string INC_FLAGS</div><div class="ttdef"><b>Definition:</b> <a href="_init_8cpp_source.html#l00043">Init.cpp:43</a></div></div>
 <div class="ttc" id="anamespace_hep_lib_1_1_s_d_html_a59283e3b396a7ad6107a1626e9fb96d4"><div class="ttname"><a href="namespace_hep_lib_1_1_s_d.html#a59283e3b396a7ad6107a1626e9fb96d4">HepLib::SD::eps</a></div><div class="ttdeci">const Symbol eps</div></div>
 <div class="ttc" id="aclass_hep_lib_1_1_s_d_1_1_sec_dec_html_af8a3c7c5b89dd6f5d0446f2b4a738efe"><div class="ttname"><a href="class_hep_lib_1_1_s_d_1_1_sec_dec.html#af8a3c7c5b89dd6f5d0446f2b4a738efe">HepLib::SD::SecDec::CIPrepares</a></div><div class="ttdeci">void CIPrepares(const string &amp;key=&quot;&quot;)</div><div class="ttdoc">Prepare for the Contours and Integrates calls .so will be generated, for more detailed exported funct...</div><div class="ttdef"><b>Definition:</b> <a href="_c_i_prepares_8cpp_source.html#l00017">CIPrepares.cpp:17</a></div></div>
 <!-- start footer part -->

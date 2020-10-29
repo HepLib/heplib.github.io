@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['method_1303',['METHOD',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a443ca66dc01a78f93cee239fa48eb13c',1,'HepLib::SD::CUBA']]]
+  ['type_941',['Type',['../class_hep_lib_1_1_f_c_1_1_index.html#aaefdc36e31dedd02dec44f03ab2e9d37',1,'HepLib::FC::Index']]]
 ];

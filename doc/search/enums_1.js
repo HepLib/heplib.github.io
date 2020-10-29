@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['io_1302',['IO',['../namespace_hep_lib_1_1_f_c_1_1_quarkonium.html#a65ac6156e65063e726b5bc98f5b33e10',1,'HepLib::FC::Quarkonium']]]
+  ['method_940',['METHOD',['../class_hep_lib_1_1_s_d_1_1_c_u_b_a.html#a443ca66dc01a78f93cee239fa48eb13c',1,'HepLib::SD::CUBA']]]
 ];
