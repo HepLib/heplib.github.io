@@ -2,11 +2,11 @@
 
 [Home](index.md)
 
-[Installation](install.md)
+[Installation](https://heplib.readthedocs.io/en/latest/api/install.html)
   
-[Usage](usage.md)
+[Usage](https://heplib.readthedocs.io/en/latest/api/usage.html)
   
-[Examples](example.md)
+[Examples](https://heplib.readthedocs.io/en/latest/api/example.html)
 
 [Releases](release.md)
   
