@@ -10,6 +10,6 @@
 
 [Releases](release.md)
   
-[Document](doc/)
+[Document](https://heplib.github.io/doxygen/)
 
 [@REPL](https://examples.heplib.repl.run/)
