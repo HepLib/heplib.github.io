@@ -209,7 +209,7 @@ ${GMP} :
 	curl -L -O https://gmplib.org/download/gmp/${GMP}
 
 ${MPFR}:
-	curl -L -O https://heplib.github.io/download/${MPFR}
+	curl -L -O https://heplib.github.io/${MPFR}
 
 ${CLN}:
 	curl -L -O https://www.ginac.de/CLN/${CLN}

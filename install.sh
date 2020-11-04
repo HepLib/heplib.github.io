@@ -36,7 +36,7 @@ echo ""
 export pkg="mpfr-4.0.2"
 echo "Installing $pkg ..."
 if [ ! -f $pkg.tar.gz ]; then
-    curl -L -O https://heplib.github.io/download/$pkg.tar.gz
+    curl -L -O https://heplib.github.io/$pkg.tar.gz
 fi
 rm -rf $pkg
 tar zxf $pkg.tar.gz
