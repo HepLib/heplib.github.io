@@ -14,6 +14,7 @@ ifeq ($(UNAMES),Darwin)
     form = $(basename $(basename ${FORM}))
 endif
  
+dlcmd = curl -k -L
 GMP = gmp-6.2.0.tar.gz
 gmp = $(basename $(basename ${GMP}))
 MPFR = mpfr-4.0.2.tar.gz
@@ -206,38 +207,38 @@ INSTALL_GMP: ${GMP}
 	echo ""
 
 ${GMP} :
-	curl -L -O https://gmplib.org/download/gmp/${GMP}
+	${dlcmd} -o ${GMP} https://gmplib.org/download/gmp/${GMP}
 
 ${MPFR}:
-	curl -L -O https://heplib.github.io/${MPFR}
+	${dlcmd} -o ${MPFR}  https://heplib.github.io/${MPFR}
 
 ${CLN}:
-	curl -L -O https://www.ginac.de/CLN/${CLN}
+	${dlcmd} -o ${CLN}  https://www.ginac.de/CLN/${CLN}
 
 ${GINAC}:
-	curl -L -O https://www.ginac.de/${GINAC}
+	${dlcmd} -o ${GINAC}  https://www.ginac.de/${GINAC}
 
 ${CUBA}:
-	curl -L -O http://www.feynarts.de/cuba/${CUBA}
+	${dlcmd} -o ${CUBA}  http://www.feynarts.de/cuba/${CUBA}
 
 ${MINUIT}:
-	curl -L -O http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/${MINUIT}
+	${dlcmd} -o ${MINUIT} http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/${MINUIT}
 
 ${QHULL}:
-	curl -L -O http://www.qhull.org/download/${QHULL}
+	${dlcmd} -o ${QHULL} http://www.qhull.org/download/${QHULL}
 
 ${HepLib}:
-	curl -L -O https://heplib.github.io/HepLib.tar.gz
+	${dlcmd} -o HepLib.tar.gz https://heplib.github.io/HepLib.tar.gz
 
 ${Fermat}:
-	curl -L -O http://home.bway.net/lewis/fermat64/${Fermat}
+	${Fermat} -o ${Fermat} http://home.bway.net/lewis/fermat64/${Fermat}
 
 ${FIRE}:
 	git clone https://bitbucket.org/feynmanIntegrals/fire.git
 
 ${KIRA}:
-	curl -L -o ${KIRA} https://kira.hepforge.org/downloads?f=binaries/${KIRA}
+	${dlcmd} -o ${KIRA} https://kira.hepforge.org/downloads?f=binaries/${KIRA}
 
 ${FORM}:
-	curl -L -O https://github.com/vermaseren/form/releases/download/v4.2.1/${FORM}
+	${dlcmd} -o ${FORM} https://github.com/vermaseren/form/releases/download/v4.2.1/${FORM}
 
