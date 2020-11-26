@@ -231,7 +231,7 @@ ${HepLib}:
 	${dlcmd} -o HepLib.tar.gz https://heplib.github.io/HepLib.tar.gz
 
 ${Fermat}:
-	${Fermat} -o ${Fermat} http://home.bway.net/lewis/fermat64/${Fermat}
+	${dlcmd} -o ${Fermat} http://home.bway.net/lewis/fermat64/${Fermat}
 
 ${FIRE}:
 	git clone https://bitbucket.org/feynmanIntegrals/fire.git
