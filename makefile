@@ -15,7 +15,7 @@ ifeq ($(UNAMES),Darwin)
 endif
  
 dlcmd = curl -k -L
-GMP = gmp-6.2.1.tar.gz
+GMP = gmp-6.2.1.tar.bz2
 gmp = $(basename $(basename ${GMP}))
 MPFR = mpfr-4.0.2.tar.gz
 mpfr = $(basename $(basename ${MPFR}))
@@ -197,7 +197,7 @@ INSTALL_MPFR: ${MPFR}
 INSTALL_GMP: ${GMP}
 	echo "Installing GMP ..." ;\
 	rm -rf ${gmp} ;\
-	tar zxf ${GMP} ;\
+	tar jxf ${GMP} ;\
 	cd ${gmp} ;\
 	./configure --prefix=${INSTALL_PATH} >>${LOG} 2>>${LOG} ;\
 	make -j ${jn} >>${LOG} 2>>${LOG} ;\
