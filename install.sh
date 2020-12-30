@@ -18,7 +18,7 @@ export CWD=$PWD
 export LOG=$CWD/log.txt
 
 # install GMP
-export pkg="gmp-6.2.0"
+export pkg="gmp-6.2.1"
 echo "Installing $pkg ..."
 if [ ! -f $pkg.tar.gz ]; then
     $dlcmd -o $pkg.tar.gz https://gmplib.org/download/gmp/$pkg.tar.gz

@@ -15,7 +15,7 @@ ifeq ($(UNAMES),Darwin)
 endif
  
 dlcmd = curl -k -L
-GMP = gmp-6.2.0.tar.gz
+GMP = gmp-6.2.1.tar.gz
 gmp = $(basename $(basename ${GMP}))
 MPFR = mpfr-4.0.2.tar.gz
 mpfr = $(basename $(basename ${MPFR}))
