@@ -52,7 +52,7 @@ VE::usage="Value and Error Wrapper";
 VE/:VE[0,0]:=0;
 VE/:VE[Complex[vr_,vi_],Complex[er_,ei_]]:=VE[vr,er]+I VE[vi,ei];
 VE/:VE[v_?NumericQ,e_]/;Element[v,Reals]&&v<0:=-VE[-v,e];
-VE/:MakeBoxes[VE[v_?NumericQ,0],TraditionalForm]:=StyleBox[MakeBoxes[v,TraditionalForm],FontColor->Blue];
+VE/:MakeBoxes[VE[v_?NumericQ,0],TraditionalForm]:=With[{vv=N[v,35]},StyleBox[MakeBoxes[vv,TraditionalForm],FontColor->Blue]];
 VE/:MakeBoxes[VE[v_?NumericQ,e_/;Abs[e]<=0],TraditionalForm]:=StyleBox[MakeBoxes[v,TraditionalForm],FontColor->Blue];
 
 
