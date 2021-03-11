@@ -1,7 +1,7 @@
 (* ::Package:: *)
 
-(* ::Chapter::Closed:: *)
-(*Sector Decomposition*)
+(* ::Chapter:: *)
+(*HepLib*)
 
 
 (* ::Section::Closed:: *)
@@ -42,7 +42,7 @@ Return[ret];
 RE[cex_String]:=C2M[cex]/.Complex[r_,_]:>r
 
 
-(* ::Section::Closed:: *)
+(* ::Section:: *)
 (*VE*)
 
 
@@ -91,34 +91,6 @@ Clear[ChopVE];
 ChopVE[exp_,diff_:Power[10,-6]]:=exp/.VE[v_/;Abs[v]<diff,e_/;Abs[e]<diff]->0;
 
 
-Clear[SimplifyVE];
-SimplifyVE[exp_]:=Module[{tmp,VEH,VF,IH},
-tmp=Cases[exp,s_Symbol/;Not[NumericQ[s]],{0,Infinity}]//Union;
-If[Length[tmp]=!=0,Print["Extra Symbols Found in SimplifyVE: ",tmp];Return[tmp]];
-tmp=exp/.VE->VEH;
-tmp=tmp/.VEH[Complex[r_,i_],e_]:>VEH[r,e]+I VEH[i,e];
-tmp=Collect[tmp,_VEH,VF];
-tmp=tmp/.VF[0]->0;
-tmp=tmp//.Dispatch[{
-VEH[v1_,e1_]^2:>VEH[v1^2,Abs[2v1 e1]],
-VEH[v1_,e1_] VEH[v2_,e2_]:>VEH[v1 v2,Sqrt[Abs[v1 e2]^2+Abs[v2 e1]^2]]
-}];
-tmp=tmp//.Dispatch[{
-VF[Complex[r_,i_]]:>(VF[r]+IH VF[i]),
-VF[-c_]:>-VF[c]
-}];
-tmp=Collect[tmp,{IH,_VEH}];
-tmp=tmp/.VF[0]->0;
-tmp=tmp/.VF[c_] VEH[v_,e_]:>VEH[c v,Abs[c e]];
-tmp=tmp/.VF[c_]:>c;
-tmp=tmp//.Dispatch[{
-VEH[v1_,e1_]+VEH[v2_,e2_]:>VEH[v1+v2,Sqrt[e1^2+e2^2]],
-r_+VEH[v_,e_]/;Element[r,Reals]:>VEH[r+v,e]
-}];
-tmp/.{VEH->VE,IH->I}
-];
-
-
 Clear[VESimplify];
 VESimplify[exp_,ri_:Null]:=Module[{tmp,VF,VE2,IM,resR,resI},
 On[Assert];Assert[SubsetQ[{True},Union[Map[NumericQ,Union[Cases[exp,_Symbol,{0,Infinity}]]]]]];
@@ -127,6 +99,7 @@ tmp=tmp/.Complex[a_,b_]:>a+b IM;
 tmp=Expand[tmp,_VE|IM];
 tmp=Distribute[VF[tmp]];
 tmp=tmp/.VF[0]->0;
+tmp=tmp/.VF[r_+i_ IM]:>VF[r]+IM VF[i];
 tmp=tmp/.VF[ex_]/;FreeQ[ex,_VE]:>VF[VE[ex,0]];
 tmp=tmp/.{VF[c_. VE[e_,v_]]/;FreeQ[c,IM]:>VE2[c e,Power[Abs[c] v,2]]};
 tmp=tmp/.{VF[c_. IM VE[e_,v_]]:>IM VE2[c e,Power[Abs[c] v,2]]};
@@ -149,6 +122,10 @@ tmp=Switch[ri
 ,Im,I resI];
 Return[tmp];
 ];
+
+
+Clear[SimplifyVE];
+SimplifyVE[exp_]:=VESimplify[exp];
 
 
 (* ::Section::Closed:: *)
@@ -184,4 +161,76 @@ res=ReadString[os,EndOfFile];
 If[res===EndOfFile||StringLength[StringTrim[res]]==0,Print[ReadString[es,EndOfBuffer]];Abort[]];
 KillProcess[proc];
 res
+];
+
+
+(* ::Section:: *)
+(*RC*)
+
+
+SetAttributes[RC,HoldAll];
+
+
+RCsubs={};
+
+
+RC[Z2,Gluon]:=1+1/2 \[Alpha]\[Pi] Tf nH (-(2/(3 ep))-(2 lmu)/3-(ep lmu^2)/3-(\[Pi]^2 ep)/18-(ep^2 lmu^3)/9-1/18 \[Pi]^2 ep^2 lmu+2/9 ep^2 Zeta[3]+NoDone[1,2,ep] ep^3)+(\[Alpha]\[Pi]/2)^2 Tf nH (Tf nH ((4 lmu)/(9 ep)+(2 lmu^2)/3+\[Pi]^2/27)+Tf nL (-(4/(9 ep^2))-(4 lmu)/(9 ep)-(2 lmu^2)/9-\[Pi]^2/27)+CF (-(1/(2 ep))-lmu-15/4)+CA (35/(36 ep^2)+(13 lmu)/(18 ep)-5/(8 ep)-(5 lmu)/4+lmu^2/9+13/48+(13 \[Pi]^2)/216)+NoDone[2,0,ep] ep)//. RCsubs;
+
+
+RC[Z2,LightQuark]:=1+(\[Alpha]\[Pi]/2)^2 CF Tf nH (1/(4 ep)+lmu/2-5/24)//.RCsubs;
+
+
+RC[Z2,HeavyQuark]:=1+1/2 \[Alpha]\[Pi] CF (-(3/(2 ep))-2-(3 lmu)/2-4 ep-2 ep lmu-(3 ep lmu^2)/4-(\[Pi]^2 ep)/8-8 ep^2-4 ep^2 lmu-ep^2 lmu^2-(ep^2 lmu^3)/4-(\[Pi]^2 ep^2)/6-1/8 \[Pi]^2 ep^2 lmu+1/2 ep^2 Zeta[3]+NoDone[1,2,ep] ep^3)+(\[Alpha]\[Pi]/2)^2 CF (Tf nH (1/(4 ep)+lmu/ep+947/72+(11 lmu)/6+(3 lmu^2)/2-(5 \[Pi]^2)/4)+Tf nL (-(1/(2 ep^2))+11/(12 ep)+113/24+(19 lmu)/6+lmu^2/2+\[Pi]^2/3)+CF (9/(8 ep^2)+51/(16 ep)+(9 lmu)/(4 ep)+433/32+(51 lmu)/8+(9 lmu^2)/4-(49 \[Pi]^2)/16+4 \[Pi]^2 Log[2]-6 Zeta[3])+CA (11/(8 ep^2)-127/(48 ep)-1705/96-(215 lmu)/24-(11 lmu^2)/8+(5 \[Pi]^2)/4-2 \[Pi]^2 Log[2]+3 Zeta[3])+NoDone[2,0,ep] ep)//. RCsubs;
+
+
+RC[Zm]:=1+1/2 \[Alpha]\[Pi] CF (-(3/(2 ep))-2-(3 lmu)/2-4 ep-2 ep lmu-(3 ep lmu^2)/4-(\[Pi]^2 ep)/8-8 ep^2-4 ep^2 lmu-ep^2 lmu^2-(ep^2 lmu^3)/4-(\[Pi]^2 ep^2)/6-1/8 \[Pi]^2 ep^2 lmu+1/2 ep^2 Zeta[3]+NoDone[1,2,ep] ep^3)+(\[Alpha]\[Pi]/2)^2 CF (Tf nH (-(1/(2 ep^2))+5/(12 ep)+143/24+(13 lmu)/6+lmu^2/2-(2 \[Pi]^2)/3)+Tf nL (-(1/(2 ep^2))+5/(12 ep)+71/24+(13 lmu)/6+lmu^2/2+\[Pi]^2/3)+CF (9/(8 ep^2)+45/(16 ep)+(9 lmu)/(4 ep)+199/32+(45 lmu)/8+(9 lmu^2)/4-(17 \[Pi]^2)/16+2 \[Pi]^2 Log[2]-3 Zeta[3])+CA (11/(8 ep^2)-97/(48 ep)-1111/96-(185 lmu)/24-(11 lmu^2)/8+\[Pi]^2/3-\[Pi]^2 Log[2]+(3 Zeta[3])/2)+NoDone[2,0,ep] ep)//. RCsubs;
+
+
+lmu:=Log[\[Mu]^2/m^2];
+
+
+\[Alpha]\[Pi]B:=With[{Nf=nH+nL},Block[{b0=(11 CA)/3-(4 Tf Nf)/3,b1=(34 CA^2)/3-(20 CA Tf Nf)/3-4 CF Tf Nf},\[Alpha]\[Pi]LO (1-(\[Alpha]\[Pi] b0)/(2 (2 ep))+(\[Alpha]\[Pi]/2)^2 (b0^2/(4 ep^2)-b1/(8 ep)))]]//. RCsubs;
+
+
+\[Alpha]\[Pi]LO=\[Alpha]\[Pi] \[Mu]^(2 ep) (Exp[EulerGamma]/(4 \[Pi]))^ep;
+
+
+RC[Zas]:=\[Alpha]\[Pi]B/\[Alpha]\[Pi];
+
+
+Zas0=\[Mu]^(2 ep) (Exp[EulerGamma]/(4 \[Pi]))^ep;
+
+
+(* ::Section:: *)
+(*Plus Function*)
+
+
+Clear[Delta,PlusFunction];
+
+
+Delta/:MakeBoxes[Delta[exp_],TraditionalForm]:=RowBox[{"\[Delta]","[",MakeBoxes[exp,TraditionalForm],"]"}]
+
+
+PlusFunction/:MakeBoxes[PlusFunction[exp_],TraditionalForm]:=SubscriptBox[RowBox[{"[",MakeBoxes[exp,TraditionalForm],"]"}],"+"]
+
+
+PlusFunctionSeries[z_,-1+a_ ep,n_]:=Delta[z]/(a ep)+Sum[(a ep)^k/k! PlusFunction[Log[z]^k/z],{k,0,n}]
+
+
+PlusFunction2Series[z_Symbol,-1+a_ ep,n_]:=Gamma[a ep]^2/(2 Gamma[2a ep]) (Delta[z]+Delta[1-z])+Sum[(a ep)^k/k! PlusFunction[Log[z(1-z)]^k/(z(1-z))],{k,0,n}]
+
+
+Clear[SimplifyPlusFunction];
+Options[SimplifyPlusFunction]={Factor->1,Point->1,Variables->z};
+SimplifyPlusFunction[exp_,OptionsPattern[SimplifyPlusFunction]]:=Module[{pre,vz,z0,tmp,VF},
+pre=OptionValue[Factor];
+z0=OptionValue[Point];
+vz=OptionValue[Variables];
+tmp=exp;
+tmp=Collect[tmp,_PlusFunction];
+tmp=Distribute[VF[tmp]]/.VF[c_ pf_PlusFunction]:>Factor[pre(
+pf Normal@Series[c/pre,{vz,z0,0}]+(c/pre-Normal@Series[c/pre,{vz,z0,0}])(pf/.PlusFunction->Identity)
+)];
+tmp=tmp/.VF->Identity;
+Return[tmp];
 ];
