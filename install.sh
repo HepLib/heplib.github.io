@@ -101,7 +101,7 @@ echo ""
 export pkg="Minuit2-5.34.14"
 echo "Installing $pkg ..."
 if [ ! -f $pkg.tar.gz ]; then
-    $dlcmd -o $pkg.tar.gz http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/$pkg.tar.gz
+    $dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
 fi
 rm -rf $pkg
 tar zxf $pkg.tar.gz

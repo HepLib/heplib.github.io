@@ -222,7 +222,7 @@ ${CUBA}:
 	${dlcmd} -o ${CUBA}  http://www.feynarts.de/cuba/${CUBA}
 
 ${MINUIT}:
-	${dlcmd} -o ${MINUIT} http://project-mathlibs.web.cern.ch/project-mathlibs/sw/5_34_14/Minuit2/${MINUIT}
+	${dlcmd} -o ${MINUIT} https://heplib.github.io/${MINUIT}
 
 ${QHULL}:
 	${dlcmd} -o ${QHULL} http://www.qhull.org/download/${QHULL}
