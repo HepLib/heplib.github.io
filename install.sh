@@ -66,7 +66,7 @@ rm -rf $pkg
 echo ""
 
 # install GiNaC
-export pkg="ginac-1.8.0"
+export pkg="ginac-1.8.1"
 echo "Installing $pkg ..."
 if [ ! -f $pkg.tar.bz2 ]; then
     $dlcmd -o $pkg.tar.bz2 https://www.ginac.de/$pkg.tar.bz2
