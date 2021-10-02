@@ -122,10 +122,8 @@ fi
 rm -rf $pkg
 unzip -q $pkg.zip
 cd $pkg
-cp Makefile Makefile.bak
-cat Makefile.bak | sed "s/\/usr\/local/\$\$INSTALL_PATH/g" > Makefile
-make >>$LOG 2>>$LOG
-make install >>$LOG 2>>$LOG
+make PREFIX=$INSTALL_PATH >>$LOG 2>>$LOG
+make PREFIX=$INSTALL_PATH install >>$LOG 2>>$LOG
 cd $CWD
 rm -rf $pkg
 echo ""

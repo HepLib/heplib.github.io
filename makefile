@@ -126,10 +126,8 @@ INSTALL_QHULL: ${QHULL}
 	rm -rf ${qhull} ;\
 	unzip -q ${QHULL} ;\
 	cd ${qhull} ;\
-	cp Makefile Makefile.bak ;\
-	cat Makefile.bak | sed "s/\/usr\/local/$(subst /,\/,${INSTALL_PATH})/g" > Makefile ;\
-	make >>${LOG} 2>>${LOG} ;\
-	make install >>${LOG} 2>>${LOG} ;\
+	make PREFIX=${INSTALL_PATH} >>${LOG} 2>>${LOG} ;\
+	make PREFIX=${INSTALL_PATH} install >>${LOG} 2>>${LOG} ;\
 	cd ${CWD} ;\
 	rm -rf ${qhull} ;\
 	echo ""
