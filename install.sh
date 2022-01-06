@@ -66,13 +66,13 @@ rm -rf $pkg
 echo ""
 
 # install GiNaC
-export pkg="ginac-1.8.1"
+export pkg="GiNaC"
 echo "Installing $pkg ..."
-if [ ! -f $pkg.tar.bz2 ]; then
-    $dlcmd -o $pkg.tar.bz2 https://www.ginac.de/$pkg.tar.bz2
+if [ ! -f $pkg.tar.gz ]; then
+    $dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
 fi
 rm -rf $pkg
-tar jxf $pkg.tar.bz2
+tar zxf $pkg.tar.gz
 cd $pkg
 ./configure --prefix=$INSTALL_PATH PKG_CONFIG_PATH=$INSTALL_PATH/lib/pkgconfig >>$LOG 2>>$LOG
 make -j $jn >>$LOG 2>>$LOG
