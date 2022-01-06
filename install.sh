@@ -216,7 +216,7 @@ fi
 rm -rf $pkg
 tar zxf $pkg.tar.gz
 cd $pkg/src
-mkdir build && cd build
+mkdir -p build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=$INSTALL_PATH ..
 make -j $jn
 make install 
