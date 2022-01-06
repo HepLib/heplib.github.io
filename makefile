@@ -21,7 +21,7 @@ MPFR = mpfr-4.0.2.tar.gz
 mpfr = $(basename $(basename ${MPFR}))
 CLN = cln-1.3.6.tar.bz2
 cln = $(basename $(basename ${CLN}))
-GINAC = ginac-1.8.1.tar.bz2
+GINAC = GiNaC.tar.gz
 ginac = $(basename $(basename ${GINAC}))
 CUBA = Cuba-4.2.tar.gz
 cuba = $(basename $(basename ${CUBA}))
@@ -159,7 +159,7 @@ INSTALL_CUBA: ${CUBA}
 INSTALL_GINAC: ${GINAC}
 	echo "Installing GiNaC ..." ;\
 	rm -rf ${ginac} ;\
-	tar jxf ${GINAC} ;\
+	tar zxf ${GINAC} ;\
 	cd ${ginac} ;\
 	./configure --prefix=${INSTALL_PATH} PKG_CONFIG_PATH=${INSTALL_PATH}/lib/pkgconfig >>${LOG} 2>>${LOG} ;\
 	make -j ${jn} >>${LOG} 2>>${LOG} ;\
