@@ -197,7 +197,7 @@ INSTALL_GMP: ${GMP}
 	rm -rf ${gmp} ;\
 	tar jxf ${GMP} ;\
 	cd ${gmp} ;\
-	./configure --prefix=${INSTALL_PATH} >>${LOG} 2>>${LOG} ;\
+	./configure --prefix=${INSTALL_PATH} --enable-cxx >>${LOG} 2>>${LOG} ;\
 	make -j ${jn} >>${LOG} 2>>${LOG} ;\
 	make install >>${LOG} 2>>${LOG} ;\
 	cd ${CWD} ;\
