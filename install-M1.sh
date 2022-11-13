@@ -80,7 +80,7 @@ if [ ! -f $pkg.tar.gz ]; then
     $dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
 fi
 rm -rf $pkg
-tar jxf $pkg.tar.gz
+tar zxf $pkg.tar.gz
 cd $pkg
 ./configure --prefix=$INSTALL_PATH PKG_CONFIG_PATH=$INSTALL_PATH/lib/pkgconfig >>$LOG 2>>$LOG
 make -j $jn >>$LOG 2>>$LOG
@@ -195,8 +195,8 @@ mv -f $pkg "$INSTALL_PATH/$pkg"
 cd "$INSTALL_PATH/$pkg"
 make -j $jn dep >>$LOG 2>>$LOG
 make >>$LOG 2>>$LOG
-make cleandep
-make clean
+make cleandep >>$LOG 2>>$LOG
+make clean >>$LOG 2>>$LOG
 cd $CWD
 echo ""
 
