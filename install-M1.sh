@@ -17,11 +17,13 @@ export jn
 export CWD=$PWD
 export LOG=$CWD/log.txt
 
-# install GMP
+#================================================================
+# Install GMP
+#================================================================
 export pkg="gmp-6.2.1"
 echo "Installing $pkg ..."
 if [ ! -f $pkg.tar.bz2 ]; then
-    $dlcmd -o $pkg.tar.bz2 https://gmplib.org/download/gmp/$pkg.tar.bz2
+    $dlcmd -o $pkg.tar.bz2 https://heplib.github.io/$pkg.tar.bz2
 fi
 rm -rf $pkg
 tar jxf $pkg.tar.bz2
@@ -33,7 +35,9 @@ cd $CWD
 rm -rf $pkg
 echo ""
 
-# install MPFR
+#================================================================
+# Install MPFR
+#================================================================
 export pkg="mpfr-4.0.2"
 echo "Installing $pkg ..."
 if [ ! -f $pkg.tar.gz ]; then
@@ -49,11 +53,13 @@ cd $CWD
 rm -rf $pkg
 echo ""
 
-# install CLN
+#================================================================
+# Install CLN
+#================================================================
 export pkg="cln-1.3.6"
 echo "Installing $pkg ..."
 if [ ! -f $pkg.tar.bz2 ]; then
-    $dlcmd -o $pkg.tar.bz2 https://www.ginac.de/CLN/$pkg.tar.bz2
+    $dlcmd -o $pkg.tar.bz2 https://heplib.github.io/$pkg.tar.bz2
 fi
 rm -rf $pkg
 tar jxf $pkg.tar.bz2
@@ -65,7 +71,9 @@ cd $CWD
 rm -rf $pkg
 echo ""
 
-# install GiNaC
+#================================================================
+# Install GiNaC - Modified version
+#================================================================
 export pkg="GiNaC"
 echo "Installing $pkg ..."
 if [ ! -f $pkg.tar.gz ]; then
@@ -81,43 +89,13 @@ cd $CWD
 rm -rf $pkg
 echo ""
 
-# install CUBA
-export pkg="Cuba-4.2"
-echo "Installing $pkg ..."
-if [ ! -f $pkg.tar.gz ]; then
-    $dlcmd -o $pkg.tar.gz http://www.feynarts.de/cuba/$pkg.tar.gz
-fi
-rm -rf $pkg
-tar zxf $pkg.tar.gz
-cd $pkg
-./configure --prefix=$INSTALL_PATH --with-real=10 CFLAGS="-fPIC -fcommon" CXXFLAGS="-fPIC -fcommon" >>$LOG 2>>$LOG
-make >>$LOG 2>>$LOG
-make install >>$LOG 2>>$LOG
-cd $CWD
-rm -rf $pkg
-echo ""
-
-# install ROOT::Minuit2
-export pkg="Minuit2-5.34.14"
-echo "Installing $pkg ..."
-if [ ! -f $pkg.tar.gz ]; then
-    $dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
-fi
-rm -rf $pkg
-tar zxf $pkg.tar.gz
-cd $pkg
-./configure --prefix=$INSTALL_PATH >>$LOG 2>>$LOG
-make -j $jn >>$LOG 2>>$LOG
-make install >>$LOG 2>>$LOG
-cd $CWD
-rm -rf $pkg
-echo ""
-
-# install QHull
+#================================================================
+# Install QHull
+#================================================================
 export pkg="qhull-2020.2"
 echo "Installing $pkg ..."
 if [ ! -f $pkg.zip ]; then
-    $dlcmd -o $pkg.zip http://www.qhull.org/download/$pkg.zip
+    $dlcmd -o $pkg.zip https://heplib.github.io/$pkg.zip
 fi
 rm -rf $pkg
 unzip -q $pkg.zip
@@ -128,7 +106,45 @@ cd $CWD
 rm -rf $pkg
 echo ""
 
-# install Fermat
+#================================================================
+# Install FLINT
+#================================================================
+export pkg="flint-2.9.0"
+echo "Installing $pkg ..."
+if [ ! -f $pkg.tar.gz ]; then
+    $dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
+fi
+rm -rf $pkg
+tar zxf $pkg.tar.gz
+cd $pkg
+./configure --prefix=$INSTALL_PATH --with-gmp=$INSTALL_PATH --with-mpfr=$INSTALL_PATH >>$LOG 2>>$LOG
+make -j $jn >>$LOG 2>>$LOG
+make install >>$LOG 2>>$LOG
+cd $CWD
+rm -rf $pkg
+echo ""
+
+#================================================================
+# Install ARB
+#================================================================
+export pkg="arb-2.23.0"
+echo "Installing $pkg ..."
+if [ ! -f $pkg.tar.gz ]; then
+    $dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
+fi
+rm -rf $pkg
+tar zxf $pkg.tar.gz
+cd $pkg
+./configure --prefix=$INSTALL_PATH --with-gmp=$INSTALL_PATH --with-mpfr=$INSTALL_PATH --with-flint=$INSTALL_PATH >>$LOG 2>>$LOG
+make -j $jn >>$LOG 2>>$LOG
+make install >>$LOG 2>>$LOG
+cd $CWD
+rm -rf $pkg
+echo ""
+
+#================================================================
+# Install Fermat
+#================================================================
 echo "Installing Fermat ..."
 uo="$(uname -s)"
 case "${uo}" in
@@ -137,7 +153,7 @@ case "${uo}" in
 esac
 export pkg
 if [ ! -f $pkg.tar.gz ]; then
-    $dlcmd -o $pkg.tar.gz http://home.bway.net/lewis/fermat64/$pkg.tar.gz
+    $dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
 fi
 rm -rf $pkg
 tar zxf $pkg.tar.gz
@@ -148,7 +164,9 @@ ln -s -f ../$pkg/fer64 .
 cd $CWD
 echo ""
 
-# install Form
+#================================================================
+# Install Form
+#================================================================
 uo="$(uname -s)"
 case "${uo}" in
     Linux*)     pkg="form-4.2.1-x86_64-linux";;
@@ -157,7 +175,7 @@ esac
 export pkg
 echo "Installing $pkg ..."
 if [ ! -f $pkg.tar.gz ]; then
-    $dlcmd -o $pkg.tar.gz https://github.com/vermaseren/form/releases/download/v4.2.1/$pkg.tar.gz
+    $dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
 fi
 tar zxf $pkg.tar.gz
 cp -rf $pkg/form "$INSTALL_PATH/bin/"
@@ -166,48 +184,25 @@ rm -rf $pkg
 cd $CWD
 echo ""
 
-# install FIRE
-echo "Installing FIRE ..."
-rm -rf fire
-git clone https://bitbucket.org/feynmanIntegrals/fire.git
-rm -rf $INSTALL_PATH/FIRE6
-mv fire/FIRE6 $INSTALL_PATH/FIRE6
-rm -rf fire
-cd $INSTALL_PATH/FIRE6
-./configure --enable_zlib --enable_snappy --enable_lthreads --enable_tcmalloc --enable_zstd >>$LOG 2>>$LOG
+#================================================================
+# Install FIRE - Modified version
+#================================================================
+export pkg="FIRE6"
+echo "Installing $pkg ..."
+$dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
+tar zxf $pkg.tar.gz
+mv -f $pkg "$INSTALL_PATH/$pkg"
+cd "$INSTALL_PATH/$pkg"
 make -j $jn dep >>$LOG 2>>$LOG
 make >>$LOG 2>>$LOG
+make cleandep
+make clean
 cd $CWD
 echo ""
 
-# install KIRA
-uo="$(uname -s)"
-case "${uo}" in
-    Linux*)     pkg="Linux";;
-    Darwin*)    pkg="MacOS";;
-esac
-export pkg
-if [ $pkg == "Linux" ]; then
-    rm -rf kira
-    $dlcmd -o kira https://kira.hepforge.org/downloads?f=binaries/kira-2.0
-    chmod +x kira
-    mv -f kira "$INSTALL_PATH/bin/kira"
-fi
-if [ $pkg == "MacOS" ]; then
-    rm -rf kira
-    $dlcmd -o kira-2.0.tar.gz https://kira.hepforge.org/downloads?f=kira-2.0.tar.gz
-    tar zxf kira-2.0.tar.gz
-    cd kira-2.0
-    pip3 install --user meson
-    meson -Dfirefly=false --prefix=$INSTALL_PATH --wrap-mode=forcefallback builddir
-    cd builddir
-    ninja
-    ninja install
-fi
-cd $CWD
-echo ""
-
-# install HepLib
+#================================================================
+# Install HepLib
+#================================================================
 export pkg="HepLib"
 echo "Installing $pkg ..."
 if [ ! -f $pkg.tar.gz ]; then
