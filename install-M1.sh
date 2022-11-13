@@ -210,12 +210,13 @@ if [ ! -f $pkg.tar.gz ]; then
 fi
 rm -rf $pkg
 tar zxf $pkg.tar.gz
-cd $pkg/src
+cd $pkg
 mkdir -p build && cd build
 cmake -DCMAKE_INSTALL_PREFIX=$INSTALL_PATH ..
 make -j $jn
-make install 
+make install
 cd $CWD
+rm -rf $pkg
 echo ""
 
 echo ""
