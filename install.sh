@@ -38,7 +38,7 @@ echo ""
 #================================================================
 # Install MPFR
 #================================================================
-export pkg="mpfr-4.0.2"
+export pkg="mpfr-4.1.1"
 echo "Installing $pkg ..."
 if [ ! -f $pkg.tar.gz ]; then
     $dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz

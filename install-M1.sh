@@ -18,40 +18,14 @@ export CWD=$PWD
 export LOG=$CWD/log.txt
 
 #================================================================
-# Install GMP
+# brew
 #================================================================
-export pkg="gmp-6.2.1"
-echo "Installing $pkg ..."
-if [ ! -f $pkg.tar.bz2 ]; then
-    $dlcmd -o $pkg.tar.bz2 https://heplib.github.io/$pkg.tar.bz2
-fi
-rm -rf $pkg
-tar jxf $pkg.tar.bz2
-cd $pkg
-./configure --prefix=$INSTALL_PATH --enable-cxx >>$LOG 2>>$LOG
-make -j $jn >>$LOG 2>>$LOG
-make install >>$LOG 2>>$LOG
-cd $CWD
-rm -rf $pkg
-echo ""
-
-#================================================================
-# Install MPFR
-#================================================================
-export pkg="mpfr-4.0.2"
-echo "Installing $pkg ..."
-if [ ! -f $pkg.tar.gz ]; then
-    $dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
-fi
-rm -rf $pkg
-tar zxf $pkg.tar.gz
-cd $pkg
-./configure --prefix=$INSTALL_PATH --with-gmp=$INSTALL_PATH --enable-thread-safe >>$LOG 2>>$LOG
-make -j $jn >>$LOG 2>>$LOG
-make install >>$LOG 2>>$LOG
-cd $CWD
-rm -rf $pkg
-echo ""
+brew install gmp
+brew install mpfr
+brew install qhull
+brew install flint
+brew install arb
+brew install texinfo
 
 #================================================================
 # Install CLN
@@ -64,7 +38,7 @@ fi
 rm -rf $pkg
 tar jxf $pkg.tar.bz2
 cd $pkg
-CPPFLAGS="-DNO_ASM" ./configure --prefix=$INSTALL_PATH --with-gmp=$INSTALL_PATH >>$LOG 2>>$LOG
+./configure --prefix=$INSTALL_PATH --with-gmp=$INSTALL_PATH >>$LOG 2>>$LOG
 make -j $jn >>$LOG 2>>$LOG
 make install >>$LOG 2>>$LOG
 cd $CWD
@@ -90,56 +64,19 @@ rm -rf $pkg
 echo ""
 
 #================================================================
-# Install QHull
+# Install FIRE - Modified version
 #================================================================
-export pkg="qhull-2020.2"
+export pkg="FIRE6"
 echo "Installing $pkg ..."
-if [ ! -f $pkg.zip ]; then
-    $dlcmd -o $pkg.zip https://heplib.github.io/$pkg.zip
-fi
-rm -rf $pkg
-unzip -q $pkg.zip
-cd $pkg
-make PREFIX=$INSTALL_PATH >>$LOG 2>>$LOG
-make PREFIX=$INSTALL_PATH install >>$LOG 2>>$LOG
-cd $CWD
-rm -rf $pkg
-echo ""
-
-#================================================================
-# Install FLINT
-#================================================================
-export pkg="flint-2.9.0"
-echo "Installing $pkg ..."
-if [ ! -f $pkg.tar.gz ]; then
-    $dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
-fi
-rm -rf $pkg
+$dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
 tar zxf $pkg.tar.gz
-cd $pkg
-./configure --prefix=$INSTALL_PATH --with-gmp=$INSTALL_PATH --with-mpfr=$INSTALL_PATH >>$LOG 2>>$LOG
-make -j $jn >>$LOG 2>>$LOG
-make install >>$LOG 2>>$LOG
+mv -f $pkg "$INSTALL_PATH/$pkg"
+cd "$INSTALL_PATH/$pkg"
+make -f Makefile.M1 -j $jn dep >>$LOG 2>>$LOG
+make -f Makefile.M1 >>$LOG 2>>$LOG
+make -f Makefile.M1 cleandep >>$LOG 2>>$LOG
+make -f Makefile.M1 clean >>$LOG 2>>$LOG
 cd $CWD
-rm -rf $pkg
-echo ""
-
-#================================================================
-# Install ARB
-#================================================================
-export pkg="arb-2.23.0"
-echo "Installing $pkg ..."
-if [ ! -f $pkg.tar.gz ]; then
-    $dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
-fi
-rm -rf $pkg
-tar zxf $pkg.tar.gz
-cd $pkg
-./configure --prefix=$INSTALL_PATH --with-gmp=$INSTALL_PATH --with-mpfr=$INSTALL_PATH --with-flint=$INSTALL_PATH >>$LOG 2>>$LOG
-make -j $jn >>$LOG 2>>$LOG
-make install >>$LOG 2>>$LOG
-cd $CWD
-rm -rf $pkg
 echo ""
 
 #================================================================
@@ -184,21 +121,6 @@ rm -rf $pkg
 cd $CWD
 echo ""
 
-#================================================================
-# Install FIRE - Modified version
-#================================================================
-export pkg="FIRE6"
-echo "Installing $pkg ..."
-$dlcmd -o $pkg.tar.gz https://heplib.github.io/$pkg.tar.gz
-tar zxf $pkg.tar.gz
-mv -f $pkg "$INSTALL_PATH/$pkg"
-cd "$INSTALL_PATH/$pkg"
-make -j $jn dep >>$LOG 2>>$LOG
-make >>$LOG 2>>$LOG
-make cleandep >>$LOG 2>>$LOG
-make clean >>$LOG 2>>$LOG
-cd $CWD
-echo ""
 
 #================================================================
 # Install HepLib
@@ -222,5 +144,4 @@ echo ""
 echo ""
 echo "Installation Completed!"
 echo ""
-
 
