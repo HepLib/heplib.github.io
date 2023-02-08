@@ -38,7 +38,7 @@ fi
 rm -rf $pkg
 tar jxf $pkg.tar.bz2
 cd $pkg
-./configure --prefix=$INSTALL_PATH --with-gmp=$INSTALL_PATH >>$LOG 2>>$LOG
+CPPFLAGS="-DNO_ASM" ./configure --prefix=$INSTALL_PATH --with-gmp=$INSTALL_PATH >>$LOG 2>>$LOG
 make -j $jn >>$LOG 2>>$LOG
 make install >>$LOG 2>>$LOG
 cd $CWD
