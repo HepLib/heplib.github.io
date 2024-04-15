@@ -1,5 +1,5 @@
 {
-  "gitbook": ">=3.2.0",
+  "gitbook": ">=4.0.0",
   "generator": "site",
   "title": "HepLib",
   "structure" : {
