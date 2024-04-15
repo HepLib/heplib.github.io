@@ -1,0 +1,17 @@
+{
+  "gitbook": ">=3.2.0",
+  "generator": "site",
+  "title": "HepLib",
+  "structure" : {
+        "readme" : "README.md"
+    },
+
+  "plugins": [
+    "hints",
+    "tabs2",
+    "mathjax",
+    "-highlight", 
+    "prism"
+  ]
+
+}
