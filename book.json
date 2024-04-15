@@ -10,7 +10,6 @@
     "hints",
     "tabs2",
     "mathjax",
-    "-highlight", 
     "prism"
   ]
 
