@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ 14, 16, 18 ]
+        node: [ 12.14.0 ]
     steps:
       - uses: actions/checkout@v3
       - name: Run linting rules and tests
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 12.14.0
       - name: Checkout action
         uses: actions/checkout@v2
       - name: Gitbook Action
