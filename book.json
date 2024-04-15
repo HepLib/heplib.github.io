@@ -8,9 +8,7 @@
 
   "plugins": [
     "hints",
-    "tabs2",
-    "mathjax",
-    "prism"
+    "tabs2" 
   ]
 
 }
