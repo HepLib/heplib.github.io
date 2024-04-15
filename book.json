@@ -17,8 +17,7 @@
     "edit-link@git+https://github.com/plugins-zander/gitbook-plugin-edit-link.git",
     "gtag@git+https://github.com/plugins-zander/gitbook-plugin-gtag.git",
     "chapter-fold@git+https://github.com/plugins-zander/gitbook-plugin-chapter-fold.git",
-    "copy-code-button@git+https://github.com/plugins-zander/gitbook-plugin-copy-code-button.git",
-    "mathjax"
+    "copy-code-button@git+https://github.com/plugins-zander/gitbook-plugin-copy-code-button.git"
   ],
   "pluginsConfig": {
     "gtag": {
