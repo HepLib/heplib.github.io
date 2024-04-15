@@ -7,6 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: install mathjax
+      run: |
+        sudo npm install mathjax@2.7.6
     - name: Checkout action
       uses: actions/checkout@v2
     - name: Gitbook Action
