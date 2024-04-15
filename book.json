@@ -18,7 +18,7 @@
     "gtag@git+https://github.com/plugins-zander/gitbook-plugin-gtag.git",
     "chapter-fold@git+https://github.com/plugins-zander/gitbook-plugin-chapter-fold.git",
     "copy-code-button@git+https://github.com/plugins-zander/gitbook-plugin-copy-code-button.git",
-    "mathjax"
+    "mathjax-pro@git+https://github.com/kevinkangkang/gitbook-plugin-mathjax-pro.git"
   ],
   "pluginsConfig": {
     "gtag": {
@@ -30,6 +30,9 @@
     },
     "sitemap-general": {
       "prefix": "https://zlogs.net/gitbook-action/"
+    },
+    "mathjax-pro":{
+      "version": "2.7.5"
     }
   }
 
