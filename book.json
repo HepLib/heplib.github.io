@@ -9,7 +9,7 @@
   "plugins": [
     "hints",
     "tabs2",
-    "mathjax-pro"
+    "mathjax@git+https://github.com/F-Feng/plugin-mathjax.git"
   ]
 
 }
