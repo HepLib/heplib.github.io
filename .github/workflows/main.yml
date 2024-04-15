@@ -11,9 +11,9 @@ jobs:
       uses: actions/checkout@v2
     - name: Gitbook Action
       run: |
-      npm install gitbook-cli -g
-      gitbook fetch 3.2.3
-      npm install mathjax@2.7.6
-      gitbook install
-      gitbook build
+        npm install gitbook-cli -g
+        gitbook fetch 3.2.3
+        npm install mathjax@2.7.6
+        gitbook install
+        gitbook build
       
