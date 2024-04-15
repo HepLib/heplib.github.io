@@ -16,4 +16,4 @@ jobs:
       npm install mathjax@2.7.6
       gitbook install
       gitbook build
-      bash
+      
