@@ -6,14 +6,22 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ 14, 16, 18 ]
     steps:
-    - name: Checkout action
-      uses: actions/checkout@v2
-    - name: Gitbook Action
-      run: |
-        npm install gitbook-cli -g
-        gitbook fetch 3.2.3
-        npm install mathjax@2.7.6
-        gitbook install
-        gitbook build
+      - uses: actions/checkout@v3
+      - name: Run linting rules and tests
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Checkout action
+        uses: actions/checkout@v2
+      - name: Gitbook Action
+        run: |
+          npm install gitbook-cli -g
+          gitbook fetch 3.2.3
+          npm install mathjax@2.7.6
+          gitbook install
+          gitbook build
       
