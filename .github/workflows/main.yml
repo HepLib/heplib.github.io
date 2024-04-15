@@ -10,6 +10,10 @@ jobs:
     - name: Checkout action
       uses: actions/checkout@v2
     - name: Gitbook Action
-      uses: F-Feng/gitbook-action@master
-      with:
-        token: ${{ secrets.PERSONAL_TOKEN }}
+      run: |
+      npm install gitbook-cli -g
+      gitbook fetch 3.2.3
+      npm install mathjax@2.7.6
+      gitbook install
+      gitbook build
+      bash
