@@ -1,5 +1,5 @@
 {
-  "gitbook": ">=4.0.0",
+  "gitbook": ">=3.2.0",
   "generator": "site",
   "title": "HepLib",
   "structure" : {
@@ -9,7 +9,7 @@
   "plugins": [
     "hints",
     "tabs2",
-    "mathjax"
+    "mathjax-pro"
   ]
 
 }
