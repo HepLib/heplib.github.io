@@ -9,7 +9,7 @@
   "plugins": [
     "hints",
     "tabs2",
-    "mathjax@git+https://github.com/qinix/gitbook-plugin-mathjax"
+    "mathjax"
   ]
 
 }
