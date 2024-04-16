@@ -1,4 +1,4 @@
-# [HepLib](https://heplib.gitlab.io/web/)
+# [HepLib](https://heplib.github.io/web/)
 
 **HepLib** is a C++ library for computations in _High Energy Physics_ with the help of **GiNaC** language which is a C++ library used to perform symbolic computations.
 
