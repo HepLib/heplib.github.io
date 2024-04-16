@@ -9,9 +9,14 @@
   "plugins": [
     "hints",
     "tabs2",
-    "mathjax-full@>=0.6.2"
+    "mathjax-pro",
     "-highlight", 
     "prism"
-  ]
+  ],
+  "pluginsConfig": {
+        "mathjax-pro":{
+            "version": "2.7.5"
+        }
+    }
 
 }
