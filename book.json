@@ -9,14 +9,8 @@
   "plugins": [
     "hints",
     "tabs2",
-    "-mathjax",
-    "-highlight", 
+    "katex",
+    "highlight", 
     "prism"
-  ],
-  "pluginsConfig": {
-        "mathjax":{
-            "version": "2.7.5"
-        }
-    }
-
+  ]
 }
