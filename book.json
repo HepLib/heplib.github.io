@@ -1,5 +1,6 @@
 {
-  "gitbook": "3.2.2",
+  "gitbook": ">=3.2.0",
+  "generator": "site",
   "title": "HepLib",
   "structure" : {
         "readme" : "README.md"
@@ -8,29 +9,9 @@
   "plugins": [
     "hints",
     "tabs2",
-    "-lunr",
-    "-search",
-    "-sharing",
-    "theme-simple@git+https://github.com/plugins-zander/gitbook-plugin-theme-simple.git",
-    "search-pro@git+https://github.com/plugins-zander/gitbook-plugin-search-pro.git",
-    "splitter@git+https://github.com/plugins-zander/gitbook-plugin-splitter.git",
-    "edit-link@git+https://github.com/plugins-zander/gitbook-plugin-edit-link.git",
-    "gtag@git+https://github.com/plugins-zander/gitbook-plugin-gtag.git",
-    "chapter-fold@git+https://github.com/plugins-zander/gitbook-plugin-chapter-fold.git",
-    "copy-code-button@git+https://github.com/plugins-zander/gitbook-plugin-copy-code-button.git",
-    "mathjax"
-  ],
-  "pluginsConfig": {
-    "gtag": {
-      "token": "UA-149127400-1"
-    },
-    "edit-link": {
-      "base": "https://github.com/ZanderZhao/gitbook-action/edit/master/gitbook-source",
-      "label": "EDIT"
-    },
-    "sitemap-general": {
-      "prefix": "https://zlogs.net/gitbook-action/"
-    }
-  }
+    "mathjax",
+    "-highlight", 
+    "prism"
+  ]
 
 }
