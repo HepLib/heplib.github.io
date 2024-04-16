@@ -20,10 +20,9 @@ jobs:
     - name: configue gitbook
       run: |
         npm install -g gitbook-cli
-        npm install mathjax@2.6.5
-        npm install gitbook-plugin-mathjax
-        gitbook install
+        npm install -g gitbook-plugin-mathjax-pro
         npm install -g gitbook-summary
+        gitbook install
                 
     - name: generate _book folder
       run: |
