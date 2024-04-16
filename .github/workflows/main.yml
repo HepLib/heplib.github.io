@@ -20,14 +20,15 @@ jobs:
     - name: configue gitbook
       run: |
         npm install -g gitbook-cli
-        npm install mathjax
+        npm install mathjax@2.6.7
+        npm install gitbook-plugin-mathjax
         gitbook install
         npm install -g gitbook-summary
                 
     - name: generate _book folder
       run: |
         book sm
-        gitbook build .
+        gitbook build
         cp SUMMARY.md _book
                 
     - name: push _book to branch gh-pages 
