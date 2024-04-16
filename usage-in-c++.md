@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 The above code `trace.cpp` shows how to perform the D-dimensional trace on a Dirac-𝛾 chain:
 
 $$
-{\rm Tr}\!\!\!\left[p\!\!\!/_1 \gamma^\mu (p\!\!\!/_2 + m) \gamma_\mu \right]
+{\rm Tr} \left[\gamma.p_1 \gamma^\mu (\gamma.p_2 + m) \gamma_\mu \right]
 $$
 
 ## 2. Compile and Run
