@@ -24,7 +24,7 @@
   ],
   "pluginsConfig": {
     "edit-link": {
-      "base": "https://github.com/HepLib/heplib.github.io/tree/master",
+      "base": "https://github.com/HepLib/heplib.github.io/edit/master",
       "label": "EDIT"
     }
   }
