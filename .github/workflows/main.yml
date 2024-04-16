@@ -19,7 +19,9 @@ jobs:
       
     - name: configue gitbook
       run: |
-        npm install -g gitbook-cli          
+        npm install -g gitbook-cli
+        gitbook fetch 3.2.3
+        npm install mathjax@2.7.6
         gitbook install
         npm install -g gitbook-summary
                 
