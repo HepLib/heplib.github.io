@@ -1,0 +1,801 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Usage In Python · HepLib</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tabs2/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-mathjax-commonhtml/mathjax.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="utils-in-heplib.html" />
+    
+    
+    <link rel="prev" href="usage-in-c++.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="examples-in-c++.html">
+            
+                <a href="examples-in-c++.html">
+            
+                    
+                    Examples In C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="examples-in-python.html">
+            
+                <a href="examples-in-python.html">
+            
+                    
+                    Examples In Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="objects-in-c++.html">
+            
+                <a href="objects-in-c++.html">
+            
+                    
+                    Objects In C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="objects-in-python.html">
+            
+                <a href="objects-in-python.html">
+            
+                    
+                    Objects In Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="try-and-run-online.html">
+            
+                <a href="try-and-run-online.html">
+            
+                    
+                    Try And Run Online
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="usage-in-c++.html">
+            
+                <a href="usage-in-c++.html">
+            
+                    
+                    Usage In C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="usage-in-python.html">
+            
+                <a href="usage-in-python.html">
+            
+                    
+                    Usage In Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="utils-in-heplib.html">
+            
+                <a href="utils-in-heplib.html">
+            
+                    
+                    Utils In Heplib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Usage In Python</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="usage-in-python">Usage in Python</h1>
+<p><strong>HepLib</strong> provides a wrapper class <code>HepLibW</code> as an interface to other languages, the <strong>SWIG</strong> interace file <code>HepLib.i</code> is also installed <code>&lt;INSTALL_PATH&gt;/include/HepLib.i</code>. We will just show the usage within <code>python</code>, but it also applys to other languages with the help of <strong>SWIG</strong>.</p>
+<h3 id="compile-the-python-module">Compile the python module</h3>
+<p>One can use the following <em>makefile</em> to generate the python module files: <code>_HepLib.so</code> and <code>HepLib.py</code>.</p>
+<p><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-694" aria-controls="tab-694" role="tab" data-toggle="tab">python 3.x(&gt;3.8)</a></li><li role="presentation" class=""><a href="#tab-695" aria-controls="tab-695" role="tab" data-toggle="tab">python 3.8</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-694"><pre class="language-"><code class="lang-makefile">all: _HepLib.so
+HLS=HepLib_SWIG
+flatns=&quot;&quot;
+
+uname := <span class="hljs-variable">$(shell uname -s)</span>
+ifeq ($(uname),Darwin)
+  flatns = &quot;-flat_namespace&quot;
+endif
+
+$(HLS).cpp:
+        swig -python -c++ -o $(HLS).cpp {% math %}(heplib-config --prefix)/include/HepLib.i
+$(HLS).o : $(HLS).cpp
+        heplib++ -fPIC -c $(HLS).cpp {% endmath %}(python3-config --cflags)
+_HepLib.so : $(HLS).o
+        heplib++ -shared $(flatns) $(HLS).o -o _HepLib.so {% math %}(python3-config --ldflags --embed)
+<span class="hljs-section">clean:</span>
+        rm -f $(HLS)* _HepLib.so HepLib.py</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="tab-695"><pre class="language-"><code class="lang-makefile">all: _HepLib.so
+HLS=HepLib_SWIG
+flatns=&quot;&quot;
+
+uname := <span class="hljs-variable">$(shell uname -s)</span>
+ifeq ($(uname),Darwin)
+  flatns = &quot;-flat_namespace&quot;
+endif
+
+$(HLS).cpp:
+        swig -python -c++ -o $(HLS).cpp {% endmath %}(heplib-config --prefix)/include/HepLib.i
+$(HLS).o : $(HLS).cpp
+        heplib++ -fPIC -c $(HLS).cpp {% math %}(python3-config --cflags)
+_HepLib.so : $(HLS).o
+        heplib++ -shared $(flatns) $(HLS).o -o _HepLib.so {% endmath %}(python3-config --ldflags) -lpython3.8
+<span class="hljs-section">clean:</span>
+        rm -f $(HLS)* _HepLib.so HepLib.py</code></pre>
+</div></div></div></p>
+<h3 id="python-version-for-various-c-codes">Python version for various C++ codes</h3>
+<p><em>Note:</em> the various <code>.cpp</code> files are introduced in Reference: <a href="https://doi.org/10.1016/j.cpc.2021.107982" target="_blank">https://doi.org/10.1016/j.cpc.2021.107982</a></p>
+<ul>
+<li><code>0.py</code> (python version for <code>0.cpp</code>)</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-comment"># python version for 0.cpp</span>
+
+<span class="hljs-keyword">from</span> HepLib <span class="hljs-keyword">import</span> *
+
+x = symbol(<span class="hljs-string">&quot;x&quot;</span>)
+y = symbol(<span class="hljs-string">&quot;y&quot;</span>)
+z = symbol(<span class="hljs-string">&quot;z&quot;</span>)
+r = expr(<span class="hljs-string">&quot;2/3&quot;</span>)
+print(<span class="hljs-string">&quot;x -&gt;&quot;</span>, x, <span class="hljs-string">&quot;, r -&gt;&quot;</span>, r)
+
+e1 = r*x+<span class="hljs-number">2</span>*y+pow(y,<span class="hljs-number">10</span>)
+print(<span class="hljs-string">&quot;e1 -&gt;&quot;</span>, e1)
+e2 = (x+<span class="hljs-number">1</span>)/(x<span class="hljs-number">-1</span>)
+print(<span class="hljs-string">&quot;e2 -&gt;&quot;</span>, e2)
+e3 = sin(x+<span class="hljs-number">2</span>*y)+<span class="hljs-number">3</span>*z+<span class="hljs-number">41</span>
+print(<span class="hljs-string">&quot;e3 -&gt;&quot;</span>, e3)
+e4 = e3+e2/exp(e1)
+print(<span class="hljs-string">&quot;e4 -&gt;&quot;</span>, e4)
+print()
+
+x = symbol(<span class="hljs-string">&quot;x&quot;</span>)
+y = Symbol(<span class="hljs-string">&quot;y&quot;</span>)
+print(<span class="hljs-string">&quot;x -&gt;&quot;</span>, x, <span class="hljs-string">&quot;, y-&gt;&quot;</span>, y)
+e1 = conjugate(x)
+print(<span class="hljs-string">&quot;conjugate(x) -&gt;&quot;</span>, e1)
+e2 = conjugate(y)
+print(<span class="hljs-string">&quot;conjugate(y) -&gt;&quot;</span>, e2)
+print()
+</code></pre>
+<ul>
+<li><code>1.py</code> (python version for <code>1.cpp</code>)</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-comment"># python version for 0.cpp</span>
+
+<span class="hljs-keyword">from</span> HepLib <span class="hljs-keyword">import</span> *
+
+expr_str = <span class="hljs-string">&quot;WF(1)+x(1)^2+sin(5)+power(a,n)&quot;</span>
+e1 = expr(expr_str)
+print(e1)
+a = Symbol(<span class="hljs-string">&quot;a&quot;</span>)
+n = Symbol(<span class="hljs-string">&quot;n&quot;</span>)
+e2 = WF(expr(<span class="hljs-number">1</span>))+pow(x(<span class="hljs-number">1</span>),<span class="hljs-number">2</span>)+sin(expr(<span class="hljs-number">5</span>))+pow(a,n)
+print(e1-e2)
+
+print()
+</code></pre>
+<ul>
+<li><code>2.py</code> (python version for<code>2.cpp</code>)</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-comment"># python version for 0.cpp</span>
+
+<span class="hljs-keyword">from</span> HepLib <span class="hljs-keyword">import</span> *
+
+x = Symbol(<span class="hljs-string">&quot;x&quot;</span>)
+y = Symbol(<span class="hljs-string">&quot;y&quot;</span>)
+z = Symbol(<span class="hljs-string">&quot;z&quot;</span>)
+n = Symbol(<span class="hljs-string">&quot;n&quot;</span>)
+l1 = lst([x, y, x+z])
+e1 = pow(sin(x),n)
+print(<span class="hljs-string">&quot;l1 -&gt;&quot;</span>, l1)
+print(<span class="hljs-string">&quot;e1 -&gt;&quot;</span>, e1)
+tot = l1.nops()
+print(<span class="hljs-string">&quot;l1.nops() -&gt;&quot;</span>, tot)
+item1 = l1.op(<span class="hljs-number">0</span>)
+print(<span class="hljs-string">&quot;1st item of l1 -&gt;&quot;</span>, item1)
+l1.let_op(<span class="hljs-number">2</span>, e1)
+print(<span class="hljs-string">&quot;updated l1 -&gt;&quot;</span>, l1)
+tot = e1.nops()
+print(<span class="hljs-string">&quot;e1.nops() -&gt;&quot;</span>, tot)
+item2 = e1.op(<span class="hljs-number">1</span>)
+print(<span class="hljs-string">&quot;2nd item of e1 -&gt;&quot;</span>, item2)
+print()
+</code></pre>
+<ul>
+<li><code>3.py</code> (python version for<code>3.cpp</code>)</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-comment"># python version for 0.cpp</span>
+
+<span class="hljs-keyword">from</span> HepLib <span class="hljs-keyword">import</span> *
+
+x = Symbol(<span class="hljs-string">&quot;x&quot;</span>)
+y = Symbol(<span class="hljs-string">&quot;y&quot;</span>)
+e0 = expr(<span class="hljs-string">&quot;x^4+x^3+x^2+x&quot;</span>)
+print(<span class="hljs-string">&quot;e0 -&gt;&quot;</span>, e0)
+e1 = e0.subs([pow(x,w)&gt;&gt;pow(y,w+<span class="hljs-number">2</span>)])
+print(<span class="hljs-string">&quot;e1 -&gt;&quot;</span>,e1)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">mapClass</span><span class="hljs-params">(MapFunction)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">map</span><span class="hljs-params">(self, e)</span>:</span>
+        <span class="hljs-keyword">if</span>(e.match(pow(x,w)) <span class="hljs-keyword">and</span> e.op(<span class="hljs-number">1</span>).info(<span class="hljs-string">&quot;even&quot;</span>)):
+            <span class="hljs-keyword">return</span> pow(y,e.op(<span class="hljs-number">1</span>)+<span class="hljs-number">2</span>)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> e.map(self)
+
+e2 = mapClass()(e0)
+print(<span class="hljs-string">&quot;e2 -&gt;&quot;</span>,e2)
+
+print()
+</code></pre>
+<ul>
+<li><code>4.py</code> (python version for<code>4.cpp</code>)</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-comment"># python version for 0.cpp</span>
+
+<span class="hljs-keyword">from</span> HepLib <span class="hljs-keyword">import</span> *
+
+x = Symbol(<span class="hljs-string">&quot;x&quot;</span>)
+y = Symbol(<span class="hljs-string">&quot;y&quot;</span>)
+
+data = exvec()
+total = <span class="hljs-number">100</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(total):
+    data.push_back(sin(exp(x+y*i)))
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ParFunRun</span><span class="hljs-params">(ParFun)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__call__</span><span class="hljs-params">(self, idx)</span>:</span>
+        ret = data[idx]
+        ret = series(ret,x,<span class="hljs-number">5</span>)
+        <span class="hljs-comment">#print(&quot;idx:&quot;, idx)</span>
+        <span class="hljs-keyword">return</span> ret
+
+f = ParFunRun()
+set_Verbose(<span class="hljs-number">100</span>)
+set_Parallel_Process(<span class="hljs-number">4</span>)
+ret = Parallel(total, f)
+<span class="hljs-comment">#print(ret)</span>
+</code></pre>
+<ul>
+<li><code>5.py</code> (python version for<code>5.cpp</code>)</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-comment"># python version for 0.cpp</span>
+
+<span class="hljs-keyword">from</span> HepLib <span class="hljs-keyword">import</span> *
+
+me = Symbol(<span class="hljs-string">&quot;me&quot;</span>)
+mm = Symbol(<span class="hljs-string">&quot;mm&quot;</span>)
+e = Symbol(<span class="hljs-string">&quot;e&quot;</span>)
+mu = Index(<span class="hljs-string">&quot;mu&quot;</span>)
+nu = Index(<span class="hljs-string">&quot;nu&quot;</span>)
+p = Vector(<span class="hljs-string">&quot;p&quot;</span>)
+P = Vector(<span class="hljs-string">&quot;P&quot;</span>)
+k = Vector(<span class="hljs-string">&quot;k&quot;</span>)
+K = Vector(<span class="hljs-string">&quot;K&quot;</span>)
+q = Vector(<span class="hljs-string">&quot;q&quot;</span>)
+
+letSP(p,me*me)
+letSP(P,me*me)
+letSP(k,mm*mm)
+letSP(K,mm*mm)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">gpm</span><span class="hljs-params">(p, m)</span>:</span>
+    <span class="hljs-keyword">return</span> GAS(p)+m*GAS(<span class="hljs-number">1</span>)
+
+tr1 = TR( gpm(P,-me)*GAS(mu)*gpm(p,me)*GAS(nu) );
+tr2 = TR( gpm(k,mm)*GAS(mu)*gpm(K,-mm)*GAS(nu) );
+res =  pow(e,<span class="hljs-number">4</span>) / (<span class="hljs-number">4</span>*pow(SP(q),<span class="hljs-number">2</span>)) * tr1 * tr2;
+set_form_using_dim4(<span class="hljs-keyword">True</span>)
+res = form(res)
+res = factor(res);
+print(res.subs(me&gt;&gt;<span class="hljs-number">0</span>));
+print()
+
+set_form_using_su3(<span class="hljs-keyword">True</span>)
+a = IndexCA(<span class="hljs-string">&quot;a&quot;</span>)
+i = IndexCF(<span class="hljs-string">&quot;i&quot;</span>)
+j = IndexCF(<span class="hljs-string">&quot;j&quot;</span>);
+tr = TTR([a,a]);
+print(<span class="hljs-string">&quot;tr1 =&quot;</span>, form(tr))
+tr = SUNT(a,i,j) * SUNT(a,j,i);
+print(<span class="hljs-string">&quot;tr2 =&quot;</span>, form(tr))
+tr = SUNT([a,a],i,i)
+print(<span class="hljs-string">&quot;tr3 =&quot;</span>, form(tr))
+
+print()
+</code></pre>
+<ul>
+<li><code>6.py</code> (python version for<code>6.cpp</code>)</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-keyword">from</span> HepLib <span class="hljs-keyword">import</span> *
+
+A = Symbol(<span class="hljs-string">&quot;A&quot;</span>)
+e = Symbol(<span class="hljs-string">&quot;e&quot;</span>)
+ebar = Symbol(<span class="hljs-string">&quot;ebar&quot;</span>)
+mu = Symbol(<span class="hljs-string">&quot;mu&quot;</span>)
+mubar = Symbol(<span class="hljs-string">&quot;mubar&quot;</span>)
+
+p = Vector(<span class="hljs-string">&quot;p&quot;</span>)
+P = Vector(<span class="hljs-string">&quot;P&quot;</span>)
+k = Vector(<span class="hljs-string">&quot;k&quot;</span>)
+K = Vector(<span class="hljs-string">&quot;K&quot;</span>)
+
+me = Symbol(<span class="hljs-string">&quot;me&quot;</span>)
+mm = Symbol(<span class="hljs-string">&quot;mm&quot;</span>)
+
+proc = Process()
+proc.Model = <span class="hljs-string">&quot;&quot;&quot;
+    [e, ebar, -]
+    [mu, mubar, -]
+    [A, A, +]
+    [ebar, e, A]
+    [mubar, mu, A]
+&quot;&quot;&quot;</span>
+proc.In = <span class="hljs-string">&quot;e[p],ebar[P]&quot;</span>
+proc.Out = <span class="hljs-string">&quot;mubar[k],mu[K]&quot;</span>
+proc.Options = <span class="hljs-string">&quot;onshell&quot;</span>
+proc.Loops = <span class="hljs-number">0</span>
+
+st = {}
+st[<span class="hljs-string">&quot;p&quot;</span>] = p
+st[<span class="hljs-string">&quot;P&quot;</span>] = P
+st[<span class="hljs-string">&quot;k&quot;</span>] = k
+st[<span class="hljs-string">&quot;K&quot;</span>] = K
+
+amps = proc.Amplitudes(st)
+
+set_InOutTeX(<span class="hljs-number">-1</span>,<span class="hljs-string">&quot;$e^-(p)$&quot;</span>)
+set_InOutTeX(<span class="hljs-number">-3</span>,<span class="hljs-string">&quot;$e^+(P)$&quot;</span>)
+set_InOutTeX(<span class="hljs-number">-2</span>,<span class="hljs-string">&quot;$\\mu^+(k)$&quot;</span>)
+set_InOutTeX(<span class="hljs-number">-4</span>,<span class="hljs-string">&quot;$\\mu^-(K)$&quot;</span>)
+
+set_LineTeX(Symbol(<span class="hljs-string">&quot;e&quot;</span>),<span class="hljs-string">&quot;fermion, edge label=$e$&quot;</span>)
+set_LineTeX(Symbol(<span class="hljs-string">&quot;ebar&quot;</span>),<span class="hljs-string">&quot;anti fermion, edge label=$e$&quot;</span>)
+set_LineTeX(Symbol(<span class="hljs-string">&quot;mu&quot;</span>),<span class="hljs-string">&quot;fermion, edge label=$\\mu$&quot;</span>)
+set_LineTeX(Symbol(<span class="hljs-string">&quot;mbar&quot;</span>),<span class="hljs-string">&quot;anti fermion, edge label=$\\mu$&quot;</span>)
+set_LineTeX(Symbol(<span class="hljs-string">&quot;A&quot;</span>),<span class="hljs-string">&quot;photon, edge label=$\\gamma$&quot;</span>)
+
+Process.DrawPDF(amps, <span class="hljs-string">&quot;amps.pdf&quot;</span>)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ClassFR</span><span class="hljs-params">(MapFunction)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        MapFunction.__init__(self)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">map</span><span class="hljs-params">(self, e)</span>:</span>
+        <span class="hljs-keyword">if</span>(isFunction(e,<span class="hljs-string">&quot;OutField&quot;</span>) <span class="hljs-keyword">or</span> isFunction(e,<span class="hljs-string">&quot;InField&quot;</span>)):
+            <span class="hljs-keyword">return</span> expr(<span class="hljs-number">1</span>)
+        <span class="hljs-keyword">elif</span>(isFunction(e, <span class="hljs-string">&quot;Propagator&quot;</span>)):
+            fi1 = e.op(<span class="hljs-number">0</span>).op(<span class="hljs-number">1</span>)
+            fi2 = e.op(<span class="hljs-number">1</span>).op(<span class="hljs-number">1</span>)
+            mom = e.op(<span class="hljs-number">2</span>)
+            <span class="hljs-keyword">if</span>(e.op(<span class="hljs-number">0</span>).op(<span class="hljs-number">0</span>)==A):
+                <span class="hljs-keyword">return</span> (-I) * SP(LI(fi1),LI(fi2)) / SP(mom); <span class="hljs-comment"># Feynman Gauge</span>
+            <span class="hljs-keyword">elif</span>(e.op(<span class="hljs-number">0</span>).op(<span class="hljs-number">0</span>)==ebar):
+                <span class="hljs-keyword">return</span> I * Matrix(GAS(mom)+GAS(<span class="hljs-number">1</span>)*me, DI(fi1),DI(fi2)) / (SP(mom)-me*me)
+            <span class="hljs-keyword">elif</span>(e.op(<span class="hljs-number">0</span>).op(<span class="hljs-number">0</span>)==mubar):
+                <span class="hljs-keyword">return</span> I * Matrix(GAS(mom)+GAS(<span class="hljs-number">1</span>)*mm, DI(fi1),DI(fi2)) / (SP(mom)-mm*mm)
+        <span class="hljs-keyword">elif</span>(isFunction(e, <span class="hljs-string">&quot;Vertex&quot;</span>)):
+            fi1 = e.op(<span class="hljs-number">0</span>).op(<span class="hljs-number">1</span>)
+            fi2 = e.op(<span class="hljs-number">1</span>).op(<span class="hljs-number">1</span>)
+            fi3 = e.op(<span class="hljs-number">2</span>).op(<span class="hljs-number">1</span>)
+            <span class="hljs-keyword">if</span>(e.op(<span class="hljs-number">0</span>).op(<span class="hljs-number">0</span>)==ebar):
+                <span class="hljs-keyword">return</span> I*Symbol(<span class="hljs-string">&quot;e&quot;</span>)*Matrix(GAS(LI(fi3)),DI(fi1),DI(fi2))
+            <span class="hljs-keyword">elif</span>(e.op(<span class="hljs-number">0</span>).op(<span class="hljs-number">0</span>)==mubar):
+                <span class="hljs-keyword">return</span> I*Symbol(<span class="hljs-string">&quot;e&quot;</span>)*Matrix(GAS(LI(fi3)),DI(fi1),DI(fi2))
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> e.map(self)
+
+amps_FR = ClassFR()(amps[<span class="hljs-number">0</span>])
+
+print(<span class="hljs-string">&quot;amps_FR: &quot;</span>)
+print(amps_FR);
+
+ampL = amps_FR
+ampR = IndexL2R(conjugate(ampL));
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">SS1</span><span class="hljs-params">(p,m,i)</span>:</span>
+    <span class="hljs-keyword">return</span> Matrix(GAS(p)+m*GAS(<span class="hljs-number">1</span>),DI(i),RDI(i))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">SS2</span><span class="hljs-params">(p,m,i)</span>:</span>
+    <span class="hljs-keyword">return</span> Matrix(GAS(p)+m*GAS(<span class="hljs-number">1</span>),RDI(i),DI(i))
+
+M2 = ampL * ampR * SS1(p,me,<span class="hljs-number">-1</span>) * SS2(P,-me,<span class="hljs-number">-3</span>) * SS1(k,-mm,<span class="hljs-number">-2</span>) * SS2(K,mm,<span class="hljs-number">-4</span>);
+M2 = MatrixContract(M2);
+
+print(<span class="hljs-string">&quot;M2: &quot;</span>)
+print(M2)
+print()
+
+set_form_using_dim4(<span class="hljs-keyword">True</span>)
+letSP(p,me*me)
+letSP(P,me*me)
+letSP(k,mm*mm)
+letSP(K,mm*mm)
+
+res = form(M2);
+print(<span class="hljs-string">&quot;Final M2:&quot;</span>)
+print(factor(res.subs(me&gt;&gt;<span class="hljs-number">0</span>)))
+</code></pre>
+<ul>
+<li><code>7.py</code> (python version for<code>7.cpp</code>)</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-keyword">from</span> HepLib <span class="hljs-keyword">import</span> *
+
+p = Vector(<span class="hljs-string">&quot;p&quot;</span>)
+q1 = Vector(<span class="hljs-string">&quot;q1&quot;</span>)
+expr = expr(<span class="hljs-number">1</span>)/SP(q1) * expr(<span class="hljs-number">1</span>)/(<span class="hljs-number">2</span>*SP(p,q1)-SP(q1)) * expr(<span class="hljs-number">1</span>)/(<span class="hljs-number">2</span>*SP(p,q1)+SP(q1))
+r = Apart(expr,[q1],[p]);
+r1 = ApartIR2ex(r);
+r2 = ApartIR2F(r);
+
+print(r)
+print()
+print(r1)
+print()
+print(r2)
+print()
+
+r3 = Apart(expr, [SP(q1),SP(p,q1)])
+print(r3)
+print()
+</code></pre>
+<ul>
+<li><code>8.py</code> (python version for<code>8.cpp</code>)</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">from</span> HepLib <span class="hljs-keyword">import</span> *
+
+q1 = Symbol(<span class="hljs-string">&quot;q1&quot;</span>)
+p = Symbol(<span class="hljs-string">&quot;p&quot;</span>)
+m = Symbol(<span class="hljs-string">&quot;m&quot;</span>)
+
+fire = FIRE()
+fire.Internal = exvec([ q1 ])
+fire.External = exvec([ p ])
+fire.Replacements = exvec([ p*p &gt;&gt; m*m ])
+
+fire.Propagators = exvec([ q1*q1, <span class="hljs-number">2</span>*p*q1-q1*q1 ])
+fire.Integrals = exvec([ expr(<span class="hljs-string">&quot;{2,1}&quot;</span>) ])
+fire.WorkingDir = <span class="hljs-string">&quot;IBPdir&quot;</span>;
+fire.Reduce()
+
+print(<span class="hljs-string">&quot;Reduced Rules:&quot;</span>)
+print(fire.Rules)
+print(<span class="hljs-string">&quot;Master Integrals:&quot;</span>)
+print(fire.MIntegrals)
+
+os.system(<span class="hljs-string">&quot;rm -rf IBPdir&quot;</span>)
+</code></pre>
+<ul>
+<li><code>9.py</code> (python version for<code>9.cpp</code>)</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">from</span> HepLib <span class="hljs-keyword">import</span> *
+
+k = Symbol(<span class="hljs-string">&quot;k&quot;</span>)
+r = Symbol(<span class="hljs-string">&quot;r&quot;</span>)
+q = Symbol(<span class="hljs-string">&quot;q&quot;</span>)
+p1 = Symbol(<span class="hljs-string">&quot;p1&quot;</span>)
+p2 = Symbol(<span class="hljs-string">&quot;p2&quot;</span>)
+s = Symbol(<span class="hljs-string">&quot;s&quot;</span>)
+
+fp = FeynmanParameter()
+fp.LoopMomenta = exvec([k,r,q]);
+fp.Propagators= exvec([ -pow(k,<span class="hljs-number">2</span>),-pow(k+p1+p2,<span class="hljs-number">2</span>),-pow(-k+r,<span class="hljs-number">2</span>),-pow(p1+r,<span class="hljs-number">2</span>),-pow(k-q,<span class="hljs-number">2</span>),-pow(p1+q,<span class="hljs-number">2</span>) ]);
+fp.Exponents = exvec(expr(<span class="hljs-string">&quot;{1+3*ep,1,1,1,1,1}&quot;</span>))
+fp.lReplacements[p1*p1] = expr(<span class="hljs-number">0</span>)
+fp.lReplacements[p2*p2] = expr(<span class="hljs-number">0</span>)
+fp.lReplacements[p2*p1] = s/<span class="hljs-number">2</span>
+fp.lReplacements[s] = expr(<span class="hljs-number">-1</span>)
+fp.Prefactor = pow(I*pow(Pi,<span class="hljs-number">2</span>-ep),<span class="hljs-number">-3</span>) * pow(tgamma(<span class="hljs-number">1</span>-ep),<span class="hljs-number">3</span>)
+work = SecDec()
+set_Verbose(<span class="hljs-number">100</span>)
+work.Evaluate(fp)
+print(<span class="hljs-string">&quot;Final Result &amp; Error:&quot;</span>)
+print(work.VE)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="usage-in-c++.html" class="navigation navigation-prev " aria-label="Previous page: Usage In C">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="utils-in-heplib.html" class="navigation navigation-next " aria-label="Next page: Utils In Heplib">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Usage In Python","level":"1.9","depth":1,"next":{"title":"Utils In Heplib","level":"1.10","depth":1,"path":"utils-in-heplib.md","ref":"utils-in-heplib.md","articles":[]},"previous":{"title":"Usage In C","level":"1.8","depth":1,"path":"usage-in-c++.md","ref":"usage-in-c++.md","articles":[]},"dir":"ltr"},"config":{"plugins":["hints","tabs2","mathjax-commonhtml","highlight","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"search":{},"mathjax-commonhtml":{"defaultScaling":true},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"tabs2":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HepLib","gitbook":">=3.2.0"},"file":{"path":"usage-in-python.md","mtime":"2024-04-16T06:10:17.270Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-16T06:11:16.929Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-tabs2/tabs.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

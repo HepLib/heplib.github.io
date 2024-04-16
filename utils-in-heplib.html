@@ -1,0 +1,410 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Utils In Heplib · HepLib</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tabs2/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-mathjax-commonhtml/mathjax.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="usage-in-python.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="examples-in-c++.html">
+            
+                <a href="examples-in-c++.html">
+            
+                    
+                    Examples In C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="examples-in-python.html">
+            
+                <a href="examples-in-python.html">
+            
+                    
+                    Examples In Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="objects-in-c++.html">
+            
+                <a href="objects-in-c++.html">
+            
+                    
+                    Objects In C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="objects-in-python.html">
+            
+                <a href="objects-in-python.html">
+            
+                    
+                    Objects In Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="try-and-run-online.html">
+            
+                <a href="try-and-run-online.html">
+            
+                    
+                    Try And Run Online
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="usage-in-c++.html">
+            
+                <a href="usage-in-c++.html">
+            
+                    
+                    Usage In C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="usage-in-python.html">
+            
+                <a href="usage-in-python.html">
+            
+                    
+                    Usage In Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="utils-in-heplib.html">
+            
+                <a href="utils-in-heplib.html">
+            
+                    
+                    Utils In Heplib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Utils In Heplib</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="utils-in-heplib">Utils in HepLib</h1>
+<p>There are several useful utils installed to the directory <code>&lt;INSTALL PATH&gt;/bin</code>.</p>
+<h3 id="heplib---heplib-g">heplib++ - HepLib g++</h3>
+<p>The basic uage:</p>
+<pre class="language-"><code class="lang-bash">heplib++ -o prog prog.cpp
+</code></pre>
+<p>The content in this script</p>
+<pre class="language-"><code>g++  -I&apos;&lt;INSTALL PATH&gt;/include&apos; -Wl,-rpath,. -Wl,-rpath,&apos;&lt;INSTALL PATH&gt;/lib&apos; -L&apos;&lt;INSTALL PATH&gt;/lib&apos; -lHepLib -lcln -lginac -lMinuit2 -lcubaq -lqhullstatic -lquadmath $@ -lHepLib -lcln -lginac -lMinuit2 -lcubaq -lqhullstatic -lquadmath
+</code></pre><h3 id="heplib-config---parameters">heplib-config - parameters</h3>
+<p>Genernal information of <code>heplib-config</code> from <code>heplib-config --help</code></p>
+<pre class="language-"><code>Usage: heplib-config [--prefix|--cflags|--ldflags|--help]
+</code></pre><ul>
+<li><code>heplib-config --prefix</code> to get the <code>&lt;INSTALL PATH&gt;</code></li>
+<li><code>heplib-config --cflags</code> to get the <code>-I&#x2019;&lt;INSTALL PATH&gt;/include&#x2019;</code></li>
+<li><code>heplib-config --ldflags</code> to get the <code>-Wl,-rpath,. -Wl,-rpath,&#x2019;&lt;INSTALL PATH&gt;/lib&#x2019; -L&#x2019;&lt;INSTALL PATH&gt;/lib&#x2019;</code></li>
+</ul>
+<h3 id="sc---server--clients">sc - Server / Clients</h3>
+<p>Genernal information of <code>sc</code> from <code>sc --help</code></p>
+<pre class="language-"><code class="lang-bash">A simple Server/Client, bypass with [i].log
+Supported Options:
+  --total: total elements @server.
+  --port: server port @server/@client.
+  --server: server ip or hostname @client.
+  --command: <span class="hljs-built_in">command</span> with [i] replaced @client.
+  --round: round to be cycled @server.
+</code></pre>
+<p>One can run the following command on the <em>master</em> node</p>
+<pre class="language-"><code class="lang-bash">sc --total 100 --port 1234
+</code></pre>
+<p>One will get the message as follows:</p>
+<pre class="language-"><code>Started @ 2020-11-17 16:05:27
+  Server Port: 1234
+  Server: 0 / 99 @ 16:05:2
+</code></pre><p>The server is ready to dispatch item (from <code>0</code> to <code>99</code>) to the connected slave node.</p>
+<p>Now one can run the following command on each slave node</p>
+<pre class="language-"><code class="lang-bash">sc --server master-node-host --port 1234 --command <span class="hljs-string">&quot;echo [i]&quot;</span>
+</code></pre>
+<p>one will see the slave node will repleatly get the item from the server, and exceute the command <code>echo [i]</code>, note that <code>[i]</code> will replaced by the actual index (form <code>0</code> to <code>99</code>).</p>
+<p>Note that to prevent the command to run multiple times on the same <code>[i]</code>, one can generate a <code>[i].log</code> from the command, <em>e.g.</em>,</p>
+<pre class="language-"><code class="lang-bash">sc --server master-node-host --port 1234 --command <span class="hljs-string">&quot;echo [i] &gt; [i].log&quot;</span>
+</code></pre>
+<p>sc will skip the item <code>[i]</code> when there is a file named <code>[i].log</code>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="usage-in-python.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Usage In Python">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Utils In Heplib","level":"1.10","depth":1,"previous":{"title":"Usage In Python","level":"1.9","depth":1,"path":"usage-in-python.md","ref":"usage-in-python.md","articles":[]},"dir":"ltr"},"config":{"plugins":["hints","tabs2","mathjax-commonhtml","highlight","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"search":{},"mathjax-commonhtml":{"defaultScaling":true},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"tabs2":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HepLib","gitbook":">=3.2.0"},"file":{"path":"utils-in-heplib.md","mtime":"2024-04-16T06:10:17.270Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-16T06:11:16.929Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-tabs2/tabs.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
