@@ -14,7 +14,7 @@
     "prism"
   ],
   "pluginsConfig": {
-        "mathjax-pro":{
+        "mathjax":{
             "version": "2.7.5"
         }
     }
