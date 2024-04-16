@@ -11,6 +11,6 @@ jobs:
       uses: actions/checkout@v2
       
     - name: Gitbook Action
-      uses: F-Feng/gitbook-action
+      uses: F-Feng/gitbook-action@master
       with:
         token: ${{ secrets.PERSONAL_TOKEN }}
