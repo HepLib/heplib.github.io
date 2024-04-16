@@ -9,7 +9,7 @@
   "plugins": [
     "hints",
     "tabs2",
-    "mathjax-pro",
+    "mathjax",
     "-highlight", 
     "prism"
   ]
