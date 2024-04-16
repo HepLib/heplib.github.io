@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
 INSTALL_PATH/bin/heplib++ -o trace trace.cpp
 ```
 
-3. Run `trace` to get the trace for ${\rm Tr}[\gamma\cdot p_1 \ \gamma^\mu\ (\gamma\cdot p_2+m)\ \gamma_\mu]$
+3. Run `trace` to get the trace for $${\rm Tr}[\gamma\cdot p_1 \ \gamma^\mu\ (\gamma\cdot p_2+m)\ \gamma_\mu]$$
 ```bash
 ./trace
 # -4*d*p2.p1+8*p2.p1
