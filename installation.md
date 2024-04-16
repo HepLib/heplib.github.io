@@ -1,7 +1,7 @@
 ### **How** to Install `HepLib`
 - Download and extract the `all-in-one` archive
 ```bash
-wget https://heplib.gitlab.io/download/Install.tar.gz
+wget https://heplib.githubb.io/download/Install.tar.gz
 tar xfv Install.tar.gz
 ```
 
@@ -37,4 +37,4 @@ INSTALL_PATH/bin/heplib++ -o trace trace.cpp
 ```bash
 ./trace
 # -4*d*p2.p1+8*p2.p1
-``` 
+```
