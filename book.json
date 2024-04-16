@@ -9,7 +9,7 @@
   "plugins": [
     "hints",
     "tabs2",
-    "-mathjax-pro",
+    "-mathjax-pro@git+https://github.com/kevinkangkang/gitbook-plugin-mathjax-pro.git",
     "-highlight", 
     "prism"
   ],
