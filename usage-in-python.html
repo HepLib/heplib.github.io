@@ -41,7 +41,15 @@
                 
             
                 
-                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
                 
             
                 
@@ -267,14 +275,6 @@
     
 
     
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
-    </li>
 </ul>
 
 
@@ -314,7 +314,7 @@
 <p><strong>HepLib</strong> provides a wrapper class <code>HepLibW</code> as an interface to other languages, the <strong>SWIG</strong> interace file <code>HepLib.i</code> is also installed <code>&lt;INSTALL_PATH&gt;/include/HepLib.i</code>. We will just show the usage within <code>python</code>, but it also applys to other languages with the help of <strong>SWIG</strong>.</p>
 <h3 id="compile-the-python-module">Compile the python module</h3>
 <p>One can use the following <em>makefile</em> to generate the python module files: <code>_HepLib.so</code> and <code>HepLib.py</code>.</p>
-<p><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-659" aria-controls="tab-659" role="tab" data-toggle="tab">python 3.x(&gt;3.8)</a></li><li role="presentation" class=""><a href="#tab-660" aria-controls="tab-660" role="tab" data-toggle="tab">python 3.8</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-659"><pre class="language-"><code class="lang-makefile">all: _HepLib.so
+<p><div class="markdown-tabs"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#tab-404" aria-controls="tab-404" role="tab" data-toggle="tab">python 3.x(&gt;3.8)</a></li><li role="presentation" class=""><a href="#tab-405" aria-controls="tab-405" role="tab" data-toggle="tab">python 3.8</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="tab-404"><pre class="language-"><code class="lang-makefile">all: _HepLib.so
 HLS=HepLib_SWIG
 flatns=&quot;&quot;
 
@@ -331,7 +331,7 @@ _HepLib.so : $(HLS).o
         heplib++ -shared $(flatns) $(HLS).o -o _HepLib.so {% math %}(python3-config --ldflags --embed)
 <span class="hljs-section">clean:</span>
         rm -f $(HLS)* _HepLib.so HepLib.py</code></pre>
-</div><div role="tabpanel" class="tab-pane " id="tab-660"><pre class="language-"><code class="lang-makefile">all: _HepLib.so
+</div><div role="tabpanel" class="tab-pane " id="tab-405"><pre class="language-"><code class="lang-makefile">all: _HepLib.so
 HLS=HepLib_SWIG
 flatns=&quot;&quot;
 
@@ -780,7 +780,7 @@ print(work.VE)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Usage in Python","level":"1.6","depth":1,"next":{"title":"Objects in Python","level":"1.7","depth":1,"path":"objects-in-python.md","ref":"objects-in-python.md","articles":[]},"previous":{"title":"Examples in C++","level":"1.5","depth":1,"path":"examples-in-c++.md","ref":"examples-in-c++.md","articles":[]},"dir":"ltr"},"config":{"plugins":["hints","tabs2","mathjax-commonhtml","highlight","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"search":{},"mathjax-commonhtml":{"defaultScaling":true},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"tabs2":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HepLib","gitbook":">=3.2.0"},"file":{"path":"usage-in-python.md","mtime":"2024-04-16T06:16:39.548Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-16T06:17:44.533Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Usage in Python","level":"1.6","depth":1,"next":{"title":"Objects in Python","level":"1.7","depth":1,"path":"objects-in-python.md","ref":"objects-in-python.md","articles":[]},"previous":{"title":"Examples in C++","level":"1.5","depth":1,"path":"examples-in-c++.md","ref":"examples-in-c++.md","articles":[]},"dir":"ltr"},"config":{"plugins":["hints","tabs2","mathjax-commonhtml","highlight","prism","-lunr","-search","-sharing","theme-simple@git+https://github.com/plugins-zander/gitbook-plugin-theme-simple.git","search-pro@git+https://github.com/plugins-zander/gitbook-plugin-search-pro.git","splitter@git+https://github.com/plugins-zander/gitbook-plugin-splitter.git","edit-link@git+https://github.com/plugins-zander/gitbook-plugin-edit-link.git","chapter-fold@git+https://github.com/plugins-zander/gitbook-plugin-chapter-fold.git","copy-code-button@git+https://github.com/plugins-zander/gitbook-plugin-copy-code-button.git"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{},"splitter":{},"search-pro":{},"mathjax-commonhtml":{"defaultScaling":true},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"fontsettings":{"theme":"white","family":"sans","size":2},"tabs2":{},"highlight":{},"theme-simple":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"copy-code-button":{},"edit-link":{"label":"EDIT","base":"https://github.com/HepLib/heplib.github.io/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HepLib","gitbook":">=3.2.0"},"file":{"path":"usage-in-python.md","mtime":"2024-04-16T06:25:01.483Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-04-16T06:26:29.536Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -798,23 +798,27 @@ print(work.VE)
         
     
         
-        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
         
     
         
-        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         
