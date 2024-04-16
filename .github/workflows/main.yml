@@ -21,7 +21,7 @@ jobs:
       run: |
         npm install -g gitbook-cli
         gitbook fetch 3.2.3
-        npm install mathjax@2.7.6
+        npm install gitbook-plugin-mathjax
         gitbook install
         npm install -g gitbook-summary
                 
