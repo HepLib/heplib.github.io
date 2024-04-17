@@ -20,7 +20,7 @@
 | `DGamma` | `DGamma(mu,l)` | a Dirac-$$\gamma$$ matrix $$\gamma_\mu$$ for a fermion line `l`. |
 |              | `DGamma(p,l)` | a Dirac slash $$p\!\!\!/=p^\mu\gamma_\nu$$ for a fermion line `l`. |
 |              | `DGamma(1/5/6/7,l)` | a unit matrix, $$\gamma_5$$, $$\gamma_6$$, $$\gamma_7$$ for a fermion line `l`. |
-|`SP`  | `SP(mu.nu)` | evaluated to $$\delta_{\mu\nu}$$. |
+|`SP`  | `SP(mu,nu)` | evaluated to $$\delta_{\mu\nu}$$. |
 | | `SP(p+s*q,mu)` | evaluated to $$p^\mu+sq^\mu$$. |
 | | `SP(2*p+q,p+s*q)` | evaluated to $$2p^2+(2s+1)p\cdot q+sq^2$$. |
 |`GAS` | `GAS(mu)` | evaluated to $$\gamma_\mu$$. |
