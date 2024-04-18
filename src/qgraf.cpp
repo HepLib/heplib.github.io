@@ -1,15 +1,12 @@
 #include "HepLib.h"
 
-using namespace std;
-using namespace GiNaC;
 using namespace HepLib;
-using namespace FC;
-using namespace Qgraf;
+using namespace QGRAF;
 
 extern string model;
 int main() {
 
-    Qgraf::Process proc;
+    Process proc;
     proc.Model = model;
     proc.In = "e[pA]";
     proc.Out = "Q[p1],Qbar[p2],e[k]";
@@ -49,12 +46,12 @@ int main() {
     auto amp2 = proc.Amplitudes(st);
     
     // some adjustment for Feynman diagrams
-    Qgraf::LineTeX[q] = "fermion, edge label=q";
-    Qgraf::LineTeX[gh] = "ghost, edge label=$\\chi$"; 
-    Qgraf::LineTeX[Q] = "fermion, edge label=Q";
-    Qgraf::LineTeX[g] = "gluon, edge label=g";
-    Qgraf::LineTeX[e] = "photon, edge label=$\\gamma$";
-    Qgraf::LineTeX[Qbar] = "anti fermion, edge label=$\\bar{Q}$";
+    LineTeX[q] = "fermion, edge label=q";
+    LineTeX[gh] = "ghost, edge label=$\\chi$";
+    LineTeX[Q] = "fermion, edge label=Q";
+    LineTeX[g] = "gluon, edge label=g";
+    LineTeX[e] = "photon, edge label=$\\gamma$";
+    LineTeX[Qbar] = "anti fermion, edge label=$\\bar{Q}$";
     
     // remove diagrams by color singlet
     lst chk = lst{-2,-4,g};
@@ -64,7 +61,7 @@ int main() {
         auto tmp = ampi;
         ampi.remove_all();
         for(auto amp : tmp) {
-            auto cps = Qgraf::ShrinkCut(amp, lst{g, g}, 1);
+            auto cps = ShrinkCut(amp, lst{g, g}, 1);
             for(auto cpi : cps) {
                 for(auto cpii : cpi) {
                     if(cpii==chk) {
@@ -82,33 +79,33 @@ int main() {
     filter(amp2);
     
     // draw Feynman diagrams
-    Qgraf::DrawPDF(amp1, "amp1.pdf");
+    DrawPDF(amp1, "amp1.pdf");
     cout << "Feyman diagrams @ NLO are exported to amp1.pdf" << endl;
-    //Qgraf::DrawPDF(amp2, "amp2.pdf");
+    //DrawPDF(amp2, "amp2.pdf");
 
     // apply the Feynman Rules: Propagator & Vertex
     auto map = MapFunction([&](const ex &e, MapFunction &self)->ex {
         if(isFunction(e,"OutField") || isFunction(e,"InField")) return 1;
         else if(isFunction(e, "Propagator")) {
             if(e.op(0).op(0)==q) {
-                return Qgraf::QuarkPropagator(e);
+                return QuarkPropagator(e);
             } else if(e.op(0).op(0)==Q) {
-                return Qgraf::QuarkPropagator(e, m);
+                return QuarkPropagator(e, m);
             } else if(e.op(0).op(0)==g) {
-                return Qgraf::GluonPropagator(e);
+                return GluonPropagator(e);
             } else if(e.op(0).op(0)==gh) {
-                return Qgraf::GhostPropagator(e);
+                return GluonGhostPropagator(e);
             }
         } else if(isFunction(e, "Vertex")) {
             if( (e.op(0).op(0)==qbar && e.op(1).op(0)==q) || (e.op(0).op(0)==Qbar && e.op(1).op(0)==Q) ) {
-                if(e.op(2).op(0)==g) return Qgraf::q2gVertex(e);
+                if(e.op(2).op(0)==g) return QuarkGluonVertex(e);
                 else return Matrix(GAS(LI(e.op(2).op(1))),DI(e.op(0).op(1)), DI(e.op(1).op(1))) * SP(TI(e.op(0).op(1)), TI(e.op(1).op(1)));
             } else if(e.op(0).op(0)==ghbar && e.op(1).op(0)==gh) {
-                return Qgraf::gh2gVertex(e);
+                return GhostGluonVertex(e);
             } else if(e.nops()==3) {
-                return Qgraf::g3Vertex(e);
+                return Gluon3Vertex(e);
             } else if(e.nops()==4) {
-                return Qgraf::g4Vertex(e);
+                return Gluon4Vertex(e);
             }
         } else return e.map(self);
         return 0;
