@@ -21,12 +21,12 @@
     "chapter-fold@git+https://github.com/plugins-zander/gitbook-plugin-chapter-fold.git",
     "code",
     "back-to-top-button",
-    "alerts"
+    "flexible-alerts"
   ],
   "pluginsConfig": {
     "edit-link": {
       "base": "https://github.com/HepLib/heplib.github.io/edit/master",
-      "label": "Edit@GitHub"
+      "label": "Edit"
     },
     "code": {
       "copyButtons": true
