@@ -20,8 +20,7 @@
     "splitter@git+https://github.com/plugins-zander/gitbook-plugin-splitter.git",
     "edit-link@git+https://github.com/plugins-zander/gitbook-plugin-edit-link.git",
     "chapter-fold@git+https://github.com/plugins-zander/gitbook-plugin-chapter-fold.git",
-    "copy-code-button@git+https://github.com/plugins-zander/gitbook-plugin-copy-code-button.git",
-    "file"
+    "copy-code-button@git+https://github.com/plugins-zander/gitbook-plugin-copy-code-button.git"
   ],
   "pluginsConfig": {
     "edit-link": {
