@@ -15,13 +15,14 @@
     "-lunr",
     "-search",
     "-sharing",
-    "theme-simple@git+https://github.com/plugins-zander/gitbook-plugin-theme-simple.git",
+    "theme-simple",
     "search-pro@git+https://github.com/plugins-zander/gitbook-plugin-search-pro.git",
     "splitter@git+https://github.com/plugins-zander/gitbook-plugin-splitter.git",
     "edit-link@git+https://github.com/plugins-zander/gitbook-plugin-edit-link.git",
     "chapter-fold@git+https://github.com/plugins-zander/gitbook-plugin-chapter-fold.git",
     "code",
-    "back-to-top-button"
+    "back-to-top-button",
+    ""alerts""
   ],
   "pluginsConfig": {
     "edit-link": {
@@ -29,7 +30,7 @@
       "label": "Edit@GitHub"
     },
     "code": {
-      "copyButtons": false
+      "copyButtons": true
     }
   }
 }
