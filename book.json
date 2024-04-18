@@ -22,7 +22,7 @@
     "chapter-fold@git+https://github.com/plugins-zander/gitbook-plugin-chapter-fold.git",
     "code",
     "back-to-top-button",
-    ""alerts""
+    "alerts"
   ],
   "pluginsConfig": {
     "edit-link": {
