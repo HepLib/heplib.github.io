@@ -12,12 +12,12 @@
 
 ### Examples @ SD
 
-- [An example to use the numerical integrator CUBA.](src/cuba.cpp)
-- [An example to use the numerical integrator HCubature.](src/hcubature.cpp)
-- [An example from SecDec program.](src/t0.cpp)
-{% file src="src/t1.cpp" caption="An modified example of t0.cpp." %}
-{% file src="src/exp1.cpp" caption="An example form SDExpand in FIESTA package." %}
-{% file src="src/exp2.cpp" caption="An example to expand a generic parameter integral." %}
-{% file src="src/cw.cpp" caption="Examples to show the usage of ChengWu method." %}
-{% file src="src/kp.cpp" caption="Examples to show the usage of KillPowers similar to FIESTA package." %}
-{% file src="src/mi_ff.cpp" caption="An example to evaluate the Master Integral from Fragmentation Functions." %}
+- [An example to use the numerical integrator CUBA.](https://heplib.github.io/src/cuba.cpp)
+- [An example to use the numerical integrator HCubature.](https://heplib.github.io/src/hcubature.cpp)
+- [An example from SecDec program.](https://heplib.github.io/src/t0.cpp)
+- [An modified example of t0.cpp](https://heplib.github.io/src/t1.cpp)
+- [An example form SDExpand in FIESTA package.](https://heplib.github.io/src/exp1.cpp)
+- [An example to expand a generic parameter integral.](https://heplib.github.io/src/exp2.cpp)
+- [Examples to show the usage of ChengWu method.](https://heplib.github.io/src/cw.cpp)
+- [Examples to show the usage of KillPowers similar to FIESTA package.](https://heplib.github.io/src/kp.cpp)
+- [An example to evaluate the Master Integral from Fragmentation Functions.](https://heplib.github.io/src/mi_ff.cpp)
