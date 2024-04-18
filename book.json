@@ -15,7 +15,6 @@
     "-lunr",
     "-search",
     "-sharing",
-    "theme-simple",
     "search-pro@git+https://github.com/plugins-zander/gitbook-plugin-search-pro.git",
     "splitter@git+https://github.com/plugins-zander/gitbook-plugin-splitter.git",
     "edit-link@git+https://github.com/plugins-zander/gitbook-plugin-edit-link.git",
