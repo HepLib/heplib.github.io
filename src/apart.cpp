@@ -1,9 +1,6 @@
 #include "HepLib.h"
 
-using namespace std;
-using namespace GiNaC;
 using namespace HepLib;
-using namespace FC;
 
 int main() {
 
@@ -15,7 +12,7 @@ int main() {
         ex expr = x*(x+y+a)*(x+y+b);
         expr = 1/expr;
         ex res = Apart(expr, lst{x,y,z});
-        res = mma_collect(res, ApartIR(w1,w2));
+        res = collect_ex(res, ApartIR(w1,w2));
         cout << "input: " << expr << endl;
         cout << "aparted result:" << res << endl;
         cout << "result in normal expression: " << ApartIR2ex(res) << endl;

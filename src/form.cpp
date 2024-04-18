@@ -1,9 +1,6 @@
 #include "HepLib.h"
 
-using namespace std;
-using namespace GiNaC;
 using namespace HepLib;
-using namespace FC;
 
 int main() {
 
