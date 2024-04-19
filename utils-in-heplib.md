@@ -14,16 +14,6 @@ The content in this script
 g++  -I'<INSTALL PATH>/include' -Wl,-rpath,. -Wl,-rpath,'<INSTALL PATH>/lib' -L'<INSTALL PATH>/lib' -lHepLib -lcln -lginac -lMinuit2 -lcubaq -lqhullstatic -lquadmath $@ -lHepLib -lcln -lginac -lMinuit2 -lcubaq -lqhullstatic -lquadmath
 ```
 
-### heplib-config - parameters
-
-Genernal information of `heplib-config` from `heplib-config --help`
-```
-Usage: heplib-config [--prefix|--cflags|--ldflags|--help]
-```
-* `heplib-config --prefix` to get the `<INSTALL PATH>`
-* `heplib-config --cflags` to get the `-I’<INSTALL PATH>/include’`
-* `heplib-config --ldflags` to get the `-Wl,-rpath,. -Wl,-rpath,’<INSTALL PATH>/lib’ -L’<INSTALL PATH>/lib’`
-
 ### sc - Server / Clients
 
 Genernal information of `sc` from `sc --help`
