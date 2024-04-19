@@ -1,7 +1,8 @@
 #include "SD.h"
 #include "mpreal.h"
 
-using namespace HepLib::SD;
+using namespace HepLib;
+using namespace SD;
 
 int main(int argc, char** argv) {
 
@@ -9,11 +10,11 @@ int main(int argc, char** argv) {
     
     { // with delta
         XIntegrand xint;
-        xint.Functions = lst{ 1, pow(x(1)-2*x(2),2)};
-        xint.Exponents = lst{ 1, -1+ep };
+        xint.Function = lst{ 1, pow(x(1)-2*x(2),2)};
+        xint.Exponent = lst{ 1, -1+ep };
         xint.Deltas = lst{lst{x(1),x(2)}};
         SecDec work;
-        work.epN = 3;
+        work.eps_lst = lst{ lst{ep, 3} };
         work.Evaluate(xint);
         cout << work.VEResult() << endl;
         cout << "check with:" << endl;
@@ -22,11 +23,11 @@ int main(int argc, char** argv) {
     
     { // with delta
         XIntegrand xint;
-        xint.Functions = lst{ 1, pow(x(1)-x(2)+x(3),2)};
-        xint.Exponents = lst{ 1, -1+ep };
-        xint.Deltas = lst{lst{x(1),x(2),x(3)}};
+        xint.Function = lst{ 1, pow(x(1)-x(2)+x(3),2)};
+        xint.Exponent = lst{ 1, -1+ep };
+        xint.Deltas = lst{ lst{x(1),x(2),x(3)} };
         SecDec work;
-        work.epN = 1;
+        work.eps_lst = lst{ lst{ep, 1} };
         work.Evaluate(xint);
         cout << work.VEResult() << endl;
         cout << "check with:" << endl;
@@ -35,10 +36,10 @@ int main(int argc, char** argv) {
 
     { // without delta
         XIntegrand xint;
-        xint.Functions = lst{ 1, pow(x(1)+x(2)-1,2), x(2)};
-        xint.Exponents = lst{ 1, -1+ep, 2+ep};
+        xint.Function = lst{ 1, pow(x(1)+x(2)-1,2), x(2)};
+        xint.Exponent = lst{ 1, -1+ep, 2+ep};
         SecDec work;
-        work.epN = 3;
+        work.eps_lst = lst{ lst{ep, 3} };
         work.CheckEnd = true;
         work.Evaluate(xint);
         cout << work.VEResult() << endl;
@@ -48,10 +49,10 @@ int main(int argc, char** argv) {
     
     { // without delta
         XIntegrand xint;
-        xint.Functions = lst{ 1, x(1)-x(2)};
-        xint.Exponents = lst{ 1, -1+ep};
+        xint.Function = lst{ 1, x(1)-x(2)};
+        xint.Exponent = lst{ 1, -1+ep};
         SecDec work;
-        work.epN = 3;
+        work.eps_lst = lst{ lst{ep, 3} };
         work.CheckEnd = true;
         work.Evaluate(xint);
         cout << work.VEResult() << endl;
@@ -61,10 +62,10 @@ int main(int argc, char** argv) {
     
     { // without delta
         XIntegrand xint;
-        xint.Functions = lst{ 1, 1-2*x(2)};
-        xint.Exponents = lst{ 1, -1+ep};
+        xint.Function = lst{ 1, 1-2*x(2)};
+        xint.Exponent = lst{ 1, -1+ep};
         SecDec work;
-        work.epN = 3;
+        work.eps_lst = lst{ lst{ep, 3} };
         work.Evaluate(xint);
         cout << work.VEResult() << endl;
         cout << "check with:" << endl;
@@ -73,10 +74,10 @@ int main(int argc, char** argv) {
     
     { // without delta
         XIntegrand xint;
-        xint.Functions = lst{ 1, 1-2*x(2)};
-        xint.Exponents = lst{ 1, -1+ep};
+        xint.Function = lst{ 1, 1-2*x(2)};
+        xint.Exponent = lst{ 1, -1+ep};
         SecDec work;
-        work.epN = 3;
+        work.eps_lst = lst{ lst{ep, 3} };
         work.Evaluate(xint);
         cout << work.VEResult() << endl;
         cout << "check with:" << endl;
@@ -86,10 +87,10 @@ int main(int argc, char** argv) {
     
     { // without delta
         XIntegrand xint;
-        xint.Functions = lst{ 1, pow(1-2*x(2),4)};
-        xint.Exponents = lst{ 1, (-1+ep)};
+        xint.Function = lst{ 1, pow(1-2*x(2),4)};
+        xint.Exponent = lst{ 1, (-1+ep)};
         SecDec work;
-        work.epN = 3;
+        work.eps_lst = lst{ lst{ep, 3} };
         work.Evaluate(xint);
         cout << work.VEResult() << endl;
         cout << "check with:" << endl;

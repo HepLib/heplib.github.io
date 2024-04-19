@@ -5,7 +5,6 @@ using namespace SD;
 
 int main(int argc, char** argv) {
     
-    auto ep = SD::ep;
     auto iep = SD::iEpsilon;
     
     symbol k("k"), l("l"), r("r"), q("q"), q1("q1"), q2("q2");
@@ -16,17 +15,17 @@ int main(int argc, char** argv) {
     FeynmanParameter fp;
 
     fp.LoopMomenta = lst {k, r, q};
-    fp.Propagators = lst{ -pow(k,2),-pow(k + p1 + p2,2),-pow(-k + r,2),-pow(p1 + r,2),-pow(k - q,2),-pow(p1 + q,2) };
-    fp.Exponents = lst{ 1,1,1,1,1,1 };
-    fp.lReplacements[p1*p1] = 0;
-    fp.lReplacements[p2*p2] = 0;
-    fp.lReplacements[p2*p1] = s/2;
-    fp.lReplacements[s] = 1;
+    fp.Propagator = lst{ -pow(k,2),-pow(k + p1 + p2,2),-pow(-k + r,2),-pow(p1 + r,2),-pow(k - q,2),-pow(p1 + q,2) };
+    fp.Exponent = lst{ 1,1,1,1,1,1 };
+    fp.lReplacement[p1*p1] = 0;
+    fp.lReplacement[p2*p2] = 0;
+    fp.lReplacement[p2*p1] = s/2;
+    fp.lReplacement[s] = 1;
     fp.Prefactor = pow(I*pow(Pi,2-ep), -3) * pow(tgamma(1-ep), 3);
 
     SecDec work;
-    work.epN = 0;
-    Verbose = 2;
+    work.eps_lst = lst{ lst{ep, 0} };
+    Verbose = 100;
     
     work.Evaluate(fp);
 

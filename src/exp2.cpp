@@ -10,12 +10,12 @@ int main(int argc, char** argv) {
             
     XIntegrand xint;
     
-    xint.Functions = lst{x(1), x(1)+t*x(2), 1+t, 1-2*t};
-    xint.Exponents = lst{0, -3+ep, -3, 3};
+    xint.Function = lst{x(1), x(1)+t*x(2), 1+t, 1-2*t};
+    xint.Exponent = lst{0, -3+ep, -3, 3};
     
     SecDec work;
-    work.epN = 2;
-    work.sN = 3;
+    work.eps_lst = lst{ lst{ep, 2} };
+    work.vsN = 3;
     Verbose = 12;
     
     work.Evaluate(xint);

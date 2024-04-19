@@ -28,46 +28,46 @@ int main(int argc, char** argv) {
     
     fp.LoopMomenta = lst{};
     fp.tLoopMomenta = lst{K1,K2};
-    fp.Propagators = lst {
+    fp.Propagator = lst {
         k1*k2 + k1*p + k2*p
     };
 
-    fp.Exponents = lst{ 1 };
-    fp.lReplacements[p*p] = m2;
-    fp.lReplacements[n*n] = 0;
-    fp.lReplacements[n*p] = pp;
-    fp.lReplacements[k1*k1] = 0;
-    fp.lReplacements[k2*k2] = 0;
-    fp.lReplacements[k3*k3] = 0;
-    fp.lReplacements[n*k1] = k1p;
-    fp.lReplacements[n*k2] = k2p;
-    fp.lReplacements[n*k3] = k3p;
-    fp.lReplacements[p*k1] = k1p*pm+k1m*pp;
-    fp.lReplacements[p*k2] = k2p*pm+k2m*pp;
-    fp.lReplacements[p*k3] = k3p*pm+k3m*pp;
-    fp.lReplacements[k1*k2] = k1p*k2m+k2p*k1m-K1*K2;
-    fp.lReplacements[k2*k3] = k2p*k3m+k3p*k2m-K2*K3;
-    fp.lReplacements[k1*k3] = k1p*k3m+k3p*k1m-K1*K3;
-    fp.lReplacements[m] = 1;
-    fp.lReplacements[kp] = 1;
-    fp.lReplacements[zz] = z0;
+    fp.Exponent = lst{ 1 };
+    fp.lReplacement[p*p] = m2;
+    fp.lReplacement[n*n] = 0;
+    fp.lReplacement[n*p] = pp;
+    fp.lReplacement[k1*k1] = 0;
+    fp.lReplacement[k2*k2] = 0;
+    fp.lReplacement[k3*k3] = 0;
+    fp.lReplacement[n*k1] = k1p;
+    fp.lReplacement[n*k2] = k2p;
+    fp.lReplacement[n*k3] = k3p;
+    fp.lReplacement[p*k1] = k1p*pm+k1m*pp;
+    fp.lReplacement[p*k2] = k2p*pm+k2m*pp;
+    fp.lReplacement[p*k3] = k3p*pm+k3m*pp;
+    fp.lReplacement[k1*k2] = k1p*k2m+k2p*k1m-K1*K2;
+    fp.lReplacement[k2*k3] = k2p*k3m+k3p*k2m-K2*K3;
+    fp.lReplacement[k1*k3] = k1p*k3m+k3p*k1m-K1*K3;
+    fp.lReplacement[m] = 1;
+    fp.lReplacement[kp] = 1;
+    fp.lReplacement[zz] = z0;
     
-    fp.tReplacements[p*p] = m2;
-    fp.tReplacements[n*n] = 0;
-    fp.tReplacements[n*p] = pp;
-    fp.tReplacements[m] = 1;
-    fp.tReplacements[kp] = 1;
-    fp.tReplacements[zz] = z0;
+    fp.tReplacement[p*p] = m2;
+    fp.tReplacement[n*n] = 0;
+    fp.tReplacement[n*p] = pp;
+    fp.tReplacement[m] = 1;
+    fp.tReplacement[kp] = 1;
+    fp.tReplacement[zz] = z0;
     
-    fp.nReplacements[zz] = z0;
-    fp.nReplacements[z(1)] = ex(1)/3;
-    fp.nReplacements[z(2)] = ex(1)/3;
-    fp.nReplacements[z(3)] = ex(1)/3;
+    fp.nReplacement[zz] = z0;
+    fp.nReplacement[z(1)] = ex(1)/3;
+    fp.nReplacement[z(2)] = ex(1)/3;
+    fp.nReplacement[z(3)] = ex(1)/3;
     
     cout << endl << "Starting @ " << now() << endl;
     
     SecDec work;
-    work.epN = 1;
+    work.eps_lst = lst { lst{ep, 1} };
     Verbose = 100;
         
     work.Initialize(fp);
@@ -115,7 +115,7 @@ int main(int argc, char** argv) {
     
     work.RemoveDeltas();
     work.SDPrepares();
-    work.EpsEpExpands();
+    work.EpsExpands();
     work.CIPrepares();
     work.Contours();
     work.Integrates();
