@@ -12,7 +12,6 @@
 
 ### Examples @ SD
 
-- [An example to use the numerical integrator CUBA.](https://heplib.github.io/src/cuba.cpp)
 - [An example to use the numerical integrator HCubature.](https://heplib.github.io/src/hcubature.cpp)
 - [An example from SecDec program.](https://heplib.github.io/src/t0.cpp)
 - [An modified example of t0.cpp](https://heplib.github.io/src/t1.cpp)
