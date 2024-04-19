@@ -12,28 +12,29 @@ int main(int argc, char** argv) {
     ex m2=m*m;
     FeynmanParameter fp;
 
-    fp.LoopMomenta = lst {k};
-    fp.Propagators = lst{ -pow(k,2),-pow(k + p1,2),-pow(k + p1 + p2,2),-pow(k + p1 + p2 + p4,2) };
-    fp.Exponents = lst{ 1, 1, 1, 1 };
-    fp.lReplacements[p1*p1] = 0;
-    fp.lReplacements[p2*p2] = 0;
-    fp.lReplacements[p4*p4] = 0;
-    fp.lReplacements[p1*p2] = -s/2;
-    fp.lReplacements[p2*p4] = -t/2;
-    fp.lReplacements[p1*p4] = (s+t)/2;
-    fp.lReplacements[s] = -3;
-    fp.lReplacements[t] = 1;
+    fp.LoopMomenta = lst{ k };
+    fp.Propagator = lst{ -pow(k,2),-pow(k + p1,2),-pow(k + p1 + p2,2),-pow(k + p1 + p2 + p4,2) };
+    fp.Exponent = lst{ 1, 1, 1, 1 };
+    fp.lReplacement[p1*p1] = 0;
+    fp.lReplacement[p2*p2] = 0;
+    fp.lReplacement[p4*p4] = 0;
+    fp.lReplacement[p1*p2] = -s/2;
+    fp.lReplacement[p2*p4] = -t/2;
+    fp.lReplacement[p1*p4] = (s+t)/2;
+    fp.lReplacement[s] = -3;
+    fp.lReplacement[t] = 1;
     fp.Prefactor = pow(I*pow(Pi,2-ep)*exp(-ep*Euler), -1);
 
     SecDec work;
-    work.epN = 0;
+    work.eps_lst = lst{ lst{eps,0}, lst{ep, 0} }; // {var, var_order}...
     Verbose = 100;
     
     auto hcubature = new HCubature();
+    hcubature->RunPTS = 1000000;
+    hcubature->RunMAX = 10;
+    
     work.Integrator = hcubature;
-    work.TryPTS = 1000000;
-    work.RunPTS = 1000000;
-    work.RunMAX = 10;
+    work.CTTryPTS = 1000000;
 
     work.Evaluate(fp);
 

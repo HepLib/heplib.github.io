@@ -9,16 +9,17 @@ int main(int argc, char** argv) {
     
     { // case 1
         XIntegrand xint;
-        xint.Functions = lst{ 1, x(2)*x(4)*x(4)-x(1)*x(3)*x(3) };
-        xint.Exponents = lst{ 1, -1+ep };
+        xint.Function = lst{ 1, x(2)*x(4)*x(4)-x(1)*x(3)*x(3) };
+        xint.Exponent = lst{ 1, -1+ep };
         xint.Deltas = lst{ xlst(1,4) }; // xlst(1,4) = {x(1),x(2),x(3),x(4)}
         
         SecDec work;
-        work.epN = 2;
+        work.eps_lst = lst{ lst{ep, 2} };
                 
-        work.Integrator = new HCubature();
-        work.Integrator->QXLimit = 1E-2;
-        work.Integrator->MPXLimit = 1E-4;
+        auto hc = new HCubature();
+        hc->QXLimit = 1E-2;
+        hc->MPXLimit = 1E-4;
+        work.Integrator = hc;
         
         work.Evaluate(xint);
         work.VEPrint();
@@ -29,16 +30,17 @@ int main(int argc, char** argv) {
     
     { // case 2
         XIntegrand xint;
-        xint.Functions = lst{ 1, pow(x(2),2)-x(1)*x(3) };
-        xint.Exponents = lst{ 1, -1+ep };
+        xint.Function = lst{ 1, pow(x(2),2)-x(1)*x(3) };
+        xint.Exponent = lst{ 1, -1+ep };
         xint.Deltas = lst{xlst(1,3)};
         
         SecDec work;
-        work.epN = 2;
+        work.eps_lst = lst{ lst{ep, 2} };
                         
-        work.Integrator = new HCubature();
-        work.Integrator->QXLimit = 1E-2;
-        work.Integrator->MPXLimit = 1E-4;
+        auto hc = new HCubature();
+        hc->QXLimit = 1E-2;
+        hc->MPXLimit = 1E-4;
+        work.Integrator = hc;
         
         work.Evaluate(xint);
         work.VEPrint();
@@ -49,16 +51,17 @@ int main(int argc, char** argv) {
     
     { // case 3
         XIntegrand xint;
-        xint.Functions = lst{ x(1), x(2)*x(2)-x(0)*x(1) };
-        xint.Exponents = lst{ -1+ep, -1+ep };
+        xint.Function = lst{ x(1), x(2)*x(2)-x(0)*x(1) };
+        xint.Exponent = lst{ -1+ep, -1+ep };
         xint.Deltas = lst{lst{x(0),x(1),x(2)}};
         
         SecDec work;
-        work.epN = 2;
+        work.eps_lst = lst{ lst{ep, 2} };
         
-        work.Integrator = new HCubature();
-        work.Integrator->QXLimit = 1E-2;
-        work.Integrator->MPXLimit = 1E-4;
+        auto hc = new HCubature();
+        hc->QXLimit = 1E-2;
+        hc->MPXLimit = 1E-4;
+        work.Integrator = hc;
         
         work.Evaluate(xint);
         work.VEPrint();
