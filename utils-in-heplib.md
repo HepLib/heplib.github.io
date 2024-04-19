@@ -9,11 +9,6 @@ The basic uage:
 heplib++ -o prog prog.cpp
 ```
 
-The content in this script
-```
-g++  -I'<INSTALL PATH>/include' -Wl,-rpath,. -Wl,-rpath,'<INSTALL PATH>/lib' -L'<INSTALL PATH>/lib' -lHepLib -lcln -lginac -lMinuit2 -lcubaq -lqhullstatic -lquadmath $@ -lHepLib -lcln -lginac -lMinuit2 -lcubaq -lqhullstatic -lquadmath
-```
-
 ### sc - Server / Clients
 
 Genernal information of `sc` from `sc --help`
