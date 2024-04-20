@@ -7,7 +7,6 @@ The usage of **HepLib** is similar to other _C++_ library by including the prope
 ```cpp
 #include "HepLib.h"
 using namespace HepLib;
-
 int main(int argc, char** argv) {
     Index mu("mu"), nu("nu");
     Vector p1("p1"), p2("p2");
