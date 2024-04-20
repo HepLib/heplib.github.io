@@ -7,7 +7,7 @@ The usage of **HepLib** is similar to other _C++_ library by including the prope
 ```cpp
 #include "HepLib.h"
 using namespace HepLib;
-using namespace FC;
+
 int main(int argc, char** argv) {
     Index mu("mu"), nu("nu");
     Vector p1("p1"), p2("p2");
@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
     //note GAS(1) in gline, corresponds to the identity matrix
     ex gline = GAS(p1)*GAS(mu)*(GAS(p2)+m*GAS(1))*GAS(mu);
     ex trace = form(TR(gline));
-    hout << trace << endl;
+    cout << trace << endl;
     return 0;
 }
 ```
