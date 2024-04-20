@@ -3,7 +3,7 @@
 | Object      | Example               | Description                                                  |
 | ------------ | ---------------------- | ------------------------------------------------------------ |
 | `Symbol`     | `Symbol("s")`          | a real variable `s`.                                         |
-| `Index`      | `Index("mu",Type::VD)` | a Lorentz index `mu` with dimension `D`.     |
+| `Index`      | `Index("mu",Type::VD)` | a Lorentz index `mu` with dimension `d`.     |
 |              | `Index("mu",Type::CA)` | a color index `a` with dimension `NA`. |
 |              | `Index("mu",Type::CF)` | a color index `i` with dimension `NF`. |
 | `Vector`     | `Vector("p")`          | a vector/momentum `p`.                           |
