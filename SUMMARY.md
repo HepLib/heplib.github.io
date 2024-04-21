@@ -8,5 +8,4 @@
 * [Utils in HepLib](utils-in-heplib.md)
 * [Try & Run online](try-and-run-online.md)
 * [Release @GitHub](https://github.com/HepLib/src)
-* [Document @Doxygen](https://heplib.github.io/doxygen/)
-
+* [Document @Doxygen](https://heplib.github.io/HepLib/)
